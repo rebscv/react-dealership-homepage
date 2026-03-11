@@ -19,6 +19,7 @@ The goal of this project is to demonstrate **component-based architecture**, **d
 
 The project is organised around reusable components.
 
+```
 src
 ├ components
 │ ├ QuickLinks
@@ -30,9 +31,7 @@ src
 │
 ├ App.jsx
 └ main.jsx
-
-
----
+```
 
 ## Development Stages
 
