@@ -1,10 +1,12 @@
-import QuickLinks from "../components/QuickLinks"
+
+import Hero from "../components/Hero/Hero";
+import QuickLinks from "../components/QuickLinks";
 
 function HomePage() {
   return (
     <>
       <div>Header</div>
-      <div>Hero</div>
+      <Hero />
       <QuickLinks />
       <div>Featured Stock</div>
       <div>Welcome</div>
