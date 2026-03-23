@@ -1,6 +1,7 @@
 
 import Hero from "../components/Hero/Hero";
 import QuickLinks from "../components/QuickLinks";
+import FeaturedVehicles from "../components/FeaturedVehicles/FeaturedVehicles";
 
 function HomePage() {
   return (
@@ -8,7 +9,7 @@ function HomePage() {
       <div>Header</div>
       <Hero />
       <QuickLinks />
-      <div>Featured Stock</div>
+      <FeaturedVehicles />
       <div>Welcome</div>
       <div>Footer</div>
     </>

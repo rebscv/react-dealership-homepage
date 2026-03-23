@@ -1,0 +1,9 @@
+.featured {
+  padding: 40px;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
