@@ -1,0 +1,8 @@
+footer {
+    padding: var(--padding-tb) var(--padding-lr);
+}
+
+.footer-columns {
+    display: grid;
+    grid-auto-flow: column;
+}

@@ -1,0 +1,27 @@
+.header-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.header-title h2 {
+    margin: 0;
+}
+
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 24px;
+    z-index: 10;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+.nav-item:hover .nav-submenu {
+    display: grid;
+    grid-auto-flow: row;
+    position: absolute;
+    padding: 16px;
+    background-color: #333;
+}

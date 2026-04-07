@@ -7,15 +7,17 @@ function FeaturedVehicles() {
 
     return (
         <section>
+            <div className="std-wrapper">
 
-            <h2>Featured Vehicles</h2>
+                <h2>Featured Vehicles</h2>
 
-            <div className="vehicle-grid">
-                {vehicles.map((car) => (
-                    <VehicleCard key={car.id} {...car} />
-                ))}
+                <div className="vehicle-grid">
+                    {vehicles.map((car) => (
+                        <VehicleCard key={car.id} {...car} />
+                    ))}
+                </div>
+
             </div>
-
         </section>
     );
 

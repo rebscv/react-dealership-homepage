@@ -26,14 +26,18 @@ function QuickLinks() {
 
   return (
     <section className="quicklinks">
-      {links.map((link, index) => (
-        <QuickLinkCard
-          key={link.id}
-          title={link.title}
-          description={link.description}
-          url={link.url}
-        />
-      ))}
+
+      <div className="std-wrapper">
+        {links.map((link, index) => (
+          <QuickLinkCard
+            key={link.id}
+            title={link.title}
+            description={link.description}
+            url={link.url}
+          />
+        ))}
+      </div>
+
     </section>
   )
 

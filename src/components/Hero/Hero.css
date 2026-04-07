@@ -9,13 +9,16 @@
     align-items: center;
     padding: 0 40px;
     color: #fff;
+    position: relative;
 }
 
 .hero::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba (0, 0, 0, 0.4);
+    background-image: linear-gradient(90deg, #00000080, transparent);
+    width: 50%;
+    left: 0;
 }
 
 .hero-content {

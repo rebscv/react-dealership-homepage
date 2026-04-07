@@ -7,3 +7,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+.vehicle-card {
+  border: solid 1px #ccc;
+}
+
+.vehicle-card img {
+  width: 100%;
+}
