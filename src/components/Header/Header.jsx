@@ -16,22 +16,22 @@ function Header() {
 
 
                     <nav>
-                        <Link to="/">Home</Link>
-                        <Link to="/stock">Stock</Link>
-                        <Link to="/offers">Latest Offers</Link>
+                        <Link to="">Home</Link>
+                        <Link to="stock">Stock</Link>
+                        <Link to="offers">Latest Offers</Link>
 
                         <div className="nav-item">
-                            <Link to="/service">Service</Link>
+                            <Link to="service">Service</Link>
                             <div className="nav-submenu">
-                                <Link to="/service">Service Overview</Link>
-                                <Link to="/book-a-service">Book a Service</Link>
-                                <Link to="/parts">Parts</Link>
+                                <Link to="service">Service Overview</Link>
+                                <Link to="book-a-service">Book a Service</Link>
+                                <Link to="parts">Parts</Link>
                             </div>
                         </div>                
                         
-                        <Link to="/finance">Finance</Link>
-                        <Link to="/about">About Us</Link>
-                        <Link to="/contact">Contact Us</Link>
+                        <Link to="finance">Finance</Link>
+                        <Link to="about">About Us</Link>
+                        <Link to="contact">Contact Us</Link>
                     </nav>
 
                     <HeaderContact />
