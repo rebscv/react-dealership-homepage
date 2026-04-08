@@ -1,0 +1,109 @@
+/* =========================
+   Embla General Style
+========================= */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.embla__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0000008c;
+}
+
+.embla__slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================
+   Hero Banner
+========================= */
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-slider .embla__slide img {
+  height: calc(100vh - 74px);
+}
+
+.embla__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0000008c, transparent);
+  width: 75%;
+}
+
+.hero-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: calc(100% - 48px);
+  height: calc(100% - 48px);
+  padding: var(--padding-tb) var(--padding-lr);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-text {
+  max-width: var(--std-wrapper);
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  text-align: center;
+}
+
+.hero-text h1, .hero-text h2, .hero-text h3, .hero-text p {
+  margin: 0;
+}
+
+.slide-dark {
+  color: #fff;
+}
+
+@media (min-width:1024px) {
+
+  .hero-text-top .hero-text-container {
+    align-items: flex-start;
+  }
+
+  .hero-text-bottom .hero-text-container {
+    align-items: flex-end;
+  }
+
+  .hero-text-bottom .hero-text, .hero-text-top .hero-text {
+    text-align: left;
+  }
+
+}
+
+@media (min-width:1900px) {
+
+  .hero-text-container {
+    width: calc(100% - 96px);
+    height: calc(100% - 96px);
+    padding: var(--padding-tb-d) var(--padding-lr-d);
+  }
+    
+  .hero-slider .embla__slide img {
+    height: calc(100vh - 95px);
+  }
+
+}

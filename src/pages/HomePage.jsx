@@ -1,16 +1,23 @@
+import { useLocation } from "react-router-dom";
 
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
+import HeroSlider from "../components/Hero/HeroSlider";
 import QuickLinks from "../components/QuickLinks/QuickLinks";
 import FeaturedVehicles from "../components/FeaturedVehicles/FeaturedVehicles";
 import Footer from "../components/Footer/Footer";
 
 function HomePage() {
+
+  const location = useLocation();
+  const isVersion2 = location.pathname.includes("version-2");
+
   return (
     <>
       <div className="container">
 
-        <Hero />
+        {isVersion2 ? <HeroSlider /> : <Hero />}
+
         <QuickLinks />
         <FeaturedVehicles />
 

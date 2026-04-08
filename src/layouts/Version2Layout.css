@@ -18,6 +18,13 @@
   padding: var(--padding-tb) var(--padding-lr);
 }
 
+@media (min-width:1024px) {
+
+  .version-2 .std-wrapper {
+    padding: var(--padding-tb-d) var(--padding-lr-d);
+  }
+
+}
 
 /* =========================
    Grid Columns Layout
