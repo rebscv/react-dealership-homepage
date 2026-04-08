@@ -1,4 +1,4 @@
-import useEmblaCarousel from "embla-carousel-react";
+import useEmblaWithDots from "../../hooks/useEmblaCarouselWithDots";
 import "./HeroSlider.css";
 
 import heroImage1 from "../../assets/images/banners/bt-50-hero-slide.webp";
@@ -41,7 +41,8 @@ const slider = [
 ];
 
 function HeroSlider() {
-    const [emblaRef] = useEmblaCarousel({ loop: true });
+
+    const { emblaRef, emblaApi, selectedIndex, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true }, 4000);
 
     return (
         <section className="hero-slider">
@@ -66,6 +67,33 @@ function HeroSlider() {
 
                 </div>
             </div>
+
+            <div className="embla__dots__container">
+                <div className="embla__dots">
+                    {slider.map((_, index) => (
+
+                        <button key={index} className={`embla__dot ${index === selectedIndex ? "is-active" : ""}`} onClick={() => {scrollTo(index); resetAutoplay();}} >
+                            {index === selectedIndex && (<span className="embla__dot-progress" />)}
+                        </button>
+
+                    ))}
+                </div>
+            </div>
+
+            <div className="embla__arrows__container">
+
+                <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
+                    Previous                    
+                </button>
+
+                <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
+                    Next                    
+                </button>
+
+            </div>
+            
+
+
         </section>
     )
 

@@ -36,3 +36,130 @@ h1 {
   margin: 0 auto;
   max-width: var(--std-wrapper);
 }
+
+
+/* =========================
+   Embla General Style
+========================= */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.embla__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0000008c;
+}
+
+.embla__slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   Embla General Style
+========================= */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+
+/* Slide */
+.embla__slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.embla__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0000008c;
+}
+
+.embla__slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* Dots */
+.embla__dots {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.embla__dots__container {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.embla__dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0000005e;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.embla__dot.is-active {
+  background: #666666;
+}
+
+.embla__dot-progress {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform-origin: left;
+  animation: emblaProgress 4s linear forwards;
+}
+
+/* animation */
+@keyframes emblaProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+/* Arrows */
+.embla__prev, .embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--padding-lr);
+  cursor: pointer;
+}
+
+.embla__next {
+  left: auto;
+  right: var(--padding-lr);
+}
