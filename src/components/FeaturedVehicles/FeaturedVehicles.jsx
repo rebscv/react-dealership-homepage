@@ -6,7 +6,7 @@ import vehicles from "../../data/vehicles";
 function FeaturedVehicles() {
 
     return (
-        <section>
+        <section className="featured-vehicles">
             <div className="std-wrapper">
 
                 <h2>Featured Vehicles</h2>

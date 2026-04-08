@@ -1,31 +1,26 @@
-
-
 :root {
 	--std-wrapper: 1200px;
 	--padding-lr: 24px;
 	--padding-tb: 24px;
+	--padding-lr-d: 48px;
+	--padding-tb-d: 48px;
+
+  --grid-gap: 8px;
+  --grid-gap-d: 24px;
+
+  /* Colours */
+  --clr-nav: #000000;
+
+
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -38,8 +33,6 @@ h1 {
 }
 
 .std-wrapper {
-  width: 100%;
   margin: 0 auto;
   max-width: var(--std-wrapper);
-  padding: var(--padding-tb) var(--padding-lr);
 }

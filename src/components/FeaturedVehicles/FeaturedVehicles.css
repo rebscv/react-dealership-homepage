@@ -15,3 +15,7 @@
 .vehicle-card img {
   width: 100%;
 }
+
+.version-2 .featured-vehicles {
+  overflow-x: hidden;
+}

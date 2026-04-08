@@ -1,4 +1,5 @@
 import QuickLinkCard from "./QuickLinkCard"
+import "./QuickLinks.css"
 
 function QuickLinks() {
   const links = [
@@ -28,14 +29,20 @@ function QuickLinks() {
     <section className="quicklinks">
 
       <div className="std-wrapper">
-        {links.map((link, index) => (
-          <QuickLinkCard
-            key={link.id}
-            title={link.title}
-            description={link.description}
-            url={link.url}
-          />
-        ))}
+
+        <div className="grid-d-three-cols">
+
+          {links.map((link, index) => (
+            <QuickLinkCard
+              key={link.id}
+              title={link.title}
+              description={link.description}
+              url={link.url}
+            />
+          ))}
+
+        </div>
+
       </div>
 
     </section>

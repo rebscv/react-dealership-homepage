@@ -1,0 +1,54 @@
+/* =========================
+   General Style
+========================= */
+
+.version-2 a {
+  text-decoration: none;
+}
+
+.version-2 {
+  line-height: 1.65em;
+}
+
+/* =========================
+   Wrapper
+========================= */
+
+.version-2 .std-wrapper {
+  padding: var(--padding-tb) var(--padding-lr);
+}
+
+
+/* =========================
+   Grid Columns Layout
+========================= */
+
+.version-2 .grid-d-two-cols, .version-2 .grid-d-three-cols, .version-2 .grid-d-four-cols, .grid-d-five-cols {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+
+.version-2 .grid-d-three-cols > div {
+
+}
+
+@media (min-width:1024px) {
+  
+  .version-2 .grid-d-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .version-2 .grid-d-four-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .version-2 .grid-d-five-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+
+
+
