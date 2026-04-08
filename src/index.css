@@ -165,12 +165,33 @@ h1 {
 
 /* Slide Responsiveness */
 
-@media (min-width:1024px) {
-
-  .version-2 .embla .grid-d-two-cols {
+  .version-2 .embla .embla__container {
     display: flex;
     gap: 0;
   }
+
+  .version-2 .embla .embla__container > div {
+    flex: 0 0 100%;;
+  }
+  
+
+@media (min-width:480px) {
+
+  .version-2 .embla .grid-t-two-cols > div {
+    flex: 0 0 50%;;
+  }
+
+}
+
+@media (min-width:768px) {
+
+  .version-2 .embla .grid-l-two-cols > div {
+    flex: 0 0 50%;;
+  }
+
+}
+
+@media (min-width:1024px) {
 
   .version-2 .embla .grid-d-two-cols > div {
     flex: 0 0 50%;;
