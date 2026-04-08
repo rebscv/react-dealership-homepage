@@ -1,7 +1,7 @@
 
 
 /* =========================
-   Hero Banner
+   Hero Slider
 ========================= */
 
 .hero-slider {
@@ -12,7 +12,7 @@
   height: calc(100vh - 74px);
 }
 
-.embla__slide::after {
+.hero-slider .embla__slide::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -20,6 +20,15 @@
   width: 75%;
 }
 
+.hero-slider .embla__dots__container {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* Text */
 .hero-text-container {
   position: absolute;
   top: 0;

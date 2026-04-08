@@ -32,6 +32,24 @@ const vehicles = [
     image   : mx5,
   },
 
+  {
+    id      : 4,
+    title   : "Mazda CX-80 Slide 4",
+    price   : 69990,
+    year    : 2026,
+    mileage : 3000,
+    image   : cx80,
+  },
+
+  {
+    id      : 5,
+    title   : "Mazda BT-50 Ute Slide 5",
+    price   : 78990,
+    year    : 2026,
+    mileage : 20000,
+    image   : bt50,
+  }
+
 ]
 
 export default vehicles;

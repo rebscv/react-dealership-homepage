@@ -1,9 +1,12 @@
+import useEmblaCarouselWithDots from "embla-carousel-react";
+
 import VehicleCard from "../VehicleCard/VehicleCard";
 import "./FeaturedVehicles.css";
 import vehicles from "../../data/vehicles";
 
 
 function FeaturedVehicles() {
+    
 
     return (
         <section className="featured-vehicles">

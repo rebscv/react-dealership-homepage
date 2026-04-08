@@ -35,6 +35,9 @@
   gap: var(--grid-gap);
 }
 
+.version-2 .grid-d-two-cols > div, .version-2 .grid-d-three-cols > div, .version-2 .grid-d-four-cols > div, .grid-d-five-cols > div {
+  grid-column: span 1;
+}
 
 .version-2 .grid-d-three-cols > div {
 
@@ -42,6 +45,9 @@
 
 @media (min-width:1024px) {
   
+  .version-2 .grid-d-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .version-2 .grid-d-three-cols {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -55,6 +61,7 @@
   }
 
 }
+
 
 
 

@@ -47,6 +47,7 @@ function HeroSlider() {
     return (
         <section className="hero-slider">
             <div className="embla" ref={emblaRef}>
+
                 <div className="embla__container">
 
                     {slider.map((slide) => (
@@ -66,32 +67,33 @@ function HeroSlider() {
                     ))}
 
                 </div>
-            </div>
 
-            <div className="embla__dots__container">
-                <div className="embla__dots">
-                    {slider.map((_, index) => (
+                <div className="embla__dots__container">
+                    <div className="embla__dots">
+                        {slider.map((_, index) => (
 
-                        <button key={index} className={`embla__dot ${index === selectedIndex ? "is-active" : ""}`} onClick={() => {scrollTo(index); resetAutoplay();}} >
-                            {index === selectedIndex && (<span className="embla__dot-progress" />)}
-                        </button>
+                            <button key={index} className={`embla__dot ${index === selectedIndex ? "is-active" : ""}`} onClick={() => {scrollTo(index); resetAutoplay();}} >
+                                {index === selectedIndex && (<span className="embla__dot-progress" />)}
+                            </button>
 
-                    ))}
+                        ))}
+                    </div>
                 </div>
+
+                <div className="embla__arrows__container">
+
+                    <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
+                        Previous                    
+                    </button>
+
+                    <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
+                        Next                    
+                    </button>
+
+                </div>
+
             </div>
-
-            <div className="embla__arrows__container">
-
-                <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
-                    Previous                    
-                </button>
-
-                <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
-                    Next                    
-                </button>
-
-            </div>
-            
+          
 
 
         </section>

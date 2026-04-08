@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import HeroSlider from "../components/Hero/HeroSlider";
 import QuickLinks from "../components/QuickLinks/QuickLinks";
 import FeaturedVehicles from "../components/FeaturedVehicles/FeaturedVehicles";
+import FeaturedVehiclesSlider from "../components/FeaturedVehicles/FeaturedVehiclesSlider";
 import Footer from "../components/Footer/Footer";
 
 function HomePage() {
@@ -19,7 +20,8 @@ function HomePage() {
         {isVersion2 ? <HeroSlider /> : <Hero />}
 
         <QuickLinks />
-        <FeaturedVehicles />
+
+        {isVersion2 ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
 
         <section>
           <div className="std-wrapper">

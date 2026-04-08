@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 export default function useEmblaWithDots(options = {}, autoplayDelay = 0) {
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const [scrollSnaps, setScrollSnaps] = useState([]);
     const autoplayRef = useRef(null);
 
 
@@ -14,10 +15,22 @@ export default function useEmblaWithDots(options = {}, autoplayDelay = 0) {
             setSelectedIndex(emblaApi.selectedScrollSnap());
         };
 
+        const onInit = () => {
+            const snaps = emblaApi.scrollSnapList();
+            setScrollSnaps(Array.isArray(snaps) ? snaps : []);
+        };
+
         emblaApi.on("select", onSelect);
+        emblaApi.on("reInit", onInit);
+
+        onInit();
         onSelect();
 
-        return () => emblaApi.off("select", onSelect);
+        return () => {
+            emblaApi.off("select", onSelect);
+            emblaApi.off("reInit", onInit);
+        };
+
     }, [emblaApi]);
 
 
@@ -30,6 +43,23 @@ export default function useEmblaWithDots(options = {}, autoplayDelay = 0) {
         }, autoplayDelay); 
 
         return () => clearInterval(autoplayRef.current);
+
+    }, [emblaApi, autoplayDelay]);
+
+
+    useEffect(() => {
+        
+        if (!emblaApi || !autoplayDelay) return;
+
+        const handleInteraction = () => { resetAutoplay(); };
+        
+        emblaApi.on("pointerDown", handleInteraction);
+        emblaApi.on("select", handleInteraction);
+
+        return () => {
+            emblaApi.off("pointerDown", handleInteraction);
+            emblaApi.off("select", handleInteraction);
+        };
 
     }, [emblaApi, autoplayDelay]);
         
@@ -62,6 +92,7 @@ export default function useEmblaWithDots(options = {}, autoplayDelay = 0) {
         emblaRef,
         emblaApi,
         selectedIndex,
+        scrollSnaps,
         scrollTo,
         resetAutoplay,
         scrollNext,

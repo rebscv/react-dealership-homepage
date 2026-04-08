@@ -1,0 +1,3 @@
+.featured-vehicles .embla__slide::after {
+  content: none;
+}

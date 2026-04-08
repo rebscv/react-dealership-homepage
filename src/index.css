@@ -74,6 +74,7 @@ h1 {
 
 .embla {
   overflow: hidden;
+  position: relative;
 }
 
 .embla__container {
@@ -110,10 +111,7 @@ h1 {
 }
 
 .embla__dots__container {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: var(--padding-tb) 0;
 }
 
 .embla__dot {
@@ -162,4 +160,20 @@ h1 {
 .embla__next {
   left: auto;
   right: var(--padding-lr);
+}
+
+
+/* Slide Responsiveness */
+
+@media (min-width:1024px) {
+
+  .version-2 .embla .grid-d-two-cols {
+    display: flex;
+    gap: 0;
+  }
+
+  .version-2 .embla .grid-d-two-cols > div {
+    flex: 0 0 50%;;
+  }
+  
 }
