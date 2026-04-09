@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Version1Layout from "./layouts/Version1Layout";
 import Version2Layout from "./layouts/Version2Layout";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 import HomePage from "./pages/HomePage"
 import Stock from "./pages/Stock";
@@ -17,6 +18,9 @@ import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
+      
+      <ScrollToTop />
+
       <Routes>
 
         <Route path="/version-1">

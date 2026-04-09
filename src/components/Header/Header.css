@@ -66,15 +66,6 @@
     display: none;
 }
 
-.version-2 .nav-item:hover .nav-submenu {
-    display: grid;
-    grid-auto-flow: row;
-    position: absolute;
-    background-color: #e5e5e5;
-    top: 48px;
-    white-space: nowrap;
-}
-
 .version-2 .nav-submenu a {
     padding: 12px;
 }
@@ -98,6 +89,15 @@
     .version-2 nav a, .version-2 nav .nav-item {
         padding: 16px 0px;
         line-height: 1;
+    }
+
+    .version-2 .nav-item:hover .nav-submenu {
+        display: grid;
+        grid-auto-flow: row;
+        position: absolute;
+        background-color: #e5e5e5;
+        top: 48px;
+        white-space: nowrap;
     }
 
 }

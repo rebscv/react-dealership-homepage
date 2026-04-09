@@ -22,7 +22,7 @@ function Version2Layout() {
         <div className="version-2">
             <Header />
             <Outlet />
-            <Footer />
+            <Footer version={2} />
         </div>
     );
 }
