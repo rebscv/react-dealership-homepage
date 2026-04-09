@@ -1,19 +1,13 @@
-.hidden {
+.version-2 .hidden, .version-2 .footer-col.hidden {
     display: none;
 }
 
-/* Make headings clickable only in V2 */
-.footer h4 {
+.version-2 .footer-col {
+    display: grid;
+}
+
+footer h4 {
     cursor: pointer;
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-    .grid-d-five-cols {
-        display: block;
-    }
 
-    .grid-d-five-cols > div {
-        margin-bottom: 20px;
-    }
-}

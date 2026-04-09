@@ -74,6 +74,21 @@
     background-color: #cccccc;
 }
 
+.version-2 .nav-submenu {
+    display: block;
+}
+
+.version-2 .hidden {
+    display: none;
+}
+
+.version-2 .nav-parent {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
 @media (min-width:1024px) {
 
     .version-2 header .std-wrapper {
@@ -89,6 +104,10 @@
     .version-2 nav a, .version-2 nav .nav-item {
         padding: 16px 0px;
         line-height: 1;
+    }
+
+    .version-2 .nav-submenu {
+        display: none;
     }
 
     .version-2 .nav-item:hover .nav-submenu {

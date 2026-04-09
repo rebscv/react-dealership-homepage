@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 import { useState, useEffect } from "react";
 
 import "./Footer.css";
@@ -53,7 +52,7 @@ function Footer({ version = 1 }) {
                         <h4 onClick={() => isAccordion && toggleSection("models")}>
                             Models {isAccordion && <span>{openSection === "models" ? "-" : "+"}</span>}
                         </h4>
-                        <div className={isAccordion && openSection !== "models" ? "hidden" : ""}>
+                        <div className={isAccordion && openSection !== "models" ? "footer-col hidden" : "footer-col"}>
                             My Model Links
                         </div>
                     </div>
@@ -62,10 +61,10 @@ function Footer({ version = 1 }) {
                         <h4 onClick={() => isAccordion && toggleSection("buy")}>
                             Buy {isAccordion && <span>{openSection === "buy" ? "-" : "+"}</span>}
                         </h4>
-                        <div className={isAccordion && openSection !== "buy" ? "hidden" : ""}>
-                            <Link to={`${basePath}/stock`}>Stock</Link>
-                            <Link to={`${basePath}/offers`}>Latest Offers</Link>
-                            <Link to={`${basePath}/finance`}>Finance</Link>
+                        <div className={isAccordion && openSection !== "buy" ? "footer-col hidden" : "footer-col"}>
+                            <Link to="stock">Stock</Link>
+                            <Link to="offers">Latest Offers</Link>
+                            <Link to="finance">Finance</Link>
                         </div>
                     </div>
 
@@ -73,9 +72,9 @@ function Footer({ version = 1 }) {
                         <h4 onClick={() => isAccordion && toggleSection("own")}>
                             Own {isAccordion && <span>{openSection === "own" ? "-" : "+"}</span>}
                         </h4>
-                        <div className={isAccordion && openSection !== "own" ? "hidden" : ""}>
-                            <Link to={`${basePath}/book-a-service`}>Book a Service</Link>
-                            <Link to={`${basePath}/parts`}>Parts</Link>
+                        <div className={isAccordion && openSection !== "own" ? "footer-col hidden" : "footer-col"}>
+                            <Link to="book-a-service">Book a Service</Link>
+                            <Link to="parts">Parts</Link>
                         </div>
                     </div>
 
@@ -83,9 +82,9 @@ function Footer({ version = 1 }) {
                         <h4 onClick={() => isAccordion && toggleSection("discover")}>
                             Discover {isAccordion && <span>{openSection === "discover" ? "-" : "+"}</span>}
                         </h4>
-                        <div className={isAccordion && openSection !== "discover" ? "hidden" : ""}>
-                            <Link to={`${basePath}/about`}>About Us</Link>
-                            <Link to={`${basePath}/contact`}>Contact Us</Link>
+                        <div className={isAccordion && openSection !== "discover" ? "footer-col hidden" : "footer-col"}>
+                            <Link to="about">About Us</Link>
+                            <Link to="contact">Contact Us</Link>
                         </div>
                     </div>    
 

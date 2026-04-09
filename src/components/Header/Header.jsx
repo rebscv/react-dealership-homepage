@@ -28,7 +28,7 @@ function Header() {
     }, [menuOpen]);
 
     const closeMenu = () => {
-        setMenuOpen(fasle);
+        setMenuOpen(false);
     };
 
     return (

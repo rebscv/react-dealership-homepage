@@ -1,6 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function HeaderNavbar({ closeMenu }) {
+
+    const [openSubmenu, setOpenSubmenu] = useState(null);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => { setIsMobile(window.innerWidth < 768); }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const toggleSubmenu = (menu) => { setOpenSubmenu(openSubmenu === menu ? null : menu) };
+
+    const handleParentClick = (menu) => (e) => {
+        if (isMobile) { e.preventDefault(); toggleSubmenu(menu); }
+    };
+
+    useEffect(() => { if (!isMobile) { setOpenSubmenu(null); }}, [isMobile]);
+    
+    
     return (
 
         <nav>
@@ -8,14 +28,19 @@ function HeaderNavbar({ closeMenu }) {
             <Link to="stock" onClick={closeMenu}>Stock</Link>
             <Link to="offers" onClick={closeMenu}>Latest Offers</Link>
 
+
+
             <div className="nav-item">
-                <Link to="service" onClick={closeMenu}>Service</Link>
-                <div className="nav-submenu">
-                    <Link to="service" onClick={closeMenu}>Service Overview</Link>
-                    <Link to="book-a-service" onClick={closeMenu}>Book a Service</Link>
-                    <Link to="parts" onClick={closeMenu}>Parts</Link>
+                <NavLink to="service" onClick={handleParentClick("service")}>
+                    Service
+                </NavLink>
+
+                <div className={`nav-submenu ${isMobile && openSubmenu !== "service" ? "hidden" : ""}`}>
+                    <NavLink to="service" onClick={closeMenu}>Service Overview</NavLink>
+                    <NavLink to="book-a-service" onClick={closeMenu}>Book a Service</NavLink>
+                    <NavLink to="parts" onClick={closeMenu}>Parts</NavLink>
                 </div>
-            </div>                
+            </div>       
             
             <Link to="finance" onClick={closeMenu}>Finance</Link>
             <Link to="about" onClick={closeMenu}>About Us</Link>
