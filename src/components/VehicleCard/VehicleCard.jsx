@@ -1,7 +1,12 @@
 import "./VehicleCard.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function VehicleCard({ id, image, title, price, year, mileage }) {
+
+    const location = useLocation();
+
+    const match = location.pathname.match(/^\/(version-\d+)/);
+    const basePath = match ? `/${match[1]}` : "";
 
     return (
         <div className="vehicle-card">
@@ -16,7 +21,7 @@ function VehicleCard({ id, image, title, price, year, mileage }) {
                     <span>{mileage.toLocaleString()} km</span>
                 </div>
 
-                <Link to={`/vehicle/${id}`}>
+                <Link to={`${basePath}/vehicle/${id}`}>
                     <button>View Details</button>
                 </Link>
             </div>
