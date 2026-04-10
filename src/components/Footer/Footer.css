@@ -10,4 +10,7 @@ footer h4 {
     cursor: pointer;
 }
 
+.version-1 footer {
+    background-color: #181818;
+}
 

@@ -12,6 +12,9 @@ const vehicles = [
     year    : 2026,
     mileage : 3000,
     image   : cx80,
+    bodytype : "Sedan",
+    fuel : "Unleaded",
+    transmission : "Auto",
   },
 
   {
@@ -21,6 +24,9 @@ const vehicles = [
     year    : 2026,
     mileage : 20000,
     image   : bt50,
+    bodytype : "Sedan",
+    fuel : "Unleaded",
+    transmission : "Auto",
   },
 
   {
@@ -30,6 +36,9 @@ const vehicles = [
     year    : 2026,
     mileage : 7500,
     image   : mx5,
+    bodytype : "Sedan",
+    fuel : "Unleaded",
+    transmission : "Auto",
   },
 
   {
@@ -39,6 +48,9 @@ const vehicles = [
     year    : 2026,
     mileage : 3000,
     image   : cx80,
+    bodytype : "Sedan",
+    fuel : "Unleaded",
+    transmission : "Auto",
   },
 
   {
@@ -48,6 +60,9 @@ const vehicles = [
     year    : 2026,
     mileage : 20000,
     image   : bt50,
+    bodytype : "Sedan",
+    fuel : "Unleaded",
+    transmission : "Auto",
   }
 
 ]

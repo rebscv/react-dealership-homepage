@@ -1,0 +1,34 @@
+.version-2 .vehicle-details-content img {
+    width: 100%;
+}
+.version-2 .vd-price h2 {
+    font-size: 2em;
+}
+
+.version-2 .vd-specs-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.version-2 .vd-specs-content > div {
+    display: grid;
+}
+
+.version-2 .vd-specs-row > div:first-child {
+    font-size: 0.8em;
+}
+
+.version-2 .vd-form {
+    display: grid;
+    gap: 24px;
+}
+
+.version-2 .vd-form-row {
+    display: grid;
+    gap: 8px;
+}
+
+.version-2 .vd-form input, .version-2 .vd-form textarea {
+    width: 100%;
+}

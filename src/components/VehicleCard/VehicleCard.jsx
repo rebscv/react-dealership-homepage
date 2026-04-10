@@ -10,7 +10,10 @@ function VehicleCard({ id, image, title, price, year, mileage }) {
 
     return (
         <div className="vehicle-card">
-            <img src={image} alt={title} />
+            <Link to={`${basePath}/vehicle/${id}`}>
+                <img src={image} alt={title} />
+            </Link>
+            
 
             <div className="vehicle-info">
                 <h3>{title}</h3>

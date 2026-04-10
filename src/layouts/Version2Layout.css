@@ -43,6 +43,18 @@
 
 }
 
+@media (min-width:576px) {
+
+  .version-2 .grid-t-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .version-2 .grid-t-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
 @media (min-width:768px) {
 
   .version-2 .grid-l-two-cols {

@@ -14,7 +14,7 @@ function FeaturedVehicles() {
 
                 <h2>Featured Vehicles</h2>
 
-                <div className="vehicle-grid">
+                <div className="grid-d-three-cols grid-t-two-cols">
                     {vehicles.map((car) => (
                         <VehicleCard key={car.id} {...car} />
                     ))}
