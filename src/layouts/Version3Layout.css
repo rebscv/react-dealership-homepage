@@ -1,0 +1,107 @@
+/* =========================
+   General Style
+========================= */
+
+.version-3 {
+  font-family: MazdaTypeTT;
+  line-height: 1.65em;
+}
+
+.version-3 a {
+  text-decoration: none;
+}
+
+.version-3 {
+  
+}
+
+@media (min-width:1024px) {
+
+  .version-3-body {
+    padding-top: 138px;
+  }
+    
+}
+
+
+
+/* =========================
+   Wrapper
+========================= */
+
+.version-3 .std-wrapper {
+  padding: var(--padding-tb) var(--padding-lr);
+}
+
+@media (min-width:1024px) {
+
+  .version-3 .std-wrapper {
+    padding: var(--padding-tb-d) var(--padding-lr-d);
+  }
+
+}
+
+/* =========================
+   Grid Columns Layout
+========================= */
+
+.version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.version-3 .grid-d-two-cols > div, .version-3 .grid-d-three-cols > div, .version-3 .grid-d-four-cols > div, .grid-d-five-cols > div {
+  grid-column: span 1;
+}
+
+.version-3 .grid-d-three-cols > div {
+
+}
+
+@media (min-width:576px) {
+
+  .version-3 .grid-t-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .version-3 .grid-t-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (min-width:768px) {
+
+  .version-3 .grid-l-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .version-3 .grid-l-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (min-width:1024px) {
+  
+  .version-3 .grid-d-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .version-3 .grid-d-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .version-3 .grid-d-four-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .version-3 .grid-d-five-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+
+
+
+

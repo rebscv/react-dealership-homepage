@@ -28,13 +28,10 @@ function HeaderNavbar({ closeMenu }) {
             <Link to="stock" onClick={closeMenu}>Stock</Link>
             <Link to="offers" onClick={closeMenu}>Latest Offers</Link>
 
-
-
             <div className="nav-item">
                 <NavLink to="service" onClick={handleParentClick("service")}>
                     Service
                 </NavLink>
-
                 <div className={`nav-submenu ${isMobile && openSubmenu !== "service" ? "hidden" : ""}`}>
                     <NavLink to="service" onClick={closeMenu}>Service Overview</NavLink>
                     <NavLink to="book-a-service" onClick={closeMenu}>Book a Service</NavLink>

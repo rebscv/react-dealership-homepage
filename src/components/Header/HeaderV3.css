@@ -1,0 +1,272 @@
+/* =========================
+   3.0 Header - Version 3
+========================= */
+
+.header-v3  {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+.version-3 .header-grid {
+    display: grid;
+    gap: 24px;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.version-3 .header-title {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.version-3 .header-title h2 {
+    margin: 0;
+}
+
+.version-3 .header-container {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--header-bg);
+    transition: ease 0.6s all;
+}
+
+.version-3 .scrolled .header-container {
+    top: 0;
+}
+
+@media (min-width:1024px) {
+    
+    .version-3 .header-container {
+        top: 35px;
+    }
+
+}
+
+/* =========================
+   3.2 Header - Navigation Bar
+========================= */
+
+.menu-mobile {
+    display: none;
+}
+
+.version-3 .navbar {
+    display: none;
+}
+
+.version-3 nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 24px;
+    justify-content: center;
+}
+
+.version-3 nav a {
+    color: var(--clr-wgite);
+}
+
+.version-3 nav a, .version-3 nav .nav-item {
+    
+}
+
+.version-3 nav .nav-item > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.version-3 nav .nav-item {
+    position: relative;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+.version-3 .nav-submenu a {
+    padding: 12px;
+}
+
+.version-3 .nav-submenu a:hover {
+    background-color: #cccccc;
+}
+
+.version-3 .nav-submenu {
+    display: block;
+}
+
+.version-3 .hidden {
+    display: none;
+}
+
+.version-3 .nav-parent {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+@media (min-width:1024px) {
+
+    .version-3 .header-v3 .std-wrapper {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .version-3 .navbar {
+        display: block;
+        z-index: 10;
+        margin-left: auto;
+    }
+
+    .version-3 nav a, .version-3 nav .nav-item {
+        padding: 16px 0px;
+        line-height: 1;
+    }
+
+    .version-3 .nav-submenu {
+        display: none;
+    }
+
+    .version-3 .nav-item:hover .nav-submenu {
+        display: grid;
+        grid-auto-flow: row;
+        position: absolute;
+        background-color: #e5e5e5;
+        top: 48px;
+        white-space: nowrap;
+    }
+
+    .version-3 nav a, .version-3 nav .nav-item {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================
+   3.3 Header - Mobile Navmenu
+========================= */
+
+.version-3 .menu-mobile {
+    display: none;
+    z-index: 11;
+    position: fixed;
+    top: 74px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+
+body.version-3-body.show-mobile-menu {
+    overflow-y: hidden;
+}
+
+.version-3-body.show-mobile-menu .version-3 .menu-mobile {
+    display: block;
+}
+
+.version-3 .menu-mobile nav {
+    grid-auto-flow: row;
+    justify-content: start;
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 32px 0 128px;
+}
+
+.version-3 .menu-mobile nav a {
+    padding: 8px 24px;
+    display: block;
+}
+
+.version-3 .menu-mobile nav, .version-3 .menu-mobile .nav-item {
+    grid-column: span 1;
+}
+
+.version-3 .menu-button-mobile {
+    display: block;
+}
+
+@media (min-width:1024px) {
+
+    .version-3 .menu-button-mobile {
+        display: none;
+    }
+        
+}
+
+
+/* =========================
+   3.0 Header - Top Header
+========================= */
+
+.top-header-container {
+    border-bottom: solid 1px #1c1c1c;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--header-bg);
+    transition: ease 0.6s all;
+}
+
+.scrolled .top-header-container {
+    transform: translateY(-100%);
+}
+
+.top-header-grid {
+    display: grid;
+    gap: 24px;
+    grid-auto-flow: column;
+    justify-content: end;
+}
+
+.top-header-container {
+    display: none;
+}
+
+
+
+@media (min-width:1024px) {
+
+    .header-v3 .top-header-container .std-wrapper {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+}
+
+
+/* =========================
+   3.4 Header - Header Contact
+========================= */
+
+.version-3 .header-contact-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.version-3 .header-contact {
+    font-size: 12px;
+}
+
+
+@media (min-width:1024px) {
+
+    .version-3 .top-header-container {
+        display: block;
+    }
+
+    .version-3 .header-contact {
+        grid-template-columns: auto 1fr;
+        display: grid;
+        gap: 16px;
+    }
+    
+}

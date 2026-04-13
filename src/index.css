@@ -1,5 +1,5 @@
 :root {
-	--std-wrapper: 1200px;
+	--std-wrapper: 1800px;
 	--padding-lr: 24px;
 	--padding-tb: 24px;
 	--padding-lr-d: 48px;
@@ -9,7 +9,17 @@
   --grid-gap-d: 24px;
 
   /* Colours */
+  --clr-white: #ffffff;
+  
+  --clr-grey: #2a2a2a;
+  --clr-grey-lt: #505050;
+  --clr-grey-dk: #040404;
+
+
   --clr-nav: #000000;
+
+  --header-text: #ffffff;
+  --header-bg: #101010;
 
 
 
@@ -22,6 +32,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+    font-family: MazdaTypeTT;
+    font-display: block;
+    src: url(assets/fonts/MazdaTypeTT-Regular.woff2) format("woff2"), url(assets/fonts/MazdaTypeTT-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* SVG */
+[class*=" icon-"],[class^=icon-]{display:inline-block;width:1em;height:1em;stroke-width:0;stroke:currentColor;fill:currentColor}
 
 body {
   margin: 0;

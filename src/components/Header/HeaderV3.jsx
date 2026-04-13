@@ -4,11 +4,23 @@ import { useState, useEffect } from "react";
 import HeaderNavbar from "./HeaderNavbar";
 import HeaderContact from "./HeaderContact";
 
-import "./Header.css"
+import logo from "../../assets/images/logo.svg";
 
-function Header({ version }) {
+import "./HeaderV3.css"
 
+function HeaderV3() {
+
+    const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => { setScrolled(window.scrollY > 50); };
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+
     const toggleMenu = () => { setMenuOpen(!menuOpen); };
 
     useEffect(() => {
@@ -17,27 +29,31 @@ function Header({ version }) {
         return () => { document.body.classList.remove("show-mobile-menu"); };
     }, [menuOpen]);
 
-    const closeMenu = () => {
-        setMenuOpen(false);
-    };
+    const closeMenu = () => { setMenuOpen(false); };
+
 
     return (
-        <header>
+        <header className={`header-v3 ${scrolled ? "scrolled" : ""}`}>
+
+            <div className="top-header-container">
+                <div className="std-wrapper">
+                    <div className="top-header-grid"><HeaderContact /></div>
+                </div>
+            </div>
 
             <div className="header-container">
                 <div className="std-wrapper">
                     <div className="header-grid">
 
                         <div className="header-title">
-                            <h2>Dealership</h2>
+                            <img src={logo} alt="" width="78" height="71" />
+                            <h2>Dealer Name City</h2>
                         </div>
 
                         <div className="navbar">
                             <HeaderNavbar closeMenu={closeMenu} />
                         </div>
-                        
-
-                        <HeaderContact />
+                                               
 
                         <div className="menu-button-mobile" id="menu-btn" onClick={toggleMenu}>
                             <button>+</button>
@@ -55,4 +71,4 @@ function Header({ version }) {
     );
 }
 
-export default Header;
+export default HeaderV3;
