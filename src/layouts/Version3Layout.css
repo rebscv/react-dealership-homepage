@@ -11,8 +11,8 @@
   text-decoration: none;
 }
 
-.version-3 {
-  
+.version-3-body {
+  padding-top: 68px;
 }
 
 @media (min-width:1024px) {

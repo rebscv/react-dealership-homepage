@@ -56,7 +56,7 @@ function HeaderV3() {
                                                
 
                         <div className="menu-button-mobile" id="menu-btn" onClick={toggleMenu}>
-                            <button>+</button>
+                            <svg className="icon-menu"><use href="/icons.svg#icon-menu"></use></svg>
                         </div>
 
                     </div>

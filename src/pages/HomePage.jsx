@@ -12,16 +12,17 @@ function HomePage() {
 
   const location = useLocation();
   const isVersion2 = location.pathname.includes("version-2");
+  const isVersion3 = location.pathname.includes("version-3");
 
   return (
     <>
       <div className="container">
 
-        {isVersion2 ? <HeroSlider /> : <Hero />}
+        {(isVersion2 || isVersion3) ? <HeroSlider /> : <Hero />}
 
         <QuickLinks />
 
-        {isVersion2 ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
+        {(isVersion2 || isVersion3) ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
 
         <section>
           <div className="std-wrapper">
