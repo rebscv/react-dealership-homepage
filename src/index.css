@@ -5,11 +5,23 @@
 	--padding-lr-d: 48px;
 	--padding-tb-d: 48px;
 
-  --grid-gap: 8px;
+  --grid-gap: 24px;
   --grid-gap-d: 24px;
 
+  --hero-gap: 12px;
+  --hero-gap-d: 12px;
+
+  --font-mazda: MazdaTypeTT;
+
+
   /* Colours */
+
+  --clr-primary: #910a2d;
+  --clr-primary-lt: #B73053;
+  --clr-primary-dk: #6B0007;
+
   --clr-white: #ffffff;
+  --clr-black: #101010;
   
   --clr-grey: #2a2a2a;
   --clr-grey-lt: #505050;
@@ -58,36 +70,27 @@ h1 {
   max-width: var(--std-wrapper);
 }
 
-
-/* =========================
-   Embla General Style
-========================= */
-
-.embla {
-  overflow: hidden;
+.btn, a.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: MazdaTypeTT;
+  cursor: pointer;
+  letter-spacing: 0.25em;
+  transition: ease 0.4s all;
 }
 
-.embla__container {
-  display: flex;
+.btn-primary, a.btn-primary {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
 }
 
-.embla__slide {
-  flex: 0 0 100%;
-  position: relative;
+.btn-primary:hover, a.btn-primary:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-black);
 }
 
-.embla__slide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #0000008c;
-}
-
-.embla__slide img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
 
 /* =========================
    Embla General Style
@@ -101,7 +104,6 @@ h1 {
 .embla__container {
   display: flex;
 }
-
 
 /* Slide */
 .embla__slide {
@@ -122,13 +124,12 @@ h1 {
   object-fit: cover;
 }
 
-
 /* Dots */
 .embla__dots {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .embla__dots__container {
@@ -137,17 +138,19 @@ h1 {
 
 .embla__dot {
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #0000005e;
+  background: transparent;
   overflow: hidden;
   border: none;
   cursor: pointer;
+  border: solid 2px #ffffff8f;
 }
 
 .embla__dot.is-active {
-  background: #666666;
+  background: transparent;
+  border: solid 2px #ffffff;
 }
 
 .embla__dot-progress {

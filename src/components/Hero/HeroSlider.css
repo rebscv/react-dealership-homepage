@@ -1,4 +1,102 @@
 
+/* =========================
+   Hero Slider Version 3
+========================= */
+
+.version-3 .embla__prev, .version-3 .embla__next {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.version-3 .embla__prev svg, .version-3 .embla__next svg {
+  padding: 12px 14px 12px 10px;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: ease 0.4s all;
+}
+
+.version-3 .embla__next svg {
+  padding: 12px 10px 12px 14px;
+}
+
+.version-3 .embla__prev:hover svg, .version-3 .embla__next:hover svg {
+  background-color: #ffffff4a;
+  border-color: transparent;
+}
+
+.version-3 .hero-text {
+  text-transform: uppercase;
+  gap: var(--hero-gap);
+}
+
+.version-3 .hero-text h2 {
+  font-size: 0.8em;
+}
+
+.version-3 .hero-text p {
+  font-size: 2em;
+}
+
+
+.version-3 .hero-text h2, .version-3 .hero-text p {
+  margin: 0;
+  line-height: 1em;
+}
+
+.version-3 .hero-slider .embla__slide img {
+  height: auto;
+  max-height: 540px;
+}
+
+
+@media (min-width:768px) {
+
+  .version-3 .hero-slider .embla__slide img {
+    height: calc(100vh - 68px);
+    max-height: none;
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .version-3 .hero-text {
+    gap: var(--hero-gap-d);
+  }
+
+  .version-3 .hero-text h2 {
+    font-size: 1.25em;
+  }
+
+  .version-3 .hero-text p {
+    font-size: 3.5em;
+  }
+
+  .version-3 .hero-text h2, .version-3 .hero-text p {
+    line-height: 1em;
+  }
+
+  .version-3 .hero-slider .embla__slide img {
+    height: calc(100vh - 138px);
+  }
+  
+}
+
+@media (min-width:1600px) {
+
+  .hero-slider .embla__slide img {
+    height: calc(100vh - 138px);
+  }
+  
+}
+
+
+
+
+
 
 /* =========================
    Hero Slider
@@ -83,7 +181,7 @@
   }
     
   .hero-slider .embla__slide img {
-    height: calc(100vh - 95px);
+    height: calc(100vh - 138px);
   }
 
 }

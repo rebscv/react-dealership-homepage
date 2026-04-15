@@ -16,7 +16,7 @@ const slider = [
         title: "NEW MAZDA BT-50 UTE",
         subtitle: "Go all in. Get More Out.",
         buttonText: "Explore Now",
-        className: "slide-dark hero-text-bottom",
+        className: "slide-dark",
         image: heroImage1,
         imageMobile: heroImageMobile1,
     },
@@ -25,7 +25,7 @@ const slider = [
         title: "Mazda CX-5",
         subtitle: "The next generation is here.",
         buttonText: "Explore Now",
-        className: "slide-dark hero-text-top",
+        className: "slide-dark",
         image: heroImage2,
         imageMobile: heroImageMobile2,
     },
@@ -60,7 +60,7 @@ function HeroSlider() {
                                 <div className="hero-text">
                                     <h2>{slide.title}</h2>
                                     <p>{slide.subtitle}</p>
-                                    <div><button>{slide.buttonText}</button></div>
+                                    <div><button class="btn btn-primary">{slide.buttonText}</button></div>
                                 </div>
                             </div>
                         </div>
@@ -83,11 +83,11 @@ function HeroSlider() {
                 <div className="embla__arrows__container">
 
                     <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
-                        Previous                    
+                        <svg className="icon-arrow-left"><use href="/icons.svg#icon-arrow-left"></use></svg>
                     </button>
 
                     <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
-                        Next                    
+                        <svg className="icon-arrow-right"><use href="/icons.svg#icon-arrow-right"></use></svg>                   
                     </button>
 
                 </div>
