@@ -6,3 +6,7 @@
   border: 1px solid #ddd;
   padding: 8px;
 }
+
+.q-img {
+  display: none;
+}

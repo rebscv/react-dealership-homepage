@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import HeroSlider from "../components/Hero/HeroSlider";
 import QuickLinks from "../components/QuickLinks/QuickLinks";
+import QuickLinksSlider from "../components/QuickLinks/QuickLinksSlider";
 import FeaturedVehicles from "../components/FeaturedVehicles/FeaturedVehicles";
 import FeaturedVehiclesSlider from "../components/FeaturedVehicles/FeaturedVehiclesSlider";
 import Footer from "../components/Footer/Footer";
@@ -20,7 +21,7 @@ function HomePage() {
 
         {(isVersion2 || isVersion3) ? <HeroSlider /> : <Hero />}
 
-        <QuickLinks />
+        {(isVersion3) ? <QuickLinksSlider /> : <QuickLinks />}
 
         {(isVersion2 || isVersion3) ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
 

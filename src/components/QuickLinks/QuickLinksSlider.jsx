@@ -1,20 +1,23 @@
 import QuickLinkCard from "./QuickLinkCard"
-import "./QuickLinks.css"
+import "./QuickLinksSlider.css"
+import ServiceImg from "../../assets/images/quicklinks/quicklink.webp"
 
-function QuickLinks() {
+function QuickLinksSlider() {
   const links = [
     {
       id            : 1,
       title         : "Service",
       description   : "Book a genuine Mazda Service",
-      url           : "/service"
+      url           : "/service",
+      image         : ServiceImg
     },
 
     {
       id            : 2,
       title         : "Finance",
       description   : "Explore Finance your way",
-      url           : "/finance"
+      url           : "/finance",
+      image         : ServiceImg
     },
 
     {
@@ -22,6 +25,7 @@ function QuickLinks() {
       title         : "Offers",
       description   : "Designed to give you more",
       url           : "/offers",
+      image         : ServiceImg
     }
   ]
 
@@ -38,6 +42,7 @@ function QuickLinks() {
               title={link.title}
               description={link.description}
               url={link.url}
+              image={link.image}
             />
           ))}
 
@@ -50,4 +55,5 @@ function QuickLinks() {
 
 }
 
-export default QuickLinks
+
+export default QuickLinksSlider

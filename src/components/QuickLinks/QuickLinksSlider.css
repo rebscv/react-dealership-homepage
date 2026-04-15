@@ -1,0 +1,8 @@
+.version-3 .q-img {
+  display: block;
+}
+
+.version-3 .q-img img {
+  display: block;
+  width: 100%;
+}
