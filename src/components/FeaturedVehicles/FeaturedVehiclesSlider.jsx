@@ -10,7 +10,7 @@ function FeaturedVehiclesSlider() {
     
     const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true, align: "start",
         breakpoints: {
-            "(min-width:768px)": { slidesToScroll: 2 }
+            "(min-width:480px)": { slidesToScroll: 2 }, "(min-width:768px)": { slidesToScroll: 3 }, "(min-width:1024px)": { slidesToScroll: 4 }
         }
     }, 4000);
 
@@ -22,11 +22,13 @@ function FeaturedVehiclesSlider() {
                 <h2>Featured Vehicles</h2>
 
                 <div className="embla" ref={emblaRef}>
-                    <div className="embla__container grid-l-two-cols">
+                    <div className="embla__container grid-t-two-cols grid-l-three-cols grid-d-four-cols">
 
                         {vehicles.map((car) => (
                             <div className="embla__slide" key={car.id}>
-                                <VehicleCard {...car} />
+                                <div>
+                                    <VehicleCard {...car} />
+                                </div>
                             </div>
                         ))}
 

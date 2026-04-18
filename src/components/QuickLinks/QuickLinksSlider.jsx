@@ -1,6 +1,9 @@
 import QuickLinkCard from "./QuickLinkCard"
 import "./QuickLinksSlider.css"
-import ServiceImg from "../../assets/images/quicklinks/quicklink.webp"
+
+import ServiceImg from "../../assets/images/quicklinks/service.webp"
+import FinanceImg from "../../assets/images/quicklinks/finance.webp"
+import OffersImg from "../../assets/images/quicklinks/offers.webp"
 
 function QuickLinksSlider() {
   const links = [
@@ -17,7 +20,7 @@ function QuickLinksSlider() {
       title         : "Finance",
       description   : "Explore Finance your way",
       url           : "/finance",
-      image         : ServiceImg
+      image         : FinanceImg
     },
 
     {
@@ -25,14 +28,14 @@ function QuickLinksSlider() {
       title         : "Offers",
       description   : "Designed to give you more",
       url           : "/offers",
-      image         : ServiceImg
+      image         : OffersImg
     }
   ]
 
   return (
     <section className="quicklinks">
 
-      <div className="std-wrapper">
+      <div className="full-wrapper">
 
         <div className="grid-d-three-cols">
 

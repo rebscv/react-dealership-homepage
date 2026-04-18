@@ -1,3 +1,90 @@
 .featured-vehicles .embla__slide::after {
   content: none;
 }
+
+/* =========================
+Embla General Style
+========================= */
+
+/* Slide Responsiveness */
+
+.embla .embla__container {
+  display: flex;
+  gap: 0;
+}
+
+.embla .embla__container > div {
+  flex: 0 0 100%;;
+}
+
+.embla .grid-d-two-cols, .embla .grid-d-three-cols, .embla .grid-d-four-cols, .embla .grid-d-five-cols, .embla .grid-l-two-cols, .embla .grid-l-three-cols, .embla .grid-l-four-cols, .embla .grid-l-five-cols, .embla .grid-t-two-cols, .embla .grid-t-three-cols, .embla .grid-t-four-cols, .embla .grid-t-five-cols {
+  margin-left: -24px;
+}
+
+.embla .embla__container {
+  margin-left: -24px;
+}
+.embla .embla__container > div {
+  padding-left: 24px;
+  flex: 0 0 calc(100% - 24px);
+}
+
+@media (min-width:480px) {
+
+  .embla .grid-t-two-cols > div,  .embla .grid-t-three-cols > div,  .embla .grid-t-four-cols > div,  .embla .grid-t-five-cols > div {
+    padding-left: 24px;
+  }
+
+  .embla .grid-t-two-cols > div {
+    flex: 0 0 calc(50% - 24px);
+  }
+
+  .embla .grid-t-three-cols > div {
+    flex: 0 0 calc(33.33% - 24px);
+  }
+
+  .embla .grid-t-four-cols > div {
+    flex: 0 0 22.5%;
+  }
+
+}
+
+@media (min-width:768px) {
+
+  .embla .grid-l-two-cols > div,  .embla .grid-l-three-cols > div,  .embla .grid-l-four-cols > div,  .embla .grid-l-five-cols > div {
+    padding-left: 24px;
+  }
+
+  .embla .grid-l-two-cols > div {
+    flex: 0 0 calc(50% - 24px);
+  }
+
+  .embla .grid-l-three-cols > div {
+    flex: 0 0 calc(33.33% - 24px);
+  }
+
+  .embla .grid-l-four-cols > div {
+    flex: 0 0 22.5%;
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .embla .grid-d-two-cols > div,  .embla .grid-d-three-cols > div,  .embla .grid-d-four-cols > div,  .embla .grid-d-five-cols > div {
+    padding-left: 24px;
+  }
+
+  .embla .grid-d-two-cols > div {
+    flex: 0 0 calc(50% - 24px);
+  }
+
+  .embla .grid-d-three-cols > div {
+    flex: 0 0 calc(33.33% - 24px);
+  }
+
+  .embla .grid-d-four-cols > div {
+    flex: 0 0 22.5%;
+  }
+  
+}
