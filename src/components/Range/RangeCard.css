@@ -1,0 +1,55 @@
+.range-card a {
+    padding: 0 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.range-card img {
+    max-width: 360px;
+    width: 100%;
+}
+
+.range-info {
+    display: grid;
+    gap: 8px;
+}
+
+.range-card a h4 {
+    color: var(--clr-black);
+}
+
+.range-card a p {
+    color: var(--clr-grey-dk);
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+@media (max-width:575px) {
+
+    .range-card a {
+        padding: 0;
+        grid-template-columns: repeat(10, 1fr);
+        display: grid;
+        direction: rtl;
+        align-items: center;
+        border-bottom: solid 1px var(--clr-grey-dk);
+        padding: 32px 0;
+        gap: 0;
+    }
+
+    .range-img {
+        grid-column: span 6;
+    }
+
+    .range-info {
+        text-align: left;
+        grid-column: span 4;
+    }
+    }
+
+    .range-card h4 {
+        font-size: 1em;
+    }
+    
+    
+}

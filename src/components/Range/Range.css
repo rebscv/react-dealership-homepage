@@ -1,0 +1,36 @@
+.range {
+    background-color: var(--clr-grey);
+}
+
+.version-3 .range .grid {
+    row-gap: 24px;
+}
+
+
+@media (min-width:1024px) {
+
+    .version-3 .range .grid {
+        row-gap: 40px;
+    }
+
+    .version-3 .range .grid:hover a {
+        transition: ease 0.3s all;
+        opacity: 0.5;
+    }
+
+    .version-3 .range .grid:hover a:hover {
+        opacity: 1;
+    }
+        
+}
+
+
+@media (max-width:575px) {
+
+    .version-3 .range .grid {
+        row-gap: 24px;
+    }
+    
+}
+
+

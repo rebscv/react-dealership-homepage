@@ -40,7 +40,7 @@ function QuickLinks({ version = 1 }) {
           <div className="grid-d-three-cols ">
 
             {links.map((link) => (
-              <QuickLinkCard {...link} />
+              <QuickLinkCard key={link.id} {...link} />
             ))}
 
           </div>
@@ -59,14 +59,9 @@ function QuickLinks({ version = 1 }) {
 
         <div className="grid-d-three-cols">
 
-          {links.map((link, index) => (
-            <QuickLinkCard
-              key={link.id}
-              title={link.title}
-              description={link.description}
-              url={link.url}
-            />
-          ))}
+          {links.map((link) => (
+          <QuickLinkCard key={link.id} {...link} />
+        ))}
 
         </div>
 

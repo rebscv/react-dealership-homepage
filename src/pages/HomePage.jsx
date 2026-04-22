@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import HeroSlider from "../components/Hero/HeroSlider";
 import QuickLinks from "../components/QuickLinks/QuickLinks";
-import QuickLinksSlider from "../components/QuickLinks/QuickLinksSlider";
+import Range from "../components/Range/Range";
 import FeaturedVehicles from "../components/FeaturedVehicles/FeaturedVehicles";
 import FeaturedVehiclesSlider from "../components/FeaturedVehicles/FeaturedVehiclesSlider";
 import Footer from "../components/Footer/Footer";
@@ -21,11 +21,9 @@ function HomePage() {
 
         {(isVersion2 || isVersion3) ? <HeroSlider /> : <Hero />}
 
-
         <QuickLinks version={isVersion3 ? 3 : isVersion2 ? 2 : 1} />
         
-
-        {(isVersion2 || isVersion3) ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
+        {isVersion3 && <Range />}
 
         <section>
           <div className="std-wrapper">
@@ -33,6 +31,9 @@ function HomePage() {
             <p>Welcome to our dealership. Explore our range of new and used vehicles.</p>
           </div>
         </section>
+
+        {(isVersion2 || isVersion3) ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
+
         
       </div>
     </>

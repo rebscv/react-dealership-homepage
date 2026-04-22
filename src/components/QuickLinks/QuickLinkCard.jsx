@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 
 function QuickLinkCard({ title, description, url, image }) {
 
-  console.log("QuickLinkCard image:", image);
-
   return (
     <div className="quicklink-card">
         <a href={url}></a>
