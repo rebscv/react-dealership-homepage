@@ -1,5 +1,5 @@
 /* =========================
-   General Style
+   General Styles
 ========================= */
 
 .version-3 {
@@ -14,6 +14,8 @@
 .version-3-body {
   padding-top: 68px;
 }
+
+
 
 @media (min-width:1024px) {
 
@@ -47,8 +49,25 @@
 ========================= */
 
 .version-3 h1, .version-3 h2, .version-3 h3, .version-3 h4, .version-3 .h1, .version-3 .h2, .version-3 .h3, .version-3 .h4 {
+  line-height: 1em;
   text-transform: uppercase;
   margin: 0;
+}
+
+.version-3 h1, .version-3 .h1 {
+  font-size: 2.5em;
+}
+
+.version-3 h2, .version-3 .h2 {
+  font-size: 2.5em;
+}
+
+.version-3 h3, .version-3 .h3 {
+  font-size: 1.6em;
+}
+
+.version-3 h4, .version-3 .h4 {
+  font-size: 1.3em;
 }
 
 .version-3 p {
@@ -166,8 +185,3 @@
   }
 
 }
-
-
-
-
-

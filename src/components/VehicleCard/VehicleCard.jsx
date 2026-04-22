@@ -16,7 +16,7 @@ function VehicleCard({ id, image, title, price, year, mileage }) {
             
 
             <div className="vehicle-info">
-                <h3>{title}</h3>
+                <h4>{title}</h4>
                 <p className="price">${price.toLocaleString()}</p>
             
                 <div className="vehicle-meta">

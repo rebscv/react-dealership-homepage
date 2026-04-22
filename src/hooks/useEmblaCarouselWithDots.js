@@ -1,7 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useEffect, useRef } from "react";
 
-export default function useEmblaWithDots(options = {}, autoplayDelay = 0) {
+export default function useEmblaWithDots(options = {}, autoplayDelay = 0, enabled = true) {
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [scrollSnaps, setScrollSnaps] = useState([]);

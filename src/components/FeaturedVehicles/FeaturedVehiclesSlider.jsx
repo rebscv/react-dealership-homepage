@@ -8,7 +8,7 @@ import "./FeaturedVehiclesSlider.css";
 
 function FeaturedVehiclesSlider() {
     
-    const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true, align: "start",
+    const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true, 
         breakpoints: {
             "(min-width:480px)": { slidesToScroll: 2 }, "(min-width:768px)": { slidesToScroll: 3 }, "(min-width:1024px)": { slidesToScroll: 4 }
         }
@@ -48,17 +48,7 @@ function FeaturedVehiclesSlider() {
                         </div>
                     </div>
 
-                    <div className="embla__arrows__container">
 
-                        <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
-                            Previous                    
-                        </button>
-
-                        <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
-                            Next                    
-                        </button>
-
-                    </div>
 
 
                 </div>

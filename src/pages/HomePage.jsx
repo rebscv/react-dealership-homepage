@@ -21,7 +21,9 @@ function HomePage() {
 
         {(isVersion2 || isVersion3) ? <HeroSlider /> : <Hero />}
 
-        {(isVersion3) ? <QuickLinksSlider /> : <QuickLinks />}
+
+        <QuickLinks version={isVersion3 ? 3 : isVersion2 ? 2 : 1} />
+        
 
         {(isVersion2 || isVersion3) ? <FeaturedVehiclesSlider /> : <FeaturedVehicles />}
 

@@ -60,7 +60,7 @@ function HeroSlider() {
                                 <div className="hero-text">
                                     <h2>{slide.title}</h2>
                                     <p>{slide.subtitle}</p>
-                                    <div><button class="btn btn-primary">{slide.buttonText}</button></div>
+                                    <div><button className="btn btn-primary">{slide.buttonText}</button></div>
                                 </div>
                             </div>
                         </div>

@@ -25,17 +25,17 @@
   --clr-white: #ffffff;
   --clr-black: #101010;
   
-  --clr-grey: #2a2a2a;
-  --clr-grey-lt: #505050;
-  --clr-grey-dk: #040404;
+  --version-1-clr-grey: #2a2a2a;
+  --version-1-lt: #505050;
+  --version-1-dk: #040404;
 
+  --clr-grey: #f5f5f5;
+  --clr-dk: #999999;
 
   --clr-nav: #000000;
 
   --header-text: #ffffff;
   --header-bg: #101010;
-
-
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -136,18 +136,18 @@ h1 {
   overflow: hidden;
   border: none;
   cursor: pointer;
-  border: solid 2px #ffffff8f;
+  border: solid 2px #e5e5e5;
 }
 
 .embla__dot.is-active {
   background: transparent;
-  border: solid 2px #ffffff;
+  border: solid 2px var(--clr-primary);
 }
 
 .embla__dot-progress {
   position: absolute;
   inset: 0;
-  background: #ffffff;
+  background: var(--clr-primary);
   transform-origin: left;
   animation: emblaProgress 4s linear forwards;
 }
