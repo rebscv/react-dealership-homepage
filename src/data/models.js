@@ -7,80 +7,61 @@ import cx60 from "../assets/images/range/cx-60.webp";
 import cx70 from "../assets/images/range/cx-70.webp";
 import cx80 from "../assets/images/range/cx-80.webp";
 import cx90 from "../assets/images/range/cx-90.webp";
-
-
+import bt50 from "../assets/images/range/bt-50.webp";
+import mx5 from "../assets/images/range/mx-5.webp";
 
 const models = [
   
   {
     id            : 1,
+    slug          : "cx-3",
     title         : "Mazda CX-3",
+    subtitle      : "",
     description   : "Small SUV | 5 seats",
+    tags          : ["suv"],
     image         : cx3
   },
 
   {
     id            : 2,
+    slug          : "cx-30",
     title         : "Mazda CX-30",
+    subtitle      : "",
     description   : "Small SUV | 5 seats",
-    image         : cx30 
+    tags          : ["suv"],
+    image         : cx30
   },
 
   {
     id            : 3,
-    tag           : "Next-Gen",
+    slug          : "cx-5",
     title         : "Mazda CX-5",
+    subtitle      : "Next-Gen",
     description   : "Medium SUV | 5 seats",
+    tags          : ["suv"],
     image         : cx5nextgen
   },
 
   {
     id            : 4,
-    tag           : "2025 Model",
-    title         : "Mazda CX-5",
-    description   : "Medium SUV | 5 seats",
-    image         : cx3my25
+    slug          : "bt-50",
+    Name          : "Mazda BT-50",
+    subtitle      : "New",
+    description   : "Single | Freestyle | Dual Cab",
+    tags          : ["ute"],
+    image         : bt50
   },
 
   {
     id            : 5,
-    tag           : "All-Electric",
-    title         : "Mazda CX-6e",
-    description   : "Medium SUV | 5 Seats",
-    image         : cx6e
-  },
-
-  {
-    id            : 6,
-    tag           : "New",
-    title         : "Mazda CX-60",
-    description   : "Medium SUV | 5 seats",
-    image         : cx60
-  },
-
-  {
-    id            : 7,
-    tag           : "All-Hybrid",
-    title         : "Mazda CX-70",
-    description   : "Large SUV | 5 seats",
-    image         : cx70
-  },
-
-  {
-    id            : 8,
-    tag           : "All-Hybrid",
-    title         : "Mazda CX-80",
-    description   : "Large SUV | 6-7 seats",
-    image         : cx80
-  },
-
-  {
-    id            : 9,
-    tag           : "All-Hybrid",
-    title         : "Mazda CX-90",
-    description   : "Large SUV | 6-7 seats",
-    image         : cx90
+    slug          : "mx-5",
+    title         : "Mazda MX-5",
+    subtitle      : "",
+    description   : "Soft Top",
+    tags          : ["sports"],
+    image         : mx5
   }
+
 
 ]
 

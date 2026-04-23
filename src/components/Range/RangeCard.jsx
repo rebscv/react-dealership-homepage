@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./RangeCard.css"
 
-function ModelCard({ id, image, title, description }) {
+function ModelCard({ id, slug, image, title, subtitle, description, tags, style }) {
 
     const location = useLocation();
 
@@ -9,10 +9,11 @@ function ModelCard({ id, image, title, description }) {
     const basePath = match ? `/${match[1]}` : "";
 
     return (
-        <div className="range-card">
-            <Link to={`${basePath}/vehicle/${id}`}>
+        <div className={`range-card ${tags?.join(" ") || ""}`} style={style}>
+            <Link to={`${basePath}/model/${slug}`}>
                 <div className="range-img"><img src={image} alt={title} /></div>
                 <div className="range-info">
+                    <p>{subtitle}</p>
                     <h4>{title}</h4>
                     <p>{description}</p>
                 </div>

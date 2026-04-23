@@ -1,3 +1,16 @@
+.range-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .range-card a {
     padding: 0 24px;
     display: grid;
@@ -21,7 +34,7 @@
 .range-card a p {
     color: var(--clr-grey-dk);
     font-size: 0.8em;
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
 @media (max-width:575px) {
@@ -34,7 +47,7 @@
         align-items: center;
         border-bottom: solid 1px var(--clr-grey-dk);
         padding: 32px 0;
-        gap: 0;
+        gap: 8px;
     }
 
     .range-img {
@@ -45,11 +58,14 @@
         text-align: left;
         grid-column: span 4;
     }
-    }
 
     .range-card h4 {
         font-size: 1em;
     }
-    
+
+    .range-model-grid .range-card:last-child a {
+        border-bottom: none;
+    }
+
     
 }

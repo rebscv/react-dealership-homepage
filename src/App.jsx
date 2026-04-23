@@ -15,6 +15,7 @@ import Finance from "./pages/Finance";
 import Offers from "./pages/Offers";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import ModelDetail from "./pages/modelDetail";
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
             <Route path="offers" element={<Offers />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
+            <Route path="model/:slug" element={<ModelDetail />} />
 
           </Route>
         </Route>
