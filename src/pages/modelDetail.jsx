@@ -1,30 +1,48 @@
 import { useParams } from  "react-router-dom";
 import models from "../data/models";
 
+import ModelHero from "../components/model/ModelHero";
+import ModelHighlights from "../components/model/ModelHighlights";
+import ModelIntro from "../components/model/ModelIntro";
+import ModelGallery from "../components/model/ModelGallery";
+import ModelCTA from "../components/model/ModelCTA";
 
-function modelDetail() {
+
+function ModelDetail() {
 
     const { slug } = useParams();
-
     const model = models.find((m) => m.slug === slug);
 
-    if (!model) return <div>Model not found</div>;
+    if (!model) { return ( 
+        
+        <main className="model-detail-content">
+            <section>
+                <div className="std-wrapper t-center">
+                    <h2>Model not found</h2>
+                </div>
+            </section>
+        </main>
+
+        
+
+     ); }
 
     return (
-        <section className="model-detail-content">
-            <div className="std-wrapper">
+        <main className="model-detail-content">
+            
 
+            <ModelHero title={model.hero.title} tagline={model.hero.tagline} image={model.hero.image} />
+            {model.highlights && ( <ModelHighlights items={model.highlights} /> )}
+            {model.intro && ( <ModelIntro {...model.intro} /> )}
+            <ModelGallery images={model.gallery} />
+            <ModelCTA />
 
-                <h1>{model.title}</h1>
-                <p>{model.description}</p>
-
-
-            </div>
-        </section>
+            
+        </main>
 
     );
 
 }
 
-export default modelDetail;
+export default ModelDetail;
 

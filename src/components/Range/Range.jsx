@@ -30,7 +30,7 @@ function Range () {
 
                 <div className="grid grid-d-four-cols grid-l-three-cols grid-t-two-cols range-model-grid">
                     {filteredModels.map((car, index) => (
-                        <RangeCard key={car.id} {...car} style={{ animationDelay: `${index * 0.1}s` }} />
+                        <RangeCard key={car.slug} {...car} style={{ animationDelay: `${index * 0.1}s` }} />
                     ))}
                 </div>
 

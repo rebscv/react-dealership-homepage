@@ -43,6 +43,16 @@ const models = [
   },
 
   {
+    id            : 6,
+    slug          : "cx-60",
+    title         : "Mazda CX-60",
+    subtitle      : "New",
+    description   : "Medium SUV | 5 seats",
+    tags          : ["suv"],
+    image         : cx60
+  },
+
+  {
     id            : 4,
     slug          : "bt-50",
     Name          : "Mazda BT-50",
@@ -60,7 +70,9 @@ const models = [
     description   : "Soft Top",
     tags          : ["sports"],
     image         : mx5
-  }
+  },
+
+
 
 
 ]

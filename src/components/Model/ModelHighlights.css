@@ -1,0 +1,15 @@
+.model-highlights {
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white)
+}
+
+.model-highlights-col {
+
+}
+
+.model-highlights small {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 0.15em;
+  color: var(--clr-grey-dk)
+}

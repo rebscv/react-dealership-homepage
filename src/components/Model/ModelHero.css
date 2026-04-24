@@ -1,0 +1,35 @@
+.model-hero {
+  position: relative;
+}
+
+.model-hero-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.model-hero-text {
+  text-align: center;
+  padding: var(--padding-tb-d) var(--padding-lr-d);
+  color: var(--clr-white);
+  text-transform: uppercase;
+  display: grid;
+  gap: 16px;  
+}
+
+.model-hero .model-hero-title {
+  font-size: 1.2em;
+  letter-spacing: 0.35em;
+}
+
+.model-hero-tagline {
+  letter-spacing: 0.15em;
+  font-size: 4em;
+}
+
+.model-hero-title, .model-hero-tagline {
+  line-height: 1em;
+}
