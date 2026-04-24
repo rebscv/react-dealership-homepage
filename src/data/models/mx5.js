@@ -1,4 +1,5 @@
 import mx5 from "../../assets/images/range/mx-5.webp";
+import hero from "../../assets/images/models/cx-60/hero.webp";
 
 const mx5Model = {
   
@@ -9,7 +10,36 @@ const mx5Model = {
     subtitle      : "",
     description   : "Soft Top",
     tags          : ["sports"],
-    image         : mx5
+    image         : mx5,
+
+    hero: {
+      title: "New Mazda CX-60",
+      tagline: "Look Forward to It",
+      image: hero,
+    },
+
+    highlights: [
+
+    ],
+    
+    intro: [
+    ],
+
+    gallery: [
+    ],
+
+
+    specs: [
+    ],
+
+
+    technology: [
+    ],
+
+
+    safety: [
+    ]
+
 
 };
 

@@ -1,4 +1,5 @@
 import cx30 from "../../assets/images/range/cx-30.webp";
+import hero from "../../assets/images/models/cx-60/hero.webp";
 
 const cx30Model = {  
   
@@ -8,7 +9,13 @@ const cx30Model = {
     subtitle      : "",
     description   : "Small SUV | 5 seats",
     tags          : ["suv"],
-    image         : cx30
+    image         : cx30,
+
+    hero: {
+      title: "New Mazda CX-60",
+      tagline: "Look Forward to It",
+      image: hero
+    }
 
 };
 

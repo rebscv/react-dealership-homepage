@@ -1,4 +1,5 @@
 import cx5nextgen from "../../assets/images/range/all-new-mazda-cx-5.webp";
+import hero from "../../assets/images/models/cx-60/hero.webp";
 
 const cx5nextgenModel = {  
   
@@ -8,7 +9,36 @@ const cx5nextgenModel = {
     subtitle      : "Next-Gen",
     description   : "Medium SUV | 5 seats",
     tags          : ["suv"],
-    image         : cx5nextgen
+    image         : cx5nextgen,
+
+    hero: {
+      title: "New Mazda CX-60",
+      tagline: "Look Forward to It",
+      image: hero,
+    },
+
+    highlights: [
+
+    ],
+    
+    intro: [
+    ],
+
+    gallery: [
+    ],
+
+
+    specs: [
+    ],
+
+
+    technology: [
+    ],
+
+
+    safety: [
+    ]
+
 
 };
 
