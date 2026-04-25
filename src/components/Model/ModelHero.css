@@ -33,3 +33,26 @@
 .model-hero-title, .model-hero-tagline {
   line-height: 1em;
 }
+
+
+
+
+.model-hero img {
+    height: auto;
+    max-height: 540px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .model-hero img {
+        height: calc(100vh - 68px);
+        max-height: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .model-hero img {
+        height: calc(100vh - 138px);
+    }
+}

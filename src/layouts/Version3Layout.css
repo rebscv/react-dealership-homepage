@@ -109,7 +109,7 @@
    Wrapper
 ========================= */
 
-.version-3 .std-wrapper {
+.version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .full-wrapper {
   display: grid;
   padding: var(--padding-tb) var(--padding-lr);
   gap: var(--wrapper-gap);
@@ -117,8 +117,7 @@
 
 @media (min-width:1024px) {
 
-  .version-3 .std-wrapper {
-    display: grid;
+  .version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .full-wrapper {
     gap: var(--wrapper-gap-d);
     padding: var(--padding-tb-d) var(--padding-lr-d);
   }

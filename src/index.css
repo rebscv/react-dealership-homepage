@@ -1,5 +1,6 @@
 :root {
 	--std-wrapper: 1800px;
+	--sml-wrapper: 1000px;
 	--padding-lr: 24px;
 	--padding-tb: 24px;
 	--padding-lr-d: 48px;
@@ -68,13 +69,20 @@ body {
 
 /* Wrappers */
 
-.std-wrapper, .full-wrapper {
+.std-wrapper, .full-wrapper, .sml-wrapper {
   margin: 0 auto;
+
+}
+
+.std-wrapper,{
   max-width: var(--std-wrapper);
 }
 
+.sml-wrapper {
+  max-width: var(--sml-wrapper);
+}
+
 .full-wrapper {
-  margin: 0 auto;
   max-width: none;
 }
 
