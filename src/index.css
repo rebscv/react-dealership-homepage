@@ -7,8 +7,8 @@
 	--padding-lr-d: 48px;
 	--padding-tb-d: 80px;
 
-  --grid-gap: 8px;
-  --grid-gap-d: 24px;
+  --grid-gap: 24px;
+  --grid-gap-d: 32px;
   --grid-gap-row-d: 48px;
 
 
@@ -34,6 +34,7 @@
 
   --clr-grey: #f5f5f5;
   --clr-grey-dk: #999999;
+  
 
   --clr-dark-grey: #3a3d46;
   --clr-dark-grey-lt: #545760;

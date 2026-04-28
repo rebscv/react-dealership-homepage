@@ -20,7 +20,7 @@ function Range () {
 
                 <h2>Find Your <img src={zoomzoom} width={250} height={47} alt="Zoom Zoom" /></h2>
 
-                <div className="range-tabs">
+                <div className="range-tabs default-tabs">
                     {tabs.map((tab) => (
                         <button key={tab} className={activeTab === tab ? "active" : ""} onClick={() => setActiveTab(tab)}>
                             {tabLabels[tab]}

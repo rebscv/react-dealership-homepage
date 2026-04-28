@@ -27,6 +27,24 @@
   text-align: center;
 }
 
+.version-3 .grey-bg {
+  background-color: var(--clr-grey);
+}
+
+.version-3 .dark-grey-bg {
+  background-color: var(--clr-dark-grey);
+}
+
+.version-3 .dark-bg, .version-3 .dark-bg p, .version-3 .dark-bg h1, .version-3 .dark-bg h2, .version-3 .dark-bg h3, .version-3 .dark-bg h4, .version-3 .dark-bg .h1, .version-3 .dark-bg .h2, .version-3 .dark-bg .h3, .version-3 .dark-bg .h4 {
+  color: var(--clr-white);
+}
+
+.version-3 .section-header {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
 @media (min-width:1024px) {
 
@@ -113,6 +131,14 @@
   display: grid;
   padding: var(--padding-tb) var(--padding-lr);
   gap: var(--wrapper-gap);
+}
+
+.version-3 .std-wrapper.no-padding-bottom, .version-3 .sml-wrapper.no-padding-bottom, .version-3 .lrg-wrapper.no-padding-bottom, .version-3 .full-wrapper.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.version-3 .std-wrapper.no-padding-top, .version-3 .sml-wrapper.no-padding-top, .version-3 .lrg-wrapper.no-padding-top, .version-3 .full-wrapper.no-padding-top {
+  padding-top: 0;
 }
 
 @media (min-width:1024px) {
@@ -227,4 +253,46 @@
 .center-img img {
   object-fit: cover;
   height: 100%;
+}
+
+
+/* =========================
+   Tabs Content
+========================= */
+
+.default-tabs {    
+  margin: 0 auto;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #fff;
+  box-shadow: 2px 4px 8px #0000000d;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-columns: 1fr;
+  border-radius: 8px;
+}
+
+.default-tabs button {    
+  border: none;
+  background: none;
+  font-family: var(--font-mazda);
+  padding: 8px 12px;
+  background: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+  transition: ease 0.4s all;
+  color: var(--clr-grey-dk);
+  grid-column: span 1;
+}
+
+.default-tabs button.active {
+  background-color: var(--clr-primary);
+  color: #fff;
+}
+
+.default-tabs, .default-tabs button {
+  border-radius: 4px;
 }

@@ -13,7 +13,7 @@ function ModelColourPicker ({ colours }) {
     <section className="model-colour-picker">
       <div className="std-wrapper t-center">
         
-        <div className="model-colour-picker-title">
+        <div className="section-header model-colour-picker-title">
           {title && <h2 className="h4">{title}</h2>}
           {subtitle && <h3 className="h2">{subtitle}</h3>}
         </div>

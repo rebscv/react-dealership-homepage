@@ -4,6 +4,7 @@ import models from "../data/models";
 import ModelHero from "../components/model/ModelHero";
 import ModelHighlights from "../components/model/ModelHighlights";
 import ModelIntro from "../components/model/ModelIntro";
+import ModelFeatured from "../components/model/ModelFeatured";
 import ModelColourPicker from "../components/model/ModelColourPicker";
 import ModelGallery from "../components/model/ModelGallery";
 import ModelCTA from "../components/model/ModelCTA";
@@ -35,6 +36,7 @@ function ModelDetail() {
             <ModelHero title={model.hero.title} tagline={model.hero.tagline} image={model.hero.image} />
             {model.highlights && ( <ModelHighlights items={model.highlights} /> )}
             {model.intro && ( <ModelIntro {...model.intro} /> )}
+            {model.featured && ( <ModelFeatured featured={model.featured} /> )}
             {model.colours && (
                 <ModelColourPicker colours={model.colours} />
             )}

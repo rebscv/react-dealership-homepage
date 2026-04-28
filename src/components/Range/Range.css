@@ -14,39 +14,6 @@
     row-gap: 24px;
 }
 
-.range-tabs {    
-    display: flex;
-    margin: 0 auto;
-    gap: 8px;
-    padding: 6px 12px;
-    background-color: #fff;
-    box-shadow: 2px 4px 8px #0000000d;
-}
-
-.range-tabs button {    
-    border: none;
-    background: none;
-    font-family: var(--font-mazda);
-    padding: 8px 12px;
-    background: #fff;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    width: 100%;
-    transition: ease 0.4s all;
-    color: var(--clr-grey-dk);
-    max-width: 96px;
-}
-
-.range-tabs button.active {
-    background-color: var(--clr-primary);
-    color: #fff;
-}
-
-.range-tabs, .range-tabs button {
-    border-radius: 4px;
-}
-
 @media (min-width:1024px) {
 
     .version-3 .range .grid {
