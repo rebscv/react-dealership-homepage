@@ -1,6 +1,7 @@
 :root {
-	--std-wrapper: 1800px;
+	--std-wrapper: 1444px;
 	--sml-wrapper: 1000px;
+	--lrg-wrapper: 1824px;
 	--padding-lr: 24px;
 	--padding-tb: 24px;
 	--padding-lr-d: 48px;
@@ -8,6 +9,8 @@
 
   --grid-gap: 8px;
   --grid-gap-d: 24px;
+  --grid-gap-row-d: 48px;
+
 
   --hero-gap: 12px;
   --hero-gap-d: 12px;
@@ -15,7 +18,7 @@
   --font-mazda: MazdaTypeTT;
 
   --wrapper-gap: 24px;
-  --wrapper-gap-d: 48px;
+  --wrapper-gap-d: 32px;
 
   /* Colours */
   --clr-primary: #910a2d;
@@ -69,17 +72,21 @@ body {
 
 /* Wrappers */
 
-.std-wrapper, .full-wrapper, .sml-wrapper {
+.std-wrapper, .full-wrapper, .sml-wrapper, .lrg-wrapper {
   margin: 0 auto;
 
 }
 
-.std-wrapper,{
+.std-wrapper {
   max-width: var(--std-wrapper);
 }
 
 .sml-wrapper {
   max-width: var(--sml-wrapper);
+}
+
+.lrg-wrapper {
+  max-width: var(--lrg-wrapper);
 }
 
 .full-wrapper {

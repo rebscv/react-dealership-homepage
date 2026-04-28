@@ -1,27 +1,45 @@
-function ModelIntro ({ title, paragraphs, cta }) {
+function ModelIntro ({ title, paragraphs, image, cta }) {
 
-  if (!title && !description) return null;
+  if (!title && !paragraphs) return null;
 
   return (
     <section className="model-intro">
-      <div className="sml-wrapper t-center">
+      <div className="lrg-wrapper">
 
-        {title && <h2>{title}</h2>}
         
-        {paragraphs &&
-          paragraphs.map((para, i) => (
-            <p key={i}>{para}</p>
-          ))
-        }
+        
+        <div className="grid-d-two-cols">
 
-        {cta &&
-          <div className="">
-            <a href="{cta.link}" className="btn btn-primary">{cta.label}</a>
+          <div className="center-img">
+            {image && <img src={image} alt="" />}
           </div>
-        }
+
+          <div className="center-content">
+            <div className="grid">
+
+                {title && <h2>{title}</h2>}
+
+                {paragraphs &&
+                  paragraphs.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))
+                }
+
+                {cta &&
+                  <div className="">
+                    <a href="{cta.link}" className="btn btn-primary">{cta.label}</a>
+                  </div>
+                }   
+
+              </div>
+          </div>
+
 
 
         </div>
+
+
+      </div>
     </section>
   );
 

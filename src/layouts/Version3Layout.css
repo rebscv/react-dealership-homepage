@@ -37,8 +37,6 @@
 }
 
 
-
-
 /* =========================
    Fonts
 ========================= */
@@ -69,6 +67,7 @@
   margin: 0;
 }
 
+
 /* =========================
    Buttons
 ========================= */
@@ -82,6 +81,7 @@
   cursor: pointer;
   letter-spacing: 0.25em;
   transition: ease 0.4s all;
+  display: inline-block;
 }
 
 .version-3 .btn-primary, .version-3 a.btn-primary {
@@ -109,7 +109,7 @@
    Wrapper
 ========================= */
 
-.version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .full-wrapper {
+.version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .lrg-wrapper, .version-3 .full-wrapper {
   display: grid;
   padding: var(--padding-tb) var(--padding-lr);
   gap: var(--wrapper-gap);
@@ -117,7 +117,7 @@
 
 @media (min-width:1024px) {
 
-  .version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .full-wrapper {
+  .version-3 .std-wrapper, .version-3 .sml-wrapper, .version-3 .lrg-wrapper, .version-3 .full-wrapper {
     gap: var(--wrapper-gap-d);
     padding: var(--padding-tb-d) var(--padding-lr-d);
   }
@@ -128,8 +128,6 @@
 /* =========================
    Grid Columns Layout
 ========================= */
-
-
 
 .version-3 .grid, .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols {
   display: grid;
@@ -197,6 +195,7 @@
 
   .version-3 .grid, .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols {
     gap: var(--grid-gap-d);
+    column-gap: var(--grid-gap-row-d);
   }
   
   .version-3 .grid-d-two-cols {
@@ -214,4 +213,18 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
+}
+
+/* =========================
+   Grid DIVs
+========================= */
+
+.center-content {
+  display: grid;
+  align-items: center;
+}
+
+.center-img img {
+  object-fit: cover;
+  height: 100%;
 }
