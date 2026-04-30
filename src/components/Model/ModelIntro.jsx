@@ -27,7 +27,7 @@ function ModelIntro ({ title, paragraphs, image, cta }) {
 
                 {cta &&
                   <div className="">
-                    <a href="{cta.link}" className="btn btn-primary">{cta.label}</a>
+                    <a href={cta.link} className="btn btn-primary">{cta.label}</a>
                   </div>
                 }   
 

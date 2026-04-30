@@ -1,11 +1,14 @@
 import { useParams } from  "react-router-dom";
 import models from "../data/models";
 
+import "./modelDetail.css";
+
 import ModelHero from "../components/model/ModelHero";
 import ModelHighlights from "../components/model/ModelHighlights";
 import ModelIntro from "../components/model/ModelIntro";
 import ModelFeatured from "../components/model/ModelFeatured";
 import ModelColourPicker from "../components/model/ModelColourPicker";
+import ModelTechnology from "../components/model/ModelTechnology";
 import ModelGallery from "../components/model/ModelGallery";
 import ModelCTA from "../components/model/ModelCTA";
 
@@ -40,6 +43,7 @@ function ModelDetail() {
             {model.colours && (
                 <ModelColourPicker colours={model.colours} />
             )}
+            <ModelTechnology technology={model.technology} />
             <ModelGallery images={model.gallery} />
             <ModelCTA />
 

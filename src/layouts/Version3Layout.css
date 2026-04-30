@@ -39,11 +39,21 @@
   color: var(--clr-white);
 }
 
-.version-3 .section-header {
+.version-3 .section-title {
   max-width: 800px;
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  line-height: 1;
+}
+.version-3 .section-title.t-center, .version-3 .t-center .section-title {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+}
+
+.version-3 .anchor {
+  top: -103px;
+  position: relative;
 }
 
 @media (min-width:1024px) {
@@ -63,6 +73,7 @@
   line-height: 1em;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: 0.1em;
 }
 
 .version-3 h1, .version-3 .h1 {

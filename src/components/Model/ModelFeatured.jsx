@@ -10,6 +10,7 @@ function ModelFeatured ({ featured }) {
 
   return (
     <section className="model-features dark-grey-bg dark-bg" style={{ backgroundImage: `url(${intro.image})` }}>
+      <span id="features" className="anchor"></span>
       <div className="std-wrapper no-padding-bottom">
 
         <div className="section-header grid t-center">
@@ -40,7 +41,11 @@ function ModelFeatured ({ featured }) {
                 <div><img src={row.image} alt={row.title} /></div>
                 <div className="row-text grid">
                   <h3>{row.title}</h3>
-                  <p>{row.description}</p>
+
+                  {Array.isArray(row.description) ? (
+                    row.description.map((para, i) => ( <p key={i}>{para}</p> ))
+                  ) : (<p>{row.description}</p>)}
+
                 </div>
               </div>
 

@@ -1,6 +1,6 @@
-import "./modelHighlights.css"
+import "./modelHighlights.css";
 
-function ModelHighlights ({ items }) {
+function ModelHighlights({ items }) {
 
   if (!items) return null;
 
@@ -11,8 +11,17 @@ function ModelHighlights ({ items }) {
         <div className="grid-d-four-cols">
           {items.map((item, index) => (
             <div key={index} className="model-highlights-col">
+
               <p><small>{item.label}</small></p>
-              <p>{item.value}</p>              
+
+              {Array.isArray(item.value) ? (
+                item.value.map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))
+              ) : (
+                <p>{item.value}</p>
+              )}
+
             </div>
           ))}
         </div>
@@ -20,7 +29,6 @@ function ModelHighlights ({ items }) {
       </div>        
     </section>
   );
-
 }
 
-export default ModelHighlights
+export default ModelHighlights;

@@ -2,15 +2,25 @@ import cx60 from "../../assets/images/range/cx-60.webp";
 import hero from "../../assets/images/models/cx-60/hero.webp";
 import intro from "../../assets/images/models/cx-60/intro.webp";
 import featureIntroImg from "../../assets/images/models/cx-60/featured-intro.webp";
-import featurePerformanceImg from "../../assets/images/models/cx-60/performance.webp";
-import featureTechnologyImg from "../../assets/images/models/cx-60/technology.webp";
-import featureDesignImg from "../../assets/images/models/cx-60/design.webp";
+import featurePerformance1Img from "../../assets/images/models/cx-60/featured-performance-1.webp";
+import featurePerformance2Img from "../../assets/images/models/cx-60/featured-performance-2.webp";
+import featurePerformance3Img from "../../assets/images/models/cx-60/featured-performance-3.webp";
+import featureTechnology1Img from "../../assets/images/models/cx-60/featured-technology-1.webp";
+import featureTechnology2Img from "../../assets/images/models/cx-60/featured-technology-2.webp";
+import featureTechnology3Img from "../../assets/images/models/cx-60/featured-technology-3.webp";
+import featureDesign1Img from "../../assets/images/models/cx-60/featured-design-1.webp";
+import featureDesign2Img from "../../assets/images/models/cx-60/featured-design-2.webp";
+import featureDesign3Img from "../../assets/images/models/cx-60/featured-design-3.webp";
 
 import RhodiumWhiteMetallic from "../../assets/images/models/cx-60/colours/rhodium-white-metallic.webp"
 import SonicSilverMetallic from "../../assets/images/models/cx-60/colours/sonic-silver-metallic.webp"
 import MachineGreyMetallic from "../../assets/images/models/cx-60/colours/machine-grey-metallic.webp"
 import SoulRedCrystalMetallic from "../../assets/images/models/cx-60/colours/soul-red-crystal-metallic.webp"
 import DeepCrystalBlueMica from "../../assets/images/models/cx-60/colours/deep-crystal-blue-mica.webp"
+
+import technology1Video from "../../assets/images/models/cx-60/technology-1.mp4";
+import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4";
+import technology3Video from "../../assets/images/models/cx-60/technology-3.mp4";
 
 const cx60Model = {
   
@@ -53,75 +63,81 @@ const cx60Model = {
     featured: {
       intro: {
         title: "Make the road ahead all yours",
-        description: "The new Mazda CX-60 has everything you need to make the next chapter your best yet. Thoughtfully designed with the latest smart tech, and built to exhilarate. It’s the kind of drive that you'll look forward to, every time.",
+        description: "The new Mazda CX-60 has everything you need to make the next chapter your best yet. Thoughtfully designed with the latest smart tech, and built to exhilarate. It's the kind of drive that you'll look forward to, every time.",
         image: featureIntroImg
       },
 
       tabs: [
-
         {
           label: "Performance",
-          rows: [
+          rows : [
             {
               title         : "A More Refined Drive",
               description   : "Get behind the wheel, with performance that delivers a more powerful, smooth and responsive drive.",
-              image         : featurePerformanceImg
+              image         : featurePerformance1Img
             },
             {
-              title         : "Performance col 2",
-              description   : "Get behind the wheel, with performance that delivers a more powerful, smooth and responsive drive.",
-              image         : featurePerformanceImg
+              title         : "Uncompromising Performance",
+              description   : "Experience the power of Plug-in Hybrid with 241kW engine and 500Nm of torque, delivering an impressive 2.5 tonnes of towing capacity.",
+              image         : featurePerformance2Img
             },
             {
-              title         : "Performance col 3",
-              description   : "Get behind the wheel, with performance that delivers a more powerful, smooth and responsive drive.",
-              image         : featurePerformanceImg
+              title         : "Move Forward With Hybrid",
+              description   : "Choose from either a powerful Plug-in Hybrid, or 3.3L Hybrid Turbo Petrol or Diesel powertrain. All with a responsive rear-biased AWD system that keeps you connected through every turn.",
+              image         : featurePerformance3Img
             }
           ]
         },
 
         {
           label : "Technology",
-          rows: [
+          rows : [
             {
-              title         : "Uncompromising Performance",
-              description   : "Experience the power of Plug-in Hybrid with 241kW engine and 500Nm of torque, delivering an impressive 2.5 tonnes of towing capacity.",
-              image         : featureTechnologyImg
+              title : "A More Connected Journey",
+              description : [
+                  "A 12.3” touchscreen display with wireless Apple CarPlay® and Android Auto™ that keeps you connected and entertained.",
+                  "(12.3” touchscreen only available on selected grade)"
+                ],
+              image : featureTechnology1Img
             },
             {
-              title         : "Technology col 2",
-              description   : "Experience the power of Plug-in Hybrid with 241kW engine and 500Nm of torque, delivering an impressive 2.5 tonnes of towing capacity.",
-              image         : featureTechnologyImg
+              title : "Intelligent Safety",
+              description : "Advanced safety and driver assist technology protects every drive with traffic, pedestrian and bicycle detection, Lane Departure Warning for safer highway driving, and 360° view cameras to manoeuvre tight spaces with ease.",
+              image : featureTechnology2Img
             },
             {
-              title         : "Technology col 3",
-              description   : "Experience the power of Plug-in Hybrid with 241kW engine and 500Nm of torque, delivering an impressive 2.5 tonnes of towing capacity.",
-              image         : featureTechnologyImg
+              title : "Personalise Your Drive",
+              description : [
+                  "With 250 personalised settings*, like optimal driving positioning, audio settings, connectivity preferences and customisable safety alerts; CX-60 makes every drive uniquely yours.",
+                  "(*Personalisation only available on selected grades)"
+                ],
+              image : featureTechnology3Img
             }
           ]
         },
 
         {
           label: "Design",
-          rows: [
+          rows : [
             {
-              title         : "Move Forward With Hybrid",
-              description   : "Choose from either a powerful Plug-in Hybrid, or 3.3L Hybrid Turbo Petrol or Diesel powertrain. All with a responsive rear-biased AWD system that keeps you connected through every turn.",
-              image         : featureDesignImg
+              title : "Design That Moves You",
+              description : "Every curve crafted by hand, the 7th Gen Kodo Design creates a sense of constant motion, even when standing still.",
+              image : featureDesign1Img
             },
             {
-              title         : "Design col 2",
-              description   : "Choose from either a powerful Plug-in Hybrid, or 3.3L Hybrid Turbo Petrol or Diesel powertrain. All with a responsive rear-biased AWD system that keeps you connected through every turn.",
-              image         : featureDesignImg
+              title : "Where Less Is More",
+              description : "A light-filled, spacious cabin—where every element seamlessly balances form and function, inviting tranquility and harmony into every corner.",
+              image : featureDesign2Img
             },
             {
-              title         : "Design col 3",
-              description   : "Choose from either a powerful Plug-in Hybrid, or 3.3L Hybrid Turbo Petrol or Diesel powertrain. All with a responsive rear-biased AWD system that keeps you connected through every turn.",
-              image         : featureDesignImg
+              title         : "Space To Settle In",
+              description   : "Load up, stretch out and enjoy every moment along the way with generous legroom and 477L of cargo space.",
+              image         : featureDesign3Img
             }
           ]
         }
       ]
+      
     },
 
     colours: {
@@ -157,17 +173,39 @@ const cx60Model = {
       ]
     },
 
-    gallery: [
-    ],
+    technology : {
+      intro: {
+        title       : "Technology",
+        subtitle    : "Technology that anticipates your needs"
+      },
+      columns : [
+        {
+          title       : "360° View Monitor",
+          description : [
+            "Advanced 360° exterior view and rear sensors enable you to reverse with confidence, for a perfect park every time.",
+            "(See through function shown available on selected grades only)"
+          ],
+          video       : technology1Video
+        },
+        {
+          title       : "Heated and Ventilated Seats",
+          description : [
+            "Enjoy ideal comfort in any condition with temperature adjustable seats. Just sit back and relax.",
+            "(Available on selected grades only)"          
+          ],
+          video       : technology2Video
+        },
+        {
+          title       : "Hands-free Power Tailgate",
+          description : [
+            "When your hands are full, feel the ease of tailgate opening by simply moving your foot under the sensor.",
+            "(Available on selected grades only)",
+          ],
+          video       : technology3Video
+        }
+      ]
 
-
-    specs: [
-    ],
-
-
-    technology: [
-    ],
-
+    },    
 
     safety: [
     ]
