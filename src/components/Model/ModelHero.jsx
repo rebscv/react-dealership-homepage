@@ -1,13 +1,15 @@
 import "./modelhero.css"
 
-function ModelHero ({ title, tagline, image }) {
+function ModelHero ({ title, tagline, image, imageMobile }) {
 
   return (
     <section className="model-hero">
 
 
             <picture>
-                <img src={image} alt={title} fetchPriority="high" />
+              <source media="(min-width: 768px)" srcset={image} />
+              <source srcset={imageMobile} />
+              <img src={image} alt={title} fetchPriority="high" />                
             </picture>
 
             <div className="model-hero-text-container">
@@ -22,6 +24,7 @@ function ModelHero ({ title, tagline, image }) {
   );
 
 }
+
 
 
 export default ModelHero

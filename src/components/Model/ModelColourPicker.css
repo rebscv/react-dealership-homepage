@@ -13,11 +13,11 @@
 }
 
 .colour-dots {
-  display: grid;
+  display: flex;
   gap: 16px;
-  grid-auto-flow: column;
   justify-content: start;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .colour-dot {

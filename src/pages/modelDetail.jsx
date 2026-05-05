@@ -10,6 +10,7 @@ import ModelFeatured from "../components/model/ModelFeatured";
 import ModelColourPicker from "../components/model/ModelColourPicker";
 import ModelTechnology from "../components/model/ModelTechnology";
 import ModelGallery from "../components/model/ModelGallery";
+import ModelSafety from "../components/model/ModelSafety";
 import ModelCTA from "../components/model/ModelCTA";
 
 
@@ -36,7 +37,7 @@ function ModelDetail() {
         <main className="model-detail-content">
             
 
-            <ModelHero title={model.hero.title} tagline={model.hero.tagline} image={model.hero.image} />
+            {model.hero && ( <ModelHero {...model.hero} /> )}
             {model.highlights && ( <ModelHighlights items={model.highlights} /> )}
             {model.intro && ( <ModelIntro {...model.intro} /> )}
             {model.featured && ( <ModelFeatured featured={model.featured} /> )}
@@ -44,8 +45,10 @@ function ModelDetail() {
                 <ModelColourPicker colours={model.colours} />
             )}
             <ModelTechnology technology={model.technology} />
+            <ModelSafety safety={model.safety} />
             <ModelGallery images={model.gallery} />
             <ModelCTA />
+            
 
             
         </main>

@@ -1,5 +1,6 @@
 import cx60 from "../../assets/images/range/cx-60.webp";
 import hero from "../../assets/images/models/cx-60/hero.webp";
+import heroMobile from "../../assets/images/models/cx-60/hero-m.webp";
 import intro from "../../assets/images/models/cx-60/intro.webp";
 import featureIntroImg from "../../assets/images/models/cx-60/featured-intro.webp";
 import featurePerformance1Img from "../../assets/images/models/cx-60/featured-performance-1.webp";
@@ -22,6 +23,8 @@ import technology1Video from "../../assets/images/models/cx-60/technology-1.mp4"
 import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4";
 import technology3Video from "../../assets/images/models/cx-60/technology-3.mp4";
 
+import safety1Video from "../../assets/images/models/cx-60/safety-1.mp4";
+
 const cx60Model = {
   
   
@@ -37,6 +40,7 @@ const cx60Model = {
       title: "New Mazda CX-60",
       tagline: "Look Forward to It",
       image: hero,
+      imageMobile: heroMobile
     },
 
     highlights: [
@@ -207,8 +211,35 @@ const cx60Model = {
 
     },    
 
-    safety: [
-    ]
+    safety: {
+      intro: {
+        title       : "Safety",
+        subtitle    : "Protecting The Road Ahead",
+        description : "Experience intelligent safety that cares for you and the world around you. The new Mazda CX-60 Hybrid introduces advanced technologies designed to protect the driver, the passengers, and others using the road."
+      },
+      slides : [
+        {
+          title       : "Smart Brake Support (SBS)",
+          description : "Helping you stay in control, this advanced technology can prevent accidents by sending alerts of an impending impact or, if necessary, apply the brakes.",
+          video       : safety1Video
+        },
+        {
+          title       : "Slide 2",
+          description : "Drive with increased confidence assisted by intuitive tech that reads traffic signs automatically adjusts the speed of the vehicle.",
+          video       : safety1Video
+        },
+        {
+          title       : "Slide 3",
+          description : "Helping you stay in control, this advanced technology can prevent accidents by sending alerts of an impending impact or, if necessary, apply the brakes.",
+          video       : safety1Video
+        },
+        {
+          title       : "Slide 4",
+          description : "Drive with increased confidence assisted by intuitive tech that reads traffic signs automatically adjusts the speed of the vehicle.",
+          video       : safety1Video
+        }
+      ]
+    }
 
 
 

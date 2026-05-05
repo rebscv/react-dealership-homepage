@@ -15,7 +15,7 @@ function ModelTechnology({ technology }) {
           {intro.subtitle && <p className="h2">{intro.subtitle}</p>}              
         </div>
 
-        <div className="grid-d-three-cols">
+        <div className="grid-d-three-cols grid-l-two-cols">
 
           {columns.map((col, index) => (
             <div key={index} className="model-technology-col grid">

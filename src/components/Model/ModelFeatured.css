@@ -1,3 +1,8 @@
+
+.version-3 .model-detail-content section:nth-child(even).dark-grey-bg {
+  background-color: var(--clr-dark-grey);
+}
+
 .model-features {
   background-size: 100%;
   background-position: top;
@@ -18,3 +23,42 @@
   position: relative;
   z-index: 1;
 }
+
+.tab-content {
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.tab-content.fade-in {
+  opacity: 1;
+}
+
+.tab-content.fade-out {
+  opacity: 0;
+}
+
+.tab-content.fade-in img {
+  filter: blur(0);
+}
+
+.tab-content.fade-out img {
+  filter: blur(16px);
+}
+
+.featured-tabs-overflow {
+  display: grid;
+}
+
+@media (max-width:575px) {
+
+  .featured-tabs-overflow {
+    overflow-x: auto;
+  }
+
+  .featured-tabs {
+    overflow-x: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+

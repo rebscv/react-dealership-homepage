@@ -77,23 +77,63 @@
 }
 
 .version-3 h1, .version-3 .h1 {
-  font-size: 2.5em;
+  font-size: 1.8em;
 }
 
 .version-3 h2, .version-3 .h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 .version-3 h3, .version-3 .h3 {
-  font-size: 1.6em;
+  font-size: 1.3em;
 }
 
 .version-3 h4, .version-3 .h4 {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .version-3 p {
   margin: 0;
+}
+
+@media (min-width:576px) {
+  
+  .version-3 h1, .version-3 .h1 {
+    font-size: 2em;
+  }
+
+  .version-3 h2, .version-3 .h2 {
+    font-size: 1.8em;
+  }
+
+  .version-3 h3, .version-3 .h3 {
+    font-size: 1.4em;
+  }
+
+  .version-3 h4, .version-3 .h4 {
+    font-size: 1.3em;
+  }
+
+}
+
+@media (min-width:1024px) {
+  
+  .version-3 h1, .version-3 .h1 {
+    font-size: 2.5em;
+  }
+
+  .version-3 h2, .version-3 .h2 {
+    font-size: 2.5em;
+  }
+
+  .version-3 h3, .version-3 .h3 {
+    font-size: 1.6em;
+  }
+
+  .version-3 h4, .version-3 .h4 {
+    font-size: 1.3em;
+  }
+
 }
 
 

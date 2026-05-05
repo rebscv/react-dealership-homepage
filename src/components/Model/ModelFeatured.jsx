@@ -4,6 +4,13 @@ import "./ModelFeatured.css";
 function ModelFeatured ({ featured }) {
 
   const [activeTab, setActiveTab] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  const handleTabClick = (index) => {
+    if (index === activeTab) return;
+    setIsFading(true);
+    setTimeout(() => { setActiveTab(index); setIsFading(false); }, 300);
+  };
 
   const { intro, tabs } = featured;
   const activeRows = tabs[activeTab].rows;  
@@ -21,18 +28,20 @@ function ModelFeatured ({ featured }) {
       </div>
 
       <div className="std-wrapper">
-        <div className="featured-tabs default-tabs">
-          {tabs.map((tab, index) => (
-            <button key={tab.label} className={activeTab === index ? "active" : ""} onClick={() => setActiveTab(index)}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="featured-tabs-overflow">
+          <div className="featured-tabs default-tabs">
+            {tabs.map((tab, index) => (
+              <button key={tab.label} className={activeTab === index ? "active" : ""} onClick={() => handleTabClick(index)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
 
         <div>
-          <div className="grid-d-three-cols">
+          <div className={`grid-d-three-cols grid-l-two-cols tab-content ${isFading ? "fade-out" : "fade-in"}`}>
 
           {activeRows.map((row, index) => (
             <div key={row.title} className={`featured-row ${index % 2 !== 0 ? "reverse" : ""}`}>
