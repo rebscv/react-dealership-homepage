@@ -3,30 +3,6 @@
    Hero Slider Version 3
 ========================= */
 
-.version-3 .embla__prev, .version-3 .embla__next {
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-
-.version-3 .embla__prev svg, .version-3 .embla__next svg {
-  padding: 12px 14px 12px 10px;
-  color: #fff;
-  border: solid 1px #fff;
-  border-radius: 50%;
-  font-size: 22px;
-  transition: ease 0.4s all;
-}
-
-.version-3 .embla__next svg {
-  padding: 12px 10px 12px 14px;
-}
-
-.version-3 .embla__prev:hover svg, .version-3 .embla__next:hover svg {
-  background-color: #ffffff4a;
-  border-color: transparent;
-}
-
 .version-3 .hero-slider .embla__container > div {
   padding: 0;
 }
@@ -64,7 +40,6 @@
   height: auto;
   max-height: 540px;
 }
-
 
 @media (min-width:768px) {
 

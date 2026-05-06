@@ -24,6 +24,12 @@ import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4"
 import technology3Video from "../../assets/images/models/cx-60/technology-3.mp4";
 
 import safety1Video from "../../assets/images/models/cx-60/safety-1.mp4";
+import safety2Video from "../../assets/images/models/cx-60/safety-2.mp4";
+import safety3Video from "../../assets/images/models/cx-60/safety-3.mp4";
+import safety4Video from "../../assets/images/models/cx-60/safety-4.mp4";
+import safety5Video from "../../assets/images/models/cx-60/safety-5.mp4";
+
+import gradeimg1 from "../../assets/images/models/cx-60/pure-grade.webp";
 
 const cx60Model = {
   
@@ -203,7 +209,7 @@ const cx60Model = {
           title       : "Hands-free Power Tailgate",
           description : [
             "When your hands are full, feel the ease of tailgate opening by simply moving your foot under the sensor.",
-            "(Available on selected grades only)",
+            "(Available on selected grades only)"
           ],
           video       : technology3Video
         }
@@ -212,6 +218,7 @@ const cx60Model = {
     },    
 
     safety: {
+      
       intro: {
         title       : "Safety",
         subtitle    : "Protecting The Road Ahead",
@@ -219,29 +226,183 @@ const cx60Model = {
       },
       slides : [
         {
-          title       : "Smart Brake Support (SBS)",
-          description : "Helping you stay in control, this advanced technology can prevent accidents by sending alerts of an impending impact or, if necessary, apply the brakes.",
-          video       : safety1Video
+          title : "Smart Brake Support (SBS)",
+          description : [
+            "Helping you stay in control, this advanced technology can prevent accidents by sending alerts of an impending impact or, if necessary, apply the brakes."
+          ],
+          video : safety1Video
         },
+
         {
-          title       : "Slide 2",
-          description : "Drive with increased confidence assisted by intuitive tech that reads traffic signs automatically adjusts the speed of the vehicle.",
-          video       : safety1Video
+          title : "i-Adaptive Cruise Control",
+          description : [
+            "Drive with increased confidence assisted by intuitive tech that reads traffic signs automatically adjusts the speed of the vehicle."
+          ],
+          video : safety2Video
         },
+
         {
-          title       : "Slide 3",
-          description : "Helping you stay in control, this advanced technology can prevent accidents by sending alerts of an impending impact or, if necessary, apply the brakes.",
-          video       : safety1Video
+          title : "Mazda Radar Cruise Control (MRCC) with Cruising & Traffic Support (CTS)",
+          description : [
+            "Stay protected by reducing driver fatigue when following a vehicle in heavy traffic. MRCC assists the driver with accelerator, brake, and steering functions.",
+            "(Cruising and Traffic Support - CTS available on selected grades only)"
+          ],
+          video : safety3Video    
         },
+        
         {
-          title       : "Slide 4",
-          description : "Drive with increased confidence assisted by intuitive tech that reads traffic signs automatically adjusts the speed of the vehicle.",
-          video       : safety1Video
+          title : "360° Safety Camera System",
+          description : [
+            "Enhance your road vision with See-through View technology that ensures drivers are always able to see their surrounding environment clearly.",
+            "(See through function shown available on selected grades only)"
+          ],
+          video : safety4Video
+        },
+        
+        {
+          title : "Active Driving Display",
+          description : [
+            "Get more of every moment with technology that displays current speed, recognises traffic signs, and shows key navigation information on the windshield, so it’s always on sight. Standard on all grades."
+          ],
+          video : safety5Video
         }
+
       ]
+
+    },
+
+    grades: {      
+      intro: {
+        title       : "Specifications",
+        subtitle    : "Choose your grade",
+      },
+      slides : [
+
+        {
+          title : "Pure",
+          price : "$47,990†",
+          featuresTitle : "Base features:",
+          features : [
+            "Mazda Connect With Apple Carplay® And Android Auto™ (Wireless And USB)",
+            "Active Driving Display",
+            "360° view monitor",
+            "Black cloth seat trim with 8-way manual driver's seat adjustment",
+            "18-inch grey metallic alloy wheels",
+            "8 speaker audio system with DAB+ and USB-C",
+            "Blind Spot Monitoring (BSM) with vehicle exit warning",
+            "Smart Brake Support (SBS)",
+            "Mazda Intelligent Drive Select (Mi-Drive)",
+            "8-speed automatic transmission"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve ",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve 2",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve 3",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve 4",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve 5",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        },
+
+        {
+          title : "Evolve 6",
+          price : "$54,780†",
+          featuresTitle : "In addition to Pure:",
+          features : [
+            "Black Maztex trim with 8-way manual driver's seat adjustment",
+            "Cruising & Traffic Support (CTS)",
+            "Remote operated power tailgate",
+            "Wireless Phone Charging (QI)",
+            "360° View Monitor with see through view",
+            "Driver monitoring",
+            "Front Cross Traffic Alert (FCTA)",
+            "See key features explainedcompare full specsBuild Your CX-60"
+          ],
+          image : gradeimg1
+        }
+
+
+      ]
+
     }
-
-
 
 };
 

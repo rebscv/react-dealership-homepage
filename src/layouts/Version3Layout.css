@@ -311,6 +311,10 @@
    Tabs Content
 ========================= */
 
+.tabs-overflow {
+  display: grid;
+}
+
 .default-tabs {    
   margin: 0 auto;
   gap: 8px;
@@ -346,4 +350,46 @@
 
 .default-tabs, .default-tabs button {
   border-radius: 4px;
+}
+
+@media (max-width:575px) {
+
+  .tabs-overflow {
+     overflow-x: auto;
+  }
+
+  .default-tabs {
+    overflow-x: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+
+/* =========================
+   Embla
+========================= */
+
+.version-3 .embla__prev, .version-3 .embla__next {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.version-3 .embla__prev svg, .version-3 .embla__next svg {
+  padding: 12px 14px 12px 10px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 22px;
+  transition: ease 0.4s all;
+  background-color: #0000005c;
+}
+
+.version-3 .embla__next svg {
+  padding: 12px 10px 12px 14px;
+}
+
+.version-3 .embla__prev:hover svg, .version-3 .embla__next:hover svg {
+  background-color: #000000;
 }

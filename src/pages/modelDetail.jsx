@@ -11,6 +11,7 @@ import ModelColourPicker from "../components/model/ModelColourPicker";
 import ModelTechnology from "../components/model/ModelTechnology";
 import ModelGallery from "../components/model/ModelGallery";
 import ModelSafety from "../components/model/ModelSafety";
+import ModelGrades from "../components/model/ModelGrades";
 import ModelCTA from "../components/model/ModelCTA";
 
 
@@ -46,6 +47,7 @@ function ModelDetail() {
             )}
             <ModelTechnology technology={model.technology} />
             <ModelSafety safety={model.safety} />
+            <ModelGrades grades={model.grades} />
             <ModelGallery images={model.gallery} />
             <ModelCTA />
             

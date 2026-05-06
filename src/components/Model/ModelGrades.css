@@ -1,0 +1,56 @@
+:root {
+  --grade-padding: 24px;
+}
+
+.model-grade-slide {
+  border: solid 1px var(--clr-grey-dk);
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.model-grade-img {
+  padding: 16px;
+  background-color: var(--clr-white);
+}
+
+.model-grade-name-row {
+  padding: 8px var(--grade-padding) var(--grade-padding);
+  background-color: var(--clr-white);
+  display: grid;
+  gap: 16px;
+}
+
+.model-grade-driveaway {
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+}
+
+.model-grade-price {
+  font-size: 1.5em;
+}
+
+.model-grade-features-row {
+  padding: var(--grade-padding);
+}
+
+.model-grade-features-title {
+  color: var(--clr-dark-grey);
+}
+
+.model-grade-features-row ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  display: grid;
+  gap: 8px;  
+}
+
+.model-grade-cta {
+  padding: 0 var(--grade-padding) var(--grade-padding);
+  margin-top: auto;
+}

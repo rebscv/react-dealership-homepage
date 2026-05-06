@@ -45,10 +45,10 @@ function HeaderV3() {
                 <div className="std-wrapper">
                     <div className="header-grid">
 
-                        <div className="header-title">
+                        <Link to="/version-3" className="header-title" onClick={closeMenu}>
                             <img src={logo} alt="" width="78" height="71" />
                             <h2>Dealer Name City</h2>
-                        </div>
+                        </Link>
 
                         <div className="navbar">
                             <HeaderNavbar closeMenu={closeMenu} />

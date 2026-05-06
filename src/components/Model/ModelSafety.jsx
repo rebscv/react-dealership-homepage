@@ -37,7 +37,11 @@ function ModelSafety({ safety }) {
                   </div>
                   <div className="model-saftey-slide-text grid">
                     {slide.title && <h3>{slide.title}</h3>}
-                    {slide.description && <p>{slide.description}</p>}
+
+                    {Array.isArray(slide.description) ? 
+                      (slide.description.map((para, i) => (<p key={i}>{para}</p>))) : (slide.description && <p>{slide.description}</p> )
+                    }
+
                   </div>
 
                 </div>

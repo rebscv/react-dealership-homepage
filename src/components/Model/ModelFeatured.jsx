@@ -28,7 +28,7 @@ function ModelFeatured ({ featured }) {
       </div>
 
       <div className="std-wrapper">
-        <div className="featured-tabs-overflow">
+        <div className="tabs-overflow">
           <div className="featured-tabs default-tabs">
             {tabs.map((tab, index) => (
               <button key={tab.label} className={activeTab === index ? "active" : ""} onClick={() => handleTabClick(index)}

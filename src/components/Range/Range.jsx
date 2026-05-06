@@ -20,12 +20,14 @@ function Range () {
 
                 <h2>Find Your <img src={zoomzoom} width={250} height={47} alt="Zoom Zoom" /></h2>
 
-                <div className="range-tabs default-tabs">
-                    {tabs.map((tab) => (
-                        <button key={tab} className={activeTab === tab ? "active" : ""} onClick={() => setActiveTab(tab)}>
-                            {tabLabels[tab]}
-                        </button>
-                    ))}
+                <div className="tabs-overflow">
+                    <div className="range-tabs default-tabs">
+                        {tabs.map((tab) => (
+                            <button key={tab} className={activeTab === tab ? "active" : ""} onClick={() => setActiveTab(tab)}>
+                                {tabLabels[tab]}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="grid grid-d-four-cols grid-l-three-cols grid-t-two-cols range-model-grid">
