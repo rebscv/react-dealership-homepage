@@ -1,19 +1,46 @@
 import useEmblaWithDots from "../../hooks/useEmblaCarouselWithDots";
+import { useState, useEffect } from "react";
+
 import "./ModelGrades.css";
 
+function ModelGrades({ grades }) {
 
-function ModelGrades({ grades }) {  
-
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);  
 
   const { intro, slides } = grades;
   if (!slides) return null;
 
-      const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev } = useEmblaWithDots(
-        {
-          loop: true,
-          loop: true, 
-          breakpoints: { "(min-width:480px)": { slidesToScroll: 2 }, "(min-width:768px)": { slidesToScroll: 3 }, "(min-width:1024px)": { slidesToScroll: 4 } }
-        }, 4000);
+  const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev } = useEmblaWithDots(
+    {
+      loop: false,
+      align: "start",
+      breakpoints: { "(min-width:768px)": { slidesToScroll: 2 }, "(min-width:1024px)": { slidesToScroll: 3 }, "(min-width:1440px)": { slidesToScroll: 4 } }
+    }, 4000)
+
+
+  // Add inactive state to next/prev buttons
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const updateButtons = () => {
+      setPrevBtnDisabled(!emblaApi.canScrollPrev());
+      setNextBtnDisabled(!emblaApi.canScrollNext());
+    };
+
+    updateButtons();
+
+    emblaApi.on("select", updateButtons);
+    emblaApi.on("reInit", updateButtons);
+
+    return () => {
+      emblaApi.off("select", updateButtons);
+      emblaApi.off("reInit", updateButtons);
+    }
+
+  }, [emblaApi]);
+
 
   return (
     <section className="model-grades">
@@ -27,7 +54,7 @@ function ModelGrades({ grades }) {
         <div className="embla model-grade-slider" ref={emblaRef}>
 
 
-          <div className="embla__container grid-d-four-cols">
+          <div className="embla__container">
 
             {slides.map((slide, index) => (
               <div key={slides.id ?? index} className={`embla__slide ${index === selectedIndex ? "is-active" : ""}`}>
@@ -82,11 +109,11 @@ function ModelGrades({ grades }) {
 
           <div className="embla__arrows__container">
 
-              <button className="embla__prev" onClick={() => { scrollPrev(); resetAutoplay(); }}>
+              <button className={`embla__prev ${prevBtnDisabled ? "is-disabled" : ""}` } onClick={() => { scrollPrev(); resetAutoplay(); }}>
                   <svg className="icon-arrow-left"><use href="/icons.svg#icon-arrow-left"></use></svg>
               </button>
 
-              <button className="embla__next" onClick={() => { scrollNext(); resetAutoplay(); }}>
+              <button className={`embla__next ${nextBtnDisabled ? "is-disabled" : ""}` } onClick={() => { scrollNext(); resetAutoplay(); }}>
                   <svg className="icon-arrow-right"><use href="/icons.svg#icon-arrow-right"></use></svg>                   
               </button>
 

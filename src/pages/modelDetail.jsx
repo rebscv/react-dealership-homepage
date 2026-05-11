@@ -48,7 +48,6 @@ function ModelDetail() {
             <ModelTechnology technology={model.technology} />
             <ModelSafety safety={model.safety} />
             <ModelGrades grades={model.grades} />
-            <ModelGallery images={model.gallery} />
             <ModelCTA />
             
 

@@ -18,6 +18,9 @@ import SonicSilverMetallic from "../../assets/images/models/cx-60/colours/sonic-
 import MachineGreyMetallic from "../../assets/images/models/cx-60/colours/machine-grey-metallic.webp"
 import SoulRedCrystalMetallic from "../../assets/images/models/cx-60/colours/soul-red-crystal-metallic.webp"
 import DeepCrystalBlueMica from "../../assets/images/models/cx-60/colours/deep-crystal-blue-mica.webp"
+import QuartzMetallic from "../../assets/images/models/cx-60/colours/quartz-metallic.webp"
+import ZirconSandMetallic from "../../assets/images/models/cx-60/colours/zircon-sand-metallic.webp"
+import JetBlackMica from "../../assets/images/models/cx-60/colours/jet-black-mica.webp"
 
 import technology1Video from "../../assets/images/models/cx-60/technology-1.mp4";
 import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4";
@@ -29,7 +32,11 @@ import safety3Video from "../../assets/images/models/cx-60/safety-3.mp4";
 import safety4Video from "../../assets/images/models/cx-60/safety-4.mp4";
 import safety5Video from "../../assets/images/models/cx-60/safety-5.mp4";
 
-import gradeimg1 from "../../assets/images/models/cx-60/pure-grade.webp";
+import gradePureImg from "../../assets/images/models/cx-60/pure-grade.webp";
+import gradeEvolveImg from "../../assets/images/models/cx-60/evolve-grade.webp";
+import gradeTouringImg from "../../assets/images/models/cx-60/touring-grade.webp";
+import gradeGTImg from "../../assets/images/models/cx-60/gt-grade.webp";
+import gradeAzamiImg from "../../assets/images/models/cx-60/azami-grade.webp";
 
 const cx60Model = {
   
@@ -161,16 +168,6 @@ const cx60Model = {
           image     : RhodiumWhiteMetallic
         },
         {
-          name      : "Deep Crystal Blue Mica",
-          colorCode : "#121c3f",
-          image     : DeepCrystalBlueMica
-        },
-        {
-          name      : "Soul Red Crystal Metallic",
-          colorCode : "#d80004",
-          image     : SoulRedCrystalMetallic
-        },
-        {
           name      : "Sonic Silver Metallic",
           colorCode : "#999999",
           image     : SonicSilverMetallic
@@ -179,6 +176,31 @@ const cx60Model = {
           name      : "Machine Grey Metallic",
           colorCode : "#666666",
           image     : MachineGreyMetallic
+        },
+        {
+          name      : "Jet Black Mica",
+          colorCode : "#2A2A2A",
+          image     : JetBlackMica
+        },
+        {
+          name      : "Soul Red Crystal Metallic",
+          colorCode : "#d80004",
+          image     : SoulRedCrystalMetallic
+        },
+        {
+          name      : "Deep Crystal Blue Mica",
+          colorCode : "#121c3f",
+          image     : DeepCrystalBlueMica
+        },
+        {
+          name      : "Platinum Quartz Metallic",
+          colorCode : "#B2AB9E",
+          image     : QuartzMetallic
+        },
+        {
+          name      : "Zircon Sand Metallic",
+          colorCode : "#A99B7D",
+          image     : ZirconSandMetallic
         }
       ]
     },
@@ -294,11 +316,11 @@ const cx60Model = {
             "Mazda Intelligent Drive Select (Mi-Drive)",
             "8-speed automatic transmission"
           ],
-          image : gradeimg1
+          image : gradePureImg
         },
 
         {
-          title : "Evolve ",
+          title : "Evolve",
           price : "$54,780†",
           featuresTitle : "In addition to Pure:",
           features : [
@@ -311,94 +333,51 @@ const cx60Model = {
             "Front Cross Traffic Alert (FCTA)",
             "See key features explainedcompare full specsBuild Your CX-60"
           ],
-          image : gradeimg1
+          image : gradeEvolveImg
         },
 
         {
-          title : "Evolve 2",
-          price : "$54,780†",
-          featuresTitle : "In addition to Pure:",
+          title : "Touring",
+          price : "$57,906†",              
+          featuresTitle : "In addition to Evolve: Black leather seat trim",
           features : [
-            "Black Maztex trim with 8-way manual driver's seat adjustment",
-            "Cruising & Traffic Support (CTS)",
-            "Remote operated power tailgate",
-            "Wireless Phone Charging (QI)",
-            "360° View Monitor with see through view",
-            "Driver monitoring",
-            "Front Cross Traffic Alert (FCTA)",
-            "See key features explainedcompare full specsBuild Your CX-60"
+            "Power seat adjustment (driver &amp; passenger) with position memory (driver)",
+            "Heated front seats (driver and passenger)",
+            "Exterior mirror memory",
+            "Rear console with LED lamp"
           ],
-          image : gradeimg1
+          image : gradeTouringImg
         },
 
         {
-          title : "Evolve 3",
-          price : "$54,780†",
-          featuresTitle : "In addition to Pure:",
+          title : "GT",
+          price : "$67,990†",
+          featuresTitle : "In addition to Touring:",
           features : [
-            "Black Maztex trim with 8-way manual driver's seat adjustment",
-            "Cruising & Traffic Support (CTS)",
-            "Remote operated power tailgate",
-            "Wireless Phone Charging (QI)",
-            "360° View Monitor with see through view",
-            "Driver monitoring",
-            "Front Cross Traffic Alert (FCTA)",
-            "See key features explainedcompare full specsBuild Your CX-60"
+            "20-inch black metallic alloy wheels",
+            "Hands-free remote operated power tailgate",
+            "Panoramic sunroof",
+            "Heated steering wheel and heated seats",
+            "Premium Bose® Audio with 12 speakers",
+            "Personalise system (auto restoration of settings)",
+            "Adaptive LED Headlamps (ALH)"
           ],
-          image : gradeimg1
+          image : gradeGTImg
         },
 
         {
-          title : "Evolve 4",
-          price : "$54,780†",
-          featuresTitle : "In addition to Pure:",
+          title : "Azami",
+          price : "$74,786†",
+          featuresTitle : "In addition to GT:",
           features : [
-            "Black Maztex trim with 8-way manual driver's seat adjustment",
-            "Cruising & Traffic Support (CTS)",
-            "Remote operated power tailgate",
-            "Wireless Phone Charging (QI)",
-            "360° View Monitor with see through view",
-            "Driver monitoring",
-            "Front Cross Traffic Alert (FCTA)",
-            "See key features explainedcompare full specsBuild Your CX-60"
+            "Nappa leather seats",
+            "Ventilated front seats",
+            "Frameless interior mirror",
+            "20-inch black metalllic &amp; machined alloy wheels",
+            "Personalise system with easy entry &amp; driving position guide"
           ],
-          image : gradeimg1
-        },
-
-        {
-          title : "Evolve 5",
-          price : "$54,780†",
-          featuresTitle : "In addition to Pure:",
-          features : [
-            "Black Maztex trim with 8-way manual driver's seat adjustment",
-            "Cruising & Traffic Support (CTS)",
-            "Remote operated power tailgate",
-            "Wireless Phone Charging (QI)",
-            "360° View Monitor with see through view",
-            "Driver monitoring",
-            "Front Cross Traffic Alert (FCTA)",
-            "See key features explainedcompare full specsBuild Your CX-60"
-          ],
-          image : gradeimg1
-        },
-
-        {
-          title : "Evolve 6",
-          price : "$54,780†",
-          featuresTitle : "In addition to Pure:",
-          features : [
-            "Black Maztex trim with 8-way manual driver's seat adjustment",
-            "Cruising & Traffic Support (CTS)",
-            "Remote operated power tailgate",
-            "Wireless Phone Charging (QI)",
-            "360° View Monitor with see through view",
-            "Driver monitoring",
-            "Front Cross Traffic Alert (FCTA)",
-            "See key features explainedcompare full specsBuild Your CX-60"
-          ],
-          image : gradeimg1
+          image : gradeAzamiImg
         }
-
 
       ]
 

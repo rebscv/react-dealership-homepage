@@ -51,6 +51,14 @@
   
 }
 
+@media (max-width:1023px) {
+
+  .model-safety .embla__arrows__container {
+    display: none;
+  }
+  
+}
+
 @media (max-width:575px) {
 
   .model-safety {

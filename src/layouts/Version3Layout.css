@@ -393,3 +393,12 @@
 .version-3 .embla__prev:hover svg, .version-3 .embla__next:hover svg {
   background-color: #000000;
 }
+
+.version-3 .embla__prev.is-disabled, .version-3 .embla__next.is-disabled {
+  opacity: 0.15;
+}
+
+.version-3 .embla__prev.is-disabled:hover svg, .version-3 .embla__next.is-disabled:hover svg {
+  background-color: #0000005c;
+}
+
