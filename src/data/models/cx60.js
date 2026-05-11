@@ -22,6 +22,13 @@ import QuartzMetallic from "../../assets/images/models/cx-60/colours/quartz-meta
 import ZirconSandMetallic from "../../assets/images/models/cx-60/colours/zircon-sand-metallic.webp"
 import JetBlackMica from "../../assets/images/models/cx-60/colours/jet-black-mica.webp"
 
+import blackClothInterior from "../../assets/images/models/cx-60/interior-colours/black-cloth.webp"
+import blackmaztexInterior from "../../assets/images/models/cx-60/interior-colours/black-maztex.webp"
+
+import blackClothInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-cloth-thumb.webp"
+import blackmaztexInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-maztex-thumb.webp"
+
+
 import technology1Video from "../../assets/images/models/cx-60/technology-1.mp4";
 import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4";
 import technology3Video from "../../assets/images/models/cx-60/technology-3.mp4";
@@ -161,48 +168,71 @@ const cx60Model = {
       title       : "Design",
       subtitle    : "It's your way forward",
       description : "Whether you’re after something bold, refined, or a bit of both, there’s a CX-60 that’s perfectly suited to you and your journey.",
-      options: [
-        {
-          name      : "Rhodium White Metallic",
-          colorCode : "#cccccc",
-          image     : RhodiumWhiteMetallic
-        },
-        {
-          name      : "Sonic Silver Metallic",
-          colorCode : "#999999",
-          image     : SonicSilverMetallic
-        },
-        {
-          name      : "Machine Grey Metallic",
-          colorCode : "#666666",
-          image     : MachineGreyMetallic
-        },
-        {
-          name      : "Jet Black Mica",
-          colorCode : "#2A2A2A",
-          image     : JetBlackMica
-        },
-        {
-          name      : "Soul Red Crystal Metallic",
-          colorCode : "#d80004",
-          image     : SoulRedCrystalMetallic
-        },
-        {
-          name      : "Deep Crystal Blue Mica",
-          colorCode : "#121c3f",
-          image     : DeepCrystalBlueMica
-        },
-        {
-          name      : "Platinum Quartz Metallic",
-          colorCode : "#B2AB9E",
-          image     : QuartzMetallic
-        },
-        {
-          name      : "Zircon Sand Metallic",
-          colorCode : "#A99B7D",
-          image     : ZirconSandMetallic
-        }
-      ]
+      
+      exterior: {
+        tabLabel: "Exterior",
+        options: [
+          {
+            name      : "Rhodium White Metallic",
+            colorCode : "#cccccc",
+            image     : RhodiumWhiteMetallic
+          },
+          {
+            name      : "Sonic Silver Metallic",
+            colorCode : "#999999",
+            image     : SonicSilverMetallic
+          },
+          {
+            name      : "Machine Grey Metallic",
+            colorCode : "#666666",
+            image     : MachineGreyMetallic
+          },
+          {
+            name      : "Jet Black Mica",
+            colorCode : "#2A2A2A",
+            image     : JetBlackMica
+          },
+          {
+            name      : "Soul Red Crystal Metallic",
+            colorCode : "#d80004",
+            image     : SoulRedCrystalMetallic
+          },
+          {
+            name      : "Deep Crystal Blue Mica",
+            colorCode : "#121c3f",
+            image     : DeepCrystalBlueMica
+          },
+          {
+            name      : "Platinum Quartz Metallic",
+            colorCode : "#B2AB9E",
+            image     : QuartzMetallic
+          },
+          {
+            name      : "Zircon Sand Metallic",
+            colorCode : "#A99B7D",
+            image     : ZirconSandMetallic
+          }
+        ]
+      },
+
+      interior: {
+        tabLabel: "Interior",
+        options: [
+          {
+            name        : "Black Cloth",
+            image       : blackClothInterior,
+            imageThumb  : blackClothInteriorThumb
+          },
+          {
+            name        : "Black Maztex",
+            image       : blackmaztexInterior,
+            imageThumb  : blackmaztexInteriorThumb
+          }
+
+        ]
+      }
+      
+
     },
 
     technology : {
