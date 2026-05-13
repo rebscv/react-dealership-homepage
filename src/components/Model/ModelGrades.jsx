@@ -16,7 +16,7 @@ function ModelGrades({ grades }) {
       loop: false,
       align: "start",
       breakpoints: { "(min-width:768px)": { slidesToScroll: 2 }, "(min-width:1024px)": { slidesToScroll: 3 }, "(min-width:1440px)": { slidesToScroll: 4 } }
-    }, 4000)
+    }, 0)
 
 
   // Add inactive state to next/prev buttons
@@ -51,7 +51,7 @@ function ModelGrades({ grades }) {
           {intro.subtitle && <p className="h2">{intro.subtitle}</p>}              
         </div>
 
-        <div className="embla model-grade-slider" ref={emblaRef}>
+        <div className="embla model-grade-slider no-dot" ref={emblaRef}>
 
 
           <div className="embla__container">
@@ -94,7 +94,7 @@ function ModelGrades({ grades }) {
           </div>
 
 
-          <div className="embla__dots__container">
+          <div className="embla__dots__container no-autoplay-dots">
               <div className="embla__dots">
                   {scrollSnaps.map((_, index) => (
 

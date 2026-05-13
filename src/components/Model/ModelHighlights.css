@@ -3,13 +3,41 @@
   color: var(--clr-white)
 }
 
-.model-highlights-col {
-
-}
-
 .model-highlights small {
   text-transform: uppercase;
   font-size: 0.65em;
   letter-spacing: 0.15em;
   color: var(--clr-grey-dk)
 }
+
+.model-highlights-col {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+
+.model-hightlight-text {
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 575px) {
+
+  .model-highlights-col {
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+  }
+
+  .model-hightlight-text {
+    font-size: 0.75em;
+    gap: 4px;
+  }
+    
+}
+

@@ -42,13 +42,11 @@ function ModelDetail() {
             {model.highlights && ( <ModelHighlights items={model.highlights} /> )}
             {model.intro && ( <ModelIntro {...model.intro} /> )}
             {model.featured && ( <ModelFeatured featured={model.featured} /> )}
-            {model.colours && (
-                <ModelColourPicker colours={model.colours} />
-            )}
+            <ModelColourPicker colours={model.colours} />
             <ModelTechnology technology={model.technology} />
             <ModelSafety safety={model.safety} />
             <ModelGrades grades={model.grades} />
-            <ModelCTA />
+            {model.cta && ( <ModelCTA {...model.cta} /> )}
             
 
             

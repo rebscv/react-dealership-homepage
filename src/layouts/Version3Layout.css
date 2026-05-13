@@ -1,3 +1,10 @@
+:root {
+
+	--padding-tb: 48px;
+
+}
+
+
 /* =========================
    General Styles
 ========================= */
@@ -151,6 +158,7 @@
   letter-spacing: 0.25em;
   transition: ease 0.4s all;
   display: inline-block;
+  line-height: 1.2em;
 }
 
 .version-3 .btn-primary, .version-3 a.btn-primary {
@@ -400,5 +408,13 @@
 
 .version-3 .embla__prev.is-disabled:hover svg, .version-3 .embla__next.is-disabled:hover svg {
   background-color: #0000005c;
+}
+
+.version-3 .no-autoplay-dots .embla__dot-progress {
+    animation: none;
+}
+
+.version-3 .no-autoplay-dots .is-active {
+
 }
 

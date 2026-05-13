@@ -13,6 +13,11 @@ import featureDesign1Img from "../../assets/images/models/cx-60/featured-design-
 import featureDesign2Img from "../../assets/images/models/cx-60/featured-design-2.webp";
 import featureDesign3Img from "../../assets/images/models/cx-60/featured-design-3.webp";
 
+import hightlightsEngine from "../../assets/images/models/global/engine.webp";
+import hightlightsPhev from "../../assets/images/models/global/phev.webp";
+import hightlightsPetrol from "../../assets/images/models/global/petrol-type.webp";
+import hightlightsSeats from "../../assets/images/models/global/seats.webp";
+
 import RhodiumWhiteMetallic from "../../assets/images/models/cx-60/colours/rhodium-white-metallic.webp"
 import SonicSilverMetallic from "../../assets/images/models/cx-60/colours/sonic-silver-metallic.webp"
 import MachineGreyMetallic from "../../assets/images/models/cx-60/colours/machine-grey-metallic.webp"
@@ -24,10 +29,19 @@ import JetBlackMica from "../../assets/images/models/cx-60/colours/jet-black-mic
 
 import blackClothInterior from "../../assets/images/models/cx-60/interior-colours/black-cloth.webp"
 import blackmaztexInterior from "../../assets/images/models/cx-60/interior-colours/black-maztex.webp"
+import blackLeatherInterior from "../../assets/images/models/cx-60/interior-colours/black-leather.webp"
+import reveraStoneLeatherInterior from "../../assets/images/models/cx-60/interior-colours/revera-stone-leather.webp"
+import blackNappaLeathererInterior from "../../assets/images/models/cx-60/interior-colours/black-nappa-leather.webp"
+import tanNappaLeatherInterior from "../../assets/images/models/cx-60/interior-colours/tan-nappa-leather.webp"
+import pureWhiteNappaLeatherInterior from "../../assets/images/models/cx-60/interior-colours/pure-white-nappa-leather.webp"
 
 import blackClothInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-cloth-thumb.webp"
 import blackmaztexInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-maztex-thumb.webp"
-
+import blackLeatherInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-leather-thumb.webp"
+import reveraStoneLeatherInteriorThumb from "../../assets/images/models/cx-60/interior-colours/revera-stone-leather-thumb.webp"
+import blackNappaLeathererInteriorThumb from "../../assets/images/models/cx-60/interior-colours/black-nappa-leather-thumb.webp"
+import tanNappaLeatherInteriorThumb from "../../assets/images/models/cx-60/interior-colours/tan-nappa-leather-thumb.webp"
+import pureWhiteNappaLeatherInteriorThumb from "../../assets/images/models/cx-60/interior-colours/pure-white-nappa-leather-thumb.webp"
 
 import technology1Video from "../../assets/images/models/cx-60/technology-1.mp4";
 import technology2Video from "../../assets/images/models/cx-60/technology-2.mp4";
@@ -44,6 +58,9 @@ import gradeEvolveImg from "../../assets/images/models/cx-60/evolve-grade.webp";
 import gradeTouringImg from "../../assets/images/models/cx-60/touring-grade.webp";
 import gradeGTImg from "../../assets/images/models/cx-60/gt-grade.webp";
 import gradeAzamiImg from "../../assets/images/models/cx-60/azami-grade.webp";
+
+import brochure from "../../assets/images/models/cx-60/cx-60-brochure.pdf";
+
 
 const cx60Model = {
   
@@ -64,10 +81,28 @@ const cx60Model = {
     },
 
     highlights: [
-      { label: "Hybrid Engine", value: "2.5L Plug-in Hybrid (PHEV)" },
-      { label: "Diesel / Petrol", value: "3.3L Mild Hybrid Turbo" },
-      { label: "Petrol Engine", value: "2.5L SkyActiv-G (RWD)" },
-      { label: "Seating", value: "5 Seats" }
+      { 
+        label: "Hybrid Engine",
+        value: "2.5L Plug-in Hybrid (PHEV)",
+        image: hightlightsPhev
+      },
+      { 
+        label : "Diesel / Petrol",
+        value : "3.3L Mild Hybrid Turbo",
+        image : hightlightsPetrol
+      },
+      {
+        label: "Petrol Engine", 
+        value: "2.5L SkyActiv-G (RWD)",
+        image : hightlightsEngine
+      },
+      {
+        label: "Seating", 
+        value: "5 Seats",
+        image : hightlightsSeats
+      }
+
+
     ],
         
     intro: {
@@ -227,6 +262,36 @@ const cx60Model = {
             name        : "Black Maztex",
             image       : blackmaztexInterior,
             imageThumb  : blackmaztexInteriorThumb
+          },
+
+          {
+            name        : "Black Leather",
+            image       : blackLeatherInterior,
+            imageThumb  : blackLeatherInteriorThumb
+          },
+
+          {
+            name        : "Revera Stone Leather",
+            image       : reveraStoneLeatherInterior,
+            imageThumb  : reveraStoneLeatherInteriorThumb
+          },
+
+          {
+            name        : "Black Nappa Leatherer",
+            image       : blackNappaLeathererInterior,
+            imageThumb  : blackNappaLeathererInteriorThumb
+          },
+
+          {
+            name        : "Tan Nappa Leather",
+            image       : tanNappaLeatherInterior,
+            imageThumb  : tanNappaLeatherInteriorThumb
+          },
+
+          {
+            name        : "Pure White Nappa Leather",
+            image       : pureWhiteNappaLeatherInterior,
+            imageThumb  : pureWhiteNappaLeatherInteriorThumb
           }
 
         ]
@@ -410,7 +475,13 @@ const cx60Model = {
         }
 
       ]
+    },
 
+    cta : {
+      model       : "CX-60",
+      description : "Experience true power and exhilaration in the new Mazda CX-60. Book a test drive today.",
+      image       : RhodiumWhiteMetallic,
+      brochure    : brochure
     }
 
 };
