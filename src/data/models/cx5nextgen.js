@@ -6,6 +6,7 @@ const cx5nextgenModel = {
     id            : 3,
     slug          : "cx-5",
     title         : "Mazda CX-5",
+    menuTitle     : "CX-5",
     subtitle      : "Next-Gen",
     description   : "Medium SUV | 5 seats",
     tags          : ["suv"],

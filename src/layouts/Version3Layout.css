@@ -214,7 +214,7 @@
    Grid Columns Layout
 ========================= */
 
-.version-3 .grid, .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols {
+.version-3 .grid, .version-3 .grid-m-two-cols, .version-3 .grid-m-three-cols, .version-3 .grid-m-four-cols, .grid-m-five-cols, .version-3 .grid, .version-3 .grid-t-two-cols, .version-3 .grid-t-three-cols, .version-3 .grid-t-four-cols, .grid-t-five-cols, .version-3 .grid, .version-3 .grid-l-two-cols, .version-3 .grid-l-three-cols, .version-3 .grid-l-four-cols, .grid-l-five-cols, .version-3 .grid, .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols, .version-3 .grid, .version-3 .grid-xl-two-cols, .version-3 .grid-xl-three-cols, .version-3 .grid-xl-four-cols, .grid-xl-five-cols {
   display: grid;
   gap: var(--grid-gap);
 }
@@ -295,6 +295,30 @@
   }
 
   .version-3 .grid-d-five-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+@media (min-width:1280px) {
+
+  .version-3 .grid, .version-3 .grid-xl-two-cols, .version-3 .grid-xl-three-cols, .version-3 .grid-xl-four-cols, .grid-xl-five-cols {
+    gap: var(--grid-gap-d);
+    column-gap: var(--grid-gap-row-d);
+  }
+  
+  .version-3 .grid-xl-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .version-3 .grid-xl-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .version-3 .grid-xl-four-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .version-3 .grid-xl-five-cols {
     grid-template-columns: repeat(5, 1fr);
   }
 
@@ -416,5 +440,23 @@
 
 .version-3 .no-autoplay-dots .is-active {
 
+}
+
+
+/* =========================
+   Social
+========================= */
+
+.social-list {
+  list-style: none;
+  margin: 16px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 24px;
+  color: #fff;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 24px;
 }
 

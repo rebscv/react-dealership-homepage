@@ -68,6 +68,7 @@ const cx60Model = {
     id            : 6,
     slug          : "cx-60",
     title         : "Mazda CX-60",
+    menuTitle     : "CX-60",
     subtitle      : "New",
     description   : "Medium SUV | 5 seats",
     tags          : ["suv"],

@@ -6,7 +6,8 @@ const bt50Model = {
   
     id            : 4,
     slug          : "bt-50",
-    Name          : "Mazda BT-50",
+    title         : "Mazda BT-50",
+    menuTitle     : "BT-50",
     subtitle      : "New",
     description   : "Single | Freestyle | Dual Cab",
     tags          : ["ute"],

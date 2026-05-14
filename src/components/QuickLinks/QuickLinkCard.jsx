@@ -9,7 +9,7 @@ function QuickLinkCard({ title, description, url, image }) {
         <div className="q-text">
           <h3>{title}</h3>
           <p>{description}</p>
-          <div className="btn btn-underline">Read More</div>
+          <div className="btn btn-underline">Find Out More</div>
         </div>  
     </div>
   )

@@ -7,6 +7,7 @@ const mx5Model = {
     id            : 5,
     slug          : "mx-5",
     title         : "Mazda MX-5",
+    menuTitle      : "MX-5",
     subtitle      : "",
     description   : "Soft Top",
     tags          : ["sports"],

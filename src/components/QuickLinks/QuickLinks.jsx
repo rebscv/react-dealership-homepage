@@ -34,7 +34,7 @@ function QuickLinks({ version = 1 }) {
   if (version == 3 ) {
     return(
 
-    <section className="quicklinks">
+    <section className="quicklinks grey-bg">
       <div className="full-wrapper">
 
           <div className="grid-d-three-cols ">

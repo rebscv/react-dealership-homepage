@@ -1,3 +1,25 @@
+/* =========================
+   Footer - Shared Styles across all Version
+========================= */
+
+footer h4 {
+    cursor: pointer;
+}
+
+
+/* =========================
+   Footer - Version 1
+========================= */
+
+.version-1 footer {
+    background-color: #181818;
+}
+
+
+/* =========================
+   Footer - Version 2
+========================= */
+
 .version-2 .hidden, .version-2 .footer-col.hidden {
     display: none;
 }
@@ -6,11 +28,117 @@
     display: grid;
 }
 
-footer h4 {
-    cursor: pointer;
+
+/* =========================
+   Footer - Version 3
+========================= */
+
+.version-3 {
+    --footer-bg: #101010;
+    --footer-hd: #ffffff;
+    --footer-text: #999999;
 }
 
-.version-1 footer {
-    background-color: #181818;
+.version-3 footer {
+    background-color: var(--footer-bg);
 }
 
+.version-3 footer, .version-3 footer a {
+    color: var(--footer-text);
+}
+
+.version-3 footer a {
+    transition: ease 0.3s all;
+}
+
+.version-3 footer a:hover {
+    color: #fff;
+}
+
+.version-3 footer h1, .version-3 footer h2, .version-3 footer h3, .version-3 footer h4, .version-3 footer .h1, .version-3 footer .h2, .version-3 footer .h3, .version-3 footer .h4 {
+    color: var(--footer-hd);
+}
+
+.version-3 footer h3 {
+    font-size: 1.3em;
+}
+
+.version-3 footer h4 {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
+
+.version-3 .hidden, .version-3 .footer-col.hidden {
+    display: grid;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.version-3 .footer-col {
+    display: grid;
+    max-height: 20000px;
+}
+
+.version-3 footer .social-list a {
+    display: inline-block;    
+    position: relative;
+}
+
+.version-3 footer .social-list a svg {
+    color: #999999
+}
+
+.version-3 footer .social-list a svg, .version-3 footer .social-list a {
+    transition: 0.4s all ease;
+}
+
+.version-3 footer .social-list a:hover {
+    transform: translateY(-4px);
+}
+
+.version-3 footer .social-list a:hover svg {
+    color: #ffffff
+}
+
+@media (max-width: 767px) {
+
+    .version-3 .footer-contact {
+        margin-bottom: 32px;
+    }
+    
+    .version-3 .foot-head {        
+        display: grid;
+        justify-content: space-between;
+        grid-auto-flow: column;
+        font-size: 1em;
+    }
+    
+    .version-3 .footer-col.hidden {
+        border-bottom: solid 1px #999999;
+    }
+
+    .version-3 .copyright {
+        margin-top: 32px;
+    }
+    
+}
+
+/* =========================
+   Copyright - Version 3
+========================= */
+
+.copyright {
+    border-top: solid 1px #666666;
+    padding-top: 24px;
+    font-size: 0.8em;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 8px;
+}
+
+.copyright > * {
+    border-right: solid 1px #333333;
+    line-height: 1;
+    padding-right: 8px;
+}
