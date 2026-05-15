@@ -1,7 +1,7 @@
 import "./VehicleCard.css";
 import { Link, useLocation } from "react-router-dom";
 
-function VehicleCard({ id, image, title, price, year, mileage }) {
+function VehicleCard({ id, image, title, price, year, mileage, bodytype, fuel, transmission }) {
 
     const location = useLocation();
 
@@ -16,12 +16,31 @@ function VehicleCard({ id, image, title, price, year, mileage }) {
             
 
             <div className="vehicle-info">
-                <h4>{title}</h4>
-                <p className="price">${price.toLocaleString()}</p>
+                <h4><span>{year}</span> {title}</h4>
+
+                <div className="price"><span>${price.toLocaleString()}</span><span className="vehicle-info-driveaway">Driveaway</span></div>
             
                 <div className="vehicle-meta">
-                    <span>{year}</span>
-                    <span>{mileage.toLocaleString()} km</span>
+
+                    <div className="vehilce-meta-row">
+                        <span>Kilometres</span>
+                        <span>{mileage.toLocaleString()} km</span>
+                    </div>
+
+                    <div className="vehilce-meta-row">
+                        <span>Type</span>
+                        <span>{bodytype}</span>
+                    </div>
+                    <div className="vehilce-meta-row">
+                        <span>Fuel Type</span>
+                        <span>{fuel}</span>
+                    </div>
+                    <div className="vehilce-meta-row">
+                        <span>Transmission</span>
+                        <span>{transmission}</span>
+                    </div>
+
+
                 </div>
 
                 <Link to={`${basePath}/vehicle/${id}`}>

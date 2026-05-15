@@ -1,6 +1,6 @@
 
 .vehicle-car {
-    border 1px solid #eee
+    border: 1px solid #eee;
     border-radius: 12px;
     overflow: hidden;
     background: #fff;
@@ -41,4 +41,90 @@
     background: black;
     color: white;
     cursor: pointer;
+}
+
+
+/* =========================
+   Version 3 styles
+========================= */
+
+.version-3 .vehicle-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px #d5d5d5;
+}
+
+.version-3 .vehicle-info {
+    display: grid;
+    gap: 16px;
+    line-height: 1.3em;
+}
+
+
+.version-3 .vehicle-info h4 span {
+    display: block;
+    font-size: 0.65em;
+}
+
+.version-3 .price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f3f3f3;
+    width: calc(100% + 8px);
+    margin-left: -16px;
+    padding: 16px 12px 14px;    
+}
+
+.version-3 .vehicle-info .price span {
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+.version-3 .vehicle-info .price .vehicle-info-driveaway {
+    font-size: 0.65em;
+    display: block;
+    margin-top: 2px;
+}
+
+.version-3 .vehicle-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.version-3 .vehilce-meta-row {
+    border-bottom: solid 1px var(--clr-grey);
+    padding-bottom: 4px;
+    font-size: 0.85em;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.version-3 .vehicle-meta span {
+    width: 50%;
+}
+
+.version-3 .vehicle-meta span:nth-child(1) {
+    color: #000;
+}
+
+.version-3 .vehicle-card button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: MazdaTypeTT;
+    cursor: pointer;
+    letter-spacing: 0.25em;
+    transition: ease 0.4s all;
+    display: inline-block;
+    line-height: 1.2em;
+    color: var(--clr-white);
+    background-color: #000
 }

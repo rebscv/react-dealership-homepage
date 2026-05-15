@@ -16,10 +16,10 @@ function FeaturedVehiclesSlider() {
 
     return (
         
-        <section className="featured-vehicles">
+        <section className="featured-vehicles grey-bg">
             <div className="std-wrapper">
 
-                <h2>Featured Vehicles</h2>
+                <h2 className="t-center">Featured Vehicles</h2>
 
                 <div className="embla" ref={emblaRef}>
                     <div className="embla__container grid-t-two-cols grid-l-three-cols grid-d-four-cols">

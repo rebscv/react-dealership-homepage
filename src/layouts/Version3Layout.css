@@ -63,11 +63,29 @@
   position: relative;
 }
 
+.version-3 .btn-flex {
+  display: flex;
+  gap: 16px;
+}
+
 @media (min-width:1024px) {
 
   .version-3-body {
     padding-top: 138px;
   }
+    
+}
+
+@media (max-width:575px) {
+
+  .version-3 .btn-flex {
+    flex-direction: column;
+  }
+
+  .version-3 .btn-flex .btn {
+    text-align: center;
+  }
+
     
 }
 
@@ -336,6 +354,38 @@
 .center-img img {
   object-fit: cover;
   height: 100%;
+}
+
+.centre-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+@media (min-width:768px) {
+
+  .grid-l-reverse {
+    direction: rtl;
+  }
+
+  .grid-l-reverse > div {
+    direction: ltr;
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .grid-d-reverse {
+    direction: rtl;
+  }
+
+  .grid-d-reverse > div {
+    direction: ltr;
+  }
+
 }
 
 
