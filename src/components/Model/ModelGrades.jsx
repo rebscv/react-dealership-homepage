@@ -43,7 +43,7 @@ function ModelGrades({ grades }) {
 
 
   return (
-    <section className="model-grades">
+    <section className="model-grades full-slider-m">
       <div className="lrg-wrapper">
 
         <div className="section-title t-center">
@@ -51,7 +51,7 @@ function ModelGrades({ grades }) {
           {intro.subtitle && <p className="h2">{intro.subtitle}</p>}              
         </div>
 
-        <div className="embla model-grade-slider no-dot" ref={emblaRef}>
+        <div className="embla model-grade-slider no-dot arrows-outside" ref={emblaRef}>
 
 
           <div className="embla__container">

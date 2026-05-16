@@ -141,20 +141,3 @@
 }
 
 
-@media (max-width:1023px) {
-
-  .model-grades .lrg-wrapper {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .model-grades .embla {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-
-  .model-grades .embla__arrows__container {
-    display: none;
-  }
-  
-}

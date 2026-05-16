@@ -31,15 +31,26 @@
   padding: 24px 16px;
 }
 
+.embla.model-saftey-slider .embla__container > div {
+  height: auto;
+}
+.embla.model-saftey-slider .embla__container > .embla__slide.is-active {
+  height: auto;
+}
+
 @media (min-width:1024px) {
+
+
   
   .embla.model-saftey-slider .embla__container > div {
     width: 50%;
+    height: 100%;
   }
 
   .model-saftey-slide-text {
     padding: 32px;
   }
+  
     
 }
 

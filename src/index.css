@@ -256,24 +256,15 @@ Embla Grid to Flex Styles
     padding-left: 24px;
   }
 
-  .embla .grid-l-two-cols > div,
-  .version-1 .embla .grid-l-two-cols > div,
-  .version-2 .embla .grid-l-two-cols > div,
-  .version-3 .embla .grid-l-two-cols > div {
+  .embla .grid-l-two-cols > div, .version-1 .embla .grid-l-two-cols > div, .version-2 .embla .grid-l-two-cols > div, .version-3 .embla .grid-l-two-cols > div {
     flex: 0 0 calc(50% - 24px);
   }
 
-  .embla .grid-l-three-cols > div,
-  .version-1 .embla .grid-l-three-cols > div,
-  .version-2 .embla .grid-l-three-cols > div,
-  .version-3 .embla .grid-l-three-cols > div {
+  .embla .grid-l-three-cols > div, .version-1 .embla .grid-l-three-cols > div, .version-2 .embla .grid-l-three-cols > div, .version-3 .embla .grid-l-three-cols > div {
     flex: 0 0 calc(33.33% - 24px);
   }
 
-  .embla .grid-l-four-cols > div,
-  .version-1 .embla .grid-l-four-cols > div,
-  .version-2 .embla .grid-l-four-cols > div,
-  .version-3 .embla .grid-l-four-cols > div {
+  .embla .grid-l-four-cols > div, .version-1 .embla .grid-l-four-cols > div, .version-2 .embla .grid-l-four-cols > div, .version-3 .embla .grid-l-four-cols > div {
     flex: 0 0 22.5%;
   }
 
@@ -294,6 +285,25 @@ Embla Grid to Flex Styles
   }
 
   .embla .grid-d-four-cols > div, .version-1 .embla .grid-d-four-cols > div, .version-2 .embla .grid-d-four-cols > div, .version-3 .embla .grid-d-four-cols > div {
+    flex: 0 0 22.5%;
+  }
+  
+}
+@media (min-width:1280px) {
+
+  .embla .grid-xl-two-cols > div,  .embla .grid-xl-three-cols > div,  .embla .grid-xl-four-cols > div,  .embla .grid-xl-five-cols > div {
+    padding-left: 24px;
+  }
+
+  .embla .grid-xl-two-cols > div, .version-1 .embla .grid-xl-two-cols > div, .version-2 .embla .grid-xl-two-cols > div, .version-3 .embla .grid-xl-two-cols > div {
+    flex: 0 0 calc(50% - 24px);
+  }
+
+  .embla .grid-xl-three-cols > div, .version-1 .embla .grid-xl-three-cols > div, .version-2 .embla .grid-xl-three-cols > div, .version-3 .embla .grid-xl-three-cols > div {
+    flex: 0 0 calc(33.33% - 24px);
+  }
+
+  .embla .grid-xl-four-cols > div, .version-1 .embla .grid-xl-four-cols > div, .version-2 .embla .grid-xl-four-cols > div, .version-3 .embla .grid-xl-four-cols > div {
     flex: 0 0 22.5%;
   }
   

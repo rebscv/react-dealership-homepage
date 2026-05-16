@@ -23,20 +23,22 @@ function VehicleCard({ id, image, title, price, year, mileage, bodytype, fuel, t
                 <div className="vehicle-meta">
 
                     <div className="vehilce-meta-row">
-                        <span>Kilometres</span>
+                        <span><svg className="icon-kms"><use href="/icons.svg#icon-kms"></use></svg> Kilometres</span>                     
                         <span>{mileage.toLocaleString()} km</span>
                     </div>
 
                     <div className="vehilce-meta-row">
-                        <span>Type</span>
+                        <span><svg className="icon-car"><use href="/icons.svg#icon-car"></use></svg> Type</span>
                         <span>{bodytype}</span>
                     </div>
+
                     <div className="vehilce-meta-row">
-                        <span>Fuel Type</span>
+                        <span><svg className="icon-petrol"><use href="/icons.svg#icon-petrol"></use></svg>Fuel Type</span>
                         <span>{fuel}</span>
                     </div>
+
                     <div className="vehilce-meta-row">
-                        <span>Transmission</span>
+                        <span><svg className="icon-transmission"><use href="/icons.svg#icon-transmission"></use></svg>Transmission</span>
                         <span>{transmission}</span>
                     </div>
 
@@ -44,8 +46,12 @@ function VehicleCard({ id, image, title, price, year, mileage, bodytype, fuel, t
                 </div>
 
                 <Link to={`${basePath}/vehicle/${id}`}>
-                    <button>View Details</button>
+                    <button className="btn btn-primary">View Now</button>
                 </Link>
+
+                <a href="" className="btn btn-outline">
+                    Finance Options
+                </a>
             </div>
         </div>
     );

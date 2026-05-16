@@ -62,6 +62,12 @@
 }
 
 
+.version-3 .vehicle-info h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .version-3 .vehicle-info h4 span {
     display: block;
     font-size: 0.65em;
@@ -112,19 +118,17 @@
 
 .version-3 .vehicle-meta span:nth-child(1) {
     color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .version-3 .vehicle-card button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-family: MazdaTypeTT;
-    cursor: pointer;
-    letter-spacing: 0.25em;
-    transition: ease 0.4s all;
-    display: inline-block;
-    line-height: 1.2em;
-    color: var(--clr-white);
-    background-color: #000
+    margin: 0;
 }
+
+.version-3 .vehicle-card .btn {
+    text-align: center;
+    font-size: 0.8em;
+}
+
