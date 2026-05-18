@@ -47,7 +47,7 @@ function HeaderV3() {
 
                         <Link to="/version-3" className="header-title" onClick={closeMenu}>
                             <img src={logo} alt="" width="78" height="71" />
-                            <h2>Dealer Name City</h2>
+                            <h2>Mazda Hometown</h2>
                         </Link>
 
                         <div className="navbar">

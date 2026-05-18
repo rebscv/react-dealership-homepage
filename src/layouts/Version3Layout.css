@@ -71,7 +71,15 @@
 @media (min-width:1024px) {
 
   .version-3-body {
-    padding-top: 138px;
+    padding-top: 112px;
+  }
+    
+}
+
+@media (min-width:1280px) {
+
+  .version-3-body {
+    padding-top: 126px;
   }
     
 }
@@ -564,7 +572,11 @@
   .version-3 .embla.arrows-outside  .embla__prev svg, .version-3 .embla.arrows-outside .embla__next svg {
     padding: 12px 14px 12px 10px;
     font-size: 22px;
-    background: #c1c1c1;
+  }
+
+  .version-3 .embla.arrows-outside .embla__next svg {
+    padding-left: 14px;
+    padding-right: 12px;
   }
 
   .version-3 .embla.arrows-outside .embla__prev:hover svg, .version-3 .embla.arrows-outside .embla__next:hover svg {

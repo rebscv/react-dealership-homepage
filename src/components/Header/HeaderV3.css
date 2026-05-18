@@ -46,7 +46,7 @@
 }
 
 .version-3 .header-title img {
-    max-width: 48px;
+    max-width: 52px;
     height: auto;
 }
 
@@ -61,12 +61,24 @@
         top: 35px;
     }
 
-.version-3 .header-title h2 {
-    font-size: 1.5em;
-}
+    .version-3 .header-title h2 {
+        font-size: 1.2em;
+    }
 
     .version-3 .header-title img {
-        max-width: 78px;
+        max-width: 48px;
+    }
+
+}
+
+@media (min-width:1280px) {
+
+    .version-3 .header-title h2 {
+        font-size: 1.5em;
+    }
+
+    .version-3 .header-title img {
+        max-width: 64px;
     }
 
 }
@@ -86,12 +98,12 @@
 .version-3 nav {
     display: grid;
     grid-auto-flow: column;
-    gap: 24px;
+    gap: 48px;
     justify-content: center;
 }
 
 .version-3 nav a {
-    color: var(--clr-wgite);
+    color: var(--clr-white);
 }
 
 .version-3 nav a, .version-3 nav .nav-item {
@@ -112,11 +124,12 @@
 }
 
 .version-3 .nav-submenu a {
-    padding: 12px;
+    padding: 16px 32px 16px 16px;
+    font-size: 1em;
 }
 
 .version-3 .nav-submenu a:hover {
-    background-color: #cccccc;
+    background-color: #2f2f2f;
 }
 
 .version-3 .nav-submenu {
@@ -142,9 +155,38 @@
         margin-left: auto;
     }
 
-    .version-3 nav a, .version-3 nav .nav-item {
-        padding: 16px 0px;
+    .version-3 nav {
         line-height: 1;
+        font-size: 0.85em;
+        letter-spacing: 0.06em;
+    }
+
+    .version-3 nav {
+        gap: 24px;
+    }
+
+    .version-3 nav > a, .version-3 nav > .nav-item {
+        padding: 16px 0;
+    }
+
+    .version-3 nav > a {
+        transition: ease 0.3s all;
+        position: relative;
+    }    
+
+    .version-3 nav > a::before {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 0%;
+        width: 100%;
+        height: 1px;
+        background-color: var(--header-bg);
+        transition: ease 0.3s all;
+    }
+
+    .version-3 nav > a:hover::before {
+        background-color: #ffffff;
     }
 
     .version-3 .nav-submenu {
@@ -155,13 +197,34 @@
         display: grid;
         grid-auto-flow: row;
         position: absolute;
-        background-color: #e5e5e5;
-        top: 48px;
+        background-color: #1e1e1e;
+        top: 46px;
         white-space: nowrap;
     }
 
-    .version-3 nav a, .version-3 nav .nav-item {
-        font-size: 18px;
+    .version-3 nav > .nav-item {
+        padding-right: 20px;
+    }
+
+    .version-3 .nav-item::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border: solid 1px #fff;
+        border-top: none;
+        border-left: none;
+        transform: translateY(-50%) rotate(45deg);
+        top: calc(50% + -2px);
+        right: 0;
+    }
+
+}
+
+@media (min-width:1280px) {
+
+    .version-3 nav {
+        gap: 48px;
     }
 
 }
@@ -198,7 +261,7 @@ body.version-3-body.show-mobile-menu {
 }
 
 .version-3 .menu-mobile nav a {
-    padding: 8px 24px;
+    padding: 16px 24px;
     display: block;
 }
 
@@ -206,9 +269,41 @@ body.version-3-body.show-mobile-menu {
     grid-column: span 1;
 }
 
+.version-3 .menu-mobile .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: solid 1px #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    top: 24px;
+    right: 24px;
+}
+
+.version-3 .menu-mobile .nav-item.active::after {
+    transform: rotate(225deg);
+    top: 28px;
+}
+
 .version-3 .menu-button-mobile {
     display: block;
     font-size: 24px;
+}
+
+.version-3 .menu-mobile .nav-submenu {
+    background: #141414;
+}
+
+.version-3 .menu-mobile nav .nav-submenu a {
+    font-size: 0.85em;
+    color: #999999;
+    padding: 12px 24px 12px 36px;
+}
+
+.version-3 .menu-mobile .nav-submenu a:hover {
+    background: transparent;
 }
 
 @media (min-width:1024px) {
@@ -249,8 +344,6 @@ body.version-3-body.show-mobile-menu {
     display: none;
 }
 
-
-
 @media (min-width:1024px) {
 
     .header-v3 .top-header-container .std-wrapper {
@@ -275,7 +368,6 @@ body.version-3-body.show-mobile-menu {
 .version-3 .header-contact {
     font-size: 12px;
 }
-
 
 @media (min-width:1024px) {
 
