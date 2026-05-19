@@ -33,18 +33,18 @@
   --version-1-dk: #040404;
 
   --clr-grey: #f5f5f5;
-  --clr-grey-dk: #999999;
-  
+  --clr-grey-dk: #999999;  
 
   --clr-dark-grey: #3a3d46;
   --clr-dark-grey-lt: #545760;
   --clr-dark-grey-dk: #21242D;
 
-
   --clr-nav: #000000;
 
   --header-text: #ffffff;
   --header-bg: #101010;
+
+  --clr-grey-border: #d5d5d5;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -94,11 +94,15 @@ body {
   max-width: none;
 }
 
-
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+@media (min-width:1024px) {
+  .hide-desktop {
+    display: none!important;
+  }  
 }
 
 

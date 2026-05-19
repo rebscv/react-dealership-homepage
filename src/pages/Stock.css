@@ -1,0 +1,6 @@
+.version-3 .stock-content .filters {
+    border: solid 1px var(--clr-grey-border);
+    background-color: var(--clr-grey);
+    border-radius: 4px;
+    padding: 16px 24px;
+}

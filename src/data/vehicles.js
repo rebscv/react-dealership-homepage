@@ -12,7 +12,7 @@ import mazda3Img from "../assets/images/vehicles/mazda3.webp";
 const vehicles = [
 
   {
-    id      : 1,
+    id      : 1001,
     title   : "Mazda CX-80 Touring",
     price   : 64990,
     year    : 2026,
@@ -24,7 +24,7 @@ const vehicles = [
   },
 
   {
-    id      : 2,
+    id      : 1002,
     title   : "Mazda BT-50 Ute SP Pickup",
     price   : 63990,
     year    : 2026,
@@ -36,7 +36,7 @@ const vehicles = [
   },
 
   {
-    id      : 3,
+    id      : 1003,
     title   : "MX-5 Roadster GT",
     price   : 58990,
     year    : 2026,
@@ -48,7 +48,7 @@ const vehicles = [
   },
 
   {
-    id      : 4,
+    id      : 1004,
     title   : "Mazda3 Touring",
     price   : 28990,
     year    : 2025,
@@ -60,7 +60,7 @@ const vehicles = [
   },
 
   {
-    id      : 5,
+    id      : 1005,
     title   : "Mazda CX-6e GT",
     price   : 58490,
     year    : 2026,
@@ -72,7 +72,7 @@ const vehicles = [
   },
 
   {
-    id      : 6,
+    id      : 1006,
     title   : "Mazda BT-50 Ute GP Pickup",
     price   : 81450,
     year    : 2026,
@@ -84,7 +84,7 @@ const vehicles = [
   },
 
   {
-    id      : 7,
+    id      : 1007,
     title   : "Mazda CX-5 AKERA",
     price   : 55190,
     year    : 2024,
@@ -96,7 +96,7 @@ const vehicles = [
   },
 
   {
-    id      : 8,
+    id      : 1008,
     title   : "Mazda CX-90 Touring",
     price   : 60990,
     year    : 2025,
@@ -108,7 +108,7 @@ const vehicles = [
   },
 
   {
-    id      : 9,
+    id      : 1009,
     title   : "Mazda CX-80 GT",
     price   : 69840,
     year    : 2026,

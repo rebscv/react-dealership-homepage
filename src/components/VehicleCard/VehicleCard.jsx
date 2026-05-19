@@ -8,6 +8,9 @@ function VehicleCard({ id, image, title, price, year, mileage, bodytype, fuel, t
     const match = location.pathname.match(/^\/(version-\d+)/);
     const basePath = match ? `/${match[1]}` : "";
 
+    const versionPath = location.pathname.split("/")[1];
+    const versionLink = (page) => `/${versionPath}/${page}`;
+
     return (
         <div className="vehicle-card">
             <Link to={`${basePath}/vehicle/${id}`}>
@@ -49,9 +52,11 @@ function VehicleCard({ id, image, title, price, year, mileage, bodytype, fuel, t
                     <button className="btn btn-primary">View Now</button>
                 </Link>
 
-                <a href="" className="btn btn-outline">
-                    Finance Options
-                </a>
+
+                <Link to={versionLink("finance")}>
+                    <button className="btn btn-outline">Finance Options</button>
+                </Link>
+
             </div>
         </div>
     );

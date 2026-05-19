@@ -1,6 +1,11 @@
+/* =========================
+   Version 2
+========================= */
+
 .version-2 .vehicle-details-content img {
     width: 100%;
 }
+
 .version-2 .vd-price h2 {
     font-size: 2em;
 }
@@ -31,4 +36,217 @@
 
 .version-2 .vd-form input, .version-2 .vd-form textarea {
     width: 100%;
+}
+
+
+/* =========================
+   Version 3 - Title & Price
+========================= */
+
+.version-3 .vd-overview {
+    display: grid;
+    gap: 64px;
+    background-color: var(--clr-white);
+    padding: 32px;
+    border: solid 1px var(--clr-grey-border);
+}
+
+.version-3 .vehicle-details-content h1 {
+    font-size: 1.5em;
+}
+
+.version-3 .vehicle-details-content h1 span {
+    display: block;
+    font-size: 0.6em;
+}
+
+.version-3 .vd-price {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--clr-grey);
+    padding: 24px 8px;
+    border-radius: 4px;
+}
+
+.version-3 .vd-price h2 {
+    letter-spacing: 0;
+    font-weight: 800;
+}
+
+
+/* =========================
+   Version 3 - Meta Details
+========================= */
+
+.version-3 .vehicle-details-content .vehicle-meta {
+    line-height: 1em;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+}
+
+.version-3 .vehicle-details-content .vehilce-meta-row {
+    border-bottom: solid 1px var(--clr-grey);
+    padding-bottom: 4px;
+    font-size: 0.85em;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.version-3 .vehicle-details-content .vehicle-meta span {
+    width: 50%;
+}
+
+.version-3 .vehicle-details-content .vehicle-meta span:nth-child(1) {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.version-3 .vehicle-details-content .vd-meta {
+    line-height: 1em;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.version-3 .vehicle-details-content .vd-meta > div {
+    grid-column: span 1;
+    display: grid;
+    gap: 12px;
+}
+
+.version-3 .vehicle-details-content .vd-meta-title {
+    font-size: 12px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+}
+
+.version-3 .vehicle-details-content .vd-meta-title svg {
+    margin-top: -2px;
+}
+
+.version-3 .vehicle-details-content .vd-meta-text {
+    font-size: 1.2em;
+    color: #666;
+}
+
+
+/* =========================
+   Version 3 - Form
+========================= */
+
+.version-3 .vd-form {
+    margin-top: 16px;
+}
+
+
+/* =========================
+   Version 3 - Vehicle Top Bar
+========================= */
+
+.version-3 .vd-top-bar {
+    display: none;
+}
+
+.vd-top-scrolling .version-3 .vd-top-bar {
+    display: block;
+    position: sticky;
+    top: 91px;
+    background-color: var(--clr-grey);    
+    width: 100%;    
+    transition: ease 0.6s all;
+    z-index: 2;
+    box-shadow: 0 0 16px #00000021;
+    border-bottom: solid 1px #fff;
+}
+
+.version-3 .vd-top-bar .std-wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.version-3 .vd-top-bar-grid {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: space-between;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 32px;
+    align-items: center;
+}
+
+.version-3 .vd-top-bar .h1 {
+    font-size: 1.5em;
+}
+
+.version-3 .vd-top-bar .vd-price {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0;
+    line-height: 1em;
+    justify-items: end;
+}
+
+.version-3 .vd-top-bar .vd-price .h2 {
+    font-size: 1.5em;
+}
+
+.version-3 .vd-top-bar .vd-price-driveaway {
+    font-size: 0.6em;
+}
+
+.version-3 .vd-top-bar-img {
+    border: solid 1px #fff;
+    box-shadow: 0 2px 4px #00000045;
+}
+
+.version-3 .vd-top-bar-img img {
+    display: block;
+    max-width: 64px;
+}
+
+/* =========================
+   Version 3 - Car Image
+========================= */
+
+.version-3 .vd-img img {
+    width: 100%;
+}
+
+/* =========================
+   Version 3 - Car Specs
+========================= */
+
+.version-3 .vd-specs-row {
+    border-bottom: solid 1px var(--clr-grey);
+    padding-bottom: 24px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.version-3 .vd-specs-row > div:nth-child(2) {
+    color: var(--clr-grey-dk);
+    font-size: 1.2em;
+}
+
+/* =========================
+   Version 3 - Footer Links
+========================= */
+
+
+
+.vehicle-details-footer svg {
+    font-size: 48px;
+    margin: 0 auto 16px;
+    display: block;
 }

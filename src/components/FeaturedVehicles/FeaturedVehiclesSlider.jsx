@@ -25,7 +25,7 @@ function FeaturedVehiclesSlider() {
                 <div className="embla arrows-outside" ref={emblaRef}>
                     <div className="embla__container grid-t-two-cols grid-l-three-cols grid-xl-four-cols">
 
-                        {vehicles.map((car) => (
+                        {vehicles.slice(0, 6).map((car) => (
                             <div className="embla__slide" key={car.id}>
                                 <div>
                                     <VehicleCard {...car} />

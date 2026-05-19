@@ -12,10 +12,10 @@ function FeaturedVehicles() {
         <section className="featured-vehicles">
             <div className="std-wrapper">
 
-                <h2>Featured Vehicles</h2>
+                <h2>Find your dream Mazda</h2>
 
                 <div className="grid-d-three-cols grid-t-two-cols">
-                    {vehicles.map((car) => (
+                    {vehicles.slice(0, 6).map((car) => (
                         <VehicleCard key={car.id} {...car} />
                     ))}
                 </div>
