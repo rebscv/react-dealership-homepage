@@ -1,6 +1,69 @@
-.version-3 .stock-content .filters {
+/* =========================
+   Version 2
+========================= */
+
+.version-2 .stock-all-vehicles > div {
+    gap: var(--grid-gap-d);
+}
+
+.version-2 .stock-filter {
+    display: grid;
+    gap: 32px;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding: 24px 0;
+}
+
+/* =========================
+   Version 3
+========================= */
+
+.version-3 .stock-content .stock-filter {
     border: solid 1px var(--clr-grey-border);
     background-color: var(--clr-grey);
     border-radius: 4px;
     padding: 16px 24px;
+    font-size: 1em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
+
+.version-3 .stock-all-vehicles > div {
+    gap: var(--grid-gap-d);
+}
+
+.version-3 .stock-filter {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.version-3 .stock-filter-col {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: auto 1fr;
+        align-items: center;
+}
+
+.version-3 .stock-filter-col {
+
+}
+
+.version-3 .stock-filter-col select {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    border: solid 1px var(--clr-grey-border);
+    color: #666;
+    letter-spacing: 0.05em;
+    padding: 12px 2px;
+    border-radius: 4px;
+}
+
+.version-3 .stock-filter-col label {
+    font-size: 0.7em;
+    line-height: 1em;
+}
+
+

@@ -1,9 +1,7 @@
 
 import VehicleCard from "../VehicleCard/VehicleCard";
-import vehicles from "../../data/vehicles";
 
-
-function VehicleStock() {
+function VehicleStock({ vehicles }) {
     
 
     return (
