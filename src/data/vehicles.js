@@ -13,6 +13,7 @@ const vehicles = [
 
   {
     id      : 1001,
+    model   : "CX-80",
     title   : "Mazda CX-80 Touring",
     price   : 64990,
     year    : 2026,
@@ -25,6 +26,7 @@ const vehicles = [
 
   {
     id      : 1002,
+    model   : "BT-50",
     title   : "Mazda BT-50 Ute SP Pickup",
     price   : 63990,
     year    : 2026,
@@ -37,18 +39,20 @@ const vehicles = [
 
   {
     id      : 1003,
+    model   : "MX-5",
     title   : "MX-5 Roadster GT",
     price   : 58990,
     year    : 2024,
     mileage : 7500,
     image   : mx5Img,
-    bodytype : "Convertible",
+    bodytype : "Sedan",
     fuel : "Petrol",
     transmission : "Manual",
   },
 
   {
     id      : 1004,
+    model   : "Mazda3",
     title   : "Mazda3 Touring",
     price   : 28990,
     year    : 2025,
@@ -61,6 +65,7 @@ const vehicles = [
 
   {
     id      : 1005,
+    model   : "CX-6e",
     title   : "Mazda CX-6e GT",
     price   : 58490,
     year    : 2026,
@@ -73,6 +78,7 @@ const vehicles = [
 
   {
     id      : 1006,
+    model   : "BT-50",
     title   : "Mazda BT-50 Ute GP Pickup",
     price   : 81450,
     year    : 2021,
@@ -85,6 +91,7 @@ const vehicles = [
 
   {
     id      : 1007,
+    model   : "CX-5",
     title   : "Mazda CX-5 AKERA",
     price   : 55190,
     year    : 2024,
@@ -97,6 +104,7 @@ const vehicles = [
 
   {
     id      : 1008,
+    model   : "CX-90",
     title   : "Mazda CX-90 Touring",
     price   : 60990,
     year    : 2018,
@@ -109,6 +117,7 @@ const vehicles = [
 
   {
     id      : 1009,
+    model   : "CX-80",
     title   : "Mazda CX-80 GT",
     price   : 69840,
     year    : 2024,

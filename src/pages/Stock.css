@@ -1,3 +1,82 @@
+
+/* =========================
+   Version 1
+========================= */
+
+.range-slider {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.range-slider::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    border: solid 1px var(--clr-grey-border);
+    border-radius: 8px;
+}
+
+.range-slider-active {
+    position: absolute;
+    top: 5px;
+    height: 4px;
+    background: #333;
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 1;
+    height: 10px;
+}
+
+.range-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+    appearance: none;
+    z-index: 2;
+    height: 20px;
+}
+
+.range-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #333;
+    cursor: pointer;
+    pointer-events: auto;
+    border: solid 2px #000;
+}
+
+.range-input::-webkit-slider-runnable-track {
+    background: transparent;
+    border-radius: 999px;
+}
+
+.range-input::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #111;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.range-input::-moz-range-track {
+    height: 4px;
+    background: #ddd;
+    border-radius: 999px;
+}
+
+
 /* =========================
    Version 2
 ========================= */
@@ -14,43 +93,45 @@
     padding: 24px 0;
 }
 
+
 /* =========================
    Version 3
 ========================= */
 
 .version-3 .stock-content .stock-filter {
+    display: grid;
+    gap: 24px;
     border: solid 1px var(--clr-grey-border);
     background-color: var(--clr-grey);
     border-radius: 4px;
-    padding: 16px 24px;
+    padding: 20px 24px;
     font-size: 1em;
     color: #999;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
-
-.version-3 .stock-all-vehicles > div {
-    gap: var(--grid-gap-d);
-}
-
-.version-3 .stock-filter {
+.version-3 .stock-filter-row {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.version-3 .stock-filter-col {
+.version-3 .stock-filter-row > .stock-filter-col {
+    grid-column: span 1;
+}
+
+.version-3 .stock-filter-row > .stock-filter-two-col {
+    grid-column: span 2;
+}
+
+.version-3 .stock-filter-col, .version-3 .stock-filter-two-col {
     display: grid;
-    gap: 12px;
-    grid-template-columns: auto 1fr;
-        align-items: center;
+    gap: 4px;
+    align-items: center;
+    grid-auto-flow: row;
 }
 
-.version-3 .stock-filter-col {
-
-}
-
-.version-3 .stock-filter-col select {
+.version-3 .stock-content select {
     width: 100%;
     border: none;
     background-color: #fff;
@@ -61,9 +142,80 @@
     border-radius: 4px;
 }
 
-.version-3 .stock-filter-col label {
+.version-3 .stock-content label {
     font-size: 0.7em;
     line-height: 1em;
 }
 
+.version-3 .stock-results-message p {
+    color: var(--clr-grey-dk);
+    font-size: 1.5em;
+}
 
+.version-3 .stock-results-message p strong {
+    color: var(--clr-primary);
+}
+
+.version-3 .stock-all-vehicles > div {
+    gap: var(--grid-gap-d);
+}
+
+
+
+
+
+.version-3 .range-slider-active {
+    background: var(--clr-primary);
+    height: 5px;
+    top: 8px;
+}
+
+.version-3 .range-slider .range-input {
+    border: none;
+    padding: 0;
+}
+
+.version-3 .range-input::-webkit-slider-thumb {
+    border-radius: 50%;
+    background: var(--clr-primary);
+    cursor: pointer;
+    pointer-events: auto;
+    border: solid 2px var(--clr-primary-dk);
+}
+
+
+.version-3 .range-slider-container {
+    padding: 8px 16px;
+    background-color: #fff;
+    border: var(--clr-grey-border) solid 1px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: 24px;
+    align-content: center;
+}
+
+.version-3 .range-slider-container .range-slider-results {
+
+}
+
+.version-3 .range-slider-container .range-slider {
+    width: 100%;
+    height: 20px;
+}
+
+
+
+
+.version-3 .stock-filter input {
+    border: solid 1px var(--clr-grey-border);
+    border-radius: 4px;
+    padding: 12px 8px;
+    font-family: var(--mazda-font);
+    font-size: 1em;
+}
+
+.version-3 .stock-search-col {
+    grid-column: span 2;
+}
