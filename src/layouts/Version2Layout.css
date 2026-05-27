@@ -10,6 +10,20 @@
   line-height: 1.65em;
 }
 
+.version-2 .btn {
+  padding: 12px;
+}
+
+.version-2 .btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.version-2 .btn-outline {
+  border: solid 1px #000;
+  color: #000;
+}
+
 /* =========================
    Wrapper
 ========================= */

@@ -45,6 +45,18 @@
 
 
 /* =========================
+   Version 2 styles
+========================= */
+
+.version-2 .vehicle-meta {
+    flex-direction: column;
+}
+
+.version-2 .vehicle-info .btn {
+    margin-top: 12px;
+}
+
+/* =========================
    Version 3 styles
 ========================= */
 

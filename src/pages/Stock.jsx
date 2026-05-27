@@ -14,6 +14,7 @@ function Stock() {
     const [selectedTransmission, setSelectedTransmission] = useState("");
     const [selectedModel, setSelectedModel] = useState("");
     const [searchTerm, setsearchTerm] = useState("");
+    const [sortOption, setSortOption] = useState("latest");
 
     const models = [...new Set(vehicles.map((car) => car.model))].sort();
     const years = vehicles.map((car) => car.year);   
@@ -34,7 +35,9 @@ function Stock() {
     const handleMaxPriceChange = (e) => { const value = Math.max(Number(e.target.value), selectedMinPrice + 5000); setSelectedMaxPrice(value); };
 
 
-    const filteredVehicles = vehicles.filter((car) => {
+    const filteredVehicles = vehicles
+
+    .filter((car) => {
 
         const bodyMatch = selectedBodyType === "" || car.bodytype === selectedBodyType;
         const fuelMatch = selectedFuel === "" || car.fuel === selectedFuel;
@@ -52,6 +55,23 @@ function Stock() {
         const searchMatch = searchTerm.trim() === "" || Object.values(car).some((value) => String(value).toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()));
 
         return bodyMatch && fuelMatch && transmissionMatch && modelMatch && yearMatch && priceMatch && searchMatch;
+
+    })
+    
+    .sort((a, b) => {
+
+        switch (sortOption) {
+            case "latest": return b.id - a.id;
+            case "price-high": return b.price - a.price;
+            case "price-low": return a.price - b.price;
+            case "year-new": return b.year - a.year;
+            case "year-old": return a.year - b.year;
+            case "mileage-low": return a.mileage - b.mileage;
+            case "mileage-hight": return a.mileage - b.mileage;
+            case "model-az": return a.model.localeCompare(b.model);
+            case "model-za": return b.model.localeCompare(a.model);
+            default: return 0;
+        }
 
     });
 
@@ -81,45 +101,48 @@ function Stock() {
     return (
         <section className="stock-content">
             <div className="std-wrapper">
-                <h1>Our Stock</h1>
 
-                <div className="stock-results-message">
-                    <p>
-                        Showing {" "}
-                        <strong>
-                            {filteredVehicles.length}{" "}
-                            {filtersActive 
-                                ? filteredVehicles.length === 1
-                                    ? "matching vehicle"
-                                    : "matching vehicles"
-                                : filteredVehicles.length === 1
-                                    ? "vehicle"
-                                    : "vehicles"
-                            }
-                        </strong>{" "}
-                         at Mazda Hometown
-                    </p>
+                <div className="stock-filter-head">
+                    <h1>Our Stock</h1>
+                    <p>Discover our wide range of Mazda vehicles at Mazda Hometown</p>
                 </div>
 
-
                 <div className="stock-filter">
+
+                    <h3>Keyword Search</h3>
                     
                     <div className="stock-filter-row">
 
-                        <div className="stock-filter-col stock-filter-two-col">
-                            <label htmlFor="stock-search">Search keywords</label>
+                        <div className="stock-filter-search-col">
+                            <label for="stock-search">Search</label>
                             <input type="text" id="stock-search" value={searchTerm} onChange={(e) => setsearchTerm(e.target.value)} placeholder="Search by make, model, body type..." />
                         </div>
-                        <div className="stock-filter-col"></div>
 
-                        <button onClick={clearFilters} className="btn btn-primary">Clear Filters</button>
+                        <div className="stock-filter-col stock-filter-show-mobile">
+                            <label htmlFor="sort-option">Sort by</label>
+                            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} id="sort-bg">
+                                <option value="latest">Recently Added</option>
+                                <option value="price-high">Price (High - Low)</option>
+                                <option value="price-low">Price (Low - High)</option>
+                                <option value="year-new">Year (Newest - Oldest)</option>
+                                <option value="year-old">Year (Oldest - Newest)</option>
+                                <option value="mileage-low">KMs (Low - High)</option>
+                                <option value="mileage=high">KMs (High - Low)</option>
+                                <option value="model-az">Model (A - Z)</option>
+                                <option value="model-za">Model (Z - A)</option>
+                            </select>
+                        </div>
 
+                        <div className="stock-filter-btn-col">
+                            <button onClick={clearFilters} className="btn btn-primary">Clear Filters</button>
+                        </div>                 
 
-                        
                     </div>
 
+                    <h3>Filter & Sort Stock</h3>
+
         
-                    <div className="stock-filter-row">
+                    <div className="stock-filter-row stock-filter-toggle-mobile">
 
                         <div className="stock-filter-col">
                             <label htmlFor="model-filter">Model</label>
@@ -149,24 +172,8 @@ function Stock() {
                                 <option value="Electric">Electric</option>
                             </select>
                         </div>
-
+     
                         <div className="stock-filter-col">
-                            <label htmlFor="tranmission-filter">Transmission</label>
-                            <select value={selectedTransmission} onChange={(e) => setSelectedTransmission(e.target.value)} id="tranmission-filter">
-                                <option value="">All</option>
-                                <option value="Auto">Auto</option>
-                                <option value="Manual">Manual</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div className="stock-filter-row">
-
-                        <div className="stock-filter-col stock-filter-two-col">
                             <label>Price Range</label>
                             <div className="range-slider-container">
                                 <span className="range-slider-results">${Number(selectedMinPrice).toLocaleString()} - ${Number(selectedMaxPrice).toLocaleString()}</span> 
@@ -182,7 +189,7 @@ function Stock() {
 
                         </div>
 
-                        <div className="stock-filter-col stock-filter-two-col">                            
+                        <div className="stock-filter-col">                            
                             <label>Year Range</label>
                             <div className="range-slider-container">
                                 <span className="range-slider-results">{selectedMinYear} - {selectedMaxYear}</span>   
@@ -197,17 +204,49 @@ function Stock() {
                             </div>                                                    
                         </div> 
 
+
+                        <div className="stock-filter-col">
+                            <label htmlFor="sort-option">Sort by</label>
+                            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} id="sort-bg">
+                                <option value="latest">Recently Added</option>
+                                <option value="price-high">Price (High - Low)</option>
+                                <option value="price-low">Price (Low - High)</option>
+                                <option value="year-new">Year (Newest - Oldest)</option>
+                                <option value="year-old">Year (Oldest - Newest)</option>
+                                <option value="mileage-low">KMs (Low - High)</option>
+                                <option value="mileage=high">KMs (High - Low)</option>
+                                <option value="model-az">Model (A - Z)</option>
+                                <option value="model-za">Model (Z - A)</option>
+                            </select>
+                        </div>
+
                         
                     </div>
-
-
                 </div>
 
+
+                <div className="stock-results-message">
+                    <p>
+                        Showing {" "}
+                        <strong>
+                            {filteredVehicles.length}{" "}
+                            {filtersActive 
+                                ? filteredVehicles.length === 1
+                                    ? "matching vehicle"
+                                    : "matching vehicles"
+                                : filteredVehicles.length === 1
+                                    ? "vehicle"
+                                    : "vehicles"
+                            }
+                        </strong>{" "}
+                         at Mazda Hometown
+                    </p>
+                </div>
 
 
                 <AnimatePresence mode="wait">
                     <motion.div className="stock-all-vehicles"
-                        key={`${selectedBodyType}-${selectedFuel}-${selectedTransmission}-${selectedModel}-${selectedMinYear}-${selectedMaxYear}-${selectedMinPrice}-${selectedMaxPrice}-${searchTerm}`}
+                        key={`${selectedBodyType}-${selectedFuel}-${selectedTransmission}-${selectedModel}-${selectedMinYear}-${selectedMaxYear}-${selectedMinPrice}-${sortOption}-${searchTerm}`}
                         initial={{ opacity: 0.5 }} 
                         animate={{ opacity: 1 }} 
                         exit={{ opacity: 0.5 }} 
