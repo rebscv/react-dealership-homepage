@@ -104,124 +104,102 @@ function Stock() {
 
                 <div className="stock-filter-head">
                     <h1>Our Stock</h1>
-                    <p>Discover our wide range of Mazda vehicles at Mazda Hometown</p>
+                    <p className="stock-filter-head-description">Discover our wide range of Mazda vehicles at Mazda Hometown</p>
                 </div>
 
                 <div className="stock-filter">
 
-                    <h3>Keyword Search</h3>
-                    
-                    <div className="stock-filter-row">
+                    <h3 className="stock-filter-header-search">Keyword Search</h3>
 
-                        <div className="stock-filter-search-col">
-                            <label for="stock-search">Search</label>
-                            <input type="text" id="stock-search" value={searchTerm} onChange={(e) => setsearchTerm(e.target.value)} placeholder="Search by make, model, body type..." />
-                        </div>
-
-                        <div className="stock-filter-col stock-filter-show-mobile">
-                            <label htmlFor="sort-option">Sort by</label>
-                            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} id="sort-bg">
-                                <option value="latest">Recently Added</option>
-                                <option value="price-high">Price (High - Low)</option>
-                                <option value="price-low">Price (Low - High)</option>
-                                <option value="year-new">Year (Newest - Oldest)</option>
-                                <option value="year-old">Year (Oldest - Newest)</option>
-                                <option value="mileage-low">KMs (Low - High)</option>
-                                <option value="mileage=high">KMs (High - Low)</option>
-                                <option value="model-az">Model (A - Z)</option>
-                                <option value="model-za">Model (Z - A)</option>
-                            </select>
-                        </div>
-
-                        <div className="stock-filter-btn-col">
-                            <button onClick={clearFilters} className="btn btn-primary">Clear Filters</button>
-                        </div>                 
-
+                    <div className="stock-filter-search-col stock-filter-search">
+                        <label for="stock-search">Search</label>
+                        <input type="text" id="stock-search" value={searchTerm} onChange={(e) => setsearchTerm(e.target.value)} placeholder="Search by make, model, body type..." />
                     </div>
 
-                    <h3>Filter & Sort Stock</h3>
+                    <div className="stock-filter-btn-col stock-filter-clear">
+                        <button onClick={clearFilters} className="btn btn-primary">Clear Filters</button>
+                    </div>                 
 
-        
-                    <div className="stock-filter-row stock-filter-toggle-mobile">
 
-                        <div className="stock-filter-col">
-                            <label htmlFor="model-filter">Model</label>
-                            <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)} id="model-filter">
-                                <option value="">All</option>
-                                {models.map((model) => ( <option key={model} value={model}>{model}</option> ))}
-                            </select>
-                        </div>
+                    <h3 className="stock-filter-header-filter-sort">Filter & Sort Stock</h3>
+    
 
-                        <div className="stock-filter-col">
-                            <label htmlFor="body-filter">Body Type</label>
-                            <select value={selectedBodyType} onChange={(e) => setSelectedBodyType(e.target.value)} id="body-filter">
-                                <option value="">All</option>
-                                <option value="SUV">SUV</option>
-                                <option value="Sedan">Sedan</option>
-                                <option value="Hatch">Hatch</option>
-                                <option value="Ute">Ute</option>                                
-                            </select>                            
-                        </div>
+                    <div className="stock-filter-col stock-filter-model">
+                        <label htmlFor="model-filter">Model</label>
+                        <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)} id="model-filter">
+                            <option value="">All</option>
+                            {models.map((model) => ( <option key={model} value={model}>{model}</option> ))}
+                        </select>
+                    </div>
 
-                        <div className="stock-filter-col">
-                            <label htmlFor="fuel-filter">Fuel</label>
-                            <select value={selectedFuel} onChange={(e) => setSelectedFuel(e.target.value)} id="fuel-filter">
-                                <option value="">All</option>
-                                <option value="Petrol">Petrol</option>
-                                <option value="Hybrid">Hybrid</option>
-                                <option value="Electric">Electric</option>
-                            </select>
-                        </div>
-     
-                        <div className="stock-filter-col">
-                            <label>Price Range</label>
-                            <div className="range-slider-container">
-                                <span className="range-slider-results">${Number(selectedMinPrice).toLocaleString()} - ${Number(selectedMaxPrice).toLocaleString()}</span> 
-                                <div className="range-slider">
-                                    <input type="range" min={minPrice} max={maxPrice} step="5000" value={selectedMinPrice} onChange={handleMinPriceChange} className="range-input range-input-min" />
-                                    <input type="range" min={minPrice} max={maxPrice} step="5000" value={selectedMaxPrice} onChange={handleMaxPriceChange} className="range-input range-input-max" />
-                                    <div className="range-slider-active" style={{
-                                        left: `${((selectedMinPrice - minPrice) / (maxPrice - minPrice)) * 100}%`,
-                                        width: `${((selectedMaxPrice - selectedMinPrice) / (maxPrice - minPrice)) * 100}%`
-                                    }}/>
-                                </div>
+                    <div className="stock-filter-col stock-filter-body">
+                        <label htmlFor="body-filter">Body Type</label>
+                        <select value={selectedBodyType} onChange={(e) => setSelectedBodyType(e.target.value)} id="body-filter">
+                            <option value="">All</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hatch">Hatch</option>
+                            <option value="Ute">Ute</option>                                
+                        </select>                            
+                    </div>
+
+                    <div className="stock-filter-col stock-filter-fuel">
+                        <label htmlFor="fuel-filter">Fuel</label>
+                        <select value={selectedFuel} onChange={(e) => setSelectedFuel(e.target.value)} id="fuel-filter">
+                            <option value="">All</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="Electric">Electric</option>
+                        </select>
+                    </div>
+    
+                    <div className="stock-filter-col stock-filter-price">
+                        <label>Price Range</label>
+                        <div className="range-slider-container">
+                            <span className="range-slider-results">${Number(selectedMinPrice).toLocaleString()} - ${Number(selectedMaxPrice).toLocaleString()}</span> 
+                            <div className="range-slider">
+                                <input type="range" min={minPrice} max={maxPrice} step="5000" value={selectedMinPrice} onChange={handleMinPriceChange} className="range-input range-input-min" />
+                                <input type="range" min={minPrice} max={maxPrice} step="5000" value={selectedMaxPrice} onChange={handleMaxPriceChange} className="range-input range-input-max" />
+                                <div className="range-slider-active" style={{
+                                    left: `${((selectedMinPrice - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                    width: `${((selectedMaxPrice - selectedMinPrice) / (maxPrice - minPrice)) * 100}%`
+                                }}/>
                             </div>
-
                         </div>
 
-                        <div className="stock-filter-col">                            
-                            <label>Year Range</label>
-                            <div className="range-slider-container">
-                                <span className="range-slider-results">{selectedMinYear} - {selectedMaxYear}</span>   
-                                <div className="range-slider">
-                                    <input type="range" min={minYear} max={maxYear} value={selectedMinYear} onChange={handleMinYearChange} className="range-input range-input-min" />
-                                    <input type="range" min={minYear} max={maxYear} value={selectedMaxYear} onChange={handleMaxYearChange} className="range-input range-input-max" />
-                                    <div className="range-slider-active" style={{
-                                        left: `${((selectedMinYear - minYear) / (maxYear - minYear)) * 100}%`,
-                                        width: `${((selectedMaxYear - selectedMinYear) / (maxYear - minYear)) * 100}%`
-                                    }}/>
-                                </div> 
-                            </div>                                                    
-                        </div> 
-
-
-                        <div className="stock-filter-col">
-                            <label htmlFor="sort-option">Sort by</label>
-                            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} id="sort-bg">
-                                <option value="latest">Recently Added</option>
-                                <option value="price-high">Price (High - Low)</option>
-                                <option value="price-low">Price (Low - High)</option>
-                                <option value="year-new">Year (Newest - Oldest)</option>
-                                <option value="year-old">Year (Oldest - Newest)</option>
-                                <option value="mileage-low">KMs (Low - High)</option>
-                                <option value="mileage=high">KMs (High - Low)</option>
-                                <option value="model-az">Model (A - Z)</option>
-                                <option value="model-za">Model (Z - A)</option>
-                            </select>
-                        </div>
-
-                        
                     </div>
+
+                    <div className="stock-filter-col stock-filter-year">                            
+                        <label>Year Range</label>
+                        <div className="range-slider-container">
+                            <span className="range-slider-results">{selectedMinYear} - {selectedMaxYear}</span>   
+                            <div className="range-slider">
+                                <input type="range" min={minYear} max={maxYear} value={selectedMinYear} onChange={handleMinYearChange} className="range-input range-input-min" />
+                                <input type="range" min={minYear} max={maxYear} value={selectedMaxYear} onChange={handleMaxYearChange} className="range-input range-input-max" />
+                                <div className="range-slider-active" style={{
+                                    left: `${((selectedMinYear - minYear) / (maxYear - minYear)) * 100}%`,
+                                    width: `${((selectedMaxYear - selectedMinYear) / (maxYear - minYear)) * 100}%`
+                                }}/>
+                            </div> 
+                        </div>                                                    
+                    </div> 
+
+
+                    <div className="stock-filter-col stock-filter-sort">
+                        <label htmlFor="sort-option">Sort by</label>
+                        <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} id="sort-bg">
+                            <option value="latest">Recently Added</option>
+                            <option value="price-high">Price (High - Low)</option>
+                            <option value="price-low">Price (Low - High)</option>
+                            <option value="year-new">Year (Newest - Oldest)</option>
+                            <option value="year-old">Year (Oldest - Newest)</option>
+                            <option value="mileage-low">KMs (Low - High)</option>
+                            <option value="mileage=high">KMs (High - Low)</option>
+                            <option value="model-az">Model (A - Z)</option>
+                            <option value="model-za">Model (Z - A)</option>
+                        </select>
+                    </div>
+
                 </div>
 
 

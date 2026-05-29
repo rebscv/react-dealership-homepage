@@ -140,6 +140,15 @@
     color: #666;
 }
 
+@media (min-width:1024px) {
+    
+    .version-3 .vehicle-details-content .vd-meta {
+
+    }
+
+
+}
+
 
 /* =========================
    Version 3 - Form
@@ -155,19 +164,21 @@
 ========================= */
 
 .version-3 .vd-top-bar {
-    display: none;
-}
-
-.vd-top-scrolling .version-3 .vd-top-bar {
     display: block;
-    position: sticky;
-    top: 91px;
     background-color: var(--clr-grey);    
     width: 100%;    
     transition: ease 0.6s all;
     z-index: 2;
     box-shadow: 0 0 16px #00000021;
     border-bottom: solid 1px #fff;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0;
+}
+
+.vd-top-scrolling .version-3 .vd-top-bar {
+    top: 78px;
+    transform: none;
 }
 
 .version-3 .vd-top-bar .std-wrapper {
@@ -183,6 +194,16 @@
     gap: 32px;
     align-items: center;
 }
+
+.version-3 .vd-top-bar-grid {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: space-between;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 32px;
+    align-items: center;
+}
+
 
 .version-3 .vd-top-bar .h1 {
     font-size: 1.5em;
@@ -212,6 +233,55 @@
 .version-3 .vd-top-bar-img img {
     display: block;
     max-width: 64px;
+}
+
+@media (min-width:1280px) {
+    .vd-top-scrolling .version-3 .vd-top-bar {
+        top: 91px;
+    }
+}
+
+@media (max-width:1023px) {
+
+    .version-3 .vd-top-bar .std-wrapper {
+        padding-top: 12px;
+        padding-bottom: 16px;
+    }
+
+    .vd-top-scrolling .version-3 .vd-top-bar {
+        top: 72px;
+    }
+
+    .version-3 .vd-top-bar-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        grid-auto-flow: unset;
+        text-align: center;
+    }
+
+    .version-3 .vd-top-bar .h1 {
+        font-size: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .version-3 .vd-top-bar-img {
+        display: none;
+    }
+    
+    .version-3 .vd-top-bar .vd-price {
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .version-3 .vd-top-bar .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
 }
 
 /* =========================
