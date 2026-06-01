@@ -80,7 +80,7 @@ function VehicleDetail() {
                         <div className="vd-overview">
 
 
-                            <div className="grid">
+                            <div className="vd-overview-title-img-price grid">
                                 <h1><span>{vehicle.year}</span> {vehicle.title}</h1>
 
                                 <div className="vd-price">
@@ -206,43 +206,43 @@ function VehicleDetail() {
 
                                     <div className="vd-specs-row">
                                         <div>Drivetrain</div>
-                                        <div><strong>FWD</strong></div>
+                                        <div>FWD</div>
                                     </div>
                                     
                                     <div className="vd-specs-row">
-                                    <div>Engine type</div>
-                                    <div><strong>2.0l 4-cyl petrol</strong></div>
+                                        <div>Engine type</div>
+                                        <div>2.0l 4-cyl petrol</div>
                                     </div>
 
                                     <div className="vd-specs-row">
-                                    <div>Fuel consumption (ADR 81/02) - combined</div>
-                                    <div><strong>6.3 l/100km</strong><sup> (1)</sup></div>
+                                        <div>Fuel consumption (ADR 81/02) - combined</div>
+                                        <div>6.3 l/100km<sup> (1)</sup></div>
                                     </div>
 
                                     <div className="vd-specs-row">
-                                    <div>Fuel tank capacity</div>
-                                    <div><strong>48l</strong></div>
+                                        <div>Fuel tank capacity</div>
+                                        <div>48l</div>
                                     </div>
 
 
                                     <div className="vd-specs-row">
-                                    <div>Maximum power</div>
-                                    <div><strong>110kW</strong></div>
+                                        <div>Maximum power</div>
+                                        <div>110kW</div>
                                     </div>
 
                                     <div className="vd-specs-row">
-                                    <div>Maximum torque</div>
-                                    <div><strong>195Nm</strong></div>
+                                        <div>Maximum torque</div>
+                                        <div>195Nm</div>
                                     </div>
 
                                     <div className="vd-specs-row">
-                                    <div>Recommended fuel</div>
-                                    <div><strong>Unleaded (91RON)</strong></div>
+                                        <div>Recommended fuel</div>
+                                        <div>Unleaded (91RON)</div>
                                     </div>
 
                                     <div className="vd-specs-row">
-                                    <div>Transmission type</div>
-                                    <div><strong>6-sp auto</strong></div>  
+                                        <div>Transmission type</div>
+                                        <div>6-sp auto</div>  
                                     </div>   
 
                                 </div>

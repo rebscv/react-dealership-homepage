@@ -237,11 +237,12 @@
     display: none;
     z-index: 11;
     position: fixed;
-    top: 68px;
+    top: 72px;
     width: 100%;
     height: 100%;
-    background-color: var(--header-bg);
+    background-color: #101010;
     overflow-y: auto;
+    border-top: solid 1px #1a1a1a;
 }
 
 body.version-3-body.show-mobile-menu {
@@ -267,6 +268,10 @@ body.version-3-body.show-mobile-menu {
 
 .version-3 .menu-mobile nav, .version-3 .menu-mobile .nav-item {
     grid-column: span 1;
+}
+
+.version-3 .menu-mobile .nav-item.active {
+    background: #141414;
 }
 
 .version-3 .menu-mobile .nav-item::after {
@@ -299,7 +304,8 @@ body.version-3-body.show-mobile-menu {
 .version-3 .menu-mobile nav .nav-submenu a {
     font-size: 0.85em;
     color: #999999;
-    padding: 12px 24px 12px 36px;
+    padding: 8px 24px;
+    border-top: solid 1px #1a1a1a;
 }
 
 .version-3 .menu-mobile .nav-submenu a:hover {

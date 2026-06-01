@@ -12,6 +12,7 @@
 .version-3 {
   font-family: MazdaTypeTT;
   line-height: 1.65em;
+  font-synthesis: weight;
 }
 
 .version-3 a {
@@ -220,6 +221,15 @@
 .version-3 .btn-outline:hover, .version-3 a.btn-outline:hover {
   color: var(--clr-white);
   background-color: var(--clr-black);
+}
+
+@media (max-width:575px) {
+  
+  .version-3 .btn:not(.btn-underline) {
+    width: 100%;
+    text-align: center;
+  }
+
 }
 
 
@@ -469,7 +479,6 @@
   font-family: var(--font-mazda);
   padding: 8px 12px;
   background: #fff;
-  font-weight: bold;
   font-size: 14px;
   cursor: pointer;
   width: auto;
@@ -769,7 +778,7 @@
   border-color: #cccccc;
 }
 
-.version-3 .form-row-textarea label, .version-3 .form-row-textarea textarea:focus + label, .version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
+.version-3 .form-row-textarea textarea:focus + label, .version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
   position: absolute;
   left: 4px;
   top: -20px;
@@ -777,6 +786,37 @@
   opacity: 1;
   font-size: 0.7em;
 }
+
+
+.version-3 .form-row-textarea textarea:focus + label, .version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
+  position: absolute;
+  left: 4px;
+  top: -20px;
+  transform: none;
+  opacity: 1;
+  font-size: 0.7em;
+}
+
+.version-3 .form-row-textarea textarea:focus + label {
+
+}
+
+
+
+.version-3 .vd-form-row.form-row-textarea label, .version-3 .form-row-textarea textarea label {
+  opacity: 1;
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  transform: none;
+  opacity: 0;
+  font-size: 0.7em;
+}
+
+.version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
+  opacity: 1;
+}
+
 
 .version-3 .form-row-submit {
 

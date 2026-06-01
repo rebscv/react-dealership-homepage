@@ -188,3 +188,11 @@
   }
 
 }
+
+@media (max-width:575px) {
+
+  .version-3 .hero-slider .btn {
+    width: auto;
+  }
+
+}

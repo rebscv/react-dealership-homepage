@@ -116,10 +116,6 @@ footer h4 {
     .version-3 .footer-col.hidden {
         border-bottom: solid 1px #999999;
     }
-
-    .version-3 .copyright {
-        margin-top: 32px;
-    }
     
 }
 
@@ -127,7 +123,7 @@ footer h4 {
    Copyright - Version 3
 ========================= */
 
-.copyright {
+.version-3 .copyright {
     border-top: solid 1px #666666;
     padding-top: 24px;
     font-size: 0.8em;
@@ -137,8 +133,33 @@ footer h4 {
     gap: 8px;
 }
 
-.copyright > * {
+.version-3 .copyright > * {
     border-right: solid 1px #333333;
-    line-height: 1;
+    line-height: 1.3em;
     padding-right: 8px;
+}
+
+@media (max-width: 767px) {
+
+    .version-3 .copyright {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        gap: 8px;
+        border-top: none;
+    }
+
+    .version-3 .copyright > * {
+        padding-right: 0;
+        border: none;
+    }
+
+    .version-3 .copyright > *:first-child {
+        grid-column: 1 / -1;
+        padding-bottom: 16px;
+        border-bottom: solid 1px #333333;
+        margin-bottom: 16px;
+    }
+    
 }
