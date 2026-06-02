@@ -7,8 +7,8 @@ function ModelHero ({ title, tagline, image, imageMobile }) {
 
 
             <picture>
-              <source media="(min-width: 768px)" srcset={image} />
-              <source srcset={imageMobile} />
+              <source media="(min-width: 768px)" srcSet={image} />
+              <source srcSet={imageMobile} />
               <img src={image} alt={title} fetchPriority="high" />                
             </picture>
 

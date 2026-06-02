@@ -139,31 +139,31 @@ function VehicleDetail() {
 
                             <div>
                                 <span id="enquire" className="anchor"></span>
-                                <form className="vd-form" action="">
+                                <form action="">
 
                                     <h4>Get in touch</h4>
 
-                                    <div className="form-row vd-form-row">                                    
+                                    <div className="form-row">                                    
                                         <input id="fullName" name="fullName" type="text" placeholder="Full Name" required />
                                         <label htmlFor="fullName">Full Name</label>
                                     </div>
 
-                                    <div className="form-row vd-form-row">                                    
+                                    <div className="form-row">                                    
                                         <input id="phone" name="phone" type="tel" placeholder="Phone" required />
                                         <label htmlFor="phone">Phone</label>
                                     </div>
 
-                                    <div className="form-row vd-form-row">                                    
+                                    <div className="form-row">                                    
                                         <input id="email" name="email" type="email" placeholder="Email" required />
                                         <label htmlFor="email">Email</label>
                                     </div>
 
-                                    <div className="form-row vd-form-row form-row-textarea">                                    
+                                    <div className="form-row form-row-textarea">                                    
                                         <textarea id="message" name="message" placeholder="Message" />
                                         <label htmlFor="message">Message</label>
                                     </div>
 
-                                    <div className="form-row form-row-submit vd-form-row">
+                                    <div className="form-row form-row-submit">
                                         <button type="submit" className="btn btn-primary">Enquire Now</button>
                                     </div>
 

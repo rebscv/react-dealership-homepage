@@ -1,0 +1,28 @@
+function PageIconFeatureItem({ icon, title, text }) {
+  return (
+
+    <article className="page-icon-feature-item">
+
+      
+
+      {icon && (
+        <div className="page-icon-feature-item-img">
+          <img src={icon} alt="" />
+        </div>
+      )}
+
+      <div className="page-icon-feature-item-content">
+
+        {title && ( <h3 className="page-icon-feature-item-title">{title}</h3> )}
+        {text && ( <p className="page-icon-feature-item-text">{text}</p> )}
+
+      </div>
+
+
+
+    </article>
+    
+  );
+}
+
+export default PageIconFeatureItem;
