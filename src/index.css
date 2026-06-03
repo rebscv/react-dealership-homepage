@@ -108,6 +108,8 @@ h1 {
   line-height: 1.1;
 }
 
+html * {box-sizing: border-box;}
+
 @media (min-width:1024px) {
   .hide-desktop { display: none!important; }  
 }

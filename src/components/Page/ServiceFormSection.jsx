@@ -1,11 +1,14 @@
-function ServiceFormSection({ title, text }) {
+import { span } from "framer-motion/client";
+
+function ServiceFormSection({ title, text, bgColour }) {
   return (
 
-
-    <section className="page-form-section">
+    
+    <section className={`page-form-section ${bgColour}`}>
       <div className="sml-wrapper">
 
 
+        <span id="enquire" className="anchor"></span>
         <div className="page-form-section-grid">
           <div className="page-form-section-content">
 

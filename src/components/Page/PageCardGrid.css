@@ -1,0 +1,72 @@
+/* =========================
+   Page Hero Version 3
+========================= */
+
+.version-3 .page-card-item {
+  border-radius: 8px;
+  border: solid 1px var(--clr-grey-border);
+  overflow: hidden;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.version-3 .page-card-item-text {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.version-3 .page-card-grid-items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--grid-gap);
+}
+
+.page-card-item-btn:last-child {
+  margin: auto auto 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width:768px) {
+
+  .version-3 .page-card-grid-items.grid-l-two-cols {
+    gap: var(--grid-gap);
+  }
+
+  .version-3 .page-card-grid-items.grid-l-two-cols .page-card-item {
+    width: calc(50% - 24px);
+  }
+
+}
+
+@media (min-width:1024px) {
+
+
+
+  .version-3 .page-card-grid-items.grid-d-three-cols {
+    display: flex;
+    justify-content: center;
+    gap: var(--grid-gap-d);
+  }
+
+  .version-3 .page-card-grid-items.grid-d-three-cols .page-card-item {
+    width: calc(33.33% - 22px);
+  }
+  
+}
+
+@media (max-width:575px) {
+
+  .page-card-item-btn:last-child {
+    width: 100%;
+  }
+  
+}
+
+
+
+
+

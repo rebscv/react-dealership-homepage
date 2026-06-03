@@ -715,6 +715,10 @@
   font-family: MazdaTypeTT;
 }
 
+.version-3 .grey-bg .form-row input {
+  background-color: var(--clr-grey);
+}
+
 .version-3 .form-row textarea, .version-3 .form-row input {
   border-color: #cccccc;
 }
@@ -722,6 +726,10 @@
 .version-3 .form-row input:focus, .version-3 .form-row textarea {
   outline: none;
   box-shadow: none;
+}
+
+.version-3 .grey-bg .form-row textarea {
+  background-color: #fff;
 }
 
 .version-3 .form-row label {

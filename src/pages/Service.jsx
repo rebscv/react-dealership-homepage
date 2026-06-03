@@ -6,10 +6,14 @@ import PageCardGrid from "../components/Page/PageCardGrid";
 import ServiceFormSection from "../components/Page/ServiceFormSection";
 
 import GenuinePartsIcon from "../assets/images/service/parts.webp";
-import ServiceExplainedImg1 from "../assets/images/page-banners/service.webp";
-
+import GenuineMaintenanceIcon from "../assets/images/service/maintenance-plan.webp";
+import GenuineSoftwareIcon from "../assets/images/service/software-update.webp";
+import GenuineHealthChecksIcon from "../assets/images/service/health-check.webp";
+import ServiceExplainedImg1 from "../assets/images/service/next-service-costs.webp";
+import ServiceExplainedImg2 from "../assets/images/service/thinking-of-buying.webp";
 
 const serviceFeatures = [
+    
     {
         icon: GenuinePartsIcon,
         title: "Genuine Parts",
@@ -21,27 +25,32 @@ const serviceFeatures = [
         text: "Updating your Mazda with the latest driver technologies."
     },
     {
-        icon: GenuinePartsIcon,
-        title: "Ongoing Maintenance Plan",
+        icon: GenuineMaintenanceIcon,
+        title: "Ongoing maintenance plan",
         text: "Preserve your vehicle's value with a tailored service schedule."
     },
     {
         icon: GenuinePartsIcon,
         title: "Full Health Checks",
-        text: "Our unique Modular Diagnostic system tests your vehicle's vital functions."
+        text: "Our unique Modular Diagnostic system tests your vehicles vital functions."
     }
+
 ];
 
 const serviceExplained = [
     {
         title: "HOW MUCH WILL MY NEXT SERVICE COST?",
         text: "Type in your VIN or registration number, and we'll estimate this for you.",
+        btn: "Enquire Now",
+        link: "#enquire",
         image: ServiceExplainedImg1
     },
     {
         title: "Software Updates",
         text: "Type in your VIN or registration number, and we'll estimate this for you.",
-        image: ServiceExplainedImg1
+        btn: "Enquire Now",        
+        link: "#enquire",        
+        image: ServiceExplainedImg2
     }
 
 ];
@@ -64,15 +73,9 @@ function Service() {
             />
 
             <PageIconFeatureGrid
-                title="Why Service With Us?"
-                columns={2}
+                title=""
+                className="grid grid-l-two-cols"
                 items={serviceFeatures}
-            />
-
-            <PageImageText
-                title="Over 150 Certified Mazda Service Dealerships Nationwide"
-                text="Wherever you are, genuine service for your Mazda is never far away."
-                image="/src/assets/images/page-banners/service.webp"
             />
 
             <PageCardGrid
@@ -85,6 +88,7 @@ function Service() {
             <ServiceFormSection
                 title="Book a Service"
                 text="Need a service?"
+                bgColour="grey-bg"
             />
 
         </main>        

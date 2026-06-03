@@ -1,14 +1,28 @@
+import PageHero from "../components/Page/PageHero";
+import PageIntro from "../components/Page/PageIntro";
+import ServiceFormSection from "../components/Page/ServiceFormSection";
+
+
 function BookService() {
     return (
 
-        <section>
-            <div className="std-wrapper">
+        <main>
 
-                <h1>Book a Service</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus dui quis quam eleifend, ut imperdiet risus auctor. Aliquam laoreet diam luctus feugiat commodo.</p>
-    
-            </div>
-        </section>
+            <PageHero
+                title="Mazda Service Select"
+                image="/src/assets/images/page-banners/service.webp"
+                imageMoible="/src/assets/images/page-banners/service-m.webp"
+                alt=""
+            />
+            
+            <ServiceFormSection
+                title="Book a Service"
+                text="Need a service?"
+                bgColour="grey-bg"
+            />
+
+
+        </main>
 
     )
 }

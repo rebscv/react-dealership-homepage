@@ -1,15 +1,18 @@
-function PageCardItem({ title, text, image, alt }) {
+import "./PageCardGrid.css"
+
+function PageCardItem({ title, text, image, btn, link, alt }) {
   return (
     <div className="page-card-item">      
+      <div>{image && ( <img src={image} alt={alt || title || ""} fetchPriority="high" /> )}</div>
 
-      <div className="grid">
-
-        <div>{image && ( <img src={image} alt={alt || title || ""} fetchPriority="high" /> )}</div>
-
-        {title && <h2>{title}</h2>}
+      <div className="page-card-item-text t-center">
+        {title && <h3 className="h4">{title}</h3>}
         {text && <p>{text}</p>}
-
+        
       </div>
+
+
+      {btn && <div className="page-card-item-btn"><a href={link} className="btn btn-primary">{btn}</a></div>}
 
 
     </div>

@@ -1,6 +1,8 @@
 import PageIconFeatureItem from "./PageIconFeatureItem";
 
-function PageIconFeatureGrid({ title, items = [], columns = 2 }) {
+import "./PageIconFeatureGrid.css";
+
+function PageIconFeatureGrid({ title, items = [], className }) {
   return (
 
     <section className="page-icon-feature-grid">
@@ -10,9 +12,10 @@ function PageIconFeatureGrid({ title, items = [], columns = 2 }) {
         {title && <h2 className="page-icon-feature-grid-title">{title}</h2>}
 
 
-        <div className="page-icon-feature-grid-items grid-d-two-cols" style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}>
+        <div className={`page-icon-feature-grid-items ${className}`}>
           {items.map((item, index) => (<PageIconFeatureItem key={index} {...item} />))}
         </div>
+
 
 
       </div>
