@@ -2,11 +2,12 @@ import PageCardItem from "./PageCardItem";
 
 
 
-function PageCardGrid({ title, text, items = [], columns = 2 }) {
+function PageCardGrid({ title, text, items, padding = [], columns = 2 }) {
   return (
 
+    
     <section className="page-card-grid">
-      <div className="std-wrapper">
+      <div className={`std-wrapper ${padding}`}>
 
         <div className="grid t-center">
           {title && <h2 className="page-icon-feature-grid-title t-center">{title}</h2>}

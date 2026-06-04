@@ -1,7 +1,7 @@
 function PageIconFeatureItem({ icon, title, text }) {
   return (
 
-    <article className="page-icon-feature-item">
+    <div className="page-icon-feature-item">
 
       
 
@@ -20,7 +20,7 @@ function PageIconFeatureItem({ icon, title, text }) {
 
 
 
-    </article>
+    </div>
     
   );
 }

@@ -10,6 +10,11 @@
   text-align: center;
 }
 
+.page-hero-eyebrow {
+  font-size: 0.5em;
+  display: block;
+}
+
 /* =========================
    Page Hero Version 3
 ========================= */
@@ -17,18 +22,48 @@
 .version-3 .page-hero-content {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: var(--padding-tb);
+  transform: translateX(-50%);
   max-width: var(--sml-wrapper);
   width: 100%;
   padding: 0 var(--padding-lr);
   color: #fff;
 }
 
+.version-3 .page-hero h1 {
+  line-height: 1;
+  display: grid;
+  gap: 8px;
+}
+
+.version-3 .page-hero-eyebrow {
+  font-size: 0.45em;
+  line-height: 1.2em;
+}
+
+
+.page-hero-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background-image: linear-gradient(0deg, transparent, #000000d1);
+}
+
 @media (min-width:1024px) {
 
   .version-3 .page-hero-content {
     padding: 0 var(--padding-lr-d);
+    top: var(--padding-tb-d);
+  }
+
+  .version-3 .page-hero-eyebrow {
+    font-size: 0.3em;
+  }
+  .version-3 .page-hero h1 {
+    font-size: 4em;
   }
     
 }

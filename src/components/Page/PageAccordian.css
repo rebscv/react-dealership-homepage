@@ -1,0 +1,58 @@
+.page-accordian-row {
+  border-bottom: solid 1px var(--clr-grey-border);
+}
+
+.accord-head {
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  padding: var(--wrapper-gap);
+  cursor: pointer;
+}
+
+.accord-content {
+  max-height: 0;  
+  overflow: hidden;
+  transition: ease-out 0.4s all;
+  padding: 0 var(--wrapper-gap);
+  
+}
+
+.active .accord-content {
+  max-height: unset;
+  opacity: 1;
+  padding: 0 var(--wrapper-gap) var(--wrapper-gap);
+}
+
+.accord-content * {
+  opacity: 0;
+  transition: ease-out 0.6s all;
+}
+
+.active .accord-content * {
+  opacity: 1;
+}
+
+
+
+
+
+.version-3 .accord-head {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.version-3 .page-accordian-row.active .accord-head, .version-3 .page-accordian-row .accord-head:hover {
+  color: var(--clr-primary);
+}
+
+.version-3 .accord-head-icon {
+  color: var(--clr-primary);
+  font-weight: 700;
+  transition: ease-out 0.4s all;
+}
+
+.version-3 .page-accordian-row.active .accord-head-icon {
+  transform: rotate(45deg);
+}

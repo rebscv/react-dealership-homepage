@@ -70,11 +70,12 @@ function Service() {
             <PageIntro
                 title="Genuine Confidence"
                 text="When it comes to keeping your vehicle in tip-top shape, only a Mazda Genuine Service can deliver the assurance and peace of mind you’re looking for."
+                cta="Enquire Now"
             />
 
             <PageIconFeatureGrid
                 title=""
-                className="grid grid-l-two-cols"
+                gridClass="grid grid-l-two-cols"
                 items={serviceFeatures}
             />
 

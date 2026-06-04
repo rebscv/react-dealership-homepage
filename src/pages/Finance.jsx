@@ -3,57 +3,67 @@ import PageIntro from "../components/Page/PageIntro";
 import PageIconFeatureGrid from "../components/Page/PageIconFeatureGrid";
 import PageImageText from "../components/Page/PageImageText";
 import PageCardGrid from "../components/Page/PageCardGrid";
+import PageAccordian from "../components/Page/PageAccordian";
 import ServiceFormSection from "../components/Page/ServiceFormSection";
 
 import GenuinePartsIcon from "../assets/images/service/parts.webp";
 import GenuineMaintenanceIcon from "../assets/images/service/maintenance-plan.webp";
 import GenuineSoftwareIcon from "../assets/images/service/software-update.webp";
 import GenuineHealthChecksIcon from "../assets/images/service/health-check.webp";
-import ServiceExplainedImg1 from "../assets/images/service/next-service-costs.webp";
-import ServiceExplainedImg2 from "../assets/images/service/thinking-of-buying.webp";
+import FinanceImg1 from "../assets/images/finance/mazda-assured.webp";
+import FinanceImg2 from "../assets/images/finance/fixed-car-rate.webp";
 
 
-import "./service.css"
+const finaceCards = [
+    {
+        title: "Mazda Assured",
+        text: [
+            "Drive away with confidence for the road ahead with lower repayments^. Thanks to a Guaranteed Future Value* with a Mazda Assured car loan, you can enjoy a new Mazda more often.",
+            "Build your Mazda and calculate your repayments."
+        ],
+        btn: "Enquire Now",
+        link: "#enquire",
+        image: FinanceImg1,
+        alt: "Couple walking next to Mazda"
+    },
+    {
+        title: "FIXED RATE CAR LOAN",
+        text: "Take control with a Fixed Rate car loan tailored to you. Select a car loan term up to 7 years, choose your repayment frequency and the option to include a deposit or a balloon payment. Visit our build tool to create your perfect Mazda and calculate repayments.",
+        btn: "Enquire Now",        
+        link: "#enquire",        
+        image: FinanceImg2,
+        alt: "Happy Couple in front of Mazda"
+    }
+
+];
 
 const serviceFeatures = [
     
     {
         icon: GenuinePartsIcon,
-        title: "Genuine Parts",
-        text: "We only use parts made for Mazda, by Mazda."
+        text: "How to Apply"
     },
     {
         icon: GenuinePartsIcon,
-        title: "Software Updates",
-        text: "Updating your Mazda with the latest driver technologies."
+        text: "Calculate Repayments"
     },
     {
         icon: GenuineMaintenanceIcon,
-        title: "Ongoing maintenance plan",
-        text: "Preserve your vehicle's value with a tailored service schedule."
+        text: "Contact Us"
     },
-    {
-        icon: GenuinePartsIcon,
-        title: "Full Health Checks",
-        text: "Our unique Modular Diagnostic system tests your vehicles vital functions."
-    }
 
 ];
 
-const serviceExplained = [
+const faqs = [
+    
     {
-        title: "HOW MUCH WILL MY NEXT SERVICE COST?",
-        text: "Type in your VIN or registration number, and we'll estimate this for you.",
-        btn: "Enquire Now",
-        link: "#enquire",
-        image: ServiceExplainedImg1
+        title: "What Identification and Documents do I need to apply?",
+        text: "Before applying for car finance there are several documents you need to have ready. We have a checklist you can print to make sure you have everything you need."
     },
+
     {
-        title: "Software Updates",
-        text: "Type in your VIN or registration number, and we'll estimate this for you.",
-        btn: "Enquire Now",        
-        link: "#enquire",        
-        image: ServiceExplainedImg2
+        title: "Why should I borrow from Mazda Finance?",
+        text: "We calculate your rate based on your credit score and other personal criteria determined by us. This means you can always be sure of a rate that’s transparent and tailored to your circumstances. As Mazda Finance is arranged through your Mazda Dealer at the time you purchase your vehicle, it’s simple and convenient too."
     }
 
 ];
@@ -64,35 +74,42 @@ function Service() {
         <main>
 
             <PageHero
-                title="Finance"
-                image="/src/assets/images/page-banners/service.webp"
-                imageMoible="/src/assets/images/page-banners/service-m.webp"
+                eyebrow="Convenience and confidence with Mazda Finance"
+                title="It's finance, your way"                
+                image="/src/assets/images/page-banners/finance.webp"
+                imageMobile="/src/assets/images/page-banners/finance-m.webp"
                 alt=""
             />
 
             <PageIntro
-                title="Genuine Confidence"
-                text="When it comes to keeping your vehicle in tip-top shape, only a Mazda Genuine Service can deliver the assurance and peace of mind you’re looking for."
-            />
-
-            <PageIconFeatureGrid
-                title=""
-                className="grid grid-l-two-cols"
-                items={serviceFeatures}
-            />
-
-            <PageImageText
-                title="Over 150 Certified Mazda Service Dealerships Nationwide"
-                text="Wherever you are, genuine service for your Mazda is never far away."
-                image="/src/assets/images/page-banners/service.webp"
+                text="Complete your car purchase all in one place - Mazda Hometown. Get to know Mazda Hometown as they assist you in finding car finance that suits your journey with Mazda Finance.  "
             />
 
             <PageCardGrid
-                title="Our Servicing Pricing explained"
-                text="We make it as simple as possible to understanding our service pricing."
-                items={serviceExplained}
+                padding="no-padding-top"
+                items={finaceCards}
             />
 
+            <PageImageText
+                bgColour="grey-bg"
+                title="Business Car Loans"
+                text="Mazda Hometown is the perfect partner for small business and sole traders. With Mazda Finance, tailor a car finance solution to suit you and your business. Find out what you can do from the convenience of Mazda Hometown."
+                image="/src/assets/images/finance/business-car-loans.webp"
+                cta="Enquire Now"
+            />
+
+
+            <PageIconFeatureGrid
+                title="Your Next Steps"
+                wrapperClass="sml-wrapper"
+                gridClass="grid grid-d-three-cols grid-l-two-cols"
+                items={serviceFeatures}
+            />
+
+            <PageAccordian
+                title="FAQs"
+                items={faqs}
+            />
 
             <ServiceFormSection
                 title="Book a Service"

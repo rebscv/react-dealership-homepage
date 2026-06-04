@@ -41,7 +41,7 @@ function ServiceFormSection({ title, text, bgColour }) {
                     <label htmlFor="message">Message</label>
                 </div>
 
-                <div className="form-row form-row-submit">
+                <div className="form-row form-row-submit t-center">
                     <button type="submit" className="btn btn-primary">Enquire Now</button>
                 </div>
 
