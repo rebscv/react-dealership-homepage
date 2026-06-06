@@ -22,6 +22,7 @@
   max-height: unset;
   opacity: 1;
   padding: 0 var(--wrapper-gap) var(--wrapper-gap);
+  white-space: pre-line;
 }
 
 .accord-content * {
@@ -37,10 +38,14 @@
 
 
 
+
+
 .version-3 .accord-head {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  gap: 8px;
+  font-size: 1em;
 }
 
 .version-3 .page-accordian-row.active .accord-head, .version-3 .page-accordian-row .accord-head:hover {
@@ -55,4 +60,12 @@
 
 .version-3 .page-accordian-row.active .accord-head-icon {
   transform: rotate(45deg);
+}
+
+@media (min-width:576px) { 
+
+  .version-3 .accord-head {
+    font-size: 1.2em;
+  }
+  
 }

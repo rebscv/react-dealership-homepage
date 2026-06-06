@@ -4,7 +4,8 @@ import PageIconFeatureGrid from "../components/Page/PageIconFeatureGrid";
 import PageImageText from "../components/Page/PageImageText";
 import PageCardGrid from "../components/Page/PageCardGrid";
 import PageAccordian from "../components/Page/PageAccordian";
-import ServiceFormSection from "../components/Page/ServiceFormSection";
+import FinanceFormSection from "../components/Page/FinanceFormSection";
+import PageDisclaimer from "../components/Page/PageDisclaimer";
 
 import GenuinePartsIcon from "../assets/images/service/parts.webp";
 import GenuineMaintenanceIcon from "../assets/images/service/maintenance-plan.webp";
@@ -13,6 +14,7 @@ import GenuineHealthChecksIcon from "../assets/images/service/health-check.webp"
 import FinanceImg1 from "../assets/images/finance/mazda-assured.webp";
 import FinanceImg2 from "../assets/images/finance/fixed-car-rate.webp";
 
+import financeFaqs from "../data/financeFaqs.js";
 
 const finaceCards = [
     {
@@ -54,18 +56,13 @@ const serviceFeatures = [
 
 ];
 
-const faqs = [
-    
-    {
-        title: "What Identification and Documents do I need to apply?",
-        text: "Before applying for car finance there are several documents you need to have ready. We have a checklist you can print to make sure you have everything you need."
-    },
+const financeDisclaimer = [
 
-    {
-        title: "Why should I borrow from Mazda Finance?",
-        text: "We calculate your rate based on your credit score and other personal criteria determined by us. This means you can always be sure of a rate that’s transparent and tailored to your circumstances. As Mazda Finance is arranged through your Mazda Dealer at the time you purchase your vehicle, it’s simple and convenient too."
-    }
-
+    "Approved applicants only. Terms, conditions, fees, charges & lending criteria apply. Mazda Finance is a division of Australian Alliance Automotive Finance Pty Limited ABN 63 002 407 703, Australian Credit Licence 513747. Click here to view our privacy policy.",
+    "*The GFV is the minimum value of your Mazda at the end of your finance contract, as determined by Mazda Finance. If you decide to return your car to Mazda Finance at the end of your term, Mazda Finance will pay you the agreed GFV, which will be put against your final payment subject to fair wear and tear conditions and agreed kilometres being met. Terms, conditions, fees, charges & lending criteria apply. Approved applicants only. Mazda Finance is a division of Australian Alliance Automotive Finance Pty Limited ABN 63 002 407 703, Australian Credit Licence 513747.",
+    "^Lower repayments compared to a similar term with no balloon final payment. Total interest charges will be higher if a balloon final payment is selected.",
+    "Target Market Determinations are available here.",
+    <>Click <a href="/my-link">here</a> to view our Consumer Data Right policy.</>
 ];
 
 function Service() {
@@ -108,12 +105,18 @@ function Service() {
 
             <PageAccordian
                 title="FAQs"
-                items={faqs}
+                items={financeFaqs}
             />
 
-            <ServiceFormSection
-                title="Book a Service"
-                text="Need a service?"
+            <FinanceFormSection
+                bgColour="grey-bg"
+                title="Make a Finance Enquiry"
+                text="Speak to our Finance team today. Complete your car purchase all in one place."
+            />
+
+            <PageDisclaimer
+                bgColour="grey-bg"
+                items={financeDisclaimer}
             />
 
         </main>        

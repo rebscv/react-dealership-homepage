@@ -1,0 +1,8 @@
+.version-3 .page-disclaimer {
+  font-size: 0.8em;
+  color: var(--clr-grey-dk)
+}
+
+.version-3 .grey-bg + .page-disclaimer.grey-bg {
+  background-color: #fff;
+}

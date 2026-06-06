@@ -23,6 +23,14 @@
   color: inherit;
 }
 
+.version-3 p a {
+  color: var(--clr-primary);
+}
+
+.version-3 p a:hover {
+  text-decoration: underline;
+}
+
 .version-3-body {
   padding-top: 68px;
 }
@@ -695,6 +703,9 @@
    Form Styles
 ========================= */
 
+.version-3 .page-form-section .lrg-wrapper, .version-3 .page-form-section .std-wrapper, .version-3 .page-form-section .sml-wrapper {
+  max-width: 800px;
+}
 
 .version-3 form {
   display: grid;
@@ -744,7 +755,7 @@
 }
 
 .version-3 .form-row input::placeholder {
-  color: #333333;
+  color: #666666;
   opacity: 1;
 }
 
@@ -762,10 +773,11 @@
   top: -8px;
 }
 
+
 /* Focus state */
-.version-3 .form-row input:focus + label {  
+.version-3 .form-row input:focus + label, .version-3 .form-row label {  
   transform: translateY(0);
-  color: var(--clr-dark-grey);  
+  color: var(--clr-grey-dk)
 }
 
 /* Populated state */
@@ -837,6 +849,8 @@
 .version-3 .form-row-submit {
 
 }
+
+
 
 
 
