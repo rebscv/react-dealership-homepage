@@ -99,7 +99,7 @@ function Service() {
             <PageIconFeatureGrid
                 title="Your Next Steps"
                 wrapperClass="sml-wrapper"
-                gridClass="grid grid-d-three-cols grid-l-two-cols"
+                gridClass="grid grid-d-three-cols grid-t-two-cols"
                 items={serviceFeatures}
             />
 

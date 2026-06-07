@@ -52,12 +52,38 @@
   background-image: linear-gradient(0deg, transparent, #000000d1);
 }
 
+.page-hero-img img {
+  object-fit: cover;
+  height: 480px;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+
+  .page-hero-img img {
+    object-fit: contain;
+    height: auto;
+  }
+
+}
+
 @media (min-width:1024px) {
 
   .version-3 .page-hero-content {
     padding: 0 var(--padding-lr-d);
     top: var(--padding-tb-d);
   }
+
+  .version-3 .page-hero-eyebrow {
+    font-size: 0.3em;
+  }
+  .version-3 .page-hero h1 {
+    font-size: 2.5em;
+  }
+    
+}
+
+@media (min-width:1440px) {
 
   .version-3 .page-hero-eyebrow {
     font-size: 0.3em;

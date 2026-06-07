@@ -13,6 +13,7 @@
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.40.0",
     "react": "^19.2.0",
+    "react-datepicker": "^9.1.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.2"
   },

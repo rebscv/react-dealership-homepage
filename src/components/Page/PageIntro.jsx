@@ -5,7 +5,7 @@ function PageIntro({ title, text, cta }) {
 
         {title && <h2>{title}</h2>}
         {text && <p>{text}</p>}
-        {cta && <div><a href="#enquire" className="btn btn-primary">{cta}</a></div>}
+        {cta && <div><a href="#enquire" className="btn btn-primary smooth-scroll">{cta}</a></div>}
 
 
       </div>
@@ -14,5 +14,3 @@ function PageIntro({ title, text, cta }) {
 }
 
 export default PageIntro;
-
-

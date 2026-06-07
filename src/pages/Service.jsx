@@ -20,7 +20,7 @@ const serviceFeatures = [
         text: "We only use parts made for Mazda, by Mazda."
     },
     {
-        icon: GenuinePartsIcon,
+        icon: GenuineSoftwareIcon,
         title: "Software Updates",
         text: "Updating your Mazda with the latest driver technologies."
     },

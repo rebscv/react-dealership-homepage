@@ -3,15 +3,15 @@ function PageImageText({ title, text, image, alt, bgColour, cta }) {
     <section className={`page-image-text ${bgColour}`}>      
       <div className="full-wrapper">
 
-      <div className="grid-d-two-cols">
+      <div className="grid-l-two-cols">
 
-        <div>{image && ( <img src={image} alt={alt || title || ""} fetchPriority="high" /> )}</div>
+        <div className="center-img">{image && ( <img src={image} alt={alt || title || ""} fetchPriority="high" /> )}</div>
 
         <div className="center-content">
         <div className="grid">
           {title && <h2>{title}</h2>}
           {text && <p>{text}</p>}
-          {cta && <div><a href="#enquire" className="btn btn-primary">{cta}</a></div>}
+          {cta && <div><a href="#enquire" className="btn btn-primary smooth-scroll">{cta}</a></div>}
 
         </div>
         </div>
@@ -25,5 +25,3 @@ function PageImageText({ title, text, image, alt, bgColour, cta }) {
 }
 
 export default PageImageText;
-
-

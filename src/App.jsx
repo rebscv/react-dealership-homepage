@@ -4,13 +4,14 @@ import Version1Layout from "./layouts/Version1Layout";
 import Version2Layout from "./layouts/Version2Layout";
 import Version3Layout from "./layouts/Version3Layout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import useSmoothScroll from "./hooks/useSmoothScroll";
 
 import HomePage from "./pages/HomePage"
 import Stock from "./pages/Stock";
 import VehicleDetail from "./pages/VehicleDetail";
 import Service from "./pages/Service";
 import BookService from "./pages/BookService";
-import Parts from "./pages/Parts";
+import Accessories from "./pages/Accessories";
 import Finance from "./pages/Finance";
 import Offers from "./pages/Offers";
 import Contact from "./pages/Contact";
@@ -18,7 +19,11 @@ import About from "./pages/About";
 import ModelDetail from "./pages/modelDetail";
 
 function App() {
-  return (
+
+  useSmoothScroll();
+
+  return (    
+
     <BrowserRouter>
       
       <ScrollToTop />
@@ -33,7 +38,7 @@ function App() {
             <Route path="vehicle/:id" element={<VehicleDetail />} />
             <Route path="service" element={<Service />} />
             <Route path="book-a-service" element={<BookService />} />
-            <Route path="parts" element={<Parts />} />
+            <Route path="accessories" element={<Accessories />} />
             <Route path="finance" element={<Finance />} />
             <Route path="offers" element={<Offers />} />
             <Route path="contact" element={<Contact />} />
@@ -50,7 +55,7 @@ function App() {
             <Route path="vehicle/:id" element={<VehicleDetail />} />
             <Route path="service" element={<Service />} />
             <Route path="book-a-service" element={<BookService />} />
-            <Route path="parts" element={<Parts />} />
+            <Route path="accessories" element={<Accessories />} />
             <Route path="finance" element={<Finance />} />
             <Route path="offers" element={<Offers />} />
             <Route path="contact" element={<Contact />} />
@@ -67,7 +72,7 @@ function App() {
             <Route path="vehicle/:id" element={<VehicleDetail />} />
             <Route path="service" element={<Service />} />
             <Route path="book-a-service" element={<BookService />} />
-            <Route path="parts" element={<Parts />} />
+            <Route path="Accessories" element={<Accessories />} />
             <Route path="finance" element={<Finance />} />
             <Route path="offers" element={<Offers />} />
             <Route path="contact" element={<Contact />} />

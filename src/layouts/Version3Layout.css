@@ -231,6 +231,20 @@
   background-color: var(--clr-black);
 }
 
+
+/* Buttons on Dark BG */
+
+.version-3 .dark-bg .btn-primary, .version-3 .dark-bg a.btn-primary {
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+.version-3 .dark-bg .btn-primary:hover, .version-3 .dark-bg a.btn-primary:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-grey-dk);
+}
+
+
 @media (max-width:575px) {
   
   .version-3 .btn:not(.btn-underline) {
@@ -402,6 +416,7 @@
   align-items: center;
 }
 
+
 .center-img img {
   object-fit: cover;
   height: 100%;
@@ -415,6 +430,17 @@
 
 @media (min-width:768px) {
 
+  .version-3 .grid-l-two-cols .center-content > div {
+    padding-top: var(--padding-tb);
+    padding-bottom: var(--padding-tb);
+    padding-right: var(--padding-tb);
+  }
+
+  .version-3 .grid-l-two-cols.grid-l-reverse .center-content > div {
+    padding-right: 0;
+    padding-left: var(--padding-tb-d);
+  }
+
   .grid-l-reverse {
     direction: rtl;
   }
@@ -427,6 +453,17 @@
 
 @media (min-width:1024px) {
 
+  .version-3 .grid-d-two-cols .center-content > div {
+    padding-top: var(--padding-tb-d);
+    padding-bottom: var(--padding-tb-d);
+    padding-right: var(--padding-tb-d);
+  }
+
+  .version-3 .grid-d-two-cols.grid-d-reverse .center-content > div {
+    padding-right: 0;
+    padding-left: var(--padding-tb-d);
+  }
+
   .grid-d-reverse {
     direction: rtl;
   }
@@ -436,6 +473,23 @@
   }
 
 }
+
+@media (max-width:1023px) {
+
+  .version-3 .full-wrapper .grid-d-two-cols .center-content > div {
+    padding: 0 var(--padding-lr) var(--padding-tb) ;
+  }
+  
+}
+
+@media (max-width:767px) {
+
+  .version-3 .full-wrapper .grid-l-two-cols .center-content > div {
+    padding: 0 var(--padding-lr) var(--padding-tb) ;
+  }
+  
+}
+
 
 /* =========================
    Grid Columns
@@ -703,8 +757,19 @@
    Form Styles
 ========================= */
 
+/* Form Layout */
+
 .version-3 .page-form-section .lrg-wrapper, .version-3 .page-form-section .std-wrapper, .version-3 .page-form-section .sml-wrapper {
-  max-width: 800px;
+  max-width: 720px;
+}
+
+.version-3 .page-form-section-form {
+  background-color: #fafafa;
+  padding: 12px 16px;
+}
+
+.version-3 .grey-bg .page-form-section-form {
+  background-color: #fff;
 }
 
 .version-3 form {
@@ -713,21 +778,30 @@
   margin-top: 16px;
 }
 
+@media (min-width:1024px) {
+
+  .version-3 .page-form-section-form {
+    background-color: #fafafa;
+    padding: 20px 24px;
+  }
+    
+}
+
+
+/* Form Row Inputs */
+
 .version-3 .form-row {
   position: relative;
 }
 
-.version-3 .form-row input {
+.version-3 .form-row input, .version-3 .form-row select {
   width: 100%;
   border: none;
   border-bottom: 1px solid #cccccc;
   padding: 16px 4px 6px;
   font-size: 1em;
   font-family: MazdaTypeTT;
-}
-
-.version-3 .grey-bg .form-row input {
-  background-color: var(--clr-grey);
+  background-color: transparent;
 }
 
 .version-3 .form-row textarea, .version-3 .form-row input {
@@ -806,38 +880,12 @@
   border-color: #cccccc;
 }
 
-.version-3 .form-row-textarea textarea:focus + label, .version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
-  position: absolute;
-  left: 4px;
-  top: -20px;
-  transform: none;
-  opacity: 1;
-  font-size: 0.7em;
-}
-
-
-.version-3 .form-row-textarea textarea:focus + label, .version-3 .form-row-textarea textarea:not(:placeholder-shown) + label {
-  position: absolute;
-  left: 4px;
-  top: -20px;
-  transform: none;
-  opacity: 1;
-  font-size: 0.7em;
-}
-
-.version-3 .form-row-textarea textarea:focus + label {
-
-}
-
-
-
 .version-3 .form-row.form-row-textarea label, .version-3 .form-row-textarea textarea label {
   opacity: 1;
   position: absolute;
   left: 4px;
-  top: 16px;
+  top: -20px;
   transform: none;
-  opacity: 0;
   font-size: 0.7em;
 }
 
@@ -846,11 +894,34 @@
 }
 
 
-.version-3 .form-row-submit {
+/* Form Row Select */
 
+.version-3 .form-row select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
 }
 
+/* Form Row Date Picker */
 
+.version-3 .react-datepicker {
+  font-family: var(--font-mazda);
+}
 
+.version-3  .react-datepicker__day--selected {
+  background-color: var(--clr-primary);
+}
 
+.version-3 .form-row-date-picker .react-datepicker-wrapper {
+  width: 100%;
+}
 
+.version-3 h2.react-datepicker__current-month {
+  font-size: 1em;
+}
+
+.version-3 .form-row-date-picker label, .version-3 .form-row select + label {
+  top: -4px;
+  opacity: 1;
+  font-size: 0.7em;
+}

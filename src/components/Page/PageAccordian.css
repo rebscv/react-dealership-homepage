@@ -44,6 +44,7 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  align-items: start;
   gap: 8px;
   font-size: 1em;
 }
@@ -54,8 +55,8 @@
 
 .version-3 .accord-head-icon {
   color: var(--clr-primary);
-  font-weight: 700;
-  transition: ease-out 0.4s all;
+  transition: ease-out 0.1s all;
+  font-size: 1.5em;
 }
 
 .version-3 .page-accordian-row.active .accord-head-icon {

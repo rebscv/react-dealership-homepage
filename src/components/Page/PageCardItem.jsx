@@ -14,7 +14,7 @@ function PageCardItem({ title, text, image, btn, link, alt }) {
 
       </div>
 
-      {btn && <div className="page-card-item-btn"><a href={link} className="btn btn-primary">{btn}</a></div>}
+      {btn && <div className="page-card-item-btn"><a href={link} className="btn btn-primary smooth-scroll">{btn}</a></div>}
 
 
     </div>

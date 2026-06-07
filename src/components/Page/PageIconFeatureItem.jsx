@@ -1,7 +1,7 @@
-function PageIconFeatureItem({ icon, title, text }) {
+function PageIconFeatureItem({ icon, title, text, itemLayout }) {
   return (
 
-    <div className="page-icon-feature-item">
+    <div className={`page-icon-feature-item ${itemLayout || ``}`}>
 
       
 

@@ -12,3 +12,52 @@
   display: grid;
   gap: 8px;
 }
+
+
+/* Stacked Layout */
+
+.version-3 .page-icon-feature-stacked {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  align-items: start;
+}
+
+@media (max-width:1023px) {
+
+  .version-3 .page-icon-feature-grid-items.grid-d-two-cols .page-icon-feature-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    border: solid 1px var(--clr-grey-border);
+    padding: var(--padding-lr);
+    border-radius: 8px;
+  }
+  
+}
+
+@media (max-width:767px) {
+
+  .version-3 .page-icon-feature-grid-items.grid-l-two-cols .page-icon-feature-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    border: solid 1px var(--clr-grey-border);
+    padding: var(--padding-lr);
+    border-radius: 8px;
+  }
+  
+}
+
+@media (max-width:575px) {
+
+  .version-3 .page-icon-feature-grid-items.grid-t-two-cols .page-icon-feature-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    border: solid 1px var(--clr-grey-border);
+    padding: var(--padding-lr);
+    border-radius: 8px;
+  }
+  
+}
