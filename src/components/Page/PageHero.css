@@ -15,6 +15,40 @@
   display: block;
 }
 
+.page-hero-video video {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.page-hero-video-cta {
+  position: absolute;
+  bottom: var(--padding-tb);
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px #fff;
+  border-radius: 50%;
+  padding: 14px 16px 18px;
+}
+
+.page-hero-video-cta-arrow {
+  width: 12px;
+  height: 12px;
+  border: solid 2px #fff;
+  display: block;
+  transform: rotate(45deg);
+  border-top: none;
+  border-left: none;
+}
+
+.page-hero-video-cta:hover {
+  background-color: #fff;  
+}
+
+.page-hero-video-cta:hover .page-hero-video-cta-arrow {
+  border-color: #666;
+}
+
 /* =========================
    Page Hero Version 3
 ========================= */
@@ -42,7 +76,7 @@
 }
 
 
-.page-hero-img::after {
+.page-hero-img::after, .version-3 .page-hero-video::after {
   content: '';
   position: absolute;
   top: 0;
@@ -90,6 +124,20 @@
   }
   .version-3 .page-hero h1 {
     font-size: 4em;
+  }
+    
+}
+
+/* =========================
+   Page Hero Version 3 - Video
+========================= */
+
+@media (min-width:1024px) {
+
+  .version-3 .page-hero-video video {
+    object-fit: cover;
+    height: calc(100vh - 125px);
+    max-height: none;
   }
     
 }

@@ -55,6 +55,10 @@
   color: var(--clr-white);
 }
 
+.version-3 .white-bg {
+  background-color: var(--clr-white);
+}
+
 .version-3 .section-title {
   max-width: 800px;
   width: 100%;
@@ -84,7 +88,7 @@
   }
 
   .version-3 .anchor {
-    top: -182px;
+    top: -90px;
   }
     
 }
@@ -302,6 +306,10 @@
   gap: var(--grid-gap);
 }
 
+ .version-3 .grid, .version-3 .grid-m-two-cols.no-gaps, .version-3 .grid-m-three-cols.no-gaps, .version-3 .grid-m-four-cols.no-gaps, .grid-m-five-cols.no-gaps,  .version-3 .grid-t-two-cols.no-gaps, .version-3 .grid-t-three-cols.no-gaps, .version-3 .grid-t-four-cols.no-gaps, .grid-t-five-cols.no-gaps,  .version-3 .grid-l-two-cols.no-gaps, .version-3 .grid-l-three-cols.no-gaps, .version-3 .grid-l-four-cols.no-gaps, .grid-l-five-cols.no-gaps,  .version-3 .grid-d-two-cols.no-gaps, .version-3 .grid-d-three-cols.no-gaps, .version-3 .grid-d-four-cols.no-gaps, .grid-d-five-cols.no-gaps,  .version-3 .grid-xl-two-cols.no-gaps, .version-3 .grid-xl-three-cols.no-gaps, .version-3 .grid-xl-four-cols.no-gaps, .grid-xl-five-cols.no-gaps {
+  gap: 0;
+}
+
 .version-3 .grid > div, .version-3 .grid-d-two-cols > div, .version-3 .grid-d-three-cols > div, .version-3 .grid-d-four-cols > div, .grid-d-five-cols > div, .version-3 .grid-l-two-cols > div, .version-3 .grid-l-three-cols > div, .version-3 .grid-l-four-cols > div, .grid-l-five-cols > div, .version-3 .grid-t-two-cols > div, .version-3 .grid-t-three-cols > div, .version-3 .grid-t-four-cols > div, .grid-t-five-cols > div, .version-3 .grid-m-two-cols > div, .version-3 .grid-m-three-cols > div, .version-3 .grid-m-four-cols > div, .grid-m-five-cols > div {
   grid-column: span 1;
 }
@@ -441,6 +449,15 @@
     padding-left: var(--padding-tb-d);
   }
 
+  .version-3 .grid-l-two-cols.no-gaps .center-content > div {
+    padding-left: var(--padding-tb);
+  }
+
+  .version-3 .grid-l-two-cols.grid-l-reverse.no-gaps .center-content > div {
+    padding-right: var(--padding-tb);
+  }
+
+
   .grid-l-reverse {
     direction: rtl;
   }
@@ -479,6 +496,10 @@
   .version-3 .full-wrapper .grid-d-two-cols .center-content > div {
     padding: 0 var(--padding-lr) var(--padding-tb) ;
   }
+
+  .version-3 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div {
+    padding-top: var(--padding-tb);
+  }
   
 }
 
@@ -486,6 +507,10 @@
 
   .version-3 .full-wrapper .grid-l-two-cols .center-content > div {
     padding: 0 var(--padding-lr) var(--padding-tb) ;
+  }
+
+  .version-3 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div {
+    padding-top: var(--padding-tb);
   }
   
 }

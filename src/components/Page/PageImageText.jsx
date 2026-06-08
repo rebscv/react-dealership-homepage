@@ -1,9 +1,9 @@
-function PageImageText({ title, text, image, alt, bgColour, cta }) {
+function PageImageText({ title, text, image, alt, bgColour, cta, gridClass }) {
   return (
     <section className={`page-image-text ${bgColour}`}>      
       <div className="full-wrapper">
 
-      <div className="grid-l-two-cols">
+      <div className={`${gridClass || ''}`}>
 
         <div className="center-img">{image && ( <img src={image} alt={alt || title || ""} fetchPriority="high" /> )}</div>
 

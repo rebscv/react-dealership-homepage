@@ -11,8 +11,8 @@ function BookService() {
             <PageHero
                 title="Mazda Service Select"
                 image="/src/assets/images/page-banners/service.webp"
-                imageMoible="/src/assets/images/page-banners/service-m.webp"
-                alt=""
+                imageMobile="/src/assets/images/page-banners/service-m.webp"
+                alt="Various Mazda Parts"
             />
             
             <ServiceFormSection

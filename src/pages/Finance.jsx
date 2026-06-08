@@ -39,7 +39,7 @@ const finaceCards = [
 
 ];
 
-const serviceFeatures = [
+const financeFeatures = [
     
     {
         icon: GenuinePartsIcon,
@@ -100,7 +100,7 @@ function Service() {
                 title="Your Next Steps"
                 wrapperClass="sml-wrapper"
                 gridClass="grid grid-d-three-cols grid-t-two-cols"
-                items={serviceFeatures}
+                items={financeFeatures}
             />
 
             <PageAccordian

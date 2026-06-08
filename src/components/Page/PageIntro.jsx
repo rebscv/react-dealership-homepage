@@ -1,11 +1,19 @@
-function PageIntro({ title, text, cta }) {
+import PageContactCard from "./PageContactCard";
+
+function PageContactTabs({ title, text, wrapperClass, items = [] }) {
   return (
-    <section className="page-intro">      
-      <div className="sml-wrapper t-center">
+    <section className="page-contact-tabs">
+        <span id="learn-more" className="anchor"></span>
+        <div className={`${wrapperClass || "std-wrapper"} t-center`}>
 
         {title && <h2>{title}</h2>}
         {text && <p>{text}</p>}
-        {cta && <div><a href="#enquire" className="btn btn-primary smooth-scroll">{cta}</a></div>}
+
+        <div>
+
+          {items.map((item, index) => (<PageContactCard key={index} {...item} />))}
+
+        </div>
 
 
       </div>
@@ -13,4 +21,4 @@ function PageIntro({ title, text, cta }) {
   );
 }
 
-export default PageIntro;
+export default PageContactTabs;

@@ -56,7 +56,7 @@ function Accessories() {
                 title="It's finance, your way"       
                 title="ACCESSORIES"
                 image="/src/assets/images/page-banners/accessories.webp"
-                imageMoible="/src/assets/images/page-banners/accessories-m.webp"
+                imageMobile="/src/assets/images/page-banners/accessories-m.webp"
                 alt=""
             />
 

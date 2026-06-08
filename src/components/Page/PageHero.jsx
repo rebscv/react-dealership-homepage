@@ -1,7 +1,7 @@
 import { div } from "framer-motion/client";
 import "./PageHero.css";
 
-function PageHero({ title, eyebrow, text, image, imageMobile, alt }) {
+function PageHero({ title, eyebrow, text, image, imageMobile, alt, video, videoPoster }) {
   return (
     <section className="page-hero">
       <div className="full-wrapper">
@@ -12,6 +12,19 @@ function PageHero({ title, eyebrow, text, image, imageMobile, alt }) {
               {imageMobile && (<source media="(max-width: 767px)" srcSet={imageMobile} />)}            
               <img src={image} alt={alt || title || ""} fetchPriority="high" />                            
             </picture>
+          </div>
+        )}
+
+        {video && (
+          <div className="page-hero-video">
+            <video preload="none" muted autoPlay loop playsInline poster={videoPoster}>
+              <source type="video/mp4" src={video} />
+            </video>
+
+            <a href="#learn-more" className="smooth-scroll page-hero-video-cta">
+              <span className="page-hero-video-cta-arrow"></span>
+            </a>
+
           </div>
         )}
 

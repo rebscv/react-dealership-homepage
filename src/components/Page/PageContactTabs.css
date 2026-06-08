@@ -1,0 +1,39 @@
+.page-contact-card-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.version-3 .page-contact-card-content-grid {
+  gap: 48px;
+}
+
+.version-3 .page-contact-card-details {
+  display: grid;
+  gap: 20px;
+}
+
+.version-3 .page-contact-card-details a {
+  color: var(--clr-base)
+}
+
+.version-3 .page-contact-card-details a:hover {
+  color: var(--clr-base);
+  text-decoration: underline;
+}
+
+.version-3 .page-contact-details-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (max-width:767px) {
+
+  .version-3 .page-contact-card-content-grid {
+    padding: var(--padding-lr);
+    gap: 32px
+  }
+  
+}
