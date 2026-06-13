@@ -1,7 +1,14 @@
-import { span } from "framer-motion/client";
+import { useSearchParams } from "react-router-dom";
 
-function ContactFormSection({ title, text, bgColour }) {
+import models from "../../data/models/index";
 
+
+
+function TestDriveFormSection({ title, text, bgColour }) {
+
+  const [searchParams] = useSearchParams();
+  const selectedModel = searchParams.get("model") || "";
+  
   return (
     
     <section className={`page-form-section ${bgColour}`}>
@@ -20,17 +27,15 @@ function ContactFormSection({ title, text, bgColour }) {
 
             <div className="page-form-section-form">              
               <form>
-
+                
                 <div className="form-row">                                    
-                    <select id="department" name="department" required>
-                      <option value="Sales">Sales</option>
-                      <option value="Service">Service</option>
-                      <option value="Accessories">Accessories</option>
-                      <option value="Finance">Finance</option>
-                      <option value="Finance">Fleet</option>
-                      <option value="Offers">Offers</option>
+                    <select id="model" name="model" required defaultValue={selectedModel}>
+
+                      <option value="">Select a model</option>
+                      {models.map((model) => (<option key={model.id} value={model.menuTitle}>{model.menuTitle}</option>))}
+
                     </select>
-                    <label htmlFor="department">Please select a department</label>
+                    <label htmlFor="model">Model</label>
                 </div>
 
                 <div className="form-row">                                    
@@ -54,7 +59,7 @@ function ContactFormSection({ title, text, bgColour }) {
                 </div>
 
                 <div className="form-row form-row-submit t-center">
-                    <button type="submit" className="btn btn-primary">Enquire Now</button>
+                    <button type="submit" className="btn btn-primary">Book Now</button>
                 </div>
 
 
@@ -71,6 +76,6 @@ function ContactFormSection({ title, text, bgColour }) {
   );
 }
 
-export default ContactFormSection;
+export default TestDriveFormSection;
 
 

@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 
 import "./ModelGrades.css";
 
-function ModelGrades({ grades }) {
+function ModelGrades({ intro, slides, menuTitle, version }) {
 
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);  
 
-  const { intro, slides } = grades;
   if (!slides) return null;
 
   const { emblaRef, emblaApi, selectedIndex, scrollSnaps, scrollTo, resetAutoplay, scrollNext, scrollPrev } = useEmblaWithDots(
@@ -44,6 +43,9 @@ function ModelGrades({ grades }) {
 
   return (
     <section className="model-grades full-slider-m">
+
+      <span id={intro?.anchorLink || "specs"} className="model-anchor"></span>
+
       <div className="lrg-wrapper">
 
         <div className="section-title t-center">
@@ -84,7 +86,7 @@ function ModelGrades({ grades }) {
                   </div>
 
                   <div className="model-grade-cta">
-                    <a href="" className="btn btn-primary">Book a Test Drive</a>
+                    <a href={`/${version}/book-a-test-drive?model=${encodeURIComponent(menuTitle)}`} className="btn btn-primary">Book a Test Drive</a>
                   </div>
 
                 </div>

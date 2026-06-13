@@ -3,10 +3,10 @@ function PageContactCard({ title, text, address, phone, hours, mapLink, mapUrl }
 
       <div className="page-contact-card-content">
 
-        <div className="grid-l-two-cols no-gaps white-bg">
+        <div className="grid-l-two-cols no-gaps white-bg page-contact-card-cols">
 
             <div className="center-content">
-                <div className="page-contact-card-content-grid grid">
+                <div className="page-contact-card-text grid">
 
 
                     

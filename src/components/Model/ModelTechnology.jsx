@@ -1,18 +1,19 @@
 import "./ModelTechnology.css";
 
-function ModelTechnology({ technology }) {  
-
-  const { intro, columns } = technology;
+function ModelTechnology({ intro, columns }) {  
 
   if (!columns) return null;
 
   return (
     <section className="model-technology">
+
+      <span id={intro?.anchorLink || "technology"} className="model-anchor"></span>
+
       <div className="std-wrapper">
 
         <div className="section-title t-center">
-          {intro.title && <h2 className="h4">{intro.title}</h2>}      
-          {intro.subtitle && <p className="h2">{intro.subtitle}</p>}              
+          {intro?.title && <h2 className="h4">{intro.title}</h2>}      
+          {intro?.subtitle && <p className="h2">{intro.subtitle}</p>}
         </div>
 
         <div className="grid-d-three-cols grid-l-two-cols">

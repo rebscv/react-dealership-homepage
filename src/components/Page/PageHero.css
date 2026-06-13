@@ -132,12 +132,35 @@
    Page Hero Version 3 - Video
 ========================= */
 
+.version-3 .page-hero-video video {
+  object-fit: cover;
+  height: 480px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+
+  .version-3 .page-hero-video video {
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
 @media (min-width:1024px) {
 
   .version-3 .page-hero-video video {
     object-fit: cover;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 112px);
     max-height: none;
+  }
+    
+}
+
+@media (min-width:1280px) {
+
+  .version-3 .page-hero-video video {
+    height: calc(100vh - 125px);
   }
     
 }

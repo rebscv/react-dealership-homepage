@@ -2,6 +2,8 @@ import { main } from "framer-motion/client";
 import PageHero from "../components/Page/PageHero";
 import PageIntro from "../components/Page/PageIntro";
 import PageContactTabs from "../components/Page/PageContactTabs";
+import ContactFormSection from "../components/Page/ContactFormSection";
+
 
 const locations = [
     
@@ -55,8 +57,13 @@ function Contact() {
             />
 
             <PageContactTabs
-                 text="Talk to to one of our friendly staff and find your Zoom-Zoom."
+                text="Talk to to one of our friendly staff and find your Zoom-Zoom."
                 items={locations}
+            />
+
+            <ContactFormSection
+                title="Make an Enquiry"
+                text="Let's chat. Send us a message and we will get back to you."
             />
 
 

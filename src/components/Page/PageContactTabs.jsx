@@ -10,7 +10,7 @@ function PageContactTabs({ text, items = [] }) {
   return (
 
     <section className="page-contact-tabs-grid grey-bg">
-      <div className="lrg-wrapper">
+      <div className="std-wrapper">
 
         <div className="t-center"><p>{text}</p></div>
 

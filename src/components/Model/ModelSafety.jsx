@@ -2,16 +2,17 @@ import useEmblaWithDots from "../../hooks/useEmblaCarouselWithDots";
 
 import "./ModelSafety.css";
 
-function ModelSafety({ safety }) {  
+function ModelSafety({ intro, slides }) {  
 
-
-  const { intro, slides } = safety;
   if (!slides) return null;
 
   const { emblaRef, emblaApi, selectedIndex, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true, align: "center" }, 4000);
 
   return (
     <section className="model-safety">
+
+      <span id={intro?.anchorLink || "safety"} className="model-anchor"></span>
+
       <div className="lrg-wrapper">
 
         <div className="section-title t-center">

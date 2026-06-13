@@ -17,7 +17,9 @@ function ModelFeatured ({ featured }) {
 
   return (
     <section className="model-features dark-grey-bg dark-bg" style={{ backgroundImage: `url(${intro.image})` }}>
-      <span id="features" className="anchor"></span>
+
+      <span id={intro?.anchorLink || "features"} className="model-anchor"></span>
+
       <div className="std-wrapper no-padding-bottom">
 
         <div className="section-header grid t-center">

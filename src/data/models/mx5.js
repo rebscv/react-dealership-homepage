@@ -19,27 +19,30 @@ const mx5Model = {
       image: hero,
     },
 
-    highlights: [
+    highlights: {
+      items: [
+        { 
+          label: "Hybrid Engine",
+          value: "2.5L Plug-in Hybrid (PHEV)",
+        },
+        { 
+          label : "Diesel / Petrol",
+          value : "3.3L Mild Hybrid Turbo",
+        },
+        {
+          label: "Petrol Engine", 
+          value: "2.5L SkyActiv-G (RWD)",
+        },
+        {
+          label: "Seating", 
+          value: "5 Seats",
+        }
+      ]
+    },
 
-    ],
-    
-    intro: [
-    ],
-
-    gallery: [
-    ],
-
-
-    specs: [
-    ],
-
-
-    technology: [
-    ],
-
-
-    safety: [
-    ]
+    cta : {
+      description : "Experience true power and exhilaration in the new Mazda CX-60. Book a test drive today.",
+    }
 
 
 };

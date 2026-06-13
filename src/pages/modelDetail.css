@@ -1,3 +1,15 @@
 .version-3 .model-detail-content section:nth-child(even) {
     background-color: var(--clr-grey);
 }
+
+.version-3 .header-v3.scrolled .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+.version-3 .model-anchor {
+    position: relative;
+    top: -61px;
+}

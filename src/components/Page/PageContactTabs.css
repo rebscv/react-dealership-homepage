@@ -3,7 +3,7 @@
   height: 100%;
 }
 
-.version-3 .page-contact-card-content-grid {
+.version-3 .page-contact-card-text {
   gap: 48px;
 }
 
@@ -31,9 +31,22 @@
 
 @media (max-width:767px) {
 
-  .version-3 .page-contact-card-content-grid {
+  .version-3 .page-contact-card-text {
     padding: var(--padding-lr);
     gap: 32px
+  }
+  
+}
+
+@media (max-width:575px) {
+
+  .version-3 .page-contact-tabs-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .version-3 .page-contact-card-cols {
+    display: flex;
+    flex-direction: column-reverse;
   }
   
 }

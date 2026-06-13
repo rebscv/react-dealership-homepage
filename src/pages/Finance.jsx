@@ -89,6 +89,7 @@ function Service() {
 
             <PageImageText
                 bgColour="grey-bg"
+                gridClass="grid-l-two-cols"
                 title="Business Car Loans"
                 text="Mazda Hometown is the perfect partner for small business and sole traders. With Mazda Finance, tailor a car finance solution to suit you and your business. Find out what you can do from the convenience of Mazda Hometown."
                 image="/src/assets/images/finance/business-car-loans.webp"

@@ -33,7 +33,7 @@ function Footer({ version = 1 }) {
     return (
         <footer>
             <div className="std-wrapper">
-                <div className="grid-xl-five-cols grid-d-four-cols grid-l-three-cols">
+                <div className="grid-xl-five-cols grid-l-three-cols grid-footer-cols">
 
                     
                     <div>
@@ -63,9 +63,9 @@ function Footer({ version = 1 }) {
                         <div>
                         <h4>Follow Us</h4>
                         <ul className="social-list">
-                            <li><a href=""><svg className="icon-facebook"><use xlinkHref="/icons.svg#icon-facebook"></use></svg></a></li>
-                            <li><a href=""><svg className="icon-youtube"><use xlinkHref="/icons.svg#icon-youtube"></use></svg></a></li>
-                            <li><a href=""><svg className="icon-instagram"><use xlinkHref="/icons.svg#icon-instagram"></use></svg></a></li>
+                            <li><a href="https://www.facebook.com/mazdaaus/" target="_blank"><svg className="icon-facebook"><use xlinkHref="/icons.svg#icon-facebook"></use></svg></a></li>
+                            <li><a href="https://www.youtube.com/@mazdaaustralia" target="_blank"><svg className="icon-youtube"><use xlinkHref="/icons.svg#icon-youtube"></use></svg></a></li>
+                            <li><a href="https://www.instagram.com/mazdaaus/" target="_blank"><svg className="icon-instagram"><use xlinkHref="/icons.svg#icon-instagram"></use></svg></a></li>
                         </ul>
                         </div>
 
@@ -99,7 +99,7 @@ function Footer({ version = 1 }) {
                             <Link to={`${basePath}/stock`}>Stock</Link>
                             <Link to={`${basePath}/offers`}>Latest Offers</Link>
                             <Link to={`${basePath}/finance`}>Finance</Link>
-                            <Link to={`${basePath}/Book a Test Drive`}>Book a Test Drive</Link>
+                            <Link to={`${basePath}/book-a-test-drive`}>Book a Test Drive</Link>
                         </div>
                         </div>
                     </div>
@@ -111,13 +111,7 @@ function Footer({ version = 1 }) {
                         </h3>
                         <div className={isAccordion && openSection !== "own" ? "footer-col hidden" : "footer-col"}>
                             <Link to={`${basePath}/book-a-service`}>Book a Service</Link>
-                            <Link to={`${basePath}/parts`}>Parts</Link>
-                            <Link to={`${basePath}/mymazda`}>MyMazda</Link>
-                            <Link to={`${basePath}/recalls`}>Recalls</Link>
-                            <Link to={`${basePath}/roadside-assistance`}>Roadside Assistance</Link>
-                            <Link to={`${basePath}/warranty`}>Warranty</Link>
-                            <Link to={`${basePath}/help-support`}>Help & Support</Link>
-                            <Link to={`${basePath}/faqs`}>FAQs</Link>
+                            <Link to={`${basePath}/accessories`}>Accessories</Link>
                         </div>
                         </div>
                     </div>
@@ -137,10 +131,9 @@ function Footer({ version = 1 }) {
                 </div>
                 <div className="copyright">
                     <div>© 2026 Mazda Dealer Name City</div>
-                    <div><a href="#" target="_blank">General Policies</a></div>
-                    <div><a href="#" target="_blank">Privacy Policies</a></div>
-                    <div><a href="#" target="_blank">Complaints</a></div>
-                    <div><a href="#" target="_blank">Sitemap</a></div>
+                    <div><a href="https://www.mazda.com.au/general-policies/" target="_blank">General Policies</a></div>
+                    <div><a href="https://www.mazda.com.au/privacy-policies/" target="_blank">Privacy Policies</a></div>
+                    <div><a href="https://www.mazda.com.au/owners/help-and-support/complaint-handling-process/" target="_blank">Complaints</a></div>
                 </div>
             </div>
         </footer>

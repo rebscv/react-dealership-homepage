@@ -7,7 +7,7 @@ const cx3Model = {
     id            : 1,
     slug          : "cx-3",
     title         : "Mazda CX-3",
-    menutitle     : "CX-3",
+    menuTitle     : "CX-3",
     subtitle      : "",
     description   : "Small SUV | 5 seats",
     tags          : ["suv"],

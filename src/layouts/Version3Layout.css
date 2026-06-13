@@ -248,6 +248,17 @@
   background-color: var(--clr-grey-dk);
 }
 
+.version-3 .dark-bg .btn-outline, .version-3 .dark-bg a.btn-outline {
+  color: var(--clr-white);
+  border: solid 1px var(--clr-white);
+}
+
+.version-3 .dark-bg .btn-outline:hover, .version-3 .dark-bg a.btn-outline:hover {
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+
 
 @media (max-width:575px) {
   
@@ -301,12 +312,12 @@
    Grid Columns Layout
 ========================= */
 
- .version-3 .grid, .version-3 .grid-m-two-cols, .version-3 .grid-m-three-cols, .version-3 .grid-m-four-cols, .grid-m-five-cols,  .version-3 .grid-t-two-cols, .version-3 .grid-t-three-cols, .version-3 .grid-t-four-cols, .grid-t-five-cols,  .version-3 .grid-l-two-cols, .version-3 .grid-l-three-cols, .version-3 .grid-l-four-cols, .grid-l-five-cols,  .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols,  .version-3 .grid-xl-two-cols, .version-3 .grid-xl-three-cols, .version-3 .grid-xl-four-cols, .grid-xl-five-cols {
+.version-3 .grid, .version-3 .grid-m-two-cols, .version-3 .grid-m-three-cols, .version-3 .grid-m-four-cols, .grid-m-five-cols,  .version-3 .grid-t-two-cols, .version-3 .grid-t-three-cols, .version-3 .grid-t-four-cols, .grid-t-five-cols,  .version-3 .grid-l-two-cols, .version-3 .grid-l-three-cols, .version-3 .grid-l-four-cols, .grid-l-five-cols,  .version-3 .grid-d-two-cols, .version-3 .grid-d-three-cols, .version-3 .grid-d-four-cols, .grid-d-five-cols,  .version-3 .grid-xl-two-cols, .version-3 .grid-xl-three-cols, .version-3 .grid-xl-four-cols, .grid-xl-five-cols {
   display: grid;
   gap: var(--grid-gap);
 }
 
- .version-3 .grid, .version-3 .grid-m-two-cols.no-gaps, .version-3 .grid-m-three-cols.no-gaps, .version-3 .grid-m-four-cols.no-gaps, .grid-m-five-cols.no-gaps,  .version-3 .grid-t-two-cols.no-gaps, .version-3 .grid-t-three-cols.no-gaps, .version-3 .grid-t-four-cols.no-gaps, .grid-t-five-cols.no-gaps,  .version-3 .grid-l-two-cols.no-gaps, .version-3 .grid-l-three-cols.no-gaps, .version-3 .grid-l-four-cols.no-gaps, .grid-l-five-cols.no-gaps,  .version-3 .grid-d-two-cols.no-gaps, .version-3 .grid-d-three-cols.no-gaps, .version-3 .grid-d-four-cols.no-gaps, .grid-d-five-cols.no-gaps,  .version-3 .grid-xl-two-cols.no-gaps, .version-3 .grid-xl-three-cols.no-gaps, .version-3 .grid-xl-four-cols.no-gaps, .grid-xl-five-cols.no-gaps {
+.version-3 .grid-m-two-cols.no-gaps, .version-3 .grid-m-three-cols.no-gaps, .version-3 .grid-m-four-cols.no-gaps, .grid-m-five-cols.no-gaps,  .version-3 .grid-t-two-cols.no-gaps, .version-3 .grid-t-three-cols.no-gaps, .version-3 .grid-t-four-cols.no-gaps, .grid-t-five-cols.no-gaps,  .version-3 .grid-l-two-cols.no-gaps, .version-3 .grid-l-three-cols.no-gaps, .version-3 .grid-l-four-cols.no-gaps, .grid-l-five-cols.no-gaps,  .version-3 .grid-d-two-cols.no-gaps, .version-3 .grid-d-three-cols.no-gaps, .version-3 .grid-d-four-cols.no-gaps, .grid-d-five-cols.no-gaps,  .version-3 .grid-xl-two-cols.no-gaps, .version-3 .grid-xl-three-cols.no-gaps, .version-3 .grid-xl-four-cols.no-gaps, .grid-xl-five-cols.no-gaps {
   gap: 0;
 }
 
@@ -493,11 +504,11 @@
 
 @media (max-width:1023px) {
 
-  .version-3 .full-wrapper .grid-d-two-cols .center-content > div {
+  .version-3 .full-wrapper .grid-d-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols .center-content > div {
     padding: 0 var(--padding-lr) var(--padding-tb) ;
   }
 
-  .version-3 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div {
+  .version-3 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols.no-gaps .center-content > div {
     padding-top: var(--padding-tb);
   }
   
@@ -505,11 +516,11 @@
 
 @media (max-width:767px) {
 
-  .version-3 .full-wrapper .grid-l-two-cols .center-content > div {
+  .version-3 .full-wrapper .grid-l-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols .center-content > div {
     padding: 0 var(--padding-lr) var(--padding-tb) ;
   }
 
-  .version-3 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div {
+  .version-3 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols.no-gaps .center-content > div {
     padding-top: var(--padding-tb);
   }
   

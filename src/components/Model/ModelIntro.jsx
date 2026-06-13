@@ -1,4 +1,4 @@
-function ModelIntro ({ title, paragraphs, image, cta }) {
+function ModelIntro ({ title, paragraphs, image, cta, menuTitle, version }) {
 
   if (!title && !paragraphs) return null;
 
@@ -19,17 +19,9 @@ function ModelIntro ({ title, paragraphs, image, cta }) {
 
                 {title && <h2>{title}</h2>}
 
-                {paragraphs &&
-                  paragraphs.map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))
-                }
+                {paragraphs && paragraphs.map((para, i) => ( <p key={i}>{para}</p> )) }
 
-                {cta &&
-                  <div className="">
-                    <a href={cta.link} className="btn btn-primary">{cta.label}</a>
-                  </div>
-                }   
+                {cta && <div><a href={`/${version}/book-a-test-drive?model=${encodeURIComponent(menuTitle)}`} className="btn btn-primary">{cta}</a></div>}
 
               </div>
           </div>

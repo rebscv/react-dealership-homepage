@@ -1,0 +1,43 @@
+.offer-content-grid .center-img .page-image-text-bg {
+    display: none;
+}
+
+@media (min-width:1024px) {
+    
+    .version-3 .offer-content-grid .center-img img {
+        position: relative;
+        z-index: 2;
+    }
+
+    .version-3 .offer-content-grid .center-img img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+
+    .version-3 .offer-content-grid .center-img {
+        position: relative;
+        display: flex;
+    }
+
+    .version-3 .offer-content-grid .center-img .page-image-text-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #000;
+        overflow: hidden;
+    }
+
+    .version-3 .offer-content-grid .center-img .page-image-text-bg img {
+        object-fit: cover;
+        height: 100%;
+        opacity: 0.5;
+        filter: blur(8px);
+    }
+
+}
+

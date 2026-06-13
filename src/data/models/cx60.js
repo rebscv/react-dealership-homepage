@@ -62,8 +62,7 @@ import gradeAzamiImg from "../../assets/images/models/cx-60/azami-grade.webp";
 import brochure from "../../assets/images/models/cx-60/cx-60-brochure.pdf";
 
 
-const cx60Model = {
-  
+const cx60Model = {  
   
     id            : 6,
     slug          : "cx-60",
@@ -74,37 +73,52 @@ const cx60Model = {
     tags          : ["suv"],
     image         : cx60,
 
+    nav: {
+      items : [
+        { name : "Overview", link : "#overview" },
+        { name : "Design", link : "#design" },
+        { name : "Technology", link : "#technology" },
+        { name : "Safety", link : "#safety" },
+        { name : "Specs", link : "#specs" }
+
+      ],
+      cta: "Book a Test Drive"
+
+    },   
+
     hero: {
       title: "New Mazda CX-60",
       tagline: "Look Forward to It",
       image: hero,
       imageMobile: heroMobile
-    },
+    }, 
 
-    highlights: [
-      { 
-        label: "Hybrid Engine",
-        value: "2.5L Plug-in Hybrid (PHEV)",
-        image: hightlightsPhev
-      },
-      { 
-        label : "Diesel / Petrol",
-        value : "3.3L Mild Hybrid Turbo",
-        image : hightlightsPetrol
-      },
-      {
-        label: "Petrol Engine", 
-        value: "2.5L SkyActiv-G (RWD)",
-        image : hightlightsEngine
-      },
-      {
-        label: "Seating", 
-        value: "5 Seats",
-        image : hightlightsSeats
-      }
+    highlights:  {
+      anchorLink: "highlights",
+      items: [        
+        { 
+          label: "Hybrid Engine",
+          value: "2.5L Plug-in Hybrid (PHEV)",
+          image: hightlightsPhev
+        },
+        { 
+          label : "Diesel / Petrol",
+          value : "3.3L Mild Hybrid Turbo",
+          image : hightlightsPetrol
+        },
+        {
+          label: "Petrol Engine", 
+          value: "2.5L SkyActiv-G (RWD)",
+          image : hightlightsEngine
+        },
+        {
+          label: "Seating", 
+          value: "5 Seats",
+          image : hightlightsSeats
+        }
+      ]
+    },    
 
-
-    ],
         
     intro: {
       title: "Ready for wherever the road takes you",
@@ -113,10 +127,7 @@ const cx60Model = {
         "Plus, with intelligent technology and advanced safety features designed for how you like to drive, the road ahead feels even more rewarding."
       ],
       image : intro,
-      cta: {
-        label: "Book a  Test Drive",
-        link: "/book-a-test-drive"
-      }
+      cta: "Book a  Test Drive",
 
     },
 
@@ -124,7 +135,8 @@ const cx60Model = {
       intro: {
         title: "Make the road ahead all yours",
         description: "The new Mazda CX-60 has everything you need to make the next chapter your best yet. Thoughtfully designed with the latest smart tech, and built to exhilarate. It's the kind of drive that you'll look forward to, every time.",
-        image: featureIntroImg
+        image: featureIntroImg,
+        anchorLink: "overview",
       },
 
       tabs: [
@@ -201,11 +213,11 @@ const cx60Model = {
     },
 
     colours: {
+      anchorLink  : "design",  
       title       : "Design",
       subtitle    : "It's your way forward",
       description : "Whether you’re after something bold, refined, or a bit of both, there’s a CX-60 that’s perfectly suited to you and your journey.",
-      
-      exterior: {
+       exterior: {
         tabLabel: "Exterior",
         options: [
           {
@@ -341,6 +353,7 @@ const cx60Model = {
         title       : "Safety",
         subtitle    : "Protecting The Road Ahead",
         description : "Experience intelligent safety that cares for you and the world around you. The new Mazda CX-60 Hybrid introduces advanced technologies designed to protect the driver, the passengers, and others using the road."
+
       },
       slides : [
         {

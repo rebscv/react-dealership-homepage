@@ -6,14 +6,12 @@ import bt50 from "./bt50";
 import mx5 from "./mx5";
 
 const models = [
-
   cx3,
   cx30,
   cx5nextgen,
   cx60,
   bt50,
   mx5
-
 ];
 
 export default models;

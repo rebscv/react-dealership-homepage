@@ -3,7 +3,7 @@ import "./ModelColourPicker.css";
 
 function ModelColourPicker ({ colours }) {
 
-  const { title, subtitle, description, exterior, interior } = colours;
+  const { title, subtitle, description, exterior, interior, anchorLink } = colours;
 
   const [activeTab, setActiveTab] = useState("exterior");
   const [selectedExterior, setSelectedExterior] = useState(0);
@@ -17,6 +17,9 @@ function ModelColourPicker ({ colours }) {
 
   return (
     <section className="model-colour-picker">
+      
+      {anchorLink && <span id={anchorLink} className="model-anchor"></span>}
+
       <div className="std-wrapper t-center">
         
         <div className="section-title">

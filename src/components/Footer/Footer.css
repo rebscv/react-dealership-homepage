@@ -100,6 +100,12 @@ footer h4 {
     color: #ffffff
 }
 
+@media (min-width: 768px) {
+    .version-3 footer .grid-footer-cols {
+        row-gap: 48px;
+    }
+}
+
 @media (max-width: 767px) {
 
     .version-3 .footer-contact {
@@ -114,7 +120,7 @@ footer h4 {
     }
     
     .version-3 .footer-col.hidden {
-        border-bottom: solid 1px #999999;
+        border-bottom: solid 1px var(--clr-footer-border);
     }
     
 }
@@ -134,7 +140,7 @@ footer h4 {
 }
 
 .version-3 .copyright > * {
-    border-right: solid 1px #333333;
+    border-right: solid 1px var(--clr-footer-border);
     line-height: 1.3em;
     padding-right: 8px;
 }
