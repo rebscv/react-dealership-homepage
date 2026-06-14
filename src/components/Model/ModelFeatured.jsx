@@ -16,7 +16,8 @@ function ModelFeatured ({ featured }) {
   const activeRows = tabs[activeTab].rows;  
 
   return (
-    <section className="model-features dark-grey-bg dark-bg" style={{ backgroundImage: `url(${intro.image})` }}>
+
+    <section className={`model-features ${intro?.bgColour || ''}`} style={{ backgroundImage: `url(${intro.image})` }}>
 
       <span id={intro?.anchorLink || "features"} className="model-anchor"></span>
 

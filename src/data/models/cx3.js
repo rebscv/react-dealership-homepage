@@ -12,6 +12,13 @@ const cx3Model = {
     description   : "Small SUV | 5 seats",
     tags          : ["suv"],
     image         : cx3,
+    sections      :[
+
+      { type: "hero",
+        data: "hero"
+      }
+
+    ],
 
     hero: {
       title: "New Mazda CX-60",

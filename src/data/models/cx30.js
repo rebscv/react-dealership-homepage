@@ -10,7 +10,14 @@ const cx30Model = {
     description   : "Small SUV | 5 seats",
     tags          : ["suv"],
     image         : cx30,
+    sections      :[
 
+      { type: "hero",
+        data: "hero"
+      }
+
+    ],
+    
     hero: {
       title: "New Mazda CX-60",
       tagline: "Look Forward to It",

@@ -71,7 +71,50 @@ const cx60Model = {
     subtitle      : "New",
     description   : "Medium SUV | 5 seats",
     tags          : ["suv"],
-    image         : cx60,
+    image         : cx60,    
+    sections      :[
+
+      { type: "hero",
+        data: "hero"
+      },
+
+      { type: "highlights",
+        data: "highlights"
+      },
+
+      { type: "intro",
+        data: "intro"
+      },
+
+      { type: "featured",
+        data: "featured"
+      },
+
+      { type: "colours",
+        data: "colours"
+      },
+
+      { type: "technology",
+        data: "technology"
+      },
+
+      { type: "safety",
+        data: "safety"
+      },
+
+      { type: "grades",
+        data: "grades"
+      },
+
+      { type: "gallery",
+        data: "gallery"
+      },
+
+      { type: "cta",
+        data: "cta"
+      }
+
+    ],
 
     nav: {
       items : [
@@ -133,6 +176,7 @@ const cx60Model = {
 
     featured: {
       intro: {
+        bgColour: "dark-grey-bg dark-bg",
         title: "Make the road ahead all yours",
         description: "The new Mazda CX-60 has everything you need to make the next chapter your best yet. Thoughtfully designed with the latest smart tech, and built to exhilarate. It's the kind of drive that you'll look forward to, every time.",
         image: featureIntroImg,

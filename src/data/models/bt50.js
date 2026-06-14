@@ -13,7 +13,26 @@ const bt50Model = {
     description   : "Single | Freestyle | Dual Cab",
     tags          : ["ute"],
     image         : bt50,
+    sections      :[
 
+      { type: "hero",
+        data: "hero"
+      },
+
+      { type: "highlights",
+        data: "highlights"
+      },
+
+      { type: "intro",
+        data: "intro"
+      },
+
+      { type: "cta",
+        data: "cta"
+      }
+
+    ],
+    
     nav: {
       items : [
         { name : "Overview", link : "#overview" },
@@ -28,30 +47,17 @@ const bt50Model = {
     },   
 
     hero: {
-      title: "New Mazda CX-60",
-      tagline: "Look Forward to It",
+      title: "New Mazda BT-50 UTE",
       image: hero,
       imageMobile: heroMobile,
     },
 
     highlights: {
       items: [
-        { 
-          label: "Hybrid Engine",
-          value: "2.5L Plug-in Hybrid (PHEV)",
-        },
-        { 
-          label : "Diesel / Petrol",
-          value : "3.3L Mild Hybrid Turbo",
-        },
-        {
-          label: "Petrol Engine", 
-          value: "2.5L SkyActiv-G (RWD)",
-        },
-        {
-          label: "Seating", 
-          value: "5 Seats",
-        }
+        {value: "6.6-7.8L /100km"},
+        {value: "3.5 tonne towing"},
+        {value: "Up to 1.2T payload"},
+        {value: "Up to 140KW & 450 nm"}
       ]
     },
 

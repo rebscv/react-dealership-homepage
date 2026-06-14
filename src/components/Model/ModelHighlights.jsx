@@ -25,7 +25,7 @@ function ModelHighlights({ highlights }) {
                   </div>
     
                   <div className="model-hightlight-text">    
-                    <p><small>{item.label}</small></p>    
+                    {item.label && <p><small>{item.label}</small></p>}
                     {Array.isArray(item.value) ? (item.value.map((para, i) => (<p key={i}>{para}</p>))) : (<p>{item.value}</p> )}    
                   </div>
     

@@ -11,6 +11,14 @@ const cx5nextgenModel = {
     description   : "Medium SUV | 5 seats",
     tags          : ["suv"],
     image         : cx5nextgen,
+    sections      :[
+
+      { type: "hero",
+        data: "hero"
+      }
+
+    ],
+
 
     hero: {
       title: "New Mazda CX-60",
