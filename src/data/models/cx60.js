@@ -442,9 +442,9 @@ const cx60Model = {
         label : "Default Grade",
         slides : [            
           {
-            title : "Pure",
-            price : "$47,990†",
-            featuresTitle : "Base features:",
+            title           : "Pure",
+            price           : "$47,990†",
+            featuresTitle   : "Base features:",
             features : [
               "Mazda Connect With Apple Carplay® And Android Auto™ (Wireless And USB)",
               "Active Driving Display",
@@ -461,9 +461,9 @@ const cx60Model = {
           },
 
           {
-            title : "Evolve",
-            price : "$54,780†",
-            featuresTitle : "In addition to Pure:",
+            title           : "Evolve",
+            price           : "$54,780†",
+            featuresTitle   : "In addition to Pure:",
             features : [
               "Black Maztex trim with 8-way manual driver's seat adjustment",
               "Cruising & Traffic Support (CTS)",
@@ -478,9 +478,9 @@ const cx60Model = {
           },
 
           {
-            title : "Touring",
-            price : "$57,906†",              
-            featuresTitle : "In addition to Evolve: Black leather seat trim",
+            title           : "Touring",
+            price           : "$57,906†",              
+            featuresTitle   : "In addition to Evolve: Black leather seat trim",
             features : [
               "Power seat adjustment (driver &amp; passenger) with position memory (driver)",
               "Heated front seats (driver and passenger)",
@@ -491,9 +491,9 @@ const cx60Model = {
           },
 
           {
-            title : "GT",
-            price : "$67,990†",
-            featuresTitle : "In addition to Touring:",
+            title           : "GT",
+            price           : "$67,990†",
+            featuresTitle   : "In addition to Touring:",
             features : [
               "20-inch black metallic alloy wheels",
               "Hands-free remote operated power tailgate",
@@ -507,9 +507,9 @@ const cx60Model = {
           },
 
           {
-            title : "Azami",
-            price : "$74,786†",
-            featuresTitle : "In addition to GT:",
+            title           : "Azami",
+            price           : "$74,786†",
+            featuresTitle   : "In addition to GT:",
             features : [
               "Nappa leather seats",
               "Ventilated front seats",

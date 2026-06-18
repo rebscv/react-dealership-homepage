@@ -64,8 +64,8 @@ function ModelGrades({ intro, tabs, menuTitle, version }) {
         {showTabs && (
 
           <div className="model-grade-tabs">
-            <div class="tabs-overflow">
-              <div class="page-contact-tabs-nav default-tabs">
+            <div className="tabs-overflow">
+              <div className="page-contact-tabs-nav default-tabs">
 
                 {tabs.map((tab, index) => (
                   <button key={tab.label} className={`model-grade-tab ${activeTab === index ? "active" : ""}`} onClick={() => setActiveTab(index)}>
