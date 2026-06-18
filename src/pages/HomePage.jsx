@@ -24,7 +24,7 @@ function HomePage() {
 
         <QuickLinks version={isVersion3 ? 3 : isVersion2 ? 2 : 1} />
         
-        {isVersion3 && <Range />}
+        <Range />
 
         <section className="welcome-section">
           <div className="std-wrapper">

@@ -1,8 +1,8 @@
-.range {
+.version-3 .range {
     background-color: var(--clr-grey);
 }
 
-.range h2 {
+.version-3 .range h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
     row-gap: 8px;
 }
 
-.range .grid {
+.version-3 .range .grid {
     row-gap: 24px;
 }
 
@@ -29,7 +29,7 @@
         opacity: 1;
     }
 
-    .range-tabs button {
+    .version-3 .range-tabs button {
         min-width: 96px;
     }
             

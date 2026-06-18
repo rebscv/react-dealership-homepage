@@ -24,6 +24,10 @@
   color: #000;
 }
 
+.version-2 .dark-bg, .version-2 .dark-bg p, .version-2 .dark-bg h1, .version-2 .dark-bg h2, .version-2 .dark-bg h3, .version-2 .dark-bg h4, .version-2 .dark-bg .h1, .version-2 .dark-bg .h2, .version-2 .dark-bg .h3, .version-2 .dark-bg .h4 {
+    color: var(--clr-white);
+}
+
 /* =========================
    Wrapper
 ========================= */
@@ -158,17 +162,17 @@
    Grid DIVs
 ========================= */
 
-.center-content {
+.version-2 .center-content {
   display: grid;
   align-items: center;
 }
 
-.center-img img {
+.version-2 .center-img img {
   object-fit: cover;
   height: 100%;
 }
 
-.centre-img img {
+.version-2 .centre-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;

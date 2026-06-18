@@ -5,7 +5,7 @@ function ModelTechnology({ intro, columns }) {
   if (!columns) return null;
 
   return (
-    <section className="model-technology">
+    <section className={`${intro?.bgColour || ""} model-technology`}>
 
       <span id={intro?.anchorLink || "technology"} className="model-anchor"></span>
 

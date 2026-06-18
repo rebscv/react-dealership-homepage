@@ -190,6 +190,7 @@ body.version-2-body.show-mobile-menu {
     display: grid;
     gap: 8px;
     z-index: 10;
+    grid-auto-flow: column;
 }
 
 .version-1 .nav-item .nav-submenu {

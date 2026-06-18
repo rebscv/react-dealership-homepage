@@ -18,6 +18,10 @@
   color: var(--clr-white);
 }
 
+.version-3 .mobile-menu-title {
+  display: none;
+}
+
 .version-3 .model-nav-flex {
   display: flex;
   justify-content: space-between;
@@ -40,4 +44,119 @@
 
 .version-3 .model-nav .btn {
   font-size: 0.6em;
+}
+
+@media (max-width:1023px) {
+
+  .version-3-body.show-model-menu {
+    overflow-y: hidden;
+  }
+  
+  .version-3 .model-nav {
+    background-color: var(--clr-white);
+  }
+
+  .version-3 .model-nav, .version-3 .model-nav a {
+    color: var(--clr-dark-grey);
+  }
+
+  .version-3 .model-nav .model-nav-title {
+    color: var(--clr-black);
+    font-size: 1em;
+  }
+
+  .version-3 .model-nav .std-wrapper {
+    gap: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .version-3 .model-nav-title {
+    margin: 0;
+    border: none;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    order: 1;
+    padding-left: var(--padding-lr);
+    padding-top: 12px;
+  }
+
+  .version-3 .model-nav-title .menu-title {
+    display: none;
+  }
+
+  .version-3 .mobile-menu-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .version-3 .model-nav-title svg {
+    transform: rotate(90deg);
+    font-size: 0.6em;
+  }
+
+  .show-model-menu .version-3 .model-nav-title svg {
+    transform: rotate(-90deg);
+  }
+
+  .version-3 .dark-bg .model-nav-flex .btn {
+    width: auto;
+    order: 2;
+    font-size: 0.5em;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-color: var(--clr-black);
+    color: var(--clr-black);
+    margin-right: var(--padding-lr);
+    margin-left: var(--padding-lr);
+  }
+
+  .version-3 .model-nav-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .version-3 .model-nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    gap: 16px;
+    max-height: 0;
+    overflow: hidden;
+    order: 3;
+    border-top: var(--clr-grey-border) solid 1px;
+    margin-top: 11px;
+  }
+
+  .show-model-menu .version-3 .model-nav-list {
+    max-height: 2000px;
+    padding-top: 16px;
+  }
+
+  .show-model-menu .version-3 .model-nav .std-wrapper {
+    height: 100vh;
+  }
+
+  .version-3 .model-nav a:not(.btn) {
+    width: 100%;
+    display: block;
+    padding-left: var(--padding-lr);
+    padding-right: var(--padding-lr);
+    color: var(--clr-grey-dk);
+  }
+
+
+
+
+
+
 }

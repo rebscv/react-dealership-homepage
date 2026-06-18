@@ -1,0 +1,16 @@
+.model-text .model-text-reverse {
+  
+}
+
+.model-text .model-text-reverse p {
+  order: 99;
+}
+
+.model-text .model-text-reverse .model-text-img {
+  order: 1;
+}
+
+.model-text .model-text-reverse h2 {
+  order: 2;
+}
+

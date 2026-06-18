@@ -93,7 +93,7 @@
     align-items: center;
     gap: 8px;
     background: #f3f3f3;
-    width: calc(100% + 8px);
+    width: calc(100% + 32px);
     margin-left: -16px;
     padding: 16px 12px 14px;    
 }

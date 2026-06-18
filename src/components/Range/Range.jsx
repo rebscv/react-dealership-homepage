@@ -15,7 +15,7 @@ function Range () {
     const filteredModels = activeTab === "all" ? models : models.filter(car => car.tags?.includes(activeTab));
 
     return (
-        <section className="range">
+        <section className="range grey-bg">
             <div className="std-wrapper t-center">
 
                 <h2>Find Your <img src={zoomzoom} width={250} height={47} alt="Zoom Zoom" /></h2>

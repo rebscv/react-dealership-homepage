@@ -1,4 +1,9 @@
-.range-card {
+
+/* =========================
+   Version 3 Styles
+========================= */
+
+.version-2 .range-card {
     opacity: 0;
     transform: translateY(16px);
     animation: fadeUp 0.5s ease forwards;
@@ -11,27 +16,27 @@
     }
 }
 
-.range-card a {
+.version-2 .range-card a {
     padding: 0 24px;
     display: grid;
     gap: 16px;
 }
 
-.range-card img {
+.version-2 .range-card img {
     max-width: 360px;
     width: 100%;
 }
 
-.range-info {
+.version-2 .range-info {
     display: grid;
     gap: 8px;
 }
 
-.range-card a h4 {
+.version-2 .range-card a h4 {
     color: var(--clr-black);
 }
 
-.range-card a p {
+.version-2 .range-card a p {
     color: var(--clr-grey-dk);
     font-size: 0.8em;
     line-height: 1.2em;
@@ -39,7 +44,7 @@
 
 @media (max-width:575px) {
 
-    .range-card a {
+    .version-2 .range-card a {
         padding: 0;
         grid-template-columns: repeat(10, 1fr);
         display: grid;
@@ -50,22 +55,102 @@
         gap: 8px;
     }
 
-    .range-img {
+    .version-2 .range-img {
         grid-column: span 6;
     }
 
-    .range-info {
+    .version-2 .range-info {
         text-align: left;
         grid-column: span 4;
     }
 
-    .range-card h4 {
+    .version-2 .range-card h4 {
         font-size: 1em;
     }
 
-    .range-model-grid .range-card:last-child a {
+    .version-2 .range-model-grid .version-2 .range-card:last-child a {
         border-bottom: none;
     }
 
     
 }
+
+
+
+
+/* =========================
+   Version 3 Styles
+========================= */
+
+.version-3 .range-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.version-3 .range-card a {
+    padding: 0 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.version-3 .range-card img {
+    max-width: 360px;
+    width: 100%;
+}
+
+.range-info {
+    display: grid;
+    gap: 8px;
+}
+
+.version-3 .range-card a h4 {
+    color: var(--clr-black);
+}
+
+.version-3 .range-card a p {
+    color: var(--clr-grey-dk);
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+@media (max-width:575px) {
+
+    .version-3 .range-card a {
+        padding: 0;
+        grid-template-columns: repeat(10, 1fr);
+        display: grid;
+        direction: rtl;
+        align-items: center;
+        border-bottom: solid 1px var(--clr-grey-dk);
+        padding: 32px 0;
+        gap: 8px;
+    }
+
+    .version-3 .range-img {
+        grid-column: span 6;
+    }
+
+    .version-3 .range-info {
+        text-align: left;
+        grid-column: span 4;
+    }
+
+    .version-3 .range-card h4 {
+        font-size: 1em;
+    }
+
+    .version-3 .range-model-grid .version-3 .range-card:last-child a {
+        border-bottom: none;
+    }
+
+    
+}
+

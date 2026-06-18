@@ -2,7 +2,7 @@ import "./PageImageTextStacked.css";
 
 function PageImageTextStacked({ title, text, image, alt, bgColour, cta }) {
   return (
-    <section className={`page-image-text-stacked ${bgColour || ''}`}>      
+    <section className={`page-image-text-stacked ${bgColour || ''}`}>
       <div className="full-wrapper">
 
 

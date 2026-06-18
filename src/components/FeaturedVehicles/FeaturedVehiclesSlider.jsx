@@ -17,23 +17,23 @@ function FeaturedVehiclesSlider() {
     return (
         
         <section className="featured-vehicles grey-bg full-slider-m">
-            <div className="std-wrapper">
+            <div className="lrg-wrapper">
 
                 <h2 className="t-center">Featured Vehicles</h2>
 
 
-                <div className="embla arrows-outside" ref={emblaRef}>
+                <div className="embla arrows-outside">
+                    <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container grid-t-two-cols grid-l-three-cols grid-xl-four-cols">
 
                         {vehicles.slice(0, 6).map((car) => (
                             <div className="embla__slide" key={car.id}>
-                                <div>
                                     <VehicleCard {...car} />
-                                </div>
                             </div>
                         ))}
 
 
+                    </div>
                     </div>
 
 

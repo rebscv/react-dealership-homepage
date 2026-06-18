@@ -81,6 +81,11 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 }
 
 
+section video {
+  width: 100%;
+}
+
+
 /* Wrappers */
 
 .std-wrapper, .full-wrapper, .sml-wrapper, .lrg-wrapper {
@@ -128,8 +133,13 @@ html * {box-sizing: border-box;}
 ========================= */
 
 .embla {
-  overflow: hidden;
   position: relative;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 2px;
 }
 
 .embla__container {
@@ -248,6 +258,7 @@ Embla Grid to Flex Styles
 
 .embla .embla__slide {
   height: 100%;
+
 }
 
 @media (min-width:480px) {
@@ -257,15 +268,15 @@ Embla Grid to Flex Styles
   }
 
   .embla .grid-t-two-cols > div, .version-1 .embla .grid-t-two-cols > div, .version-2 .embla .grid-t-two-cols > div, .version-3 .embla .grid-t-two-cols > div {
-    flex: 0 0 calc(50% - 24px);
+    flex: 0 0 50%;
   }
 
   .embla .grid-t-three-cols > div, .version-1 .embla .grid-t-three-cols > div, .version-2 .embla .grid-t-three-cols > div, .version-3 .embla .grid-t-three-cols > div {
-    flex: 0 0 calc(33.33% - 24px);
+    flex: 0 0 33.33%;
   }
 
   .embla .grid-t-four-cols > div, .version-1 .embla .grid-t-four-cols > div, .version-2 .embla .grid-t-four-cols > div, .version-3 .embla .grid-t-four-cols > div {
-    flex: 0 0 22.5%;
+    flex: 0 0 25%;
   }
 
 }
@@ -277,15 +288,15 @@ Embla Grid to Flex Styles
   }
 
   .embla .grid-l-two-cols > div, .version-1 .embla .grid-l-two-cols > div, .version-2 .embla .grid-l-two-cols > div, .version-3 .embla .grid-l-two-cols > div {
-    flex: 0 0 calc(50% - 24px);
+    flex: 0 0 50%;
   }
 
   .embla .grid-l-three-cols > div, .version-1 .embla .grid-l-three-cols > div, .version-2 .embla .grid-l-three-cols > div, .version-3 .embla .grid-l-three-cols > div {
-    flex: 0 0 calc(33.33% - 24px);
+    flex: 0 0 33.33%;
   }
 
   .embla .grid-l-four-cols > div, .version-1 .embla .grid-l-four-cols > div, .version-2 .embla .grid-l-four-cols > div, .version-3 .embla .grid-l-four-cols > div {
-    flex: 0 0 22.5%;
+    flex: 0 0 25%;
   }
 
 }
@@ -297,15 +308,15 @@ Embla Grid to Flex Styles
   }
 
   .embla .grid-d-two-cols > div, .version-1 .embla .grid-d-two-cols > div, .version-2 .embla .grid-d-two-cols > div, .version-3 .embla .grid-d-two-cols > div {
-    flex: 0 0 calc(50% - 24px);
+    flex: 0 0 50%;
   }
 
   .embla .grid-d-three-cols > div, .version-1 .embla .grid-d-three-cols > div, .version-2 .embla .grid-d-three-cols > div, .version-3 .embla .grid-d-three-cols > div {
-    flex: 0 0 calc(33.33% - 24px);
+    flex: 0 0 33.33%;
   }
 
   .embla .grid-d-four-cols > div, .version-1 .embla .grid-d-four-cols > div, .version-2 .embla .grid-d-four-cols > div, .version-3 .embla .grid-d-four-cols > div {
-    flex: 0 0 22.5%;
+    flex: 0 0 25%;
   }
   
 }
@@ -316,15 +327,15 @@ Embla Grid to Flex Styles
   }
 
   .embla .grid-xl-two-cols > div, .version-1 .embla .grid-xl-two-cols > div, .version-2 .embla .grid-xl-two-cols > div, .version-3 .embla .grid-xl-two-cols > div {
-    flex: 0 0 calc(50% - 24px);
+    flex: 0 0 50%;
   }
 
   .embla .grid-xl-three-cols > div, .version-1 .embla .grid-xl-three-cols > div, .version-2 .embla .grid-xl-three-cols > div, .version-3 .embla .grid-xl-three-cols > div {
-    flex: 0 0 calc(33.33% - 24px);
+    flex: 0 0 33.33%;
   }
 
   .embla .grid-xl-four-cols > div, .version-1 .embla .grid-xl-four-cols > div, .version-2 .embla .grid-xl-four-cols > div, .version-3 .embla .grid-xl-four-cols > div {
-    flex: 0 0 22.5%;
+    flex: 0 0 25%;
   }
   
 }

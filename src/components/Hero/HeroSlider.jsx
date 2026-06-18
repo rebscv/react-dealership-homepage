@@ -46,26 +46,28 @@ function HeroSlider() {
 
     return (
         <section className="hero-slider">
-            <div className="embla" ref={emblaRef}>
+            <div className="embla">
 
-                <div className="embla__container">
+                <div className="embla__viewport" ref={emblaRef}>
+                    <div className="embla__container">
 
-                    {slider.map((slide) => (
-                        <div className={`embla__slide ${slide.className}`} key={slide.id}>
-                            <picture>
-                                <source media="(max-width: 767px)" srcSet={slide.imageMobile} />
-                                <img src={slide.image} alt={slide.title} fetchPriority="high" />
-                            </picture>
-                            <div className="hero-text-container">
-                                <div className="hero-text">
-                                    <h2>{slide.title}</h2>
-                                    <p>{slide.subtitle}</p>
-                                    <div><button className="btn btn-primary">{slide.buttonText}</button></div>
+                        {slider.map((slide) => (
+                            <div className={`embla__slide ${slide.className}`} key={slide.id}>
+                                <picture>
+                                    <source media="(max-width: 767px)" srcSet={slide.imageMobile} />
+                                    <img src={slide.image} alt={slide.title} fetchPriority="high" />
+                                </picture>
+                                <div className="hero-text-container">
+                                    <div className="hero-text">
+                                        <h2>{slide.title}</h2>
+                                        <p>{slide.subtitle}</p>
+                                        <div><button className="btn btn-primary">{slide.buttonText}</button></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
 
+                    </div>
                 </div>
 
                 <div className="embla__dots__container">

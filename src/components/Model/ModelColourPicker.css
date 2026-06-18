@@ -91,5 +91,13 @@
     min-height: 33.33vh;
     object-fit: cover;
   }
+
+  .colour-image img {
+    min-height: 33.33vh;
+    object-fit: contain;
+    width: 100%;
+  }
+
+
   
 }

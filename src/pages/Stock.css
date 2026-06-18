@@ -113,13 +113,14 @@
     padding: 8px 4px;
 }
 
-
-
 .version-1 .stock-filter-btn-col button, .version-2 .stock-filter-btn-col button {
     width: 100%;
     margin-top: 18px;
 }
 
+.version-1 .stock-filter-price, .version-1 .stock-filter-year {
+    padding-bottom: 32px;
+}
 
 /* =========================
    Version 2
@@ -142,6 +143,14 @@
     top: -6px;
 }
 
+.version-2 .stock-filter-btn-col button, .version-2 .stock-filter-btn-col button {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.version-2 .stock-filter-price, .version-2 .stock-filter-year {
+    padding-bottom: 32px;
+}
 
 
 /* =========================

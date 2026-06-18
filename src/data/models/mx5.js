@@ -2,12 +2,37 @@ import mx5 from "../../assets/images/range/mx-5.webp";
 import hero from "../../assets/images/models/mx-5/hero.webp";
 import heroMobile from "../../assets/images/models/mx-5/hero-m.webp";
 import driveImg from "../../assets/images/models/mx-5/drive.webp";
+
 import interiorImg1 from "../../assets/images/models/mx-5/interior-1.webp";
 import interiorImg2 from "../../assets/images/models/mx-5/interior-2.webp";
 import interiorImg3 from "../../assets/images/models/mx-5/interior-3.webp";
 import exteriorImg1 from "../../assets/images/models/mx-5/exterior-1.webp";
 import exteriorImg2 from "../../assets/images/models/mx-5/exterior-2.webp";
 import exteriorImg3 from "../../assets/images/models/mx-5/exterior-3.webp";
+
+import ultimateImg from "../../assets/images/models/mx-5/ultimate-drivers-car.webp";
+
+import performanceImg1 from "../../assets/images/models/mx-5/more-thrills.webp";
+import performanceImg2 from "../../assets/images/models/mx-5/precise-performance.webp";
+import performanceImg3 from "../../assets/images/models/mx-5/refined-power.webp";
+
+import connectedTechnologyImgHero from "../../assets/images/models/mx-5/connected-technology.webp";
+import connectedTechnologyImg1 from "../../assets/images/models/mx-5/all-access.webp";
+import connectedTechnologyImg2 from "../../assets/images/models/mx-5/stay-connected.webp";
+import connectedTechnologyImg3 from "../../assets/images/models/mx-5/mymazda-app.webp";
+import connectedTechnologyImg4 from "../../assets/images/models/mx-5/open-road.webp";
+
+import intelligentTechnologyVideo1 from "../../assets/images/models/mx-5/advance-keyless-entry.mp4";
+import intelligentTechnologyVideo2 from "../../assets/images/models/mx-5/heated-seats.mp4";
+import intelligentTechnologyVideo3 from "../../assets/images/models/mx-5/wireless-entertainment.mp4";
+
+import safetyVideo1 from "../../assets/images/models/mx-5/blind-spot-monitoring-bsm.mp4";
+import safetyVideo2 from "../../assets/images/models/mx-5/lane-departure-warning-ldw.mp4";
+import safetyVideo3 from "../../assets/images/models/mx-5/smart-city-brake-support-scbs.mp4";
+import safetyVideo4 from "../../assets/images/models/mx-5/rear-cross-traffic-alert-rcta.mp4";
+import safetyVideo5 from "../../assets/images/models/mx-5/adaptive-led-headlamps-alh.mp4";
+import safetyVideo6 from "../../assets/images/models/mx-5/traffic-sign-recognition-tsr.mp4";
+
 
 
 const mx5Model = {  
@@ -25,13 +50,43 @@ const mx5Model = {
     { type: "hero",
       data: "hero"
     },
-    { type: "modelText",
+    {
+      type: "modelText",
       data: "introText"
     },
-    { type: "featured",
+    {
+      type: "featured",
       data: "featured"
     },
-    { type: "cta",
+    {
+      type: "modelTextBgImage",
+      data: "ultimateDriver"
+    },
+    {
+      type: "modelColumnSlider",
+      data: "performanceSlider"
+    },
+    {
+      type: "modelText",
+      data: "connectedTechnology"
+    },
+    {
+      type: "modelColumns",
+      data: "connectedTechnologyColumns"
+    },
+    {
+      type: "modelColumns",
+      data: "technologyColumns"
+    },
+    {
+      type: "modelColumnSlider",
+      data: "safetySlider"
+    },
+    { type: "grades",
+      data: "grades"
+    },
+    {
+      type: "cta",
       data: "cta"
     }
 
@@ -57,6 +112,7 @@ const mx5Model = {
   },
 
   introText: {
+    wrapperClass: "std-wrapper",
     title: "A DRIVE THAT’S ALL YOURS",
     text: "Mazda MX-5 is all for the joy of driving, pure and simple. Every inch designed to make you find excuses to drive. Connected from wheel to road at every moment. With refined design and exhilarating performance, the MX-5 invites you feel something you never have before.",
     image: driveImg,
@@ -65,6 +121,7 @@ const mx5Model = {
 
   featured: {
     intro: {
+      bgColour: "grey-bg",
       title: "STYLE ICON",
       description: "An undeniable style unlike any other. Mazda MX-5 expresses an elegant balance of history and innovation.",
       anchorLink: "design",
@@ -115,7 +172,226 @@ const mx5Model = {
     
   },
 
+  ultimateDriver: {
+    title : "The Ultimate Drivers Car",
+    text : "The perfectly balanced Mazda MX-5, offers the most responsive driving experience yet, with every aspect of its performance meticulously refined for pure exhilaration. ",
+    imageBg : ultimateImg,
+    bgColour : "dark-bg",
+    gridClass : "grid-d-two-cols"
+  },
+
+  performanceSlider: {      
+    intro: {
+      anchorLink    : "performance",
+      title         : "Heart Racing Performance",
+      description   : "Performance with an unmatched attention to detail, for a feeling that's hard to describe."
+    },
+    slides : [
+      {
+        title : "More Thrills",
+        description : [ "Enhanced performance for an excitement experience. Mazda MX-5 makes you feel alive with agilie and intuitive handling that connects you to the road." ],
+        image : performanceImg1,
+        alt : "Happy couple driving the MX-50"
+      },
+      {
+        title : "Precise Performance",
+        description : [ "Performance with an unparalleled attention to detail. Adopting Asymmetric Limited Slip Differential, Mazda MX-5 offers precise response steering, improved stability, enhancing the driving feel for your enjoyment." ],
+        image : performanceImg2,
+        alt : "Red MX-50 Convertible"
+      },
+      {
+        title : "Refined Power",
+        description : [ "DSC-TRACK prevents wheel spin without dropping torque, so you can challenge your skills on the track. Meanwhile Kinematic Posture Control and a grounded tyre position gives adds responsiveness, putting the driver in control of every second." ],
+        image : performanceImg3,
+        alt : "MX-50 Convertible driving on road"
+      } 
+    ]
+  },
+
+  connectedTechnology: {
+    bgColour : "grey-bg",
+    wrapperClass : "lrg-wrapper model-text-reverse",
+    title : "Connected Technology",
+    text : "The first Mazda Connected Vehicle, Mazda MX-5 gives you enhanced control over every moment.",
+    image : connectedTechnologyImgHero,
+  },
+
+  connectedTechnologyColumns: {
+    intro : {
+      bgColour : "grey-bg",
+      wrapperClass : "lrg-wrapper no-padding-top",
+      gridClass : "grid-d-four-cols grid-t-two-cols"
+    },
+    columns : [
+      {
+        title : "All Access",
+        description : [ "A large 8.8-inch LCD touchscreen makes it simple to access everything you need, all in one place." ],
+        image : connectedTechnologyImg1
+      },
+      {
+        title : "Stay Connected",
+        description : [ "Experience enhanced wireless phone connectivity so you’re always in the moment, at every turn." ],
+        image : connectedTechnologyImg2
+      },
+      {
+        title : "Mymazda App",
+        description : [ "Feel at ease with connected services to assist you in case of an emergency, calling an ambulance and talking to an operator for you." ],
+        image : connectedTechnologyImg3
+      },
+      {
+        title : "Open Road",
+        description : [ "Escape the everyday with fold down roof mechanics and space for weekend adventures." ],
+        image : connectedTechnologyImg4
+      }
+    ]
+  },
+
+  technologyColumns: {      
+    intro: {
+      anchorLink    : "intelligent-technology",
+      title         : "Intelligent Technology",
+      gridClass     : "grid-d-four-cols grid-t-two-cols"
+    },
+    columns : [
+      {
+        title : "Advanced Keyless Entry",
+        description : ["Advanced keyless entry on GT grade and above means you can gain access without fumbling for keys."],
+        video : intelligentTechnologyVideo1
+      },
+      {
+        title : "Heated Seats",
+        description : ["Never be left cold on chilly mornings with heated seats. Available on GT grade and above."],
+        video : intelligentTechnologyVideo2
+      },
+      {
+        title : "Wireless Entertainment",
+        description : ["Wireless Apple CarPlay® and Android™ Auto come standard across all grades. Seamlessly connecting your phone and car."],
+        video : intelligentTechnologyVideo3
+      },
+      {
+        title : "See Every Angle",
+        description : ["Whether you’re parking or opening your door, reverse camera and sensors let you get the job done with ease. Standard across all grades."],
+        video : safetyVideo1
+      }
+    ]
+  },
+
+  safetySlider: {      
+    intro: {
+      bgColour : "grey-bg",
+      title : "Safety Features",
+      text : ["Safety rules supreme in Mazda MX-5, with a range of smart and intuitive features designed to keep you well and truly out of harm’s way."]
+    },
+    slides : [
+      {
+        title: "Blind Spot Monitoring (BSM)",
+        description: [
+          "Blind Spot Monitoring (BSM) scans external mirrors’ blind spots up to 50m behind your vehicle, while radars detect unseen vehicles to alert you of any potential hazardous lane changes."
+        ],
+        video : safetyVideo1
+      },
+      {
+        title: "Lane Departure Warning (LDW)",
+        description : [
+          "Lane Departure Warning (LDW) monitors road markings and alerts you if you’re straying from your lane.",
+          "If no action is taken, it will apply corrective steering to help guide you back."
+        ],
+        video : safetyVideo2
+      }, 
+      {
+        title: "Smart City Brake Support (SCBS)",
+        description: [
+          "Smart City Brake Support (SCBS). At forward speeds of 4-80km/h SCBS-F monitors the vehicle or pedestrian in front to assess the likelihood of a collision. If there is a high risk, the system will warn you and brake automatically if needed. SCBS-R works with reverse speeds of 2-8km/h."
+        ],
+        video : safetyVideo3
+      }, 
+      {
+        title: "Rear Cross Traffic Alert (RCTA)",
+        description: [
+          "Rear Cross Traffic Alert (RCTA) assists you when you're reversing, by warning if a car is approaching from either side."
+        ],
+        video : safetyVideo4
+      }, 
+      {
+        title: "Adaptive LED Headlamps (ALH)",
+        description: [
+          "Adaptive LED Headlamps (ALH) individually controls a number of LEDs to broaden visibility at low speeds, avoid dazzling others on high beam, and extend vision at highway speeds.",
+          "Available on all GT grades"
+        ],
+        video : safetyVideo5
+      },
+      {
+        title: "Traffic Sign Recognition (TSR)",
+        description: [
+          "Traffic Sign Recognition (TSR) detects Stop, speed limit, and No Entry signs and projects the signs onto your Active Driving Display to ensure you don't miss a thing."
+        ],
+        video : safetyVideo6
+      }
+    ]
+  },
+
+  grades: {      
+    intro: {
+      title       : "Specifications",
+      subtitle    : "Choose your grade",
+    },
+
+    tabs: [
+      {
+        label : "Soft-top",
+        slides :
+        [
+          {
+            title : "Pure",
+            price : "$47,990†",
+            featuresTitle : "Base features:",
+            features : [
+              "Mazda Connect With Apple Carplay® And Android Auto™ (Wireless And USB)",
+              "Active Driving Display",
+              "360° view monitor",
+              "Black cloth seat trim with 8-way manual driver's seat adjustment",
+              "18-inch grey metallic alloy wheels",
+              "8 speaker audio system with DAB+ and USB-C",
+              "Blind Spot Monitoring (BSM) with vehicle exit warning",
+              "Smart Brake Support (SBS)",
+              "Mazda Intelligent Drive Select (Mi-Drive)",
+              "8-speed automatic transmission"
+            ],
+            image : connectedTechnologyImg4
+          },
+        ]
+      },
+      {
+        label : "RF",
+        slides :
+        [
+          {
+            title : "Pure RF",
+            price : "$47,990†",
+            featuresTitle : "Base features:",
+            features : [
+              "Mazda Connect With Apple Carplay® And Android Auto™ (Wireless And USB)",
+              "Active Driving Display",
+              "360° view monitor",
+              "Black cloth seat trim with 8-way manual driver's seat adjustment",
+              "18-inch grey metallic alloy wheels",
+              "8 speaker audio system with DAB+ and USB-C",
+              "Blind Spot Monitoring (BSM) with vehicle exit warning",
+              "Smart Brake Support (SBS)",
+              "Mazda Intelligent Drive Select (Mi-Drive)",
+              "8-speed automatic transmission"
+            ],
+            image : connectedTechnologyImg4
+          },
+        ]
+      }
+    ],
+
+
+  },
+
   cta : {
+    bgColour : "grey-bg",
     description : "Experience true power and exhilaration in the new Mazda CX-60. Book a test drive today.",
   }
 

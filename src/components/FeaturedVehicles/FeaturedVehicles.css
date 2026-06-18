@@ -12,10 +12,18 @@
   border: solid 1px #ccc;
 }
 
-.vehicle-card img {
+.version-2 .featured-vehicles {
+  overflow-x: hidden;
+}
+
+.version-2 .vehicle-card img {
   width: 100%;
 }
 
-.version-2 .featured-vehicles {
-  overflow-x: hidden;
+
+
+
+
+.version-3 .vehicle-card img {
+  width: 100%;
 }

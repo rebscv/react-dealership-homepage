@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.model-features img {
+  width: 100%;
+}
+
 .model-features .std-wrapper {
   position: relative;
   z-index: 1;

@@ -12,10 +12,12 @@ import ModelFeatured from "../components/model/ModelFeatured";
 import ModelColourPicker from "../components/model/ModelColourPicker";
 import ModelTechnology from "../components/model/ModelTechnology";
 import ModelGallery from "../components/model/ModelGallery";
-import ModelSafety from "../components/model/ModelSafety";
 import ModelGrades from "../components/model/ModelGrades";
 import ModelCTA from "../components/model/ModelCTA";
 import ModelText from "../components/model/ModelText";
+import ModelTextBgImage from "../components/model/ModelTextBgImage";
+import ModelColumnSlider from "../components/model/ModelColumnSlider";
+import ModelColumns from "../components/model/ModelColumns";
 
 
 
@@ -37,11 +39,13 @@ function ModelDetail() {
             case "featured": return ( <ModelFeatured featured={model[section.data]} /> );
             case "colours": return ( <ModelColourPicker colours={model[section.data]} /> );
             case "technology": return ( <ModelTechnology {...model[section.data]} /> );
-            case "safety": return ( <ModelSafety {...model[section.data]} /> );
             case "grades": return ( <ModelGrades {...model[section.data]} menuTitle={model.menuTitle} version={version} /> );
             case "gallery": return ( <ModelGallery {...model[section.data]} /> );
             case "cta": return ( <ModelCTA {...model[section.data]} menuTitle={model.menuTitle} version={version} /> );
             case "modelText": return ( <ModelText {...model[section.data]} /> );
+            case "modelTextBgImage": return ( <ModelTextBgImage {...model[section.data]} /> );
+            case "modelColumnSlider": return ( <ModelColumnSlider {...model[section.data]} /> );
+            case "modelColumns": return ( <ModelColumns {...model[section.data]} /> );
 
             default: return null;
         }     

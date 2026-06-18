@@ -1,8 +1,10 @@
-function ModelCTA ({ model, description, image, brochure, menuTitle, version }) {
+function ModelCTA ({ bgColour, model, description, image, brochure, menuTitle, version }) {
 
 
     return (
-    <section className="model-intro">
+    <section className={`${bgColour || ""} model-intro`}>
+
+
       <div className="sml-wrapper t-center">   
 
 
