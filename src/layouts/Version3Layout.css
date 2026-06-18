@@ -51,6 +51,10 @@
   background-color: var(--clr-dark-grey);
 }
 
+.version-3 .black-bg {
+  background-color: var(--clr-black);
+}
+
 .version-3 .dark-bg, .version-3 .dark-bg p, .version-3 .dark-bg h1, .version-3 .dark-bg h2, .version-3 .dark-bg h3, .version-3 .dark-bg h4, .version-3 .dark-bg .h1, .version-3 .dark-bg .h2, .version-3 .dark-bg .h3, .version-3 .dark-bg .h4 {
   color: var(--clr-white);
 }
@@ -514,7 +518,8 @@
 @media (max-width:1023px) {
 
   .version-3 .full-wrapper .grid-d-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols .center-content > div {
-    padding: 0 var(--padding-lr) var(--padding-tb) ;
+    /* padding: 0 var(--padding-lr) var(--padding-tb) ; */
+    padding: 0 0 var(--padding-tb) ;
   }
 
   .version-3 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols.no-gaps .center-content > div {
@@ -526,7 +531,8 @@
 @media (max-width:767px) {
 
   .version-3 .full-wrapper .grid-l-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols .center-content > div {
-    padding: 0 var(--padding-lr) var(--padding-tb) ;
+    /* padding: 0 var(--padding-lr) var(--padding-tb); */
+    padding: 0 0 var(--padding-tb);
   }
 
   .version-3 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols.no-gaps .center-content > div {

@@ -70,8 +70,9 @@
 @media (max-width:1023px) {
 
   .version-3 .model-text-bg-image .lrg-wrapper .grid-d-two-cols .center-content .grid {
-    padding-top: 0;
-    padding-bottom: 0;
+    /* padding-top: 0;
+    padding-bottom: 0; */
+    padding: 0 var(--padding-lr);
   }
   
 }

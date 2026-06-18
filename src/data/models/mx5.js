@@ -41,6 +41,10 @@ import GradeRfGtBlackRoof from "../../assets/images/models/mx-5/rf-gt-black-roof
 import GradeRfGtGs from "../../assets/images/models/mx-5/rf-gt-gs.webp";
 
 import brochure from "../../assets/images/models/mx-5/mx-5-brochure.pdf";
+import mx5TestDrive from "../../assets/images/models/mx-5/mx-5.webp";
+
+
+import { image } from "framer-motion/client";
 
 const mx5Model = {  
 
@@ -53,7 +57,6 @@ const mx5Model = {
   tags          : ["sports"],
   image         : mx5,
   sections      :[
-
     { type: "hero",
       data: "hero"
     },
@@ -96,13 +99,12 @@ const mx5Model = {
       type: "cta",
       data: "cta"
     }
-
   ],
 
   nav: {
     items : [
-      { name : "Overview", link : "#overview" },
       { name : "Design", link : "#design" },
+      { name : "Performance", link : "#performance" },
       { name : "Technology", link : "#technology" },
       { name : "Safety", link : "#safety" },
       { name : "Specs", link : "#specs" }
@@ -131,9 +133,8 @@ const mx5Model = {
       bgColour      : "grey-bg",
       title         : "STYLE ICON",
       description   : "An undeniable style unlike any other. Mazda MX-5 expresses an elegant balance of history and innovation.",
-      anchorLink    : "design",
+      anchorLink    : "design"
     },
-
     tabs: [
       {
         label: "Exterior",
@@ -175,11 +176,11 @@ const mx5Model = {
           }
         ]
       }
-    ]
-    
+    ]    
   },
 
   ultimateDriver : {
+    anchorLink      : "performance",
     title           : "The Ultimate Drivers Car",
     text            : "The perfectly balanced Mazda MX-5, offers the most responsive driving experience yet, with every aspect of its performance meticulously refined for pure exhilaration. ",
     imageBg         : ultimateImg,
@@ -189,9 +190,9 @@ const mx5Model = {
 
   performanceSlider : {      
     intro: {
-      anchorLink    : "performance",
       title         : "Heart Racing Performance",
-      description   : "Performance with an unmatched attention to detail, for a feeling that's hard to describe."
+      description   : "Performance with an unmatched attention to detail, for a feeling that's hard to describe.",
+      anchorLink    : "heart-racing-performance"
     },
     slides : [
       {
@@ -216,6 +217,7 @@ const mx5Model = {
   },
 
   connectedTechnology : {
+    anchorLink    : "technology",
     bgColour      : "grey-bg",
     wrapperClass  : "lrg-wrapper model-text-reverse",
     title         : "Connected Technology",
@@ -227,7 +229,8 @@ const mx5Model = {
     intro : {
       bgColour      : "grey-bg",
       wrapperClass  : "lrg-wrapper no-padding-top",
-      gridClass     : "grid-d-four-cols grid-t-two-cols"
+      gridClass     : "grid-d-four-cols grid-t-two-cols",
+      anchorLink    : "technology-content"
     },
     columns : [
       {
@@ -292,7 +295,7 @@ const mx5Model = {
     slides : [
       {
         title         : "Blind Spot Monitoring (BSM)",
-        descriptio    : [
+        description   : [
           "Blind Spot Monitoring (BSM) scans external mirrors’ blind spots up to 50m behind your vehicle, while radars detect unseen vehicles to alert you of any potential hazardous lane changes."
         ],
         video         : safetyVideo1
@@ -454,7 +457,8 @@ const mx5Model = {
   cta : {
     bgColour    : "grey-bg",
     description : "Experience true power and exhilaration in the new Mazda CX-60. Book a test drive today.",
-    brochure    : brochure
+    brochure    : brochure,
+    image       : mx5TestDrive
   }
 
 

@@ -4,10 +4,10 @@ function ModelHighlights({ highlights }) {
 
   if (!highlights) return null;
 
-  const { anchorLink, items } = highlights;
+  const { anchorLink, bgColour, items } = highlights;
 
   return (
-    <section className="model-highlights">
+    <section className={`model-highlights ${bgColour || 'dark-grey-bg dark-bg'}`}>
 
       {anchorLink && <span id={anchorLink} className="model-anchor"></span>}
 

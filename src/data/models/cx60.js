@@ -62,6 +62,8 @@ import gradeAzamiImg from "../../assets/images/models/cx-60/azami-grade.webp";
 import brochure from "../../assets/images/models/cx-60/cx-60-brochure.pdf";
 
 
+import { image, title } from "framer-motion/client";
+
 const cx60Model = {  
 
   id            : 6,

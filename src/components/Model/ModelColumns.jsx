@@ -12,8 +12,10 @@ function ModelColumns({ columns, intro }) {
       <div className={intro.wrapperClass || `lrg-wrapper`}>
 
         
-        {intro.title && ( <div className="section-title t-center"><h2>{intro.eyebrowTitle && ( <span className="title-eyebrow">{intro.eyebrowTitle}</span> )}{intro.title}</h2></div> )}
-        
+        {intro.title && ( <div className="section-title t-center"><h2>{intro.eyebrowTitle && ( <span className="title-eyebrow">{intro.eyebrowTitle}</span> )}{intro.title}</h2></div> )}       
+        {Array.isArray(intro.text) ? 
+          (intro.text.map((para, i) => (<p key={i}>{para}</p>))) : (intro.text && <p>{intro.text}</p> )
+        }
 
         <div className={intro.gridClass || `grid-d-three-cols`}>
 

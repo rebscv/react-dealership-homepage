@@ -1,9 +1,12 @@
 import "./ModelTextBgImage.css"
 
-function ModelTextBgImage({ title, text, imageBg, bgColour, wrapperClass, gridClass }) {
+function ModelTextBgImage({ title, text, imageBg, bgColour, wrapperClass, gridClass, anchorLink }) {
   return (
 
     <section className={`model-text-bg-image ${bgColour || ''}`} style={{ backgroundImage: `url(${imageBg})` }}>
+
+      {anchorLink && <span id={anchorLink} className="model-anchor"></span>}
+
       <div className={`${wrapperClass || 'lrg-wrapper'}`}>
 
       <div className={`${gridClass || ''} no-gaps`}>
