@@ -6,14 +6,79 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 
-function HeaderVehicleMenu({ closeModelMenu }) {
+function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
 
+    // Constants
     const tabs = ["all", "suv", "ute", "sports"];
     const tabLabels = {all: "All", suv: "SUV", ute: "Ute", sports: "Sports"};    
-    const [activeTab, setActiveTab] = useState("all");
 
-    const filteredModels = activeTab === "all" ? models : models.filter(car => car.tags?.includes(activeTab));
-    
+    // States
+    const [activeTab, setActiveTab] = useState("all");
+    const [mobileCategory, setMobileCategory] = useState(null);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);    
+
+    // Effects
+    useEffect (() =>  {
+        const handleResize = () => { setIsMobile(window.innerWidth < 1024); };        
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (!menuOpen) { setMobileCategory(null);}
+    }, [menuOpen]);
+
+    // Helper Functions
+    const handleModelClick = () => { setMobileCategory(null); closeModelMenu(); closeMenu(); }
+
+    // Derived Data
+    const filteredModels = activeTab === "all" ? models : models.filter(car => car.tags?.includes(activeTab)); 
+    const mobileModels = models.filter(model => model.tags?.includes(mobileCategory));
+
+    if (isMobile) { return (
+
+        <div className="header-vehicle-menu header-vehicle-menu-mobile">
+
+            {!mobileCategory ? (
+                <div className="mobile-model-categories">
+
+                    <button className="mobile-menu-back" onClick={closeModelMenu}>
+                        <span>←</span><span>Models</span>
+                    </button>
+
+                    {tabs.filter(tab => tab !== "all").map(tab => (
+                        <button key={tab} onClick={() => setMobileCategory(tab)} className="mobile-menu-category">
+                            <span>{tabLabels[tab]}</span><span>›</span>
+                        </button>)
+                    )}
+
+                </div>
+            ) : (
+                <div className="mobile-model-list">
+
+                    <button className="mobile-menu-back" onClick={() => setMobileCategory(null)}>
+                        <span>←</span><span>{tabLabels[mobileCategory]}</span>
+                    </button>
+
+                    {mobileModels.map((model) => (
+                        <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={handleModelClick}>
+                            <div>
+                                <div className="h4">{model.menuTitle}</div>
+                                <div>{model.description}</div>
+                            </div>
+                            <div>
+                                <img src={model.image} alt="{model.menuTitle}" />
+                            </div>                            
+                        </Link>                        
+                    ))}
+                </div>
+            )}
+
+        </div>
+
+
+
+    ); }
 
     return (
 

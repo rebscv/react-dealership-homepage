@@ -76,3 +76,62 @@
     transform: translateY(16px);
     animation: fadeUp 0.5s ease forwards;
 }
+
+
+
+
+
+
+
+
+.header-vehicle-menu-mobile {
+    padding: 32px 24px 128px;
+}
+
+.header-vehicle-menu-mobile button {
+    font-family: MazdaTypeTT;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    padding: 8px 0;
+    font-size: 1em;
+}
+
+
+.mobile-model-categories {
+    display: grid;
+    justify-items: start;  
+    gap: 16px;  
+}
+
+.mobile-menu-category {
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+}
+
+.mobile-menu-category span:nth-child(2) {
+    font-size: 2em;
+}
+
+.header-vehicle-menu-mobile .mobile-menu-back {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    border-bottom: solid 1px var(--clr-grey-border);
+    padding: 16px 0;
+}
+
+.mobile-menu-back span {
+    font-size: 1.3em;
+    font-weight: 600;
+    grid-column: span 1;
+}
+
+
+.mobile-menu-back span:nth-child(1) {
+    text-align: left;    
+}
