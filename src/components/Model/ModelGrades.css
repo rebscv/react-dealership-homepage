@@ -80,5 +80,14 @@
   
 }
 
+@media (max-width:1023px) {
+
+  .version-3 .model-grades.full-slider-m .model-grade-tabs {
+    padding-left: var(--padding-lr);
+    padding-right: var(--padding-lr);
+  }
+  
+}
+
 
 

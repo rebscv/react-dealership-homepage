@@ -17,11 +17,11 @@ function ModelFeatured ({ featured }) {
 
   return (
 
-    <section className={`model-features ${intro?.bgColour || ''}`} style={{ backgroundImage: `url(${intro.image})` }}>
+    <section className={`model-features ${intro?.bgColour || ''}`} style={{ backgroundImage: intro?.backgroundImage ? `url(${intro.backgroundImage})` : "none"  }}>
 
       <span id={intro?.anchorLink || "features"} className="model-anchor"></span>
 
-      <div className="std-wrapper no-padding-bottom">
+      <div className="sml-wrapper no-padding-bottom">
 
         <div className="section-header grid t-center">
           <h2>{intro.title}</h2>

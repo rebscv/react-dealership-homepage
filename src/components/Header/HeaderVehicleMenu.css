@@ -1,0 +1,78 @@
+
+.header-vehicle-menu {
+    display: none;
+}
+
+.show-model-menu .header-vehicle-menu {
+    display: block;
+}
+
+.header-vehicle-menu {
+    position: fixed;
+    top: 73px;
+    width: 100%;
+    z-index: 12;
+    background: var(--clr-white);
+    color: var(--clr-black);
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.version-3 .header-v3 .header-vehicle-menu .std-wrapper {
+    padding-top: var(--padding-tb);
+    padding-bottom: var(--padding-tb);
+}
+
+@media (min-width: 1024px) {
+    .version-3 .header-v3 .header-vehicle-menu .std-wrapper {
+        padding-top: var(--padding-tb-d);
+        padding-bottom: var(--padding-tb-d);
+    }
+
+    .header-vehicle-menu {
+        top: 113px;
+        height: auto;
+        overflow-y: auto;
+    }
+
+}
+
+
+
+
+.header-vehicle-menu-sidebar {
+    align-content: start;
+}
+
+.header-vehicle-menu-sidebar-links {
+    display: grid;
+    gap: var(--grid-gap);    
+}
+
+.header-vehicle-menu-sidebar-links button {
+    color: var(--clr-grey-dk);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-family: var(--font-mazda);    
+    cursor: pointer;
+    
+}
+
+.version-3 .header-vehicle-menu-sidebar-links button {
+    text-transform: none;
+}
+
+.header-vehicle-menu-sidebar-links button.active {
+    color: var(--clr-black);
+}
+
+
+
+
+.version-3 .header-vehicle-menu-model {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+}

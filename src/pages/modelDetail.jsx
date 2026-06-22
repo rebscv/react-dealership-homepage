@@ -69,7 +69,9 @@ function ModelDetail() {
 
     return (
 
-        <main className="model-detail-content">
+        
+
+        <main className={`model-detail-content model-${model.slug}`}>
 
             {model.nav && ( <ModelNav nav={model.nav} menuTitle={model.menuTitle} version={version} /> )}
 

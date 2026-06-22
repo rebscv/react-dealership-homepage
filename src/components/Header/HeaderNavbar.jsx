@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 
-function HeaderNavbar({ closeMenu }) {
+function HeaderNavbar({ closeMenu, toggleModelMenu, closeModelMenu }) {
 
     const [openSubmenu, setOpenSubmenu] = useState(null);
     const isMobile = useIsMobile(1024);
@@ -14,12 +14,12 @@ function HeaderNavbar({ closeMenu }) {
     };
 
     useEffect(() => { if (!isMobile) { setOpenSubmenu(null); }}, [isMobile]);
-    
-    
+
     return (
 
         <nav>
             <Link to="" onClick={closeMenu}>Home</Link>
+            <Link to="#" className="nav-models-link" onClick={(e) => { e.preventDefault(); toggleModelMenu(); }}>Models</Link>
             <Link to="stock" onClick={closeMenu}>Stock</Link>
             <Link to="offers" onClick={closeMenu}>Latest Offers</Link>
 

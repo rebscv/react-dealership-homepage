@@ -554,6 +554,10 @@
   .version-3 .grid-d-two-cols.d-grid-cols-60-40 {
     grid-template-columns: 3fr 2fr;
   }
+
+  .version-3 .grid-d-two-cols.d-grid-cols-10-40 {
+    grid-template-columns: 1fr 4fr;
+  }
   
 }
 
@@ -704,6 +708,12 @@
   .version-3 .full-slider-m .embla__arrows__container {
     display: none;
   }
+
+  .version-3 .full-slider-m .section-title {
+    padding-left: var(--padding-lr);
+    padding-right: var(--padding-lr);
+  }
+  
   
 }
 

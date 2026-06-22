@@ -5,7 +5,7 @@
 .version-3 .model-nav {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   transition: ease 0.6s all;
 }
 

@@ -33,7 +33,7 @@ function ModelColumnSlider({ intro, slides }) {
 
                     <div>
 
-                      {slide.video && <video preload="none" muted autoPlay loop playsInline poster=""><source type="video/mp4" src={slide.video} /></video>}
+                      {slide.video && <video preload="none" muted autoPlay loop playsInline poster={slide.videoPoster || ""}><source type="video/mp4" src={slide.video} /></video>}
                       {slide.image && <img src={slide.image} alt={slide.alt || slide.title || ""} />}
 
 

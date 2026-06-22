@@ -16,6 +16,8 @@
   --hero-gap-d: 12px;
 
   --font-mazda: MazdaTypeTT;
+  --font-bt50: BT-50Type;
+
 
   --wrapper-gap: 24px;
   --wrapper-gap-d: 32px;
@@ -64,6 +66,8 @@
     font-weight: 400;
     font-style: normal;
 }
+
+
 
 /* SVG */
 [class*=" icon-"],[class^=icon-]{display:inline-block;width:1em;height:1em;stroke-width:0;stroke:currentColor;fill:currentColor}

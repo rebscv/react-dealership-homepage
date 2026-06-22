@@ -45,7 +45,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
             <Route path="book-a-test-drive" element={<BookTestDrive />} />
-            <Route path="model/:slug" element={<ModelDetail />} />
+            <Route path="models/:slug" element={<ModelDetail />} />
 
           </Route>
         </Route>
@@ -64,7 +64,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
             <Route path="book-a-test-drive" element={<BookTestDrive />} />
-            <Route path="model/:slug" element={<ModelDetail />} />
+            <Route path="models/:slug" element={<ModelDetail />} />
 
           </Route>
         </Route>
@@ -83,7 +83,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
             <Route path="book-a-test-drive" element={<BookTestDrive />} />
-            <Route path="model/:slug" element={<ModelDetail />} />
+            <Route path="models/:slug" element={<ModelDetail />} />
 
           </Route>
         </Route>

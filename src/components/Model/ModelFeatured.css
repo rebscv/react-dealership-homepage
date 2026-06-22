@@ -51,4 +51,9 @@
   height: 100%;
 }
 
+.version-3 .model-features.dark-grey-bg .std-wrapper, .version-3 .model-features.dark-grey-bg .sml-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
 

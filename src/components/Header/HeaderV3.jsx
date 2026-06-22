@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import HeaderNavbar from "./HeaderNavbar";
 import HeaderContact from "./HeaderContact";
+import HeaderVehicleMenu from "./HeaderVehicleMenu";
 
 import logo from "../../assets/images/logo.svg";
 
@@ -12,6 +13,8 @@ function HeaderV3() {
 
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [modelMenuOpen, setModelMenuOpen] = useState(false);
+
 
     useEffect(() => {
         const handleScroll = () => { setScrolled(window.scrollY > 50); };
@@ -19,9 +22,7 @@ function HeaderV3() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-
-    const toggleMenu = () => { setMenuOpen(!menuOpen); };
+   
 
     useEffect(() => {
         if (menuOpen) { document.body.classList.add("show-mobile-menu"); } 
@@ -29,7 +30,19 @@ function HeaderV3() {
         return () => { document.body.classList.remove("show-mobile-menu"); };
     }, [menuOpen]);
 
+
+    useEffect(() => {
+        if (modelMenuOpen) { document.body.classList.add("show-model-menu"); } 
+        else { document.body.classList.remove("show-model-menu"); }
+        return () => { document.body.classList.remove("show-model-menu"); };
+    }, [modelMenuOpen]);
+
+
+    const toggleMenu = () => { setMenuOpen(!menuOpen); };
     const closeMenu = () => { setMenuOpen(false); };
+    
+    const toggleModelMenu = () => { setModelMenuOpen(prev => !prev); }
+    const closeModelMenu = () => { setModelMenuOpen(false); }
 
 
     return (
@@ -51,11 +64,11 @@ function HeaderV3() {
                         </Link>
 
                         <div className="navbar">
-                            <HeaderNavbar closeMenu={closeMenu} />
+                            <HeaderNavbar closeMenu={closeMenu} toggleModelMenu={toggleModelMenu} closeModelMenu={closeModelMenu} />
                         </div>
                                                
 
-                        <div className="menu-button-mobile" id="menu-btn" onClick={toggleMenu}>
+                        <div className="menu-button-mobile" id="menu-btn" onClick={() => { toggleMenu(); closeModelMenu(); }}>
                             <svg className="icon-menu"><use href="/icons.svg#icon-menu"></use></svg>
                         </div>
 
@@ -64,8 +77,10 @@ function HeaderV3() {
             </div>
 
             <div className="menu-mobile">
-                <HeaderNavbar closeMenu={closeMenu} />    
-            </div>        
+                <HeaderNavbar closeMenu={closeMenu} toggleModelMenu={toggleModelMenu} closeModelMenu={closeModelMenu} />    
+            </div>  
+
+            <HeaderVehicleMenu closeModelMenu={closeModelMenu} />      
 
         </header>
     );

@@ -167,9 +167,9 @@ const cx60Model = {
   featured: {
     intro: {
       bgColour: "dark-grey-bg dark-bg",
+      backgroundImage : featureIntroImg,
       title: "Make the road ahead all yours",
       description: "The new Mazda CX-60 has everything you need to make the next chapter your best yet. Thoughtfully designed with the latest smart tech, and built to exhilarate. It's the kind of drive that you'll look forward to, every time.",
-      image: featureIntroImg,
       anchorLink: "overview",
     },
 

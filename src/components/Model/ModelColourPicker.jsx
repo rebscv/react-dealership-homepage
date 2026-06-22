@@ -3,7 +3,7 @@ import "./ModelColourPicker.css";
 
 function ModelColourPicker ({ colours }) {
 
-  const { title, subtitle, description, exterior, interior, anchorLink } = colours;
+  const { title, subtitle, description, exterior, interior, anchorLink, bgColour, backgroundImage } = colours;
 
   const [activeTab, setActiveTab] = useState("exterior");
   const [selectedExterior, setSelectedExterior] = useState(0);
@@ -16,7 +16,7 @@ function ModelColourPicker ({ colours }) {
   if (!activeSet || !activeSet.options || !activeSet.options.length === 0) return null;
 
   return (
-    <section className="model-colour-picker">
+    <section className={`model-colour-picker ${bgColour || ''}`} style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : "none"  }}>
       
       {anchorLink && <span id={anchorLink} className="model-anchor"></span>}
 
