@@ -35,7 +35,7 @@
 .version-3 .header-container {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 14;
     width: 100%;
     background-color: var(--header-bg);
     transition: ease 0.6s all;
@@ -165,6 +165,10 @@
         gap: 24px;
     }
 
+    .version-3 nav a, .version-3 nav a:visited {
+        color: var(--clr-white);
+    }
+
     .version-3 nav > a, .version-3 nav > .nav-item {
         padding: 16px 0;
     }
@@ -234,7 +238,7 @@
 ========================= */
 
 .version-3 .menu-mobile {
-    display: none;
+    display: block;
     z-index: 11;
     position: fixed;
     top: 72px;
@@ -242,14 +246,20 @@
     height: 100%;
     background-color: var(--clr-white);
     overflow-y: auto;
+    transform: translateX(100%);
+    transition: ease 0.4s all;
+    opacity: 0.25;
 }
 
 body.version-3-body.show-mobile-menu {
     overflow-y: hidden;
+    
 }
 
 .version-3-body.show-mobile-menu .version-3 .menu-mobile {
     display: block;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .version-3 .menu-mobile nav {

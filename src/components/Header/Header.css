@@ -203,3 +203,12 @@ body.version-2-body.show-mobile-menu {
 .menu-button-mobile {
     display: none;
 }
+
+@media (min-width:1024px) {
+
+    .nav-home-link {
+        display: none;
+    }
+        
+}
+

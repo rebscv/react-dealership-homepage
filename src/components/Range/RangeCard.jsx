@@ -10,7 +10,7 @@ function ModelCard({ id, slug, image, title, subtitle, description, tags, style 
 
     return (
         <div className={`range-card ${tags?.join(" ") || ""}`} style={style}>
-            <Link to={`${basePath}/model/${slug}`}>
+            <Link to={`${basePath}/models/${slug}`}>
                 <div className="range-img"><img src={image} alt={title} /></div>
                 <div className="range-info">
                     <p>{subtitle}</p>

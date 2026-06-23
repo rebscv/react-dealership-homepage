@@ -1,9 +1,10 @@
-import "./HeaderVehicleMenu.css";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import models from "../../data/models";
 
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import "./HeaderVehicleMenu.css";
 
 
 function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
@@ -38,90 +39,102 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
     if (isMobile) { return (
 
         <div className="header-vehicle-menu header-vehicle-menu-mobile">
+            <AnimatePresence mode="sync">
 
-            {!mobileCategory ? (
-                <div className="mobile-model-categories">
+                {!mobileCategory ? (
 
-                    <button className="mobile-menu-back" onClick={closeModelMenu}>
-                        <span>←</span><span>Models</span>
-                    </button>
+                    <motion.div className="mobile-model-categories-container" key="categories" initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <div className="mobile-model-categories">
 
-                    {tabs.filter(tab => tab !== "all").map(tab => (
-                        <button key={tab} onClick={() => setMobileCategory(tab)} className="mobile-menu-category">
-                            <span>{tabLabels[tab]}</span><span>›</span>
-                        </button>)
-                    )}
+                            <button className="mobile-menu-back" onClick={closeModelMenu}>
+                                <span className="mobile-menu-back-arrow">←</span>
+                                <span className="mobile-menu-back-title">Models</span>
+                            </button>
 
-                </div>
-            ) : (
-                <div className="mobile-model-list">
+                            {tabs.filter(tab => tab !== "all").map(tab => (
+                                <button key={tab} onClick={() => setMobileCategory(tab)} className="mobile-model-category-button">
+                                    <span>{tabLabels[tab]}</span><span>›</span>
+                                </button>)
+                            )}
 
-                    <button className="mobile-menu-back" onClick={() => setMobileCategory(null)}>
-                        <span>←</span><span>{tabLabels[mobileCategory]}</span>
-                    </button>
+                        </div>
+                    </motion.div>
+                    
+                ) : (
 
-                    {mobileModels.map((model) => (
-                        <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={handleModelClick}>
-                            <div>
-                                <div className="h4">{model.menuTitle}</div>
-                                <div>{model.description}</div>
-                            </div>
-                            <div>
-                                <img src={model.image} alt="{model.menuTitle}" />
-                            </div>                            
-                        </Link>                        
-                    ))}
-                </div>
-            )}
+                    <motion.div className="mobile-model-list-contianer" key={mobileCategory} initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <div className="mobile-model-list">
 
+                            <button className="mobile-menu-back" onClick={() => setMobileCategory(null)}>
+                                <span className="mobile-menu-back-arrow">←</span>
+                                <span className="mobile-menu-back-title">{tabLabels[mobileCategory]}</span>
+                            </button> 
+                            
+                            {mobileModels.map((model) => (
+                                <Link key={model.slug} to={`/version-3/models/${model.slug}`} className="mobile-model-list-button" onClick={handleModelClick}>
+                                    <div className="mobile-model-list-txt">
+                                        <div className="mobile-model-link-title">{model.menuTitle}</div>
+                                        <div className="mobile-model-link-description">{model.description}</div>
+                                    </div>
+                                    <div className="mobile-model-list-img">
+                                        <img src={model.image} alt={model.menuTitle} />
+                                    </div>                            
+                                </Link>                        
+                            ))}                            
+
+                        </div>
+                    </motion.div>
+
+                )}
+
+            </AnimatePresence>
         </div>
-
-
 
     ); }
 
     return (
 
         <div className="header-vehicle-menu">
-            <div className="std-wrapper">
 
-                <div className="grid-d-two-cols d-grid-cols-10-40">
+            <div className="header-vehicle-menu-contianer">
+                <div className="std-wrapper">
+                    <div className="header-vehicle-menu-grid">
 
-                    <div className="header-vehicle-menu-sidebar grid">
 
-                        <div onClick={closeModelMenu}>Models</div>
-
-                        <div className="header-vehicle-menu-sidebar-links">
-                            {tabs.map((tab) => (
-                                <button key={tab} className={`h3 ${activeTab === tab ? "active" : ""}`} onClick={() => setActiveTab(tab)}>
-                                    {tabLabels[tab]}
-                                </button>
-                            ))}
+                        <div className="header-vehicle-menu-categories grid">
+                            
+                            <div className="header-vehicle-menu-categories-title" onClick={closeModelMenu}>Models</div>
+                            <div className="header-vehicle-menu-categories-links">
+                                {tabs.map((tab) => (
+                                    <button key={tab} className={`h3 ${activeTab === tab ? "active" : ""}`} onClick={() => setActiveTab(tab)}>
+                                        {tabLabels[tab]}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
+
+
+                        <div className="header-vehicle-menu-models">
+                            <div className="grid-d-two-cols grid-xl-three-cols">
+                                {filteredModels.map((model, index) => (
+                                    <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={closeModelMenu} style={{ animationDelay: `${index * 0.1}s` }} className="header-vehicle-menu-model">
+                                        <div className="header-vehicle-menu-model-img"><img src={model.image} alt={model.menuTitle} /></div>
+                                        <div className="header-vehicle-menu-model-title">{model.menuTitle}</div>
+                                        <div className="header-vehicle-menu-model-description">{model.description}</div>
+                                    </Link> 
+                                ))}
+                            </div>
+                        </div>
+
+
                     </div>
 
-
-                    <div className="grid-d-four-cols">
-                        {filteredModels.map((model, index) => (
-
-                            <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={closeModelMenu} style={{ animationDelay: `${index * 0.1}s` }} className="header-vehicle-menu-model">
-                                <div>
-                                    <img src={model.image} alt={model.menuTitle} />
-                                    <div className="h4">{model.menuTitle}</div>
-                                    <div>{model.description}</div>
-                                </div>
-                            </Link> 
-
-                        ))}
-                    </div>
-
+                    <div className="header-vehicle-menu-close-btn" onClick={closeModelMenu}><svg className="icon-arrow-up"><use href="/icons.svg#icon-arrow-up"></use></svg></div>
 
                 </div>
-
-
-
-
             </div>
+
+            <div className="header-vehicle-menu-overlay" onClick={closeModelMenu}></div>
         </div>
 
     );

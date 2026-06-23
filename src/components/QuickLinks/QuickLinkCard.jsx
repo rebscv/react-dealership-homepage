@@ -4,7 +4,7 @@ function QuickLinkCard({ title, description, url, image }) {
 
   return (
     <div className="quicklink-card">
-        <a href={url}></a>
+        <Link to={url}></Link>
         <div className="q-img"><img src={image} alt={title} /></div>
         <div className="q-text">
           <h3>{title}</h3>

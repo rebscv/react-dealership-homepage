@@ -48,7 +48,7 @@
 
 @media (max-width:1023px) {
 
-  .version-3-body.show-model-menu {
+  .version-3-body.show-model-nav-menu {
     overflow-y: hidden;
   }
   
@@ -100,7 +100,7 @@
     font-size: 0.6em;
   }
 
-  .show-model-menu .version-3 .model-nav-title svg {
+  .show-model-nav-menu .version-3 .model-nav-title svg {
     transform: rotate(-90deg);
   }
 
@@ -137,12 +137,12 @@
     margin-top: 11px;
   }
 
-  .show-model-menu .version-3 .model-nav-list {
+  .show-model-nav-menu .version-3 .model-nav-list {
     max-height: 2000px;
     padding-top: 16px;
   }
 
-  .show-model-menu .version-3 .model-nav .std-wrapper {
+  .show-model-nav-menu .version-3 .model-nav .std-wrapper {
     height: 100vh;
   }
 

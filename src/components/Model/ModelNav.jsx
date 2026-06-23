@@ -5,22 +5,22 @@ import "./ModelNav.css";
 function ModelNav ({ nav, menuTitle, version }) {
 
   const { title, items, cta } = nav;
-  const [modelMenuOpen, setModelMenuOpen] = useState(false);
-  const toggleModelMenu = () => { if (window.innerWidth < 1024) {setModelMenuOpen(prev => !prev);} };
+  const [modelNavMenuOpen, setModelNavMenuOpen] = useState(false);
+  const toggleModelNavMenu = () => { if (window.innerWidth < 1024) {setModelNavMenuOpen(prev => !prev);} };
 
   useEffect(() => {
-    const handleResize = () => { if (window.innerWidth >= 1024) {setModelMenuOpen(false);} };
+    const handleResize = () => { if (window.innerWidth >= 1024) {setModelNavMenuOpen(false);} };
     window.addEventListener("resize", handleResize);
     return () => { window.removeEventListener("resize", handleResize); };
   }, []);
 
   useEffect(() => {
-      if (modelMenuOpen) { document.body.classList.add("show-model-menu"); } 
-      else { document.body.classList.remove("show-model-menu"); }
-      return () => { document.body.classList.remove("show-model-menu"); };
-  }, [modelMenuOpen]);
+      if (modelNavMenuOpen) { document.body.classList.add("show-model-nav-menu"); } 
+      else { document.body.classList.remove("show-model-nav-menu"); }
+      return () => { document.body.classList.remove("show-model-nav-menu"); };
+  }, [modelNavMenuOpen]);
 
-  const closeModelMenu = () => { setModelMenuOpen(false); };
+  const closeModelMenu = () => { setModelNavMenuOpen(false); };
 
   return (
     <section className="model-nav dark-bg">
@@ -30,7 +30,7 @@ function ModelNav ({ nav, menuTitle, version }) {
 
           
 
-          <div className="model-nav-title h4" onClick={toggleModelMenu}>
+          <div className="model-nav-title h4" onClick={toggleModelNavMenu}>
             <div className="menu-title">{menuTitle}</div>
             <div className="mobile-menu-title">
               Explore
@@ -40,7 +40,7 @@ function ModelNav ({ nav, menuTitle, version }) {
 
           <ul className="model-nav-list">
             {items.map((item, index) => (
-              <li key={index}><a href={item.link} className="smooth-scroll" onClick={toggleModelMenu}>{item.name}</a></li>
+              <li key={index}><a href={item.link} className="smooth-scroll" onClick={toggleModelNavMenu}>{item.name}</a></li>
             ))}
           </ul>
 

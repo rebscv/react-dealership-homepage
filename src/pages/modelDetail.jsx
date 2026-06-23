@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation } from  "react-router-dom";
 import models from "../data/models";
 
@@ -29,6 +29,11 @@ function ModelDetail() {
     const version = location.pathname.split("/")[1];
 
     const model = models.find((m) => m.slug === slug);
+    
+    useEffect(() => {
+        document.body.classList.add("model-body");
+        return () => { document.body.classList.remove("model-body"); };
+    }, [slug]);
 
     const renderSection = (section) => {
 

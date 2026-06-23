@@ -1,46 +1,57 @@
 import useEmblaWithDots from "../../hooks/useEmblaCarouselWithDots";
+import { Link, useLocation } from "react-router-dom"
 import "./HeroSlider.css";
 
-import heroImage1 from "../../assets/images/banners/bt-50-hero-slide.webp";
-import heroImageMobile1 from "../../assets/images/banners/bt-50-hero-slide-m.webp";
+import Bt50Hero from "../../assets/images/banners/bt-50-hero-slide.webp";
+import Bt50HeroMobile from "../../assets/images/banners/bt-50-hero-slide-m.webp";
 
-import heroImage2 from "../../assets/images/banners/cx-5-hero-slide.webp";
-import heroImageMobile2 from "../../assets/images/banners/cx-5-hero-slide-m.webp";
+import cx60Hero from "../../assets/images/banners/cx-60-hero-slide.webp";
+import cx60HeroMobile from "../../assets/images/banners/cx-60-hero-slide-m.webp";
 
-import heroImage3 from "../../assets/images/banners/mx-5-hero-slide.webp";
-import heroImageMobile3 from "../../assets/images/banners/mx-5-hero-slide-m.webp";
+import mx5Hero from "../../assets/images/banners/mx-5-hero-slide.webp";
+import mx5HeroMobile from "../../assets/images/banners/mx-5-hero-slide-m.webp";
 
-const slider = [
-    {
-        id: 1,
-        title: "NEW MAZDA BT-50 UTE",
-        subtitle: "Go all in. Get More Out.",
-        buttonText: "Explore Now",
-        className: "slide-dark",
-        image: heroImage1,
-        imageMobile: heroImageMobile1,
-    },
-    {
-        id: 2,
-        title: "Mazda CX-5",
-        subtitle: "The next generation is here.",
-        buttonText: "Explore Now",
-        className: "slide-dark",
-        image: heroImage2,
-        imageMobile: heroImageMobile2,
-    },
-    {
-        id: 3,
-        title: "MAZDA MX-5",
-        subtitle: "Unrivalled excitement.",
-        buttonText: "Explore Now",
-        className: "slide-dark",
-        image: heroImage3,
-        imageMobile: heroImageMobile3,
-    },
-];
 
 function HeroSlider() {
+
+    const location = useLocation();
+    const version = location.pathname.split("/")[1];
+    const basePath = `/${version}`;
+
+    const slider = [
+
+        {
+            id: 1,
+            title: "NEW MAZDA BT-50 UTE",
+            subtitle: "Go all in. Get More Out.",
+            buttonText: "Explore Now",
+            className: "slide-dark",
+            image: Bt50Hero,
+            imageMobile: Bt50HeroMobile,
+            url: `${basePath}/models/bt-50`
+        },
+        {
+            id: 2,
+            title: "New Mazda CX-60",
+            subtitle: "Look forward to it",
+            buttonText: "Explore Now",
+            className: "slide-dark",
+            image: cx60Hero,
+            imageMobile: cx60HeroMobile,
+            url: `${basePath}/models/cx-60`
+        },
+        {
+            id: 3,
+            title: "MAZDA MX-5",
+            subtitle: "Unrivalled excitement",
+            buttonText: "Explore Now",
+            className: "slide-dark",
+            image: mx5Hero,
+            imageMobile: mx5HeroMobile,
+            url: `${basePath}/models/mx-5`
+        },
+    ];
+
 
     const { emblaRef, emblaApi, selectedIndex, scrollTo, resetAutoplay, scrollNext, scrollPrev, } = useEmblaWithDots({ loop: true }, 4000);
 
@@ -61,7 +72,7 @@ function HeroSlider() {
                                     <div className="hero-text">
                                         <h2>{slide.title}</h2>
                                         <p>{slide.subtitle}</p>
-                                        <div><button className="btn btn-primary">{slide.buttonText}</button></div>
+                                        <div><Link to={slide.url} className="btn btn-primary">{slide.buttonText}</Link></div>
                                     </div>
                                 </div>
                             </div>

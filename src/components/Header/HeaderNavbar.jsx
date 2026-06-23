@@ -1,27 +1,35 @@
-import { Link, NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useState, useEffect, use } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 
 function HeaderNavbar({ closeMenu, toggleModelMenu, closeModelMenu, menuOpen }) {
 
     // const
     const [openSubmenu, setOpenSubmenu] = useState(null);
+    const location = useLocation();
+    const version = location.pathname.split("/")[1] || "version-1";
+
+    // Custom Hook
     const isMobile = useIsMobile(1024);
 
-    // States 
-    const toggleSubmenu = (menu) => { setOpenSubmenu(openSubmenu === menu ? null : menu) };
-
-    // Effects
+    // Helper Functions
+    const toggleSubmenu = (menu) => { setOpenSubmenu(openSubmenu === menu ? null : menu) };   
     const handleParentClick = (menu) => (e) => { if (isMobile) { e.preventDefault(); toggleSubmenu(menu); }};
-    const handleNavClick = () => { setOpenSubmenu(null); closeMenu();};
+    const handleNavClick = () => { setOpenSubmenu(null); closeMenu(); closeModelMenu();};
+    const openMenu = (menu) => { setCurrentMenu(menu); };
+    
+    // Effects
     useEffect(() => { if (!isMobile) { setOpenSubmenu(null); }}, [isMobile]);
     useEffect(() => { if (!menuOpen) { setOpenSubmenu(null); }}, [menuOpen]);
+
+
 
     return (
 
         <nav>
-            <Link to="" onClick={handleNavClick}>Home</Link>
+            <Link to={`/${version}`} className="nav-home-link" onClick={handleNavClick}>Home</Link>
             <Link to="#" className="nav-models-link" onClick={(e) => { e.preventDefault(); toggleModelMenu(); }}>Models</Link>
+
             <Link to="stock" onClick={handleNavClick}>Stock</Link>
             <Link to="offers" onClick={handleNavClick}>Latest Offers</Link>
 

@@ -22,6 +22,12 @@ function HeaderV3() {
     const toggleModelMenu = () => { setModelMenuOpen(prev => !prev); }
     const closeModelMenu = () => { setModelMenuOpen(false); }
 
+    // Helpers
+    const handleLogoClick = () => {
+        closeMenu();
+        closeModelMenu();
+    }
+
     // Effects
     useEffect(() => {
         const handleScroll = () => { setScrolled(window.scrollY > 50); };
@@ -58,7 +64,7 @@ function HeaderV3() {
                 <div className="std-wrapper">
                     <div className="header-grid">
 
-                        <Link to="/version-3" className="header-title" onClick={closeMenu}>
+                        <Link to="/version-3" className="header-title" onClick={handleLogoClick}>
                             <img src={logo} alt="" width="78" height="71" />
                             <h2>Mazda Hometown</h2>
                         </Link>

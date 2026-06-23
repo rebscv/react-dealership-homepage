@@ -1,3 +1,6 @@
+/* =========================
+   Models Nav Menu
+========================= */
 
 .header-vehicle-menu {
     display: none;
@@ -23,69 +26,204 @@
     padding-bottom: var(--padding-tb);
 }
 
+.header-vehicle-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: var(--grid-gap);
+}
+
+.header-vehicle-menu-categories {
+    grid-column: span 1;
+}
+
+.header-vehicle-menu-models {
+    grid-column: span 4;
+}
+
+.version-3 .header-vehicle-menu-model {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.header-vehicle-menu-model-img {
+    transition: ease 0.3s all;
+    padding-bottom: 8px;
+}
+
+.header-vehicle-menu-model:hover .header-vehicle-menu-model-img {
+    transform: translateY(-4px);
+}
+
+.header-vehicle-menu-model-title {
+    font-weight: 500;
+    font-family: var(--font-mazda);
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.header-vehicle-menu-model-description {
+    font-size: 0.8em;
+    color: var(--clr-grey-dk);
+}
+
+.header-vehicle-menu-overlay {
+    content: '';
+    position: fixed;
+    top: 126px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 126px);
+    background: #000000bd;
+    z-index: 1;
+}
+
+.header-vehicle-menu-close-btn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: #b5b5b5 solid 1px;
+    color: #b5b5b5;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 9px 9px 9px 9px;
+    top: 52px;
+    position: relative;
+    font-size: 12px;
+    transition: ease 0.3s all;
+}
+
+.header-vehicle-menu-close-btn:hover {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    border: var(--clr-primary) solid 1px;
+}
+
 @media (min-width: 1024px) {
+
+    .header-vehicle-menu-contianer {
+        background-color: var(--clr-white);
+        position: relative;
+        z-index: 5;   
+    }
+
     .version-3 .header-v3 .header-vehicle-menu .std-wrapper {
         padding-top: var(--padding-tb-d);
         padding-bottom: var(--padding-tb-d);
+        background-color: white;     
     }
 
     .header-vehicle-menu {
-        top: 113px;
-        height: auto;
-        overflow-y: auto;
+        top: 114px;
+        height: unset;
+        overflow-y: scroll;
+        max-height: calc(100% - 114px);
+    }
+
+    .header-v3.scrolled .header-vehicle-menu {
+        top: 78px;
+        max-height: calc(100% - 78px);
+    }
+
+    body.version-3-body.show-model-menu {
+        overflow-y: hidden;
+    } 
+    
+    .header-vehicle-menu .header-vehicle-menu-models > div {
+        row-gap: 48px;
     }
 
 }
 
+@media (min-width: 1280px) {
 
+    .header-vehicle-menu {
+        top: 126px;
+        max-height: calc(100% - 125px);
+    }
 
+    .header-v3.scrolled .header-vehicle-menu {
+        top: 90px;
+    }
 
-.header-vehicle-menu-sidebar {
+}
+
+@media (min-width: 1440px) {
+
+    .header-vehicle-menu .header-vehicle-menu-models > div {
+        row-gap: 64px;
+    }
+}
+
+/* =========================
+   Models Nav Menu - Sidebar
+========================= */
+
+.header-vehicle-menu-categories {
     align-content: start;
 }
 
-.header-vehicle-menu-sidebar-links {
+.header-vehicle-menu-categories-links {
     display: grid;
     gap: var(--grid-gap);    
 }
 
-.header-vehicle-menu-sidebar-links button {
+.header-vehicle-menu-categories-title {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.header-vehicle-menu-categories-links button {
     color: var(--clr-grey-dk);
     padding: 0;
     border: none;
     background-color: transparent;
     text-align: left;
     font-family: var(--font-mazda);    
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
-.version-3 .header-vehicle-menu-sidebar-links button {
+.version-3 .header-vehicle-menu-categories-links button {
     text-transform: none;
 }
 
-.header-vehicle-menu-sidebar-links button.active {
+.header-vehicle-menu-categories-links button.active {
     color: var(--clr-black);
 }
 
 
-
-
-.version-3 .header-vehicle-menu-model {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: fadeUp 0.5s ease forwards;
-}
-
-
-
-
-
-
-
+/* =========================
+   Mobile - Models Nav Menu
+========================= */
 
 .header-vehicle-menu-mobile {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: block;
+}
+
+.show-model-menu .header-vehicle-menu-mobile {
+    transform: translateX(0);
+}
+
+.mobile-model-categories-container, .mobile-model-list-contianer {
     padding: 32px 24px 128px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .header-vehicle-menu-mobile button {
@@ -93,18 +231,20 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    padding: 8px 0;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
+/* =========================
+   Mobile - Models Nav Menu | First Level - Category
+========================= */
 
 .mobile-model-categories {
     display: grid;
     justify-items: start;  
-    gap: 16px;  
+    gap: 24px;
 }
 
-.mobile-menu-category {
+.mobile-model-category-button {
     display: grid;
     width: 100%;
     grid-auto-flow: column;
@@ -113,25 +253,108 @@
     line-height: 1;
 }
 
-.mobile-menu-category span:nth-child(2) {
+.mobile-model-category-button span:nth-child(2) {
     font-size: 2em;
 }
+
+/* =========================
+   Mobile - Models Nav Menu | Second Level - Models
+========================= */
+
+.mobile-model-list {
+    display: grid;
+    gap: 32px;
+}
+
+.mobile-model-list-button {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    border-bottom: solid 1px var(--clr-grey-border);
+    padding-bottom: 32px;
+    line-height: 1em;
+}
+
+.mobile-model-list-button:last-child {
+    border: none;
+}
+
+.mobile-model-list-button .mobile-model-list-txt {
+    grid-column: span 2;
+    display: grid;
+    align-content: center;
+    gap: 12px;
+}
+
+.mobile-model-list-button .mobile-model-list-img {
+    grid-column: span 3;
+}
+
+.mobile-model-link-title {
+    font-size: 1.5em;
+    font-family: var(--font-mazda);
+    font-weight: 500;
+    color: var(--clr-dark-grey);
+    line-height: 1em;
+}
+
+.mobile-model-link-description {
+    font-size: 0.8em;
+    color: var(--clr-grey-dk);
+}
+
+@media (min-width:576px) {
+
+    .mobile-model-list-button {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .mobile-model-list-button .mobile-model-list-txt {
+        grid-column: span 2;
+    }
+
+    .mobile-model-list-button .mobile-model-list-img {
+        grid-column: span 5;
+    }
+
+    .mobile-model-link-title {
+        font-size: 1.8em;
+    }
+
+    .mobile-model-link-description {
+        font-size: 0.8em;
+    }
+
+    .mobile-model-list-button .mobile-model-list-img img {
+        max-height: 180px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
+
+
+/* =========================
+   Mobile - Models Nav Menu | Title and Back Button for First & Second Levels
+========================= */
 
 .header-vehicle-menu-mobile .mobile-menu-back {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     width: 100%;
     border-bottom: solid 1px var(--clr-grey-border);
     padding: 16px 0;
 }
 
-.mobile-menu-back span {
-    font-size: 1.3em;
+.mobile-menu-back .mobile-menu-back-title {
+    font-size: 0.8em;
     font-weight: 600;
     grid-column: span 1;
 }
 
-
-.mobile-menu-back span:nth-child(1) {
+.mobile-menu-back .mobile-menu-back-arrow {
     text-align: left;    
 }
+
