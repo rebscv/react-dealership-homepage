@@ -28,6 +28,11 @@ footer h4 {
     display: grid;
 }
 
+.version-2 .foot-head {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* =========================
    Footer - Version 3
@@ -120,6 +125,10 @@ footer h4 {
     }
     
     .version-3 .footer-col.hidden {
+        border-bottom: solid 1px var(--clr-footer-border);
+    }
+
+    .version-3 .grid-footer-cols .footer-col > div:last-child {
         border-bottom: solid 1px var(--clr-footer-border);
     }
     

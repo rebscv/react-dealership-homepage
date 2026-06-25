@@ -23,14 +23,28 @@
 .model-hero .model-hero-title {
   font-size: 0.8em;
   letter-spacing: 0.35em;
+  display: grid;
+  gap: 8px;
 }
 
-.model-hero-tagline {
+
+
+.model-hero .model-hero-title span {
+  font-size: 3em;  
+  line-height: 1em;
+}
+
+.model-hero .model-hero-title span.model-hero-title-eyebrow {
+  font-size: 1em;
+  letter-spacing: 0.35em;
+}
+
+.model-hero-tagline, .model-hero-tagline {
   letter-spacing: 0.15em;
   font-size: 2em;
 }
 
-.model-hero-title, .model-hero-tagline {
+.model-hero-title {
   line-height: 1em;
 }
 
@@ -42,12 +56,12 @@
 
 @media (min-width: 768px) {
 
-  .model-hero .model-hero-title {
-    font-size: 1em;
+  .model-hero .model-hero-title span {
+    font-size: 3.5em;
   }
 
-  .model-hero-tagline {
-    font-size: 2.5em;
+  .model-hero .model-hero-title span.model-hero-title-eyebrow {
+    font-size: 1.2em;
   }
 
   .model-hero img {
@@ -59,9 +73,10 @@
 }
 
 @media (min-width: 1024px) {
+
     .model-hero img {
-        height: calc(100vh - 138px);
-        object-fit: cover;
+      height: calc(100vh - 138px);
+      object-fit: cover;
     }
 
   .model-hero-text {
@@ -73,13 +88,12 @@
     gap: 16px;
   }
 
-  .model-hero .model-hero-title {
-    font-size: 1.2em;
-    letter-spacing: 0.35em;
+  .model-hero .model-hero-title span {
+    font-size: 6em;
   }
 
-  .model-hero-tagline {
-    font-size: 4em;
+  .model-hero .model-hero-title span.model-hero-title-eyebrow {
+    font-size: 1.8em;
   }
 
 }

@@ -1,16 +1,57 @@
 /* =========================
-   Models Nav Menu
+   Version 3 - Models Nav Menu
 ========================= */
 
-.header-vehicle-menu {
+.version-1 .header-vehicle-menu {
     display: none;
 }
 
-.show-model-menu .header-vehicle-menu {
+/* =========================
+   Version 2 - Models Nav Menu
+========================= */
+
+.version-2 .header-vehicle-menu {
+    display: none;
+}
+
+
+.version-2-body.show-model-menu .version-2 .header-vehicle-menu {
     display: block;
 }
 
-.header-vehicle-menu {
+.version-2 .header-vehicle-menu-close-btn {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media (max-width:1023px) {
+
+    .version-2-body.show-model-menu .version-2 .header-vehicle-menu {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 12;
+        background-color: var(--clr-white);
+        border-top: var(--clr-grey-border) solid 1px;
+    }
+}
+
+
+/* =========================
+   Version 3 - Models Nav Menu
+========================= */
+
+.version-3 .header-vehicle-menu {
+    display: none;
+}
+
+.show-model-menu .version-3  .header-vehicle-menu {
+    display: block;
+}
+
+.version-3 .header-vehicle-menu {
     position: fixed;
     top: 73px;
     width: 100%;
@@ -28,16 +69,16 @@
 
 .header-vehicle-menu-grid {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(7,1fr);
     gap: var(--grid-gap);
 }
 
 .header-vehicle-menu-categories {
-    grid-column: span 1;
+    grid-column: span 2;
 }
 
 .header-vehicle-menu-models {
-    grid-column: span 4;
+    grid-column: span 5;
 }
 
 .version-3 .header-vehicle-menu-model {
@@ -65,6 +106,7 @@
     font-family: var(--font-mazda);
     font-size: 1.2em;
     letter-spacing: 0.1em;
+    color: var(--clr-black)
 }
 
 .header-vehicle-menu-model-description {
@@ -72,7 +114,7 @@
     color: var(--clr-grey-dk);
 }
 
-.header-vehicle-menu-overlay {
+.version-3 .header-vehicle-menu-overlay {
     content: '';
     position: fixed;
     top: 126px;
@@ -83,7 +125,7 @@
     z-index: 1;
 }
 
-.header-vehicle-menu-close-btn {
+.version-3 .header-vehicle-menu-close-btn {
     cursor: pointer;
     display: block;
     margin: 0 auto;
@@ -99,7 +141,7 @@
     transition: ease 0.3s all;
 }
 
-.header-vehicle-menu-close-btn:hover {
+.version-3 .header-vehicle-menu-close-btn:hover {
     background: var(--clr-primary);
     color: var(--clr-white);
     border: var(--clr-primary) solid 1px;
@@ -119,14 +161,14 @@
         background-color: white;     
     }
 
-    .header-vehicle-menu {
+    .version-3 .header-vehicle-menu {
         top: 114px;
         height: unset;
         overflow-y: scroll;
         max-height: calc(100% - 114px);
     }
 
-    .header-v3.scrolled .header-vehicle-menu {
+    .version-3 .header-v3.scrolled .header-vehicle-menu {
         top: 78px;
         max-height: calc(100% - 78px);
     }
@@ -139,22 +181,42 @@
         row-gap: 48px;
     }
 
+    .version-3 .header-vehicle-menu-model-img img {
+        max-width: 240px;
+    }
+
 }
 
 @media (min-width: 1280px) {
 
-    .header-vehicle-menu {
+    .version-3 .header-vehicle-menu {
         top: 126px;
         max-height: calc(100% - 125px);
     }
 
-    .header-v3.scrolled .header-vehicle-menu {
+    .version-3 .header-v3.scrolled .header-vehicle-menu {
         top: 90px;
+    }
+
+    .version-3 .header-vehicle-menu-model-img img {
+        max-width: 100%;
     }
 
 }
 
 @media (min-width: 1440px) {
+
+    .header-vehicle-menu-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }    
+
+    .header-vehicle-menu-categories {
+        grid-column: span 1;
+    }
+
+    .header-vehicle-menu-models {
+        grid-column: span 4;
+    }
 
     .header-vehicle-menu .header-vehicle-menu-models > div {
         row-gap: 64px;
@@ -303,6 +365,12 @@
     color: var(--clr-grey-dk);
 }
 
+.version-3 .mobile-model-list-txt .range-card-badge {
+    position: relative;
+    font-size: 0.5em;
+    width: max-content;
+}
+
 @media (min-width:576px) {
 
     .mobile-model-list-button {
@@ -331,6 +399,10 @@
         display: block;
         margin: 0 auto;
     }
+
+    .version-3 .mobile-model-list-txt .range-card-badge {
+        font-size: 0.65em;
+    }
     
 }
 
@@ -341,17 +413,20 @@
 
 .header-vehicle-menu-mobile .mobile-menu-back {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     align-items: center;
     width: 100%;
     border-bottom: solid 1px var(--clr-grey-border);
     padding: 16px 0;
 }
 
+.mobile-menu-back span {
+    grid-column: span 1;
+}
 .mobile-menu-back .mobile-menu-back-title {
     font-size: 0.8em;
     font-weight: 600;
-    grid-column: span 1;
+    grid-column: span 7;
 }
 
 .mobile-menu-back .mobile-menu-back-arrow {

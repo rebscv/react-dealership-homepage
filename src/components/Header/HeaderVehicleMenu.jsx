@@ -10,11 +10,11 @@ import "./HeaderVehicleMenu.css";
 function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
 
     // Constants
-    const tabs = ["all", "suv", "ute", "sports"];
-    const tabLabels = {all: "All", suv: "SUV", ute: "Ute", sports: "Sports"};    
+    const tabs = [ "featured", "suv", "ute", "sports", "hatchSedan", "electricHybrid" ];
+    const tabLabels = { featured: "Featured", suv: "SUVs", ute: "Utes", sports: "Sports", hatchSedan: "Hatch & Sedans", electricHybrid: "Eletric & Hybrid" };
 
     // States
-    const [activeTab, setActiveTab] = useState("all");
+    const [activeTab, setActiveTab] = useState("featured");
     const [mobileCategory, setMobileCategory] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);    
 
@@ -75,6 +75,7 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
                                     <div className="mobile-model-list-txt">
                                         <div className="mobile-model-link-title">{model.menuTitle}</div>
                                         <div className="mobile-model-link-description">{model.description}</div>
+                                        {model.isFeaturedPage && ( <span className="range-card-badge">Featured Model</span> )}
                                     </div>
                                     <div className="mobile-model-list-img">
                                         <img src={model.image} alt={model.menuTitle} />
@@ -115,9 +116,10 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
 
 
                         <div className="header-vehicle-menu-models">
-                            <div className="grid-d-two-cols grid-xl-three-cols">
+                            <div key={activeTab} className="grid-d-two-cols grid-xl-three-cols">
                                 {filteredModels.map((model, index) => (
                                     <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={closeModelMenu} style={{ animationDelay: `${index * 0.1}s` }} className="header-vehicle-menu-model">
+                                        {model.isFeaturedPage && ( <span className="range-card-badge">Featured Model</span> )}
                                         <div className="header-vehicle-menu-model-img"><img src={model.image} alt={model.menuTitle} /></div>
                                         <div className="header-vehicle-menu-model-title">{model.menuTitle}</div>
                                         <div className="header-vehicle-menu-model-description">{model.description}</div>

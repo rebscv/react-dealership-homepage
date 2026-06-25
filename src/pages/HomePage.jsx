@@ -28,7 +28,7 @@ function HomePage() {
 
         <section className="welcome-section">
           <div className="std-wrapper">
-            <div className="grid-l-two-cols grid-l-reverse">
+            <div className="grid-d-two-cols grid-d-reverse">
 
 
               <div className="centre-img">

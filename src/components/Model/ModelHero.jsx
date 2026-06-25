@@ -1,6 +1,6 @@
 import "./modelhero.css"
 
-function ModelHero ({ title, tagline, image, imageMobile }) {
+function ModelHero ({ title, tagline, titleEyebrow, image, imageMobile }) {
 
   return (
     <section className="model-hero">
@@ -14,8 +14,8 @@ function ModelHero ({ title, tagline, image, imageMobile }) {
 
             <div className="model-hero-text-container">
                 <div className="model-hero-text">
-                  <h1 className="model-hero-title">{title}</h1>
-                  <p className="model-hero-tagline">{tagline}</p>
+                  
+                  {title && <h1 className="model-hero-title">{titleEyebrow && <span className="model-hero-title-eyebrow">{titleEyebrow}</span>}<span>{title}</span> </h1>}
                 </div>
             </div>
 

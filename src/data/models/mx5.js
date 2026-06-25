@@ -51,11 +51,12 @@ const mx5Model = {
   id            : 5,
   slug          : "mx-5",
   title         : "Mazda MX-5",
-  menuTitle      : "MX-5",
+  menuTitle     : "MX-5",
   subtitle      : "",
   description   : "Soft Top",
-  tags          : ["sports"],
+  tags          : ["sports", "featured"],
   image         : mx5,
+  isFeaturedPage: true,
   sections      :[
     { type: "hero",
       data: "hero"
@@ -114,8 +115,8 @@ const mx5Model = {
   },
 
   hero: {
-    title         : "MAZDA MX-5",
-    tagline       : "UNRIVALLED EXCITEMENT",
+    titleEyebrow  : "MAZDA MX-5",
+    title         : "Unrivalled Excitement",
     image         : hero,
     imageMobile   : heroMobile,
   },

@@ -44,6 +44,11 @@
   padding-bottom: 48px;
 }
 
+.version-3 .model-bt-50 .model-hero-title {
+    letter-spacing: 0.05em;
+}
+
+
 @media (min-width: 1024px) {
 
     .version-3 .model-bt-50 .section-break-btm {

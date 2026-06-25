@@ -1,0 +1,52 @@
+.model-related-card {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.model-related-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.model-related-img {
+  padding-bottom: 16px;
+}
+
+.model-related-img img {
+  display: block;
+  transition: ease 0.5s all;
+  max-width: 240px;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.model-related-card:hover .model-related-img img {
+  transform: translateY(-8px);
+}
+
+.model-related-card h3 {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.model-related-card p {
+  color: var(--clr-grey-dk);
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 576px) {
+
+  .model-related-img img {
+    max-width: none;
+  }
+  
+}

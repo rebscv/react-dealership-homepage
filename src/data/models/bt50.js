@@ -92,17 +92,15 @@ const bt50Model = {
   menuTitle     : "BT-50",
   subtitle      : "New",
   description   : "Single | Freestyle | Dual Cab",
-  tags          : ["ute"],
+  tags          : ["ute", "featured"],
   image         : bt50,
+  isFeaturedPage: true,
   sections      :[
     { type: "hero",
       data: "hero"
     },
     { type: "highlights",
       data: "highlights"
-    },
-    { type: "intro",
-      data: "intro"
     },
     {
       type: "modelTextBgImage",

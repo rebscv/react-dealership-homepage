@@ -1,6 +1,4 @@
-.featured {
-  padding: 40px;
-}
+
 
 .vehicle-grid {
   display: grid;
@@ -22,8 +20,12 @@
 
 
 
-
+.version-3 .featured {
+  padding: 40px;
+}
 
 .version-3 .vehicle-card img {
   width: 100%;
 }
+
+

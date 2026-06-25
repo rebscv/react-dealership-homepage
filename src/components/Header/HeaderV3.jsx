@@ -23,10 +23,7 @@ function HeaderV3() {
     const closeModelMenu = () => { setModelMenuOpen(false); }
 
     // Helpers
-    const handleLogoClick = () => {
-        closeMenu();
-        closeModelMenu();
-    }
+    const handleLogoClick = () => { closeMenu(); closeModelMenu(); }
 
     // Effects
     useEffect(() => {

@@ -142,7 +142,7 @@
 
   .version-3 .page-hero-video video {
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
   }
 
 }

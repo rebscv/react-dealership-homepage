@@ -123,8 +123,23 @@
   .version-3 .btn-flex .btn {
     text-align: center;
   }
-
     
+}
+
+@media (max-width:1023) {
+  
+  .version-3 .t-center-below-d {
+    text-align: center;
+  }
+
+}
+
+@media (max-width:767px) {
+  
+  .version-3 .t-center-below-t {
+    text-align: center;
+  }
+
 }
 
 
@@ -227,7 +242,7 @@
   background-color: var(--clr-black);
 }
 
-.version-3 .btn-underline {
+.version-3 .btn-underline, .version-3 a.btn-underline {
   color: var(--clr-primary);
   border-bottom: solid 1px var(--clr-primary);
   letter-spacing: 0;
@@ -517,9 +532,13 @@
 
 @media (max-width:1023px) {
 
-  .version-3 .full-wrapper .grid-d-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols .center-content > div {
+  .version-3 .full-wrapper .grid-d-two-cols .center-content > div {
     /* padding: 0 var(--padding-lr) var(--padding-tb) ; */
     padding: 0 0 var(--padding-tb) ;
+  }
+
+  .version-3 .lrg-wrapper .grid-d-two-cols .center-content > div {
+    padding: 0 var(--padding-lr) var(--padding-tb);
   }
 
   .version-3 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-d-two-cols.no-gaps .center-content > div {
@@ -531,8 +550,8 @@
 @media (max-width:767px) {
 
   .version-3 .full-wrapper .grid-l-two-cols .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols .center-content > div {
-    /* padding: 0 var(--padding-lr) var(--padding-tb); */
-    padding: 0 0 var(--padding-tb);
+    padding: 0 var(--padding-lr) var(--padding-tb); */
+    /* padding: 0 0 var(--padding-tb); */
   }
 
   .version-3 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div, .version-3 .lrg-wrapper .grid-l-two-cols.no-gaps .center-content > div {
@@ -616,6 +635,7 @@
   transition: ease 0.4s all;
   color: var(--clr-grey-dk);
   grid-column: span 1;
+  text-wrap-mode: nowrap;  
 }
 
 .version-3 .default-tabs button.active {

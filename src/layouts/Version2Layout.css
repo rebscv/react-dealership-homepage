@@ -4,6 +4,11 @@
 
 .version-2 a {
   text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.version-2 a:hover {
+  color: var(--clr-black);
 }
 
 .version-2 {
@@ -28,29 +33,93 @@
     color: var(--clr-white);
 }
 
+.version-2 .btn, .version-2 a.btn {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.version-2 .btn:hover, .version-2 a.btn:hover {
+  background-color: var(--clr-dark-grey);
+}
+
+.version-2 .btn-flex {
+  display: flex;
+  gap: 16px;
+}
+
+.version-2 img {
+    max-width: 100%;
+}
+
+/* =========================
+   Fonts
+========================= */
+
+.version-2 h1, .version-2 h2, .version-2 h3, .version-2 h4, .version-2 .h1, .version-2 .h2, .version-2 .h3, .version-2 .h4 {
+  font-weight: 700;
+}
+
+.version-2 h1, .version-2 h2, .version-2 h3, .version-2 h4, .version-2 .h1, .version-2 .h2, .version-2 .h3, .version-2 .h4, .version-2 p {
+  margin: 0;
+}
+
+.version-2 h1, .version-2 h2, .version-2 h3, .version-2 h4, .version-2 .h1, .version-2 .h2, .version-2 .h3, .version-2 .h4 {
+  line-height: 1em;
+}
+
+.version-2 p {
+  line-height: 1.5em;
+}
+
 /* =========================
    Wrapper
 ========================= */
 
-.version-2 .std-wrapper {
+.version-2 .std-wrapper, .version-2 .sml-wrapper, .version-2 .lrg-wrapper, .version-2 .full-wrapper {
+  display: grid;
+  gap: var(--wrapper-gap);
+}
+
+.version-2 .std-wrapper, .version-2 .sml-wrapper, .version-2 .lrg-wrapper {
   padding: var(--padding-tb) var(--padding-lr);
+}
+
+.version-2 .full-wrapper {
+  padding: 0
+}
+
+.version-2 .std-wrapper.no-padding-bottom, .version-2 .sml-wrapper.no-padding-bottom, .version-2 .lrg-wrapper.no-padding-bottom, .version-2 .full-wrapper.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.version-2 .std-wrapper.no-padding-top, .version-2 .sml-wrapper.no-padding-top, .version-2 .lrg-wrapper.no-padding-top, .version-2 .full-wrapper.no-padding-top {
+  padding-top: 0;
 }
 
 @media (min-width:1024px) {
 
-  .version-2 .std-wrapper {
-    padding: var(--padding-tb-d) var(--padding-lr-d);
+  .version-2 .std-wrapper, .version-2 .sml-wrapper, .version-2 .lrg-wrapper, .version-2 .full-wrapper {
+    gap: var(--wrapper-gap-d);
   }
 
+  .version-2 .std-wrapper, .version-2 .sml-wrapper, .version-2 .lrg-wrapper {
+    padding: var(--padding-tb-d) var(--padding-lr-d);
+  }
+  
 }
+
 
 /* =========================
    Grid Columns Layout
 ========================= */
 
-.version-2 .grid, .version-2 .grid-m-two-cols, .version-2 .grid-m-three-cols, .version-2 .grid-m-four-cols, .grid-m-five-cols, .version-2 .grid, .version-2 .grid-t-two-cols, .version-2 .grid-t-three-cols, .version-2 .grid-t-four-cols, .grid-t-five-cols, .version-2 .grid, .version-2 .grid-l-two-cols, .version-2 .grid-l-three-cols, .version-2 .grid-l-four-cols, .grid-l-five-cols, .version-2 .grid, .version-2 .grid-d-two-cols, .version-2 .grid-d-three-cols, .version-2 .grid-d-four-cols, .grid-d-five-cols, .version-2 .grid, .version-2 .grid-xl-two-cols, .version-2 .grid-xl-three-cols, .version-2 .grid-xl-four-cols, .grid-xl-five-cols {
+.version-2 .grid, .version-2 .grid-m-two-cols, .version-2 .grid-m-three-cols, .version-2 .grid-m-four-cols, .grid-m-five-cols,  .version-2 .grid-t-two-cols, .version-2 .grid-t-three-cols, .version-2 .grid-t-four-cols, .grid-t-five-cols,  .version-2 .grid-l-two-cols, .version-2 .grid-l-three-cols, .version-2 .grid-l-four-cols, .grid-l-five-cols,  .version-2 .grid-d-two-cols, .version-2 .grid-d-three-cols, .version-2 .grid-d-four-cols, .grid-d-five-cols,  .version-2 .grid-xl-two-cols, .version-2 .grid-xl-three-cols, .version-2 .grid-xl-four-cols, .grid-xl-five-cols {
   display: grid;
   gap: var(--grid-gap);
+}
+
+.version-2 .grid-m-two-cols.no-gaps, .version-2 .grid-m-three-cols.no-gaps, .version-2 .grid-m-four-cols.no-gaps, .grid-m-five-cols.no-gaps,  .version-2 .grid-t-two-cols.no-gaps, .version-2 .grid-t-three-cols.no-gaps, .version-2 .grid-t-four-cols.no-gaps, .grid-t-five-cols.no-gaps,  .version-2 .grid-l-two-cols.no-gaps, .version-2 .grid-l-three-cols.no-gaps, .version-2 .grid-l-four-cols.no-gaps, .grid-l-five-cols.no-gaps,  .version-2 .grid-d-two-cols.no-gaps, .version-2 .grid-d-three-cols.no-gaps, .version-2 .grid-d-four-cols.no-gaps, .grid-d-five-cols.no-gaps,  .version-2 .grid-xl-two-cols.no-gaps, .version-2 .grid-xl-three-cols.no-gaps, .version-2 .grid-xl-four-cols.no-gaps, .grid-xl-five-cols.no-gaps {
+  gap: 0;
 }
 
 .version-2 .grid > div, .version-2 .grid-d-two-cols > div, .version-2 .grid-d-three-cols > div, .version-2 .grid-d-four-cols > div, .grid-d-five-cols > div, .version-2 .grid-l-two-cols > div, .version-2 .grid-l-three-cols > div, .version-2 .grid-l-four-cols > div, .grid-l-five-cols > div, .version-2 .grid-t-two-cols > div, .version-2 .grid-t-three-cols > div, .version-2 .grid-t-four-cols > div, .grid-t-five-cols > div, .version-2 .grid-m-two-cols > div, .version-2 .grid-m-three-cols > div, .version-2 .grid-m-four-cols > div, .grid-m-five-cols > div {
@@ -167,6 +236,7 @@
   align-items: center;
 }
 
+
 .version-2 .center-img img {
   object-fit: cover;
   height: 100%;
@@ -178,9 +248,27 @@
   object-fit: cover;
 }
 
-
-
 @media (min-width:768px) {
+
+  .version-2 .grid-l-two-cols .center-content > div {
+    padding-top: var(--padding-tb);
+    padding-bottom: var(--padding-tb);
+    padding-right: var(--padding-tb);
+  }
+
+  .version-2 .grid-l-two-cols.grid-l-reverse .center-content > div {
+    padding-right: 0;
+    padding-left: var(--padding-tb-d);
+  }
+
+  .version-2 .grid-l-two-cols.no-gaps .center-content > div {
+    padding-left: var(--padding-tb);
+  }
+
+  .version-2 .grid-l-two-cols.grid-l-reverse.no-gaps .center-content > div {
+    padding-right: var(--padding-tb);
+  }
+
 
   .grid-l-reverse {
     direction: rtl;
@@ -194,6 +282,17 @@
 
 @media (min-width:1024px) {
 
+  .version-2 .grid-d-two-cols .center-content > div {
+    padding-top: var(--padding-tb-d);
+    padding-bottom: var(--padding-tb-d);
+    padding-right: var(--padding-tb-d);
+  }
+
+  .version-2 .grid-d-two-cols.grid-d-reverse .center-content > div {
+    padding-right: 0;
+    padding-left: var(--padding-tb-d);
+  }
+
   .grid-d-reverse {
     direction: rtl;
   }
@@ -202,4 +301,112 @@
     direction: ltr;
   }
 
+}
+
+@media (max-width:1023px) {
+
+  .version-2 .full-wrapper .grid-d-two-cols .center-content > div {
+    /* padding: 0 var(--padding-lr) var(--padding-tb) ; */
+    padding: 0 0 var(--padding-tb) ;
+  }
+
+  .version-2 .lrg-wrapper .grid-d-two-cols .center-content > div {
+    padding: 0 var(--padding-lr) var(--padding-tb);
+  }
+
+  .version-2 .full-wrapper .grid-d-two-cols.no-gaps .center-content > div, .version-2 .lrg-wrapper .grid-d-two-cols.no-gaps .center-content > div {
+    padding-top: var(--padding-tb);
+  }
+  
+}
+
+@media (max-width:767px) {
+
+  .version-2 .full-wrapper .grid-l-two-cols .center-content > div, .version-2 .lrg-wrapper .grid-l-two-cols .center-content > div {
+    padding: 0 var(--padding-lr) var(--padding-tb); */
+    /* padding: 0 0 var(--padding-tb); */
+  }
+
+  .version-2 .full-wrapper .grid-l-two-cols.no-gaps .center-content > div, .version-2 .lrg-wrapper .grid-l-two-cols.no-gaps .center-content > div {
+    padding-top: var(--padding-tb);
+  }
+  
+}
+
+
+/* =========================
+   Grid Columns
+========================= */
+
+@media (min-width:1024px) {
+  
+  .version-2 .grid-d-two-cols.d-grid-cols-40-60 {
+    grid-template-columns: 2fr 3fr;
+  }
+  .version-2 .grid-d-two-cols.d-grid-cols-60-40 {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .version-2 .grid-d-two-cols.d-grid-cols-10-40 {
+    grid-template-columns: 1fr 4fr;
+  }
+  
+}
+
+
+/* =========================
+   Grid Columns Block Styles
+========================= */
+
+.block-col {
+  border: solid 1px var(--clr-grey-border);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.grey-bg .block-col {
+  background-color: #ffffff;
+}
+
+/* =========================
+   Tabs Styles
+========================= */
+
+.version-2 .default-tabs {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.version-2 .default-tabs button {
+  border: var(--clr-black) solid 1px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  padding: 16px
+}
+
+.version-2 .default-tabs button.active {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
+@media (min-width:768px) {
+
+  .version-2 .default-tabs {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .version-2 .default-tabs {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(8,1fr);
+  }
+  
 }

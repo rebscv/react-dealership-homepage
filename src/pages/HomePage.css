@@ -1,3 +1,16 @@
+/* =========================
+   Home Page - Version 2
+========================= */
+
+.version-2 .welcome-section h1 span {
+    font-size: 0.5em;
+    display: block;
+}
+
+/* =========================
+   Home Page - Version 3
+========================= */
+
 .version-3 .welcome-section h1 span {
     display: block;
     font-size: 0.35em;
@@ -9,6 +22,18 @@
 
     .version-3 .welcome-section h1 span {
         font-size: 0.5em;
+    }
+
+     .version-3 .welcome-section .btn-flex {
+        flex-direction: column;
+        align-items: flex-start;
+}
+    
+}
+@media (min-width:1280px) {
+
+     .version-3 .welcome-section .btn-flex {
+        flex-direction: row;
 }
     
 }

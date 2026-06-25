@@ -19,6 +19,7 @@ import ModelTextBgImage from "../components/model/ModelTextBgImage";
 import ModelColumnSlider from "../components/model/ModelColumnSlider";
 import ModelColumns from "../components/model/ModelColumns";
 import ModelColumnTextImage from "../components/model/ModelColumnTextImage";
+import ModelRelated from "../components/model/ModelRelated";
 
 
 
@@ -53,6 +54,7 @@ function ModelDetail() {
             case "modelColumnSlider": return ( <ModelColumnSlider {...model[section.data]} /> );
             case "modelColumns": return ( <ModelColumns {...model[section.data]} /> );
             case "modelColumnTextImage": return ( <ModelColumnTextImage {...model[section.data]} /> );
+            case "modelRelated": return ( <ModelRelated {...model[section.data]} /> );
 
             default: return null;
         }     

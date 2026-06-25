@@ -1,6 +1,6 @@
 
 /* =========================
-   Version 3 Styles
+   Version 2 Styles
 ========================= */
 
 .version-2 .range-card {
@@ -19,7 +19,7 @@
 .version-2 .range-card a {
     padding: 0 24px;
     display: grid;
-    gap: 16px;
+    gap: 4px;
 }
 
 .version-2 .range-card img {
@@ -27,9 +27,25 @@
     width: 100%;
 }
 
+
+
 .version-2 .range-info {
     display: grid;
     gap: 8px;
+}
+
+.version-2 .range-card .range-card-badge {
+    display: none;
+}
+
+.version-2 .range-card .range-info .range-card-badge {
+    display: block;
+    font-size: 0.6em;
+    background-color: var(--clr-dark-grey);
+    color: var(--clr-white);
+    width: fit-content;
+    line-height: 1em;
+    padding: 4px;
 }
 
 .version-2 .range-card a h4 {
@@ -62,6 +78,7 @@
     .version-2 .range-info {
         text-align: left;
         grid-column: span 4;
+        justify-items: end;
     }
 
     .version-2 .range-card h4 {
@@ -84,8 +101,12 @@
 
 .version-3 .range-card {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(-16px);
     animation: fadeUp 0.5s ease forwards;
+}
+
+.version-3 .range-card.featured {
+    padding: 0;
 }
 
 @keyframes fadeUp {
@@ -99,11 +120,13 @@
     padding: 0 24px;
     display: grid;
     gap: 16px;
+    position: relative;
 }
 
 .version-3 .range-card img {
     max-width: 360px;
     width: 100%;
+    position: relative;
 }
 
 .range-info {
@@ -121,7 +144,45 @@
     line-height: 1.2em;
 }
 
+.version-3 .range-card-badge {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    padding: 4px 12px;
+    border-radius: 24px;
+    position: absolute;
+    right: 0;
+    background: none;
+    top: 0;
+    z-index: 1;
+    background-color: var(--clr-dark-grey);
+    color: #fff;
+}
+
+.version-3 .range-info .range-card-badge {
+    display: none;
+}
+
+@media (min-width:1024px) {
+
+    .version-3 .range-card img {
+        max-width: 260px;
+    }
+
+
+}
+
+@media (min-width:1280px) {
+
+}
+
+
 @media (max-width:575px) {
+
+    .version-3 .range .grid {
+        row-gap: 8px;
+    }
 
     .version-3 .range-card a {
         padding: 0;
@@ -129,18 +190,23 @@
         display: grid;
         direction: rtl;
         align-items: center;
-        border-bottom: solid 1px var(--clr-grey-dk);
-        padding: 32px 0;
-        gap: 8px;
+        border-bottom: solid 1px var(--clr-grey-border);
+        padding: 8px 0 16px;
+        gap: 4px;
+    }
+
+    .version-3 .range-card:last-child a {
+        border-bottom: none;
     }
 
     .version-3 .range-img {
-        grid-column: span 6;
+        grid-column: span 5;
     }
 
     .version-3 .range-info {
         text-align: left;
-        grid-column: span 4;
+        grid-column: span 5;
+        justify-content: end;
     }
 
     .version-3 .range-card h4 {
@@ -151,6 +217,18 @@
         border-bottom: none;
     }
 
-    
+    .version-3 .range-card img {
+        max-width: 128px;
+    }
+
+    .version-3 .range-card-badge {
+        display: none;
+    }
+
+    .version-3 .range-info .range-card-badge {
+        display: block;
+        position: relative;
+    }
+
 }
 

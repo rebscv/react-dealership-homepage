@@ -1,3 +1,7 @@
+/* =========================
+   Range Style - Version - 3
+========================= */
+
 .version-3 .range {
     background-color: var(--clr-grey);
 }
@@ -35,13 +39,43 @@
             
 }
 
-
-@media (max-width:575px) {
+@media (max-width:1023px) {
 
     .version-3 .range .grid {
         row-gap: 24px;
     }
+
+    .version-3 .range .tabs-overflow {
+        padding-bottom: 16px;
+        overflow-y: auto;
+    }
+    .version-3 .range .range-tabs {
+        display: flex;
+    }
+
+    /* width */
+    .version-3 .range .tabs-overflow::-webkit-scrollbar {
+    height: 4px;
+    }
+
+    /* Track */
+    .version-3 .range .tabs-overflow::-webkit-scrollbar-track {
+        background-color: #e5e5e5;
+    border-radius: 10px;
+    }
     
+    /* Handle */
+    .version-3 .range .tabs-overflow::-webkit-scrollbar-thumb {
+    background: var(--clr-grey-dk); 
+    border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    .version-3 .range .tabs-overflow::-webkit-scrollbar-thumb:hover {
+        background: var(--clr-primary); 
+    }
+
+
 }
 
 

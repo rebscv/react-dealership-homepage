@@ -24,7 +24,7 @@ function Offers() {
 
             <PageImageText
                 wrapperClass="lrg-wrapper no-padding-top"
-                gridClass="grid-d-two-cols grey-bg offer-content-grid"
+                gridClass="grid-d-two-cols grey-bg offer-content-grid t-center-below-d"
                 title="Mazda Finance Offer"
                 text={[
                     "Get 2.99% Annual Percentage Rate† for business applicants on new and demo 2025 Mazda BT-50 XS Dual Cab models with Mazda Assured at participating Mazda Dealers.",
@@ -38,7 +38,7 @@ function Offers() {
 
             <PageImageText
                 wrapperClass="lrg-wrapper no-padding-top"
-                gridClass="grid-d-two-cols grid-d-reverse grey-bg offer-content-grid"
+                gridClass="grid-d-two-cols grid-d-reverse grey-bg offer-content-grid t-center-below-d"
                 eyebrowTitle="All-new, All-Electric"
                 title="Mazda CX-6e Pre-Order Offer"
                 text="Free upgrade worth $3,000 when you pre-order. Pre-order the Mazda CX-6e today and receive the Azami for the price of the GT. Available to the first 1,000 customers."

@@ -8,9 +8,12 @@ import { useState } from "react";
 
 function Range () {
 
-    const tabs = ["all", "suv", "ute", "sports"];
-    const tabLabels = {all: "All", suv: "SUV", ute: "Ute", sports: "Sports"};    
-    const [activeTab, setActiveTab] = useState("all");
+    // Costants
+    const tabs = ["featured", "suv", "ute", "sports", "hatchSedan", "electricHybrid"];
+    const tabLabels = {featured: "Featured", suv: "SUVs", ute: "Utes", sports: "Sports", hatchSedan: "Hatch & Sedans", electricHybrid: "Eletric & Hybrid"};    
+
+    // States
+    const [activeTab, setActiveTab] = useState("featured");    
 
     const filteredModels = activeTab === "all" ? models : models.filter(car => car.tags?.includes(activeTab));
 
@@ -30,7 +33,11 @@ function Range () {
                     </div>
                 </div>
 
-                <div className="grid grid-d-four-cols grid-l-three-cols grid-t-two-cols range-model-grid">
+            </div>
+
+            <div className="std-wrapper no-padding-top t-center">
+
+                <div key={activeTab} className="grid grid-xl-four-cols grid-d-three-cols grid-t-two-cols range-model-grid">
                     {filteredModels.map((car, index) => (
                         <RangeCard key={car.slug} {...car} style={{ animationDelay: `${index * 0.1}s` }} />
                     ))}

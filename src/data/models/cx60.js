@@ -72,8 +72,9 @@ const cx60Model = {
   menuTitle     : "CX-60",
   subtitle      : "New",
   description   : "Medium SUV | 5 seats",
-  tags          : ["suv"],
-  image         : cx60,    
+  tags          : ["suv", "electricHybrid", "featured"],
+  image         : cx60,  
+  isFeaturedPage: true,
   sections      :[
 
     { type: "hero",
@@ -120,10 +121,10 @@ const cx60Model = {
   },   
 
   hero: {
-    title: "New Mazda CX-60",
-    tagline: "Look Forward to It",
-    image: hero,
-    imageMobile: heroMobile
+    titleEyebrow  : "New Mazda CX-60",
+    title         : "Look Forward to It",
+    image         : hero,
+    imageMobile   : heroMobile
   }, 
 
   highlights:  {
@@ -161,7 +162,6 @@ const cx60Model = {
     ],
     image : intro,
     cta: "Book a  Test Drive",
-
   },
 
   featured: {
