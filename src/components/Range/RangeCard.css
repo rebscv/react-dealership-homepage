@@ -1,5 +1,13 @@
 
 /* =========================
+   Version 1 Styles
+========================= */
+
+.version-1  .range-info p , .version-1 .range-info h4 {
+    margin: 0;
+}
+
+/* =========================
    Version 2 Styles
 ========================= */
 

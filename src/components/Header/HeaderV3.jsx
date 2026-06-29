@@ -22,9 +22,6 @@ function HeaderV3() {
     const toggleModelMenu = () => { setModelMenuOpen(prev => !prev); }
     const closeModelMenu = () => { setModelMenuOpen(false); }
 
-    // Helpers
-    const handleLogoClick = () => { closeMenu(); closeModelMenu(); }
-
     // Effects
     useEffect(() => {
         const handleScroll = () => { setScrolled(window.scrollY > 50); };
@@ -46,6 +43,7 @@ function HeaderV3() {
     }, [modelMenuOpen]);
 
     // Helper Functions
+    const handleLogoClick = () => { closeMenu(); closeModelMenu(); }
     const handleMobileMenuClick = () => { toggleMenu(); closeModelMenu(); }
 
     return (

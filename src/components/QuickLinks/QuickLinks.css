@@ -7,6 +7,10 @@
   padding: 8px;
 }
 
+.version-1 .range-img img {
+  max-width: 240px;
+}
+
 .q-img {
   display: none;
 }

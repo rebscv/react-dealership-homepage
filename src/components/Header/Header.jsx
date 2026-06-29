@@ -35,6 +35,7 @@ function Header() {
 
     // Helpers
     const handleLogoClick = () => { closeMenu(); closeModelMenu(); }
+    const handleMobileMenuClick = () => { toggleMenu(); closeModelMenu(); }
 
     return (
         <header>
@@ -54,7 +55,7 @@ function Header() {
 
                         <HeaderContact />
 
-                        <div className="menu-button-mobile" id="menu-btn" onClick={toggleMenu}>
+                        <div className="menu-button-mobile" id="menu-btn" onClick={handleMobileMenuClick}>
                             <button>+</button>
                         </div>
 

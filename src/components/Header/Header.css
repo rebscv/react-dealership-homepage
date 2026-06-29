@@ -130,6 +130,14 @@
 
 }
 
+@media (max-width:1023px) {
+
+    .version-2 .nav-submenu {
+        background-color: #e5e5e5;
+    }
+
+}
+
 /* =========================
    2.3 Header - Mobile Navmenu
 ========================= */

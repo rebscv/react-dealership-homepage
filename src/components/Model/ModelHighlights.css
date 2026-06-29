@@ -1,3 +1,10 @@
+.version-2 .model-highlights img {
+  width: auto
+}
+
+
+
+
 .version-3 .model-detail-content section.model-highlights.dark-bg {
   color: var(--clr-white)
 }

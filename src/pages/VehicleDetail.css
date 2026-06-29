@@ -34,8 +34,24 @@
     gap: 8px;
 }
 
+.version-2 .vehicle-details-content .vd-img {
+    display: none;
+}
+
 .version-2 .vd-form input, .version-2 .vd-form textarea {
     width: 100%;
+}
+
+@media (min-width: 576px) {
+    
+    .version-2 .vd-top-bar {
+        display: none;
+    }
+
+    .version-2 .vehicle-details-content .vd-img {
+        display: block;
+    }
+
 }
 
 

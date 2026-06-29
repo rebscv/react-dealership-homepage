@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -12,7 +12,9 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
     // Constants
     const tabs = [ "featured", "suv", "ute", "sports", "hatchSedan", "electricHybrid" ];
     const tabLabels = { featured: "Featured", suv: "SUVs", ute: "Utes", sports: "Sports", hatchSedan: "Hatch & Sedans", electricHybrid: "Eletric & Hybrid" };
-
+    const version = location.pathname.split("/")[1];
+    const basePath = `/${version}`;
+    
     // States
     const [activeTab, setActiveTab] = useState("featured");
     const [mobileCategory, setMobileCategory] = useState(null);
@@ -71,7 +73,7 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
                             </button> 
                             
                             {mobileModels.map((model) => (
-                                <Link key={model.slug} to={`/version-3/models/${model.slug}`} className="mobile-model-list-button" onClick={handleModelClick}>
+                                <Link key={model.slug} to={`${basePath}/models/${model.slug}`} className="mobile-model-list-button" onClick={handleModelClick}>
                                     <div className="mobile-model-list-txt">
                                         <div className="mobile-model-link-title">{model.menuTitle}</div>
                                         <div className="mobile-model-link-description">{model.description}</div>
@@ -118,7 +120,7 @@ function HeaderVehicleMenu({ closeModelMenu, closeMenu, menuOpen }) {
                         <div className="header-vehicle-menu-models">
                             <div key={activeTab} className="grid-d-two-cols grid-xl-three-cols">
                                 {filteredModels.map((model, index) => (
-                                    <Link key={model.slug} to={`/version-3/models/${model.slug}`} onClick={closeModelMenu} style={{ animationDelay: `${index * 0.1}s` }} className="header-vehicle-menu-model">
+                                    <Link key={model.slug} to={`${basePath}/models/${model.slug}`} onClick={closeModelMenu} style={{ animationDelay: `${index * 0.1}s` }} className="header-vehicle-menu-model">
                                         {model.isFeaturedPage && ( <span className="range-card-badge">Featured Model</span> )}
                                         <div className="header-vehicle-menu-model-img"><img src={model.image} alt={model.menuTitle} /></div>
                                         <div className="header-vehicle-menu-model-title">{model.menuTitle}</div>

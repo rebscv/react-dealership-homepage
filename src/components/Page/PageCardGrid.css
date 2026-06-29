@@ -24,7 +24,7 @@
   row-gap: var(--grid-gap);
 }
 
-.page-card-item-btn:last-child {
+.version-3 .page-card-item-btn:last-child {
   margin: auto auto 24px;
   padding-left: 24px;
   padding-right: 24px;

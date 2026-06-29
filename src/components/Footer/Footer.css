@@ -11,8 +11,8 @@ footer h4 {
    Footer - Version 1
 ========================= */
 
-.version-1 footer {
-    background-color: #181818;
+.version-1 footer .footer-col {
+    display: grid;
 }
 
 
@@ -31,6 +31,10 @@ footer h4 {
 .version-2 .foot-head {
     display: flex;
     justify-content: space-between;
+}
+
+.version-2 .grid-footer-cols .grid {
+    align-content: start;
 }
 
 

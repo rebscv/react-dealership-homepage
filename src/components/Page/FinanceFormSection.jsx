@@ -47,25 +47,16 @@ function FinanceFormSection({ title, text, bgColour }) {
                     <input id="email" name="email" type="email" placeholder="Email" required />
                     <label htmlFor="email">Email</label>
                 </div>
-
-
-                <div className="form-row">                                    
-                    <input id="email" name="email" type="email" placeholder="Email" required />
-                    <label htmlFor="email">Email</label>
-                </div>
-
-                
+               
                 <div className="form-row">                                    
                     <input id="vehicle" name="vehicle" type="text" placeholder="Vehicle" required />
                     <label htmlFor="vehicle">Vehicle</label>
                 </div>
 
-
                 <div className="form-row">                                    
                     <input id="amount" name="amount" type="text" placeholder="Finance Amount" value={amount} onChange={handleAmountChange} required />
                     <label htmlFor="amount">Finance Amount</label>
                 </div>
-
 
                 <div className="form-row form-row-textarea">                                    
                     <textarea id="message" name="message" placeholder="How can we help?" />
@@ -76,14 +67,11 @@ function FinanceFormSection({ title, text, bgColour }) {
                     <button type="submit" className="btn btn-primary">Enquire Now</button>
                 </div>
 
-
               </form>
             </div>
 
           </div>
-
         </div>
-
 
       </div>
     </section>

@@ -15,39 +15,44 @@
   display: block;
 }
 
-.page-hero-video video {
+/* =========================
+   Page Hero Version 1
+========================= */
+
+.version-1 .page-hero {
+  padding: 0;
+}
+
+.version-1 .page-hero img {
   width: 100%;
-  max-height: 480px;
-  object-fit: cover;
+  max-width: 100%;
 }
 
-.page-hero-video-cta {
-  position: absolute;
-  bottom: var(--padding-tb);
-  left: 50%;
-  transform: translateX(-50%);
-  border: solid 1px #fff;
+/* =========================
+   Page Hero Version 2
+========================= */
+
+.version-2 .page-hero-video-cta {
+  display: flex;
+  border: solid 1px #000000;
   border-radius: 50%;
-  padding: 14px 16px 18px;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto 0;
 }
 
-.page-hero-video-cta-arrow {
+.version-2 .page-hero-video-cta-arrow {
   width: 12px;
   height: 12px;
-  border: solid 2px #fff;
+  border: solid 2px #000000;
   display: block;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(-2px, -2px);
   border-top: none;
   border-left: none;
 }
 
-.page-hero-video-cta:hover {
-  background-color: #fff;  
-}
-
-.page-hero-video-cta:hover .page-hero-video-cta-arrow {
-  border-color: #666;
-}
 
 /* =========================
    Page Hero Version 3
@@ -62,6 +67,40 @@
   width: 100%;
   padding: 0 var(--padding-lr);
   color: #fff;
+}
+
+.version-3 .page-hero-video video {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.verions-3 .page-hero-video-cta {
+  position: absolute;
+  bottom: var(--padding-tb);
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px #fff;
+  border-radius: 50%;
+  padding: 14px 16px 18px;
+}
+
+.verions-3 .page-hero-video-cta-arrow {
+  width: 12px;
+  height: 12px;
+  border: solid 2px #fff;
+  display: block;
+  transform: rotate(45deg);
+  border-top: none;
+  border-left: none;
+}
+
+.version-3 .page-hero-video-cta:hover {
+  background-color: #fff;  
+}
+
+.version-3 .page-hero-video-cta:hover .page-hero-video-cta-arrow {
+  border-color: #666;
 }
 
 .version-3 .page-hero h1 {
@@ -142,7 +181,7 @@
 
   .version-3 .page-hero-video video {
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
   }
 
 }

@@ -56,6 +56,14 @@
     margin-top: 12px;
 }
 
+.version-2 .vehicle-info {
+    display: grid;
+}
+
+.version-2 .vehicle-info .btn{
+    width: 100%;
+}
+
 /* =========================
    Version 3 styles
 ========================= */

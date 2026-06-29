@@ -126,6 +126,11 @@
    Version 2
 ========================= */
 
+.version-2 .stock-filter {
+    display: grid;
+    gap: 16px;
+}
+
 .version-2 .stock-all-vehicles > div {
     gap: var(--grid-gap-d);
 }

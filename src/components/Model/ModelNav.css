@@ -1,3 +1,57 @@
+
+/* =========================
+   ModelNav - Version 2
+========================= */
+
+.version-2 .model-nav {
+  background-color: var(--clr-dark-grey);
+}
+
+.version-2 .model-nav .std-wrapper {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.version-2 .model-nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.version-2 .model-nav-list  {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+}
+
+.version-2 .model-nav-list a {
+  color: var(--clr-white);
+}
+
+.version-2 .mobile-menu-title {
+  display: none;
+}
+
+@media (max-width:575px) {
+
+.version-2 .model-nav-flex, .version-2 .model-nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .version-2 .model-nav .btn {
+    width: 100%;
+  }
+  
+}
+
+/* =========================
+   ModelNav - Version 3
+========================= */
+
 .version-3 .model-nav {
   background-color: var(--clr-dark-grey);
 }
